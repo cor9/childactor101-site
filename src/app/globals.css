@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), var(--font-inter), ui-sans-serif, system-ui;
+
+  --color-primary-50: #fef5f2;
+  --color-primary-100: #fee8e1;
+  --color-primary-200: #fcd4c7;
+  --color-primary-300: #fab8a4;
+  --color-primary-400: #f69176;
+  --color-primary-500: #f16947;
+  --color-primary-600: #df4b28;
+  --color-primary-700: #ba381b;
+  --color-primary-800: #9b311a;
+  --color-primary-900: #802d1a;
+  --color-primary-950: #451308;
+
+  --color-secondary-50: #f4f6f8;
+  --color-secondary-100: #e3e9ef;
+  --color-secondary-200: #cdd8e2;
+  --color-secondary-300: #a9bed0;
+  --color-secondary-400: #7f9eb7;
+  --color-secondary-500: #60829e;
+  --color-secondary-600: #4c6882;
+  --color-secondary-700: #3f556b;
+  --color-secondary-800: #364859;
+  --color-secondary-900: #303e4d;
+  --color-secondary-950: #1f2834;
+
+  --color-accent-50: #fcf6eb;
+  --color-accent-100: #f7e8ce;
+  --color-accent-200: #f1d19d;
+  --color-accent-300: #ebb667;
+  --color-accent-400: #e69d3a;
+  --color-accent-500: #e0821c;
+  --color-accent-600: #d16715;
+  --color-accent-700: #ad4c14;
+  --color-accent-800: #8b3c17;
+  --color-accent-900: #713316;
+  --color-accent-950: #401808;
+
+  --color-surface-50: #ffffff;
+  --color-surface-100: #fafafa;
+  --color-surface-200: #f4f4f5;
+  --color-surface-300: #e4e4e7;
+  --color-surface-400: #d4d4d8;
+  --color-surface-900: #18181b;
+  --color-surface-950: #09090b;
+
+  --color-text-primary: var(--color-surface-900);
+  --color-text-secondary: #52525b;
+  --color-text-tertiary: #71717a;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-surface-50);
+    --foreground: var(--color-text-primary);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: var(--color-surface-950);
+      --foreground: var(--color-surface-50);
+    }
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}

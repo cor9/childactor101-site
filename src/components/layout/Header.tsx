@@ -18,7 +18,7 @@ export interface HeaderProps {
 
 const defaultNavItems: HeaderNavItem[] = [
   { href: "/start-here", label: "Start here" },
-  { href: "/#chapters", label: "From the Classroom" },
+  { href: "/from-the-classroom", label: "From the Classroom" },
   { href: "/ecosystem", label: "Tools" },
   { href: "/ecosystem", label: "Training" },
   { href: "/corey-ralston", label: "About Corey" },

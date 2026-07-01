@@ -19,7 +19,7 @@ import {
   getAdjacentLessons,
   getClassroomChapter,
   getClassroomLesson,
-  getClassroomPreviewSections,
+  getClassroomOverviewSections,
   getClassroomStaticLessonParams,
   getRelatedLessons,
 } from "@/content/classroom";
@@ -64,7 +64,7 @@ export default async function ClassroomLessonPage({
     notFound();
   }
 
-  const sections = lesson.bodySections ?? getClassroomPreviewSections(lesson, chapter);
+  const sections = lesson.bodySections ?? getClassroomOverviewSections(lesson, chapter);
   const relatedLessons = getRelatedLessons(lesson);
   const { previous, next } = getAdjacentLessons(chapter.slug, lesson.slug);
 
@@ -113,7 +113,7 @@ export default async function ClassroomLessonPage({
             <ChalkDust />
             <div className="relative space-y-5">
               <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
-                Sample lesson layout
+                Inside the classroom
               </div>
               <div className="overflow-hidden rounded-[28px] border border-white/10">
                 <Image
@@ -127,10 +127,10 @@ export default async function ClassroomLessonPage({
               </div>
               <div className="rounded-[24px] border border-white/10 bg-white/5 px-5 py-4">
                 <p className="text-xs uppercase tracking-[0.22em] text-[#bcefdc]">
-                  Lesson flow
+                  Lesson context
                 </p>
                 <p className="mt-3 text-sm leading-7 text-white/78">
-                  Prototype pages use placeholder body copy where needed, but the page structure is final enough to test hierarchy, reading rhythm, and next-step navigation.
+                  Every lesson is designed to give you a clear, calm perspective on the business of child acting before you take the next step.
                 </p>
               </div>
             </div>
@@ -243,8 +243,8 @@ export default async function ClassroomLessonPage({
           <Newsletter
             ctaHref="/podcast"
             ctaLabel="Keep learning"
-            description="Sample lesson pages use short body copy for now, but the layout already shows how each lesson can connect to guidance, tools, and the next chapter in the library."
-            label="Newsletter CTA"
+            description="Join other parents receiving practical guidance, podcast updates, and honest industry perspective."
+            label="Stay connected"
             title="Get the next lesson in your inbox."
           />
         </Container>
@@ -254,7 +254,7 @@ export default async function ClassroomLessonPage({
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Previous and next links make the classroom feel like a real curriculum, even while the library is still being populated in batches."
+            description="Move through the classroom at your own pace. Each lesson connects to the next step in the curriculum."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="Lesson Navigation"
             title="Keep moving through the shelf."
@@ -282,10 +282,10 @@ export default async function ClassroomLessonPage({
                   Previous lesson
                 </div>
                 <h3 className="mt-4 font-display text-3xl leading-tight text-chalkboard">
-                  This is the first sample lesson in the chapter.
+                  This is the first lesson in the chapter.
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-ink-soft">
-                  As the classroom fills in, earlier lessons will appear here to keep the shelf moving in order.
+                  You are at the beginning of this shelf. Keep reading forward to continue the curriculum.
                 </p>
               </Card>
             )}
@@ -311,10 +311,10 @@ export default async function ClassroomLessonPage({
                   <ArrowRight className="h-4 w-4" />
                 </div>
                 <h3 className="mt-4 font-display text-3xl leading-tight text-chalkboard">
-                  This is the end of the current sample run.
+                  You&apos;ve reached the end of this chapter.
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-ink-soft">
-                  Future imports will extend the shelf without changing this lesson flow or the surrounding navigation patterns.
+                  Head back to the main classroom to explore the next shelf in your journey.
                 </p>
               </Card>
             )}

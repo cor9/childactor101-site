@@ -231,7 +231,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "How to Become a Child Actor",
     subtitle: "A classroom lesson on how to become a child actor.",
     summary: "Cornerstone beginner topic with consistently high parent confusion. It directly supports /start-here and should set expectations before families spend money.",
-    teacherNote: "Create a clean cornerstone guide from the saved module source. Pull out the first steps, safety checkpoints, industry reality, and what parents should not buy yet.",
+    teacherNote: "Before you spend a dime on photos or classes, read this. The biggest advantage you can give your child early on is simply knowing how the business actually works.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -248,7 +248,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "What It Takes to Be a Successful Child Actor",
     subtitle: "A classroom lesson on what it takes to be a successful child actor.",
     summary: "Trust-building expectation-setting lesson that gives families a realistic picture of the work, pace, and mindset required.",
-    teacherNote: "Keep the core argument, but shift the framing from inspirational overview to practical checklist language for parents.",
+    teacherNote: "We often mistake early attention for success. True success in this industry is built on patience, resilience, and treating this like a marathon, not a sprint.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -266,7 +266,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Background Acting: Pros and Cons for Young Performers",
     subtitle: "A classroom lesson on background acting: pros and cons for young performers.",
     summary: "Families regularly misunderstand background work. This lesson helps prevent unrealistic expectations and clarifies where background fits in a child's path.",
-    teacherNote: "Light update only. Tighten the distinction between useful exposure, résumé value, and the limits of background work as a growth strategy.",
+    teacherNote: "Background acting is a great way to learn how a set works, but it's important to understand where it fits. It is an experience, not a fast-track to representation.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -284,7 +284,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "When Should My Child Start Acting Training?",
     subtitle: "A classroom lesson on when should my child start acting training?.",
     summary: "Parents ask this early and often. It helps reduce premature spending and supports the educational tone of learn before you buy.",
-    teacherNote: "Keep the existing guidance, but make the progression clearer: readiness, goals, budget, and what training should solve.",
+    teacherNote: "There is no single 'right' age to start training, but there is a right time for your family. Focus on readiness and curiosity over rushing into a class.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -302,7 +302,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Agents vs. Managers for Child Actors",
     subtitle: "A classroom lesson on agents vs. managers for child actors.",
     summary: "One of the clearest high-confusion trust builders in the whole library. It supports early onboarding and lowers the risk of bad representation decisions.",
-    teacherNote: "Preserve the article structure, but add a clearer side-by-side comparison and a short parent red-flag section.",
+    teacherNote: "The line between an agent and a manager can feel blurry. Understanding the difference now will save you from paying double commissions or signing the wrong contract.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
@@ -320,7 +320,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Is My Child Ready for an Agent?",
     subtitle: "A classroom lesson on is my child ready for an agent?.",
     summary: "Directly reduces rushed rep submissions and wasted effort. This is a core transition lesson between /start-here and the representation chapter.",
-    teacherNote: "Keep the current core teaching, but strengthen the readiness checklist and signs that a family should wait.",
+    teacherNote: "It’s tempting to rush toward representation, but securing an agent too early often does more harm than good. Make sure the foundation is there first.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
@@ -338,7 +338,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Understanding Talent Rep Commissions",
     subtitle: "A classroom lesson on understanding talent rep commissions.",
     summary: "Money confusion is a major trust issue. This lesson reduces misunderstanding around percentages, norms, and what families should question.",
-    teacherNote: "Retain the explanation, but add cleaner examples and parent-first plain language around what is standard versus suspicious.",
+    teacherNote: "Money is where most families get taken advantage of. Knowing exactly how commissions work protects your child's earnings and keeps your professional relationships transparent.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
@@ -356,7 +356,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Booking Out for Child Actors",
     subtitle: "A classroom lesson on booking out for child actors.",
     summary: "Practical professionalism topic that parents rarely understand until they make an avoidable mistake. Good trust and operations lesson for Batch 01.",
-    teacherNote: "Strip any announcement framing and rebuild it as a clear lesson on when to book out, how to communicate it, and what happens if you do not.",
+    teacherNote: "Booking out is one of the easiest ways to prove you are a professional family. It shows your reps that you respect their time as much as your own.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
@@ -374,7 +374,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Self Tape Equipment for Child Actors",
     subtitle: "A classroom lesson on self tape equipment for child actors.",
     summary: "Evergreen, practical, and immediately useful. It lowers wasted spending and answers one of the first concrete audition questions parents face.",
-    teacherNote: "Keep the equipment guidance, then lightly fold in the backdrop and sound duplicate cluster so families do not need several overlapping lessons.",
+    teacherNote: "You do not need a Hollywood soundstage in your living room. A clean, reliable setup matters far more than buying the most expensive gear.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
@@ -392,7 +392,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "How to Build a Better Audition Slate",
     subtitle: "A classroom lesson on how to build a better audition slate.",
     summary: "Slates are small but high-stakes. Parents repeatedly need direct, practical instruction here, and the saved curriculum already contains the raw material.",
-    teacherNote: "Extract one focused lesson from module 08. Keep it narrowly about slate purpose, delivery, framing, and what not to overdo.",
+    teacherNote: "A slate is often the very first thing casting sees. Keep it simple, keep it grounded, and let your child’s natural personality show through.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
@@ -409,7 +409,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "How to Use a Slate Shot Well",
     subtitle: "A classroom lesson on how to use a slate shot well.",
     summary: "This solves a recurring technical confusion point and pairs naturally with the slate lesson without bloating that page.",
-    teacherNote: "Pull this into its own lesson from module 08. Keep it separate from the slate lesson so each page answers one clear parent question.",
+    teacherNote: "Slate shots are a specific tool for casting profiles. Understanding how to use them effectively can give your child’s profile a more complete, professional feel.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
@@ -426,7 +426,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "What Makes a Child Actor's Self Tape Competitive",
     subtitle: "A classroom lesson on what makes a child actor's self tape competitive.",
     summary: "Strong practical bridge between technical setup and actual audition quality. It gives parents a clear standard without hype.",
-    teacherNote: "Keep the lesson intact, but trim overlap with first-impression articles and clarify the practical checklist parents can use during taping.",
+    teacherNote: "A competitive tape isn't about perfect lighting—it's about authentic performance and eliminating distractions so casting can actually watch the work.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
@@ -444,7 +444,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "When Is It Time to Update Your Child Actor Headshots?",
     subtitle: "A classroom lesson on when is it time to update your child actor headshots?.",
     summary: "Headshot timing is a high-confusion money decision. This lesson helps parents avoid both stale photos and unnecessary repeat shoots.",
-    teacherNote: "Reframe the existing article from session variety into a clearer timing-and-readiness lesson, while keeping the original practical headshot advice.",
+    teacherNote: "Headshots are an investment. Knowing when it’s actually time to update them will keep you from wasting money on photos you don’t need yet.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -462,7 +462,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Headshot Prep: The No-Makeup Look for Child Actor Photos",
     subtitle: "A classroom lesson on headshot prep: the no-makeup look for child actor photos.",
     summary: "Practical and evergreen. It solves a narrow parent question that frequently leads to overproduced or age-inaccurate materials.",
-    teacherNote: "Minimal update. Keep the article grounded and parent-first, with emphasis on authenticity over polish.",
+    teacherNote: "Casting directors want to see what your child actually looks like when they walk into a room. Over-styling often works against them.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -480,7 +480,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Actors Access for Parents of Child Actors",
     subtitle: "A classroom lesson on actors access for parents of child actors.",
     summary: "High-value practical platform knowledge. It supports profiles, submissions, and material readiness without forcing a sales angle.",
-    teacherNote: "Refresh any outdated platform detail and reframe the page around what parents actually need to set up and maintain.",
+    teacherNote: "Actors Access is the standard, but it can feel overwhelming. Focus on maintaining a clean, accurate profile rather than uploading every single piece of media.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -498,7 +498,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Child Acting Budget: What Families Really Spend",
     subtitle: "A classroom lesson on child acting budget: what families really spend.",
     summary: "Critical money reality check for brand-new families. This lesson directly reduces wasted spending and builds trust fast.",
-    teacherNote: "Update the budgeting examples and remove date-framed language so the lesson stays evergreen. Separate must-have costs from optional spending.",
+    teacherNote: "Every family needs a realistic picture of what this business costs. Setting a budget early prevents financial panic and keeps the journey sustainable.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -516,7 +516,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "How to Track Auditions and Expenses",
     subtitle: "A classroom lesson on how to track auditions and expenses.",
     summary: "Highly practical system-building lesson that supports calmer decision-making and better professional follow-through.",
-    teacherNote: "Extract the best standalone lesson first, then treat any deeper tracker templates or examples as related tools rather than part of the main lesson.",
+    teacherNote: "Memory is unreliable in this business. A simple, consistent tracking system is one of the best tools you can give yourself as a parent manager.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -533,7 +533,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Tax Guide for Parents of Child Actors",
     subtitle: "A classroom lesson on tax guide for parents of child actors.",
     summary: "Evergreen operational topic with real financial consequences. It also reinforces the platform's honest, non-hype authority positioning.",
-    teacherNote: "Keep the voice calm and practical. Make clear this is educational guidance, not tax advice, and emphasize what records families should keep.",
+    teacherNote: "Taxes don't have to be terrifying if you keep organized records throughout the year. Treat the acting journey like a small business from day one.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -551,7 +551,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "When Rejection Stings: Helping Your Child Actor Bounce Back",
     subtitle: "A classroom lesson on when rejection stings: helping your child actor bounce back.",
     summary: "Essential emotional support lesson that balances the more business-heavy early batch. Parents need this before rejection becomes a family identity issue.",
-    teacherNote: "Keep the tone warm and steady. Sharpen the parent actions after rejection so the page ends with practical next steps.",
+    teacherNote: "Rejection is part of the job. How you react as a parent will heavily influence how your child processes the inevitable 'no's in this industry.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -569,7 +569,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Maintaining Self-Esteem as a Child Actor",
     subtitle: "A classroom lesson on maintaining self-esteem as a child actor.",
     summary: "Protecting the child's sense of self is foundational to the brand's parent-first ethos and builds trust in the classroom as more than an advice blog.",
-    teacherNote: "Use the saved module as source material, but keep the first lesson tightly scoped to self-esteem protection rather than broad emotional wellness.",
+    teacherNote: "Your child's worth has nothing to do with their booking ratio. Protecting their self-esteem is the most important job you have in this process.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -586,7 +586,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "The New Hollywood Casting Scam Every Parent Needs to Know About",
     subtitle: "A classroom lesson on the new hollywood casting scam every parent needs to know about.",
     summary: "Direct trust builder and one of the clearest ways to prove the classroom protects families from costly mistakes.",
-    teacherNote: "Update any time-sensitive details, but keep the warning signs, parent filters, and what to do next if a family has already engaged.",
+    teacherNote: "Scams evolve, but the warning signs stay the same. If someone is asking for money upfront or promising overnight success, walk away.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -604,7 +604,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "What Is a Coogan Account and Do I Need One for My Child Actor?",
     subtitle: "A classroom lesson on what is a coogan account and do i need one for my child actor?.",
     summary: "Foundational money-and-protection lesson. It answers a recurring parent question and supports legal literacy without overwhelming the reader.",
-    teacherNote: "Keep it concise and practical. Add a simple when-you-need-one explanation and connect it to broader family record-keeping.",
+    teacherNote: "Coogan accounts are legally required in many states, but they are also just a good practice. It's about protecting your child's financial future.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -622,7 +622,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Child Labor Laws for Child Actors: A Parent Primer",
     subtitle: "A classroom lesson on child labor laws for child actors: a parent primer.",
     summary: "Parents need a simple legal orientation early. This builds authority and prevents avoidable confusion around set hours, school, and protection.",
-    teacherNote: "The source title is incomplete. Rebuild it into a clear primer and trim any jurisdiction-specific clutter that obscures the basic protections parents need to understand first.",
+    teacherNote: "Child labor laws exist to protect your kid’s education and well-being on set. As a parent, you need to understand these rules before you ever arrive on location.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -640,7 +640,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "TikTok and Your Child Actor: Creativity, Connection, and Safety",
     subtitle: "A classroom lesson on tiktok and your child actor: creativity, connection, and safety.",
     summary: "Modern parent concern with ongoing relevance. It belongs in the first batch because it reduces risk while staying grounded rather than fear-based.",
-    teacherNote: "Keep the balanced tone. Tighten the distinction between creative use, professional presence, parental oversight, and risk boundaries.",
+    teacherNote: "Social media can be a fun creative outlet, but it requires boundaries. You must balance professional visibility with your child’s right to privacy and safety.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
@@ -658,7 +658,7 @@ export const classroomLessons: ClassroomLesson[] = [
     title: "Why Consistent Training Matters for Young Actors",
     subtitle: "A classroom lesson on why consistent training matters for young actors.",
     summary: "Good bridge from beginner curiosity into long-term development. It helps families think in terms of skill-building rather than quick wins.",
-    teacherNote: "Keep the core message, but tone down any hype language and make the lesson about patient, durable skill-building for families.",
+    teacherNote: "You can't cram for an acting career. Consistent, ongoing training builds the kind of durable confidence that holds up in a high-pressure audition room.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
@@ -737,22 +737,23 @@ export function getLessonPagination(chapterSlug: string, lessonSlug: string) {
 
 export const getAdjacentLessons = getLessonPagination;
 
-export function getClassroomPreviewSections(
+export function getClassroomOverviewSections(
   lesson: ClassroomLesson,
   chapter: ClassroomChapter,
 ): ClassroomLessonSection[] {
   return [
     {
-      heading: "Lesson Preview",
+      heading: "Lesson Overview",
       paragraphs: [
-        lesson.title + " belongs in the " + chapter.title + " chapter because it answers a recurring parent question in a more structured way than a traditional blog archive would.",
-        "This is a short classroom preview. The complete lesson will provide examples, calmer framing, and one clear next step for the reader.",
+        `This lesson inside the ${chapter.title} chapter addresses one of the most common questions families face when navigating the industry.`,
+        lesson.summary
       ],
     },
     {
-      heading: "What you will learn",
+      heading: "Why this matters",
       paragraphs: [
-        lesson.summary + " This lesson helps families build a solid foundation by focusing on context, education, takeaways, related tools, and a guided path into the next step instead of a dead end.",
+        "Instead of rushing into decisions or spending money prematurely, take time to understand the fundamentals.",
+        "The goal is to help you build a clear, sustainable approach so your child can focus on the work, and you can focus on supporting them."
       ],
     },
   ];

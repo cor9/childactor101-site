@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const footerColumns = [
@@ -23,37 +24,46 @@ const footerColumns = [
     links: [
       { href: "/ecosystem", label: "Character Lab" },
       { href: "/ecosystem", label: "Audition Mastery" },
-      { href: "/ecosystem", label: "The Craft" },
+      { href: "/ecosystem", label: "Coaching with Corey" },
     ],
   },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-chalkboard/12 bg-chalkboard text-chalk">
+    <footer className="border-t border-white/10 bg-[linear-gradient(180deg,#143226_0%,#0f241b_100%)] text-white">
       <div className="flex justify-center gap-4 px-4 pt-10 sm:px-6 lg:px-8">
         <span className="h-2.5 w-12 rounded-full bg-purple" />
         <span className="h-2.5 w-12 rounded-full bg-[#CB4435]" />
         <span className="h-2.5 w-12 rounded-full bg-[#A6E0C9]" />
         <span className="h-2.5 w-12 rounded-full bg-[#9A6536]" />
       </div>
-      <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_repeat(3,minmax(0,1fr))] lg:px-8">
+      <div className="mx-auto grid w-full max-w-[1440px] gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_repeat(3,minmax(0,1fr))] lg:px-8">
         <div className="max-w-sm">
-          <p className="font-display text-3xl leading-tight">Child Actor 101</p>
-          <p className="mt-4 text-sm leading-7 text-chalk/72">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/101logo.png"
+              alt="Child Actor 101 logo"
+              width={54}
+              height={54}
+              className="h-12 w-12 object-contain"
+            />
+            <p className="font-display text-3xl leading-tight">Child Actor 101</p>
+          </div>
+          <p className="mt-4 text-sm leading-7 text-white/72">
             Come inside. Let&apos;s learn.
           </p>
         </div>
 
         {footerColumns.map((column) => (
           <div key={column.heading}>
-            <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-chalk/70">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.24em] text-[#bcefdc]">
               {column.heading}
             </h2>
-            <ul className="mt-4 space-y-3 text-sm text-chalk/85">
+            <ul className="mt-4 space-y-3 text-sm text-white/84">
               {column.links.map((link) => (
                 <li key={link.label}>
-                  <Link className="transition hover:text-white" href={link.href}>
+                  <Link className="transition hover:text-[#c7f2e4]" href={link.href}>
                     {link.label}
                   </Link>
                 </li>
@@ -62,7 +72,7 @@ export function Footer() {
           </div>
         ))}
       </div>
-      <div className="border-t border-chalk/10 px-4 py-5 text-center text-xs uppercase tracking-[0.18em] text-chalk/60 sm:px-6 lg:px-8">
+      <div className="border-t border-white/10 px-4 py-5 text-center text-xs uppercase tracking-[0.18em] text-white/56 sm:px-6 lg:px-8">
         © Child Actor 101 · Privacy · Terms
       </div>
     </footer>

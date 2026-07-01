@@ -57,6 +57,8 @@
   --color-accent-950: #2e1d49;
 
   --shadow-soft: 0 18px 40px rgba(22, 36, 58, 0.08);
+  --shadow-board: 0 32px 64px rgba(9, 23, 18, 0.22);
+  --shadow-paper: 0 24px 48px rgba(22, 36, 58, 0.08);
 }
 
 @layer base {
@@ -80,9 +82,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image:
-      radial-gradient(circle at top left, rgba(244, 201, 93, 0.18), transparent 28%),
-      radial-gradient(circle at top right, rgba(166, 120, 242, 0.16), transparent 24%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 22%),
+      linear-gradient(180deg, #fbf6ea 0%, #f6eedf 100%);
   }
 
   h1,
@@ -97,6 +98,10 @@
 
   p {
     text-wrap: pretty;
+  }
+
+  img {
+    display: block;
   }
 
   ::selection {

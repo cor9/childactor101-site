@@ -1,10 +1,13 @@
 type SectionLabelProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export function SectionLabel({ children }: SectionLabelProps) {
+export function SectionLabel({ children, className = "" }: SectionLabelProps) {
   return (
-    <span className="inline-flex rounded-full border border-chalkboard/15 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
+    <span
+      className={`inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-purple-deep ${className}`}
+    >
       {children}
     </span>
   );

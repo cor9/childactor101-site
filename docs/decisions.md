@@ -126,6 +126,18 @@ The educational material is still valuable, but future public pages should prese
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Treat the granular module lesson inventories as internal source-content maps for classroom extraction, and never surface `LEVEL UP` branding or legacy framing on public-facing Child Actor 101 pages.
+
+### Reason
+
+The source material is useful because it identifies the smallest practical lesson units, but the public product should feel like one intentionally designed Child Actor 101 learning library rather than repackaged legacy course content.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

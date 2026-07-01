@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/Button";
@@ -8,13 +9,14 @@ export function MeetCorey() {
     <section id="corey" className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto grid w-full max-w-[1440px] gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <div className="mx-auto w-full max-w-[380px] rounded-[34px] bg-[#f5eddd] p-8 shadow-[var(--shadow-paper)] lg:max-w-none">
-          <div className="flex aspect-square items-center justify-center rounded-[34px] border-[6px] border-[#9be5cf] bg-[linear-gradient(180deg,#23503b_0%,#17382b_100%)] shadow-[0_28px_50px_rgba(35,79,59,0.22)]">
-            <div className="text-center text-white">
-              <p className="font-display text-7xl">CR</p>
-              <p className="mt-4 text-lg uppercase tracking-[0.22em] text-white/78">
-                Your headshot here
-              </p>
-            </div>
+          <div className="overflow-hidden rounded-[34px] border-[6px] border-[#9be5cf] bg-[linear-gradient(180deg,#23503b_0%,#17382b_100%)] shadow-[0_28px_50px_rgba(35,79,59,0.22)]">
+            <Image
+              src="/images/corey-ralston.jpg"
+              alt="Corey Ralston headshot"
+              width={900}
+              height={1200}
+              className="aspect-square w-full object-cover object-center"
+            />
           </div>
         </div>
 

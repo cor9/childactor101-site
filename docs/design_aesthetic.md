@@ -92,6 +92,30 @@ Use chalkboard elements thoughtfully.
 
 They should support the experience rather than dominate it.
 
+The chalkboard should look used.
+
+Not dirty.
+
+Not grungy.
+
+But softly lived in.
+
+Dark green surfaces should include subtle eraser residue, chalk haze, and hand-drawn white marks that make the page feel like an active classroom wall.
+
+Preferred recurring accents:
+
+• Chalk stars
+
+• Chalk arrows
+
+• Chalk swirls
+
+• Hand-drawn cue marks near key messages, illustrations, and transitions
+
+These doodles should create cohesion across the homepage and other major brand moments.
+
+They should feel intentional and sparse, never decorative clutter.
+
 ---
 
 ## Pixar-Inspired Editorial Storytelling

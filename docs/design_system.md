@@ -95,6 +95,17 @@ Responsive behavior should be built into every component.
 --ink-soft: #31425C;
 ```
 
+Chalkboard surfaces are not solid fills alone.
+
+Implementation should layer:
+
+- a dark green base
+- soft radial chalk haze
+- light eraser-dust residue
+- occasional white chalk doodles for emphasis
+
+Homepage chalkboard sections should visibly read as classroom boards, not generic dark hero bands.
+
 ---
 
 ## Typography
@@ -251,6 +262,26 @@ Large
 ```
 
 Depth should feel soft.
+
+---
+
+# Chalkboard Surface Treatment
+
+Use a reusable chalkboard treatment for dark green sections.
+
+Required ingredients:
+
+- Dark green gradient base
+- Low-contrast chalk speckle or dust texture
+- Soft blurred residue patches that feel like erased chalk
+- Sparse white chalk doodles such as stars, arrows, and swirls
+
+Rules:
+
+- Keep doodles decorative, not interactive
+- Lower opacity so content remains primary
+- Repeat the motif consistently across homepage chalkboard sections
+- Avoid overfilling the canvas
 
 ---
 

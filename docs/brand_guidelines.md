@@ -211,6 +211,18 @@ Professional without becoming corporate.
 
 Creative without becoming chaotic.
 
+Dark green brand fields should read as a real classroom chalkboard.
+
+Not a flat green panel.
+
+Use soft chalk bloom, faint eraser dust residue, and slightly imperfect hand-drawn accents so the brand world feels taught-in rather than digitally sterile.
+
+White chalk stars, arrows, swirls, and instructional doodles should appear consistently across homepage chalkboard sections as connective tissue.
+
+These marks should feel light, warm, and teacherly.
+
+Never random clip art.
+
 ---
 
 # Brand Experience

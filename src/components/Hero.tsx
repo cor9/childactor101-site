@@ -2,13 +2,17 @@ import Image from "next/image";
 import { ArrowDown, Mic2 } from "lucide-react";
 
 import { Button } from "@/components/Button";
+import { ChalkDoodle } from "@/components/ChalkDoodle";
+import { ChalkDust } from "@/components/ChalkDust";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(49,99,71,0.55),transparent_34%),linear-gradient(180deg,#18352a_0%,#122c21_100%)] px-4 pb-12 pt-10 text-white sm:px-6 lg:px-8 lg:pb-16 lg:pt-14">
-      <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_1px_1px,rgba(248,244,232,0.85)_1px,transparent_0)] [background-size:18px_18px]" />
+      <ChalkDust />
       <div className="relative mx-auto grid w-full max-w-[1440px] gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
         <div className="max-w-3xl">
+          <ChalkDoodle variant="spark" className="left-[-0.5rem] top-4 hidden h-9 w-9 lg:block" />
+          <ChalkDoodle variant="swirl" className="right-12 top-28 hidden h-14 w-14 lg:block" />
           <div className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#b9ecd9]">
             <span className="h-2.5 w-2.5 rounded-full bg-[#d04c3f]" />
             For families of young actors
@@ -51,6 +55,8 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[760px] lg:max-w-none">
+          <ChalkDoodle variant="star" className="right-8 top-14 h-10 w-10" />
+          <ChalkDoodle variant="arrow-down" className="left-10 bottom-10 hidden h-12 w-12 md:block" />
           <div className="absolute left-8 top-0 z-10 rounded-[18px] bg-[#cc4f40] px-5 py-2 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(204,79,64,0.28)]">
             ● Now learning
           </div>

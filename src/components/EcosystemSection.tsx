@@ -1,4 +1,6 @@
 import { Card } from "@/components/Card";
+import { ChalkDoodle } from "@/components/ChalkDoodle";
+import { ChalkDust } from "@/components/ChalkDust";
 import { SectionLabel } from "@/components/SectionLabel";
 
 const columns = [
@@ -36,8 +38,11 @@ export function EcosystemSection() {
   return (
     <section
       id="ecosystem"
-      className="bg-[radial-gradient(circle_at_top_left,rgba(49,99,71,0.45),transparent_28%),linear-gradient(180deg,#173226_0%,#10261d_100%)] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-24"
+      className="relative bg-[radial-gradient(circle_at_top_left,rgba(49,99,71,0.45),transparent_28%),linear-gradient(180deg,#173226_0%,#10261d_100%)] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-24"
     >
+      <ChalkDust />
+      <ChalkDoodle variant="star" className="left-8 top-16 hidden h-9 w-9 md:block" />
+      <ChalkDoodle variant="arrow-right" className="right-10 top-22 hidden h-12 w-12 md:block" />
       <div className="mx-auto w-full max-w-[1440px]">
         <Card tone="chalkboard" className="overflow-hidden">
           <SectionLabel className="text-[#c7f2e4]">The Whole Ecosystem</SectionLabel>

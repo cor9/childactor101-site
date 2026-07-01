@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { Card } from "@/components/Card";
-import { SectionLabel } from "@/components/SectionLabel";
+import { Container } from "@/components/layout/Container";
+import { Section } from "@/components/layout/Section";
+import { ChapterCard } from "@/components/home/ChapterCard";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const chapters = [
   {
@@ -33,42 +32,23 @@ const chapters = [
 
 export function ChapterCards() {
   return (
-    <section id="chapters" className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto w-full max-w-[1440px]">
-        <SectionLabel>From the Classroom</SectionLabel>
-        <div className="mt-6 max-w-3xl">
-          <h2 className="font-display text-4xl leading-tight text-chalkboard sm:text-5xl lg:text-[4rem]">
-            Open to the chapter you need
-          </h2>
-          <p className="mt-4 text-[1.45rem] leading-[1.7] text-ink-soft">
-            Every lesson is illustrated, plain-spoken, and built for parents —
-            pick where your family is right now.
-          </p>
-        </div>
+    <Section id="chapters" className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
+      <Container>
+        <SectionHeader
+          className="max-w-3xl"
+          description="Every lesson is illustrated, plain-spoken, and built for parents — pick where your family is right now."
+          descriptionClassName="mt-4 text-[1.45rem] leading-[1.7] text-ink-soft"
+          label="From the Classroom"
+          labelClassName="text-purple-deep"
+          title="Open to the chapter you need"
+          titleClassName="mt-6 text-chalkboard"
+        />
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {chapters.map((chapter) => (
-            <Link key={chapter.title} href={chapter.href} className="group block">
-              <Card className="overflow-hidden p-0 transition duration-200 group-hover:-translate-y-1">
-                <Image
-                  src={chapter.image}
-                  alt={chapter.alt}
-                  width={460}
-                  height={460}
-                  className="aspect-square w-full object-cover"
-                />
-                <div className="flex items-center justify-between px-7 py-6">
-                  <h3 className="font-display text-[2rem] leading-tight text-chalkboard">
-                    {chapter.title}
-                  </h3>
-                  <span className="text-4xl leading-none text-purple-deep transition group-hover:translate-x-1">
-                    →
-                  </span>
-                </div>
-              </Card>
-            </Link>
+            <ChapterCard key={chapter.title} {...chapter} />
           ))}
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 }

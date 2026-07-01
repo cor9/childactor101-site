@@ -78,6 +78,18 @@ Families clicking a "listen" action should reach the real show immediately, whil
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Treat the current homepage implementation as the canonical visual reference and extract its patterns into reusable components without changing content, layout, or responsive behavior.
+
+### Reason
+
+Future pages need a shared design system, but the homepage already defines the approved chalkboard classroom look and should remain visually stable while that system is extracted.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

@@ -4,26 +4,26 @@ const footerColumns = [
   {
     heading: "Learn",
     links: [
+      { href: "/start-here", label: "Start Here" },
       { href: "/#chapters", label: "From the Classroom" },
-      { href: "/#journey", label: "Free guides" },
-      { href: "/#podcast", label: "Podcast" },
-      { href: "/#ecosystem", label: "Directory" },
+      { href: "/podcast", label: "Podcast" },
+      { href: "/corey-ralston", label: "Meet Corey" },
     ],
   },
   {
     heading: "Create",
     links: [
-      { href: "/#ecosystem", label: "Resume101" },
-      { href: "/#ecosystem", label: "Pages101" },
-      { href: "/#ecosystem", label: "Prep101" },
+      { href: "/ecosystem", label: "Resume101" },
+      { href: "/ecosystem", label: "Pages101" },
+      { href: "/ecosystem", label: "Prep101" },
     ],
   },
   {
     heading: "Perform",
     links: [
-      { href: "/#ecosystem", label: "Character Lab" },
-      { href: "/#ecosystem", label: "Audition Mastery" },
-      { href: "/#ecosystem", label: "The Craft" },
+      { href: "/ecosystem", label: "Character Lab" },
+      { href: "/ecosystem", label: "Audition Mastery" },
+      { href: "/ecosystem", label: "The Craft" },
     ],
   },
 ];

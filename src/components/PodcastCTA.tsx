@@ -22,7 +22,7 @@ export function PodcastCTA() {
                 The Callback — honest talks about auditions, the business, and
                 keeping kids kids while they chase the dream. New every week.
               </p>
-              <Button href="/#podcast" className="mt-8 w-fit">
+              <Button href="/podcast" className="mt-8 w-fit">
                 Start listening
                 <Headphones className="h-5 w-5" />
               </Button>

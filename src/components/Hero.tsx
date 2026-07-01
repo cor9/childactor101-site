@@ -39,11 +39,11 @@ export function Hero() {
             side of it.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button href="/#journey" size="lg">
+            <Button href="/start-here" size="lg">
               Start here
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <Button href="/#podcast" size="lg" variant="secondary">
+            <Button href="/podcast" size="lg" variant="secondary">
               Conversations from inside Hollywood
               <Mic2 className="h-5 w-5" />
             </Button>

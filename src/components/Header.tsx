@@ -4,11 +4,11 @@ import { ChevronRight, Menu } from "lucide-react";
 import { Button } from "@/components/Button";
 
 const navItems = [
-  { href: "/#journey", label: "Start Here" },
-  { href: "/#chapters", label: "From the Classroom" },
-  { href: "/#chapters", label: "Tools" },
-  { href: "/#ecosystem", label: "Training" },
-  { href: "/corey-ralston", label: "About Corey" },
+  { href: "/start-here", label: "Start Here" },
+  { href: "/#chapters", label: "Learn" },
+  { href: "/ecosystem", label: "Ecosystem" },
+  { href: "/podcast", label: "Podcast" },
+  { href: "/corey-ralston", label: "Meet Corey" },
 ];
 
 export function Header() {
@@ -42,7 +42,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/#journey" size="sm">
+          <Button href="/start-here" size="sm">
             Start here
             <ChevronRight className="h-4 w-4" />
           </Button>
@@ -64,7 +64,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button href="/#journey" className="mt-3 w-full">
+              <Button href="/start-here" className="mt-3 w-full">
                 Start here
                 <ChevronRight className="h-4 w-4" />
               </Button>

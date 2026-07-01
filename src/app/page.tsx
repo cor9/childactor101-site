@@ -8,7 +8,7 @@ import { MeetCorey } from "@/components/MeetCorey";
 import { PodcastCTA } from "@/components/PodcastCTA";
 
 export const metadata: Metadata = {
-  title: "Homepage",
+  title: "The classroom for families navigating TV and film",
   description:
     "Start with the foundational Child Actor 101 homepage shell: the parent-first path into learning, tools, training, and podcast conversations.",
 };

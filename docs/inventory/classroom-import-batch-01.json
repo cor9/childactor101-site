@@ -7,7 +7,7 @@
     "Support the /start-here onboarding journey.",
     "Choose topics that reduce scams, wasted money, and unrealistic expectations.",
     "Include no more than four lessons from any one chapter.",
-    "Use docs/level-up/source-lesson-inventory.md as the internal lesson-splitting map for module-derived lessons without exposing legacy course naming publicly."
+    "Use docs/level-up/source-lesson-inventory.md as the internal lesson-splitting map for module-derived lessons without exposing internal module naming publicly."
   ],
   "chapter_counts": {
     "Start Here": 4,

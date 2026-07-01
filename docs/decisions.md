@@ -118,23 +118,11 @@ The educational library should feel like opening the Child Actor 101 classroom, 
 
 ### Decision
 
-Store former LEVEL UP parent course modules in repo docs as internal source material for future lesson extraction.
+Former course material is treated only as internal source content. Public content is organized into Classroom chapters, lessons, and guides.
 
 ### Reason
 
-The educational material is still valuable, but future public pages should present it as one cohesive Child Actor 101 curriculum rather than as legacy course or archive content.
-
----
-
-## 2026-07-01
-
-### Decision
-
-Treat the granular module lesson inventories as internal source-content maps for classroom extraction, and never surface `LEVEL UP` branding or legacy framing on public-facing Child Actor 101 pages.
-
-### Reason
-
-The source material is useful because it identifies the smallest practical lesson units, but the public product should feel like one intentionally designed Child Actor 101 learning library rather than repackaged legacy course content.
+The educational material is still valuable, but future public pages should present it as one cohesive Child Actor 101 curriculum rather than as internal module naming or archive content.
 
 ---
 

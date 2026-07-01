@@ -35,7 +35,7 @@ It prioritizes:
 - Batch 01 favors lessons that answer first-order parent questions.
 - Several saved curriculum sources are included only where the topic gap is too important to delay, especially `How to Become a Child Actor`, `How to Build a Better Audition Slate`, `How to Use a Slate Shot Well`, `How to Track Auditions and Expenses`, and `Maintaining Self-Esteem as a Child Actor`.
 - Topics with duplicate clusters were only selected when a canonical lesson is clearly needed in the first batch.
-- For module-derived lessons, use `docs/level-up/source-lesson-inventory.md` as the internal lesson-splitting map and do not expose legacy course naming publicly.
+- For module-derived lessons, use `docs/level-up/source-lesson-inventory.md` as the internal lesson-splitting map and do not expose internal module naming publicly.
 
 ## Planned Lessons
 

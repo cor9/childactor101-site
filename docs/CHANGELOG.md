@@ -12,7 +12,7 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 
 - Chalkboard texture guidance and homepage chalk doodle treatment across dark classroom sections
 - Saved LEVEL UP Modules 01, 05, 06, 07, and 08 as internal curriculum source material for future Child Actor 101 lesson extraction
-- Added a granular internal source-lesson inventory for Modules 01 and 05 to guide classroom lesson splitting without exposing legacy course framing
+- Added a granular internal source-lesson inventory for Modules 01 and 05 to guide classroom lesson splitting without exposing internal module naming publicly
 - Added a typed `src/content/classroom.ts` sample classroom library model plus dynamic chapter and lesson prototype routes for `/from-the-classroom`
 
 ### Changed
@@ -23,6 +23,8 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Built the `/start-here` onboarding page as the primary parent-first roadmap using the existing reusable component system
 - Built `/from-the-classroom` as a chapter-based classroom library instead of a chronological blog feed
 - Wired `/from-the-classroom` into a polished front-end prototype with chapter cards, sample chapter pages, sample lesson pages, breadcrumbs, related-lesson flow, and prototype lesson navigation
+- Refined internal curriculum documentation to remove legacy course terminology
+- Generated the master blog-to-classroom curriculum mapping to guide future lesson extraction
 
 ### Remaining
 

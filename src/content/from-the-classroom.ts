@@ -11,7 +11,7 @@ export const featuredLessons = [
     imageAlt: images.chapterGettingStarted.alt,
   },
   {
-    title: "Talent Scams and the Pressure Tactics Behind Them",
+    title: "Talent Scams",
     description:
       "Learn how scam offers are framed, why urgency is such a common tactic, and how to tell the difference between guidance and a sales trap.",
     category: "Safety",
@@ -20,7 +20,7 @@ export const featuredLessons = [
     imageAlt: images.chapterForParents.alt,
   },
   {
-    title: "Choosing Representation Without Guessing",
+    title: "Choosing Representation",
     description:
       "A clear look at agents, managers, submissions, meetings, and the signs that a professional relationship is built on fit rather than hype.",
     category: "Representation",
@@ -29,7 +29,7 @@ export const featuredLessons = [
     imageAlt: images.chapterRepresentation.alt,
   },
   {
-    title: "Self Tapes That Help Casting Focus on the Performance",
+    title: "Self Tapes",
     description:
       "From framing and lighting to parent involvement and prep, this lesson breaks down what makes a self tape easier to review and easier to trust.",
     category: "Auditions",
@@ -38,7 +38,7 @@ export const featuredLessons = [
     imageAlt: images.homeHero.alt,
   },
   {
-    title: "Headshots That Match the Stage You're Actually In",
+    title: "Headshots",
     description:
       "A practical guide to timing, expectations, and the difference between getting useful headshots and paying for marketing materials too early.",
     category: "Professional Materials",
@@ -47,13 +47,34 @@ export const featuredLessons = [
     imageAlt: images.chapterTechnique.alt,
   },
   {
-    title: "Audition Etiquette for Young Actors and Parents",
+    title: "Audition Etiquette",
     description:
       "Professional habits start before the room. Learn the simple behaviors that make auditions smoother for actors, parents, reps, and casting teams.",
     category: "Business",
     href: "#chapter-business",
     imageSrc: images.chapterForParents.src,
     imageAlt: images.chapterForParents.alt,
+  },
+  {
+    title: "Residuals",
+    description:
+      "A plain-language explanation of what residuals are, how they show up, and why families should understand them long before a paycheck lands.",
+    category: "Business",
+    href: "#chapter-business",
+  },
+  {
+    title: "Commissions",
+    description:
+      "Understand how commissions work with agents and managers, where confusion usually starts, and what parents should ask before agreeing to anything.",
+    category: "Representation",
+    href: "#chapter-representation",
+  },
+  {
+    title: "Contracts",
+    description:
+      "A parent-first guide to slowing down, reading carefully, and understanding the parts of an entertainment contract that shape family decisions.",
+    category: "Legal",
+    href: "#chapter-legal",
   },
 ] as const;
 

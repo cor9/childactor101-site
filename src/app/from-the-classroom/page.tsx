@@ -105,7 +105,7 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="These cornerstone lessons answer the questions parents ask first and return to most often. Think of them as the opening chapters of the Child Actor 101 textbook."
+            description="These cornerstone lessons answer the questions parents ask first and return to most often. Think of them as the opening chapters of the Child Actor 101 parent curriculum."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="Featured Lessons"
             title="Begin with the lessons that frame the whole classroom."
@@ -138,7 +138,7 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="This is not a category archive. Each chapter is a learning shelf that groups lessons the way a parent actually experiences the business."
+            description="This is a structured learning library. Each chapter is a learning shelf that groups lessons the way a parent actually experiences the business."
             descriptionClassName="mt-4 text-lg leading-8 text-white/72"
             label="Browse by Chapter"
             labelClassName="text-[#bcefdc]"

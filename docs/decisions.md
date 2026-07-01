@@ -114,6 +114,18 @@ The educational library should feel like opening the Child Actor 101 classroom, 
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Store former LEVEL UP parent course modules in repo docs as internal source material for future lesson extraction.
+
+### Reason
+
+The educational material is still valuable, but future public pages should present it as one cohesive Child Actor 101 curriculum rather than as legacy course or archive content.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

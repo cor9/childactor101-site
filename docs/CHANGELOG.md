@@ -11,6 +11,7 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 ### Added
 
 - Chalkboard texture guidance and homepage chalk doodle treatment across dark classroom sections
+- Saved LEVEL UP Modules 01, 05, 06, 07, and 08 as internal curriculum source material for future Child Actor 101 lesson extraction
 
 ### Changed
 

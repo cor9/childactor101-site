@@ -1,6 +1,24 @@
 import { images } from "@/content/images";
 
-export const featuredLessons = [
+export interface ClassroomLessonCard {
+  category: string;
+  description: string;
+  href: string;
+  imageAlt?: string;
+  imageSrc?: string;
+  title: string;
+}
+
+export interface ClassroomChapterCard {
+  description: string;
+  id: string;
+  imageAlt: string;
+  imageSrc: string;
+  lessons: string[];
+  title: string;
+}
+
+export const featuredLessons: ClassroomLessonCard[] = [
   {
     title: "How to Become a Child Actor",
     description:
@@ -76,9 +94,9 @@ export const featuredLessons = [
     category: "Legal",
     href: "#chapter-legal",
   },
-] as const;
+];
 
-export const chapterCards = [
+export const chapterCards: ClassroomChapterCard[] = [
   {
     id: "chapter-getting-started",
     title: "Getting Started",
@@ -151,9 +169,9 @@ export const chapterCards = [
     imageSrc: images.chapterForParents.src,
     imageAlt: images.chapterForParents.alt,
   },
-] as const;
+];
 
-export const newestLessons = [
+export const newestLessons: ClassroomLessonCard[] = [
   {
     title: "Residuals for Parents: What They Are and Why They Matter",
     description:
@@ -196,9 +214,9 @@ export const newestLessons = [
     category: "Parents",
     href: "#chapter-parents",
   },
-] as const;
+];
 
-export const mostPopularLessons = [
+export const mostPopularLessons: ClassroomLessonCard[] = [
   {
     title: "The Biggest Mistakes Parents Make",
     description:
@@ -227,4 +245,4 @@ export const mostPopularLessons = [
     category: "Auditions",
     href: "#chapter-auditions",
   },
-] as const;
+];

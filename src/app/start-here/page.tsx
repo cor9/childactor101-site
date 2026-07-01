@@ -8,6 +8,7 @@ import { LessonCard } from "@/components/content/LessonCard";
 import { Newsletter } from "@/components/content/Newsletter";
 import { JourneyTimeline } from "@/components/home/JourneyTimeline";
 import { PageHero } from "@/components/PageHero";
+import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { images } from "@/content/images";
 
@@ -84,7 +85,7 @@ const firstReads = [
   },
 ];
 
-const guides = [
+const freeGuides = [
   {
     title: "Headshot Guide",
     description:
@@ -113,12 +114,22 @@ const guides = [
     href: "/guides/zoom-callback-tips",
     eyebrow: "Free guide",
   },
+];
+
+const freeTools = [
   {
     title: "Resume101",
     description:
       "A focused tool for building a clean, professional actor resume once your child is ready to present materials clearly.",
     href: "/ecosystem#resume101",
-    eyebrow: "Tool",
+    eyebrow: "Free tool",
+  },
+  {
+    title: "Pages101",
+    description:
+      "A clean home base for actor materials when your family is ready to organize photos, resume, and links professionally.",
+    href: "/ecosystem#pages101",
+    eyebrow: "Career tool",
   },
 ];
 
@@ -208,6 +219,18 @@ export default function StartHerePage() {
           <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
             First 30 days
           </div>
+          <div className="relative rounded-[24px] border border-[#a8ead6]/35 bg-[#17382b]/78 px-5 py-5 text-chalk shadow-[0_18px_40px_rgba(8,23,19,0.2)]">
+            <ChalkDoodle variant="star" className="right-4 top-4 h-7 w-7 text-[#bcefdc]" />
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#bcefdc]">
+              Roadmap: Step 1 of 5
+            </p>
+            <p className="mt-3 font-display text-[1.8rem] leading-tight text-white">
+              Understand the Industry
+            </p>
+            <p className="mt-2 text-sm leading-7 text-white/74">
+              This page is Lesson 1 in the parent journey: learn how the business works before you decide what comes next.
+            </p>
+          </div>
           <div className="overflow-hidden rounded-[28px] border border-chalk/10">
             <Image
               src={images.chapterGettingStarted.src}
@@ -241,8 +264,9 @@ export default function StartHerePage() {
 
       <section className="px-4 py-18 sm:px-6 lg:px-8 lg:py-20">
         <div className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <Card tone="warm">
-            <SectionLabel>Intro</SectionLabel>
+          <Card tone="warm" className="relative">
+            <ChalkDoodle variant="arrow-right" className="right-8 top-8 hidden h-10 w-10 text-purple/40 lg:block" />
+            <SectionLabel>Lesson 1</SectionLabel>
             <h2 className="mt-6 font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
               Child Actor 101 helps parents understand the industry step by step.
             </h2>
@@ -259,7 +283,8 @@ export default function StartHerePage() {
             </p>
           </Card>
 
-          <Card className="bg-white/90">
+          <Card className="relative bg-white/90">
+            <ChalkDoodle variant="spark" className="right-7 top-7 hidden h-8 w-8 text-purple/35 lg:block" />
             <SectionLabel>What matters first</SectionLabel>
             <div className="mt-7 space-y-4">
               <div className="rounded-[22px] border border-chalkboard/10 bg-paper px-5 py-5">
@@ -287,14 +312,16 @@ export default function StartHerePage() {
 
       <JourneyTimeline
         id="roadmap"
+        label="Curriculum path"
         title="The five-step roadmap"
         description="This is the parent-first path through the business. Take it in order, learn what each stage is for, and let each step prepare you for the next."
+        showProgressLine
         steps={roadmapSteps}
       />
 
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <section id="first-lessons" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
-          <SectionLabel>First things to read</SectionLabel>
+          <SectionLabel>First lessons</SectionLabel>
           <div className="mt-6 max-w-3xl">
             <h2 className="font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
               Start with the lessons that reduce confusion first.
@@ -324,7 +351,7 @@ export default function StartHerePage() {
 
       <section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
-          <SectionLabel>Free tools and guides</SectionLabel>
+          <SectionLabel>Lesson extras</SectionLabel>
           <div className="mt-6 max-w-3xl">
             <h2 className="font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
               Use practical resources that support the stage you&apos;re actually in.
@@ -334,42 +361,65 @@ export default function StartHerePage() {
               step, not when you need to buy your way into the business.
             </p>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            {guides.map((item) => (
-              <LessonCard
-                key={item.title}
-                actionHref={item.href}
-                actionLabel="Open guide"
-                description={item.description}
-                eyebrow={item.eyebrow}
-                title={item.title}
-                tone="warm"
-              />
-            ))}
+          <div className="mt-10 grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">
+            <div>
+              <div className="flex items-center gap-3">
+                <SectionLabel>Free Guides</SectionLabel>
+                <ChalkDoodle variant="arrow-right" className="static h-7 w-7 text-purple/40" />
+              </div>
+              <div className="mt-5 grid gap-6 md:grid-cols-2">
+                {freeGuides.map((item) => (
+                  <LessonCard
+                    key={item.title}
+                    actionHref={item.href}
+                    actionLabel="Open guide"
+                    description={item.description}
+                    eyebrow={item.eyebrow}
+                    title={item.title}
+                    tone="warm"
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <SectionLabel>Free Tools</SectionLabel>
+              <div className="mt-5 grid gap-6">
+                {freeTools.map((item) => (
+                  <LessonCard
+                    key={item.title}
+                    actionHref={item.href}
+                    actionLabel="Open tool"
+                    description={item.description}
+                    eyebrow={item.eyebrow}
+                    title={item.title}
+                    tone="paper"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-chalkboard px-4 py-20 text-chalk sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
-          <SectionLabel className="text-[#bcefdc]">
-            When to consider training or coaching
-          </SectionLabel>
+          <SectionLabel className="text-[#bcefdc]">Later in the roadmap</SectionLabel>
           <div className="mt-6 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
               <h2 className="font-display text-4xl leading-tight text-white sm:text-5xl">
-                Training is not the first purchase every family needs.
+                Not today? That&apos;s okay.
               </h2>
               <p className="mt-5 text-lg leading-8 text-white/76">
-                In the beginning, most families need understanding more than
-                they need another service. Training and coaching become more
-                useful once your actor is ready to build skill, take direction,
-                and audition with more confidence.
+                Training and coaching become useful when your family is ready
+                for more structure, feedback, or skill-building. Start with
+                understanding. Then choose support that matches your child&apos;s
+                actual stage.
               </p>
               <p className="mt-5 text-lg leading-8 text-white/76">
                 The right support should strengthen fundamentals and reduce
-                chaos. It should not replace a clear roadmap or create pressure
-                to sprint before your child is ready.
+                chaos. It should never make a family feel rushed into spending
+                before the basics are clear.
               </p>
               <div className="mt-8">
                 <Button href="/ecosystem" variant="outlineLight">
@@ -401,10 +451,35 @@ export default function StartHerePage() {
           <Newsletter
             ctaHref="#newsletter"
             ctaLabel="Join The Callback"
-            description="The Callback gives parents practical guidance, new articles, podcast updates, and resources from the Child Actor 101 ecosystem."
-            label="Newsletter"
+            description="The Callback is not another hype email. It&apos;s practical guidance for parents of young actors — new lessons, honest industry perspective, podcast updates, and resources from the Child Actor 101 ecosystem."
+            label="Next lesson"
             title="Get the next lesson in your inbox."
           />
+        </div>
+      </section>
+
+      <section className="bg-paper-warm px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl">
+          <Card tone="warm" className="relative">
+            <ChalkDoodle variant="star" className="right-8 top-8 hidden h-8 w-8 text-purple/35 lg:block" />
+            <SectionLabel>Continue the journey</SectionLabel>
+            <h2 className="mt-6 font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
+              Ready for the next chapter?
+            </h2>
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-ink-soft">
+              Start with the basics, then move through the roadmap at your family&apos;s pace.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Button href="#first-lessons" size="lg">
+                Read the first lessons
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+              <Button href="/ecosystem" size="lg" variant="secondary">
+                Explore the ecosystem
+                <ArrowRight className="h-5 w-5" />
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
     </main>

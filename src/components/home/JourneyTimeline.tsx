@@ -17,6 +17,8 @@ export interface JourneyStep {
 export interface JourneyTimelineProps {
   description: string;
   id?: string;
+  label?: string;
+  showProgressLine?: boolean;
   steps: JourneyStep[];
   title: string;
 }
@@ -24,6 +26,8 @@ export interface JourneyTimelineProps {
 export function JourneyTimeline({
   description,
   id = "journey",
+  label,
+  showProgressLine = false,
   steps,
   title,
 }: JourneyTimelineProps) {
@@ -39,50 +43,66 @@ export function JourneyTimeline({
           className="relative"
           description={description}
           descriptionClassName="mt-4 text-[1.45rem] leading-8 text-white/72"
+          label={label}
+          labelClassName="text-[#bcefdc]"
           title={title}
-          titleClassName="font-display text-[2rem] leading-tight text-white sm:text-[2.3rem] lg:text-[2.3rem]"
+          titleClassName={`${label ? "mt-6 " : ""}font-display text-[2rem] leading-tight text-white sm:text-[2.3rem] lg:text-[2.3rem]`}
         />
         <ChalkDoodle variant="star" className="left-[10%] top-8 hidden h-8 w-8 md:block" />
         <ChalkDoodle variant="spark" className="right-[12%] top-10 hidden h-8 w-8 md:block" />
 
-        <div className="mt-14 grid gap-10 md:grid-cols-2 xl:grid-cols-5 xl:gap-6">
-          {steps.map((step, index) => (
-            <div key={step.title} className="relative text-center xl:px-4">
-              {index < steps.length - 1 ? (
-                <ArrowRight className="absolute right-[-1.2rem] top-10 hidden h-9 w-9 text-[#8ed8bf] xl:block" />
-              ) : null}
-              {index === 0 ? (
-                <ChalkDoodle
-                  variant="arrow-right"
-                  className="left-6 top-28 hidden h-10 w-10 text-white/45 lg:block"
-                />
-              ) : null}
-              {index === 3 ? (
-                <ChalkDoodle
-                  variant="swirl"
-                  className="right-4 top-30 hidden h-12 w-12 text-white/45 lg:block"
-                />
-              ) : null}
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-[#a8ead6] font-display text-4xl text-[#d8fff3]">
-                {index + 1}
+        <div className="relative mt-14">
+          {showProgressLine ? (
+            <>
+              <div
+                aria-hidden="true"
+                className="absolute left-[10%] right-[10%] top-10 hidden h-px border-t border-dashed border-[#a8ead6]/55 xl:block"
+              />
+              <ChalkDoodle
+                variant="arrow-right"
+                className="right-[8%] top-4 hidden h-12 w-12 text-[#bcefdc] xl:block"
+              />
+            </>
+          ) : null}
+          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-5 xl:gap-6">
+            {steps.map((step, index) => (
+              <div key={step.title} className="relative text-center xl:px-4">
+                {index < steps.length - 1 ? (
+                  <ArrowRight className="absolute right-[-1.2rem] top-10 hidden h-9 w-9 text-[#8ed8bf] xl:block" />
+                ) : null}
+                {index === 0 ? (
+                  <ChalkDoodle
+                    variant="arrow-right"
+                    className="left-6 top-28 hidden h-10 w-10 text-white/45 lg:block"
+                  />
+                ) : null}
+                {index === 3 ? (
+                  <ChalkDoodle
+                    variant="swirl"
+                    className="right-4 top-30 hidden h-12 w-12 text-white/45 lg:block"
+                  />
+                ) : null}
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border-[4px] border-[#a8ead6] font-display text-4xl text-[#d8fff3]">
+                  {index + 1}
+                </div>
+                <h3 className="mt-8 font-display text-[2rem] leading-tight text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-[1.15rem] leading-9 text-white/72">
+                  {step.description}
+                </p>
+                {step.actionHref && step.actionLabel ? (
+                  <Link
+                    href={step.actionHref}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#bcefdc] transition hover:text-white"
+                  >
+                    {step.actionLabel}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                ) : null}
               </div>
-              <h3 className="mt-8 font-display text-[2rem] leading-tight text-white">
-                {step.title}
-              </h3>
-              <p className="mt-4 text-[1.15rem] leading-9 text-white/72">
-                {step.description}
-              </p>
-              {step.actionHref && step.actionLabel ? (
-                <Link
-                  href={step.actionHref}
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#bcefdc] transition hover:text-white"
-                >
-                  {step.actionLabel}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              ) : null}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
     </Section>

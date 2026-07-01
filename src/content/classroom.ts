@@ -26,6 +26,7 @@ export interface ClassroomLesson {
   teacherNote: string;
   title: string;
   bodySections?: ClassroomLessonSection[];
+  sourceUrl?: string;
 }
 
 export interface ClassroomChapter {
@@ -89,17 +90,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "start-here",
     title: "Start Here",
-    description:
-      "The opening shelf for families who are brand new and need the business explained in a calm, practical order.",
+    description: "The opening shelf for families who are brand new and need the business explained in a calm, practical order.",
     lessonCountLabel: "9 lessons planned",
     browseLabel: "Browse Start Here",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
-    lessonSlugs: [
-      "what-it-takes-to-be-a-successful-child-actor",
-      "background-acting-the-pros-and-cons-for-young-performers",
-      "when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
-    ],
+    lessonSlugs: ["how-to-become-a-child-actor","what-it-takes-to-be-a-successful-child-actor","background-acting-pros-and-cons-for-young-performers","when-should-my-child-start-acting-training"],
     shelfHighlights: [
       "Beginner questions answered in plain English",
       "Expectation-setting before spending money",
@@ -109,17 +105,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "representation",
     title: "Representation",
-    description:
-      "A practical shelf on agents, managers, timing, money, and how healthy representation relationships actually work.",
+    description: "A practical shelf on agents, managers, timing, money, and how healthy representation relationships actually work.",
     lessonCountLabel: "29 lessons planned",
     browseLabel: "Browse Representation",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
-    lessonSlugs: [
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-      "is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
-      "understanding-talent-rep-commissions-in-the-entertainment-industry",
-    ],
+    lessonSlugs: ["agents-vs-managers-for-child-actors","is-my-child-ready-for-an-agent","understanding-talent-rep-commissions","booking-out-for-child-actors"],
     shelfHighlights: [
       "Clarifies the difference between agent and manager roles",
       "Prevents rushed submissions and avoidable rep mistakes",
@@ -129,17 +120,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "auditions",
     title: "Auditions",
-    description:
-      "The self tape and audition-prep shelf, built to make performance, setup, and decision-making feel less chaotic.",
+    description: "The self tape and audition-prep shelf, built to make performance, setup, and decision-making feel less chaotic.",
     lessonCountLabel: "34 lessons planned",
     browseLabel: "Browse Auditions",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
-    lessonSlugs: [
-      "self-tape-equipment-for-child-actors",
-      "how-to-build-a-better-audition-slate",
-      "what-makes-a-child-actors-self-tape-audition-competitive",
-    ],
+    lessonSlugs: ["self-tape-equipment-for-child-actors","how-to-build-a-better-audition-slate","how-to-use-a-slate-shot-well","what-makes-a-child-actors-self-tape-competitive"],
     shelfHighlights: [
       "Breaks the audition process into clear, repeatable parts",
       "Keeps the focus on performance over overproduction",
@@ -149,17 +135,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "professional-materials",
     title: "Professional Materials",
-    description:
-      "A shelf for headshots, casting profiles, reels, and the materials that should support skill instead of replacing it.",
+    description: "A shelf for headshots, casting profiles, reels, and the materials that should support skill instead of replacing it.",
     lessonCountLabel: "12 lessons planned",
     browseLabel: "Browse Professional Materials",
     featuredImageSrc: images.chapterTechnique.src,
     featuredImageAlt: images.chapterTechnique.alt,
-    lessonSlugs: [
-      "actors-access",
-      "getting-multifaceted-shots-from-a-3-look-headshot-session",
-      "headshot-hacks-mastering-the-no-makeup-look-for-your-child-actor-essential-makeup-tips-for-perfect-photos",
-    ],
+    lessonSlugs: ["when-to-update-child-actor-headshots","headshot-prep-no-makeup-look-for-child-actor-photos","actors-access-for-parents-of-child-actors"],
     shelfHighlights: [
       "Helps families understand timing before investing in polished assets",
       "Keeps materials practical, accurate, and age-appropriate",
@@ -169,17 +150,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "parent-operations",
     title: "Parent Operations",
-    description:
-      "The shelf for family systems, business habits, tracking, and the practical realities that keep the journey sustainable.",
+    description: "The shelf for family systems, business habits, tracking, and the practical realities that keep the journey sustainable.",
     lessonCountLabel: "10 lessons planned",
     browseLabel: "Browse Parent Operations",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
-    lessonSlugs: [
-      "the-business-side-to-acting",
-      "how-to-track-auditions-and-expenses",
-      "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
-    ],
+    lessonSlugs: ["child-acting-budget-what-families-really-spend","how-to-track-auditions-and-expenses","tax-guide-for-parents-of-child-actors"],
     shelfHighlights: [
       "Builds systems that reduce stress, missed details, and wasted spending",
       "Turns vague family overwhelm into repeatable parent workflows",
@@ -189,17 +165,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "networking-professional-presence",
     title: "Networking & Professional Presence",
-    description:
-      "A shelf about relationships, referrals, online behavior, and showing up professionally without becoming transactional.",
+    description: "A shelf about relationships, referrals, online behavior, and showing up professionally without becoming transactional.",
     lessonCountLabel: "13 lessons planned",
     browseLabel: "Browse Networking",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
-    lessonSlugs: [
-      "networking-in-showbiz",
-      "industry-event-networking-etiquette",
-      "social-media-as-professional-presence",
-    ],
+    lessonSlugs: [],
     shelfHighlights: [
       "Frames networking as community-building instead of pitching",
       "Helps parents teach professional presence without pressure",
@@ -209,17 +180,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "wellness-resilience",
     title: "Wellness & Resilience",
-    description:
-      "The emotional shelf for protecting confidence, childhood, family balance, and long-term mental durability.",
+    description: "The emotional shelf for protecting confidence, childhood, family balance, and long-term mental durability.",
     lessonCountLabel: "11 lessons planned",
     browseLabel: "Browse Wellness",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
-    lessonSlugs: [
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-      "maintaining-self-esteem-as-a-child-actor",
-      "how-parents-support-without-pressuring",
-    ],
+    lessonSlugs: ["when-rejection-stings-helping-your-child-actor-bounce-back","maintaining-self-esteem-as-a-child-actor"],
     shelfHighlights: [
       "Keeps the child's well-being central to every next step",
       "Helps parents respond well to rejection, pressure, and comparison",
@@ -229,17 +195,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "safety-ethics",
     title: "Safety & Ethics",
-    description:
-      "The family-protection shelf for scams, boundaries, online safety, and the legal issues parents need to understand early.",
+    description: "The family-protection shelf for scams, boundaries, online safety, and the legal issues parents need to understand early.",
     lessonCountLabel: "11 lessons planned",
     browseLabel: "Browse Safety & Ethics",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
-    lessonSlugs: [
-      "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
-      "what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
-      "tiktok-and-your-child-actor-a-guide-to-creativity-connection-and-safety",
-    ],
+    lessonSlugs: ["the-new-hollywood-casting-scam-every-parent-needs-to-know-about","what-is-a-coogan-account","child-labor-laws-for-child-actors","tiktok-and-your-child-actor-safety"],
     shelfHighlights: [
       "Builds trust by helping families avoid the most expensive mistakes",
       "Explains protection topics without panic or jargon",
@@ -249,17 +210,12 @@ export const classroomChapters: ClassroomChapter[] = [
   {
     slug: "career-growth",
     title: "Career Growth",
-    description:
-      "The long-game shelf for training consistency, career pacing, and the habits that build a durable actor instead of a short sprint.",
+    description: "The long-game shelf for training consistency, career pacing, and the habits that build a durable actor instead of a short sprint.",
     lessonCountLabel: "52 lessons planned",
     browseLabel: "Browse Career Growth",
     featuredImageSrc: images.chapterTechnique.src,
     featuredImageAlt: images.chapterTechnique.alt,
-    lessonSlugs: [
-      "olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
-      "why-i-rebuilt-the-entire-actor-training-program",
-      "the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-is-just-a-hobbyist",
-    ],
+    lessonSlugs: ["why-consistent-training-matters-for-young-actors"],
     shelfHighlights: [
       "Reinforces that child acting is built over time, not by urgency",
       "Connects skill-building to confidence and professionalism",
@@ -271,720 +227,459 @@ export const classroomChapters: ClassroomChapter[] = [
 export const classroomLessons: ClassroomLesson[] = [
   {
     chapterSlug: "start-here",
+    slug: "how-to-become-a-child-actor",
+    title: "How to Become a Child Actor",
+    subtitle: "A classroom lesson on how to become a child actor.",
+    summary: "Cornerstone beginner topic with consistently high parent confusion. It directly supports /start-here and should set expectations before families spend money.",
+    teacherNote: "Create a clean cornerstone guide from the saved module source. Pull out the first steps, safety checkpoints, industry reality, and what parents should not buy yet.",
+    featuredImageSrc: images.chapterGettingStarted.src,
+    featuredImageAlt: images.chapterGettingStarted.alt,
+    keyTakeaways: [
+      "Cornerstone beginner topic with consistently high parent confusion. It directly supports /start-here and should set expectations before families spend money.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
+    ],
+    relatedLessonSlugs: ["what-it-takes-to-be-a-successful-child-actor","background-acting-pros-and-cons-for-young-performers","when-should-my-child-start-acting-training"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+  },
+  {
+    chapterSlug: "start-here",
     slug: "what-it-takes-to-be-a-successful-child-actor",
-    title: "What It Takes To Be a Successful Child Actor",
-    subtitle:
-      "A realistic opening lesson on the habits, expectations, and long-view mindset that support a child actor's growth.",
-    summary:
-      "This lesson sets the tone for the whole classroom by helping parents understand that longevity comes from skill, emotional steadiness, professionalism, and patience rather than speed or hype.",
-    teacherNote:
-      "Use this lesson early. It resets expectations before a family starts measuring progress by auditions, followers, or being seen.",
+    title: "What It Takes to Be a Successful Child Actor",
+    subtitle: "A classroom lesson on what it takes to be a successful child actor.",
+    summary: "Trust-building expectation-setting lesson that gives families a realistic picture of the work, pace, and mindset required.",
+    teacherNote: "Keep the core argument, but shift the framing from inspirational overview to practical checklist language for parents.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Long-term success is built on skill, readiness, and professionalism.",
-      "Parents need to protect both childhood and consistency.",
-      "The first goal is understanding the business clearly, not rushing into paid services.",
+      "Trust-building expectation-setting lesson that gives families a realistic picture of the work, pace, and mindset required.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "background-acting-the-pros-and-cons-for-young-performers",
-      "when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-    ],
-    resources: [sharedResources.startHere, sharedResources.callback, sharedResources.podcast],
-    bodySections: [
-      {
-        heading: "Start with truth, not urgency",
-        paragraphs: [
-          "The sample classroom version of this lesson begins by slowing families down. A child acting career does not become healthier because a parent buys more things faster. It becomes healthier when the family understands what the work actually asks of a child over time.",
-          "That means learning how auditions work, how representation fits in, and how much emotional steadiness the process requires before every next purchase starts sounding necessary.",
-        ],
-      },
-      {
-        heading: "Success usually looks quieter than parents expect",
-        paragraphs: [
-          "Many families arrive assuming success looks like instant bookings, early fame, or constant visibility. In practice, success more often looks like skill building, steady routines, strong communication, and a child who can stay grounded while opportunities come and go.",
-          "This is where the classroom tone matters. Parents are not being asked to become industry insiders overnight. They are being asked to become informed decision-makers who can recognize progress that is real, sustainable, and age-appropriate.",
-        ],
-        bullets: [
-          "Skill matters more than urgency.",
-          "Professionalism matters more than hype.",
-          "Emotional durability matters more than early attention.",
-        ],
-      },
-      {
-        heading: "What to do after this lesson",
-        paragraphs: [
-          "A finished classroom lesson would end by pointing the reader toward the next practical questions: when training actually helps, what representation is supposed to do, and what materials matter first.",
-          "For the prototype, this page shows the flow we want every lesson to follow: context, education, application, related resources, and one clear next step.",
-        ],
-      },
-    ],
+    relatedLessonSlugs: ["how-to-become-a-child-actor","is-my-child-ready-for-an-agent","why-consistent-training-matters-for-young-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/what-it-takes",
   },
   {
     chapterSlug: "start-here",
-    slug: "background-acting-the-pros-and-cons-for-young-performers",
-    title: "Background Acting The Pros And Cons For Young Performers",
-    subtitle:
-      "A classroom lesson on where background work fits, what it teaches, and what it should not be mistaken for.",
-    summary:
-      "This lesson helps families understand the difference between exposure, experience, and meaningful career progress so they can decide whether background work fits their child's path.",
-    teacherNote:
-      "Parents often attach too much meaning to background work. The classroom version should help them see it as one option, not a shortcut.",
+    slug: "background-acting-pros-and-cons-for-young-performers",
+    title: "Background Acting: Pros and Cons for Young Performers",
+    subtitle: "A classroom lesson on background acting: pros and cons for young performers.",
+    summary: "Families regularly misunderstand background work. This lesson helps prevent unrealistic expectations and clarifies where background fits in a child's path.",
+    teacherNote: "Light update only. Tighten the distinction between useful exposure, résumé value, and the limits of background work as a growth strategy.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Background work can be useful, but it is not the same as actor training or principal work.",
-      "Families should understand the tradeoffs before chasing set experience as a strategy.",
-      "A calm definition of progress prevents false expectations.",
+      "Families regularly misunderstand background work. This lesson helps prevent unrealistic expectations and clarifies where background fits in a child's path.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "what-it-takes-to-be-a-successful-child-actor",
-      "when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
-      "the-business-side-to-acting",
-    ],
-    resources: [sharedResources.startHere, sharedResources.ecosystem],
+    relatedLessonSlugs: ["how-to-become-a-child-actor","what-it-takes-to-be-a-successful-child-actor","when-should-my-child-start-acting-training"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/background-acting-the-pros-and-cons-for-young-performers",
   },
   {
     chapterSlug: "start-here",
-    slug: "when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
-    title: "When Should My Child Start Acting Training A Parents Guide To The Right Age",
-    subtitle:
-      "A practical lesson about readiness, timing, and what training should solve before a family starts spending heavily.",
-    summary:
-      "This lesson shows parents how to think about training as a support for skill, focus, and confidence rather than as a quick fix for uncertainty.",
-    teacherNote:
-      "The goal is not to answer with one perfect age. The goal is to help parents judge readiness more accurately.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
+    slug: "when-should-my-child-start-acting-training",
+    title: "When Should My Child Start Acting Training?",
+    subtitle: "A classroom lesson on when should my child start acting training?.",
+    summary: "Parents ask this early and often. It helps reduce premature spending and supports the educational tone of learn before you buy.",
+    teacherNote: "Keep the existing guidance, but make the progression clearer: readiness, goals, budget, and what training should solve.",
+    featuredImageSrc: images.chapterGettingStarted.src,
+    featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Training is most useful when it matches the child's readiness and goals.",
-      "Parents do not need to buy every service at the beginning.",
-      "Early clarity about why a child is training prevents waste later.",
+      "Parents ask this early and often. It helps reduce premature spending and supports the educational tone of learn before you buy.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "what-it-takes-to-be-a-successful-child-actor",
-      "olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
-      "the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-is-just-a-hobbyist",
-    ],
-    resources: [sharedResources.startHere, sharedResources.ecosystem],
+    relatedLessonSlugs: ["how-to-become-a-child-actor","what-it-takes-to-be-a-successful-child-actor","why-consistent-training-matters-for-young-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
   },
   {
     chapterSlug: "representation",
-    slug: "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-    title: "Navigating Hollywood Do You Need A Talent Agent Or A Manager",
-    subtitle:
-      "A parent-first lesson on the difference between these roles and how each one fits into the roadmap.",
-    summary:
-      "This lesson explains what agents and managers are actually responsible for, why families confuse them, and how to judge fit instead of hype.",
-    teacherNote:
-      "This is a trust-building lesson. If families understand this shelf, they make calmer choices everywhere else.",
+    slug: "agents-vs-managers-for-child-actors",
+    title: "Agents vs. Managers for Child Actors",
+    subtitle: "A classroom lesson on agents vs. managers for child actors.",
+    summary: "One of the clearest high-confusion trust builders in the whole library. It supports early onboarding and lowers the risk of bad representation decisions.",
+    teacherNote: "Preserve the article structure, but add a clearer side-by-side comparison and a short parent red-flag section.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
-      "Agents and managers are not interchangeable roles.",
-      "Readiness matters more than collecting industry titles around your child.",
-      "Representation should make the path clearer, not more confusing.",
+      "One of the clearest high-confusion trust builders in the whole library. It supports early onboarding and lowers the risk of bad representation decisions.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
-      "understanding-talent-rep-commissions-in-the-entertainment-industry",
-      "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
-    ],
-    resources: [sharedResources.startHere, sharedResources.podcast],
+    relatedLessonSlugs: ["is-my-child-ready-for-an-agent","understanding-talent-rep-commissions","booking-out-for-child-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
   },
   {
     chapterSlug: "representation",
-    slug: "is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
-    title: "Is My Child Ready For An Agent A Parents Guide To Knowing The Right Time",
-    subtitle:
-      "A lesson designed to slow families down before they start submitting too early or expecting representation to solve everything.",
-    summary:
-      "This lesson helps parents measure readiness through materials, skill, professionalism, and emotional steadiness rather than wishful thinking.",
-    teacherNote:
-      "Families need a clear line between wanting an agent and being ready for an agent.",
+    slug: "is-my-child-ready-for-an-agent",
+    title: "Is My Child Ready for an Agent?",
+    subtitle: "A classroom lesson on is my child ready for an agent?.",
+    summary: "Directly reduces rushed rep submissions and wasted effort. This is a core transition lesson between /start-here and the representation chapter.",
+    teacherNote: "Keep the current core teaching, but strengthen the readiness checklist and signs that a family should wait.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
-      "Representation should match the child's current level of readiness.",
-      "Parents need to look at skill, materials, and consistency together.",
-      "Waiting can be strategic, not discouraging.",
+      "Directly reduces rushed rep submissions and wasted effort. This is a core transition lesson between /start-here and the representation chapter.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-      "understanding-talent-rep-commissions-in-the-entertainment-industry",
-      "actors-access",
-    ],
-    resources: [sharedResources.startHere, sharedResources.ecosystem],
+    relatedLessonSlugs: ["agents-vs-managers-for-child-actors","understanding-talent-rep-commissions","how-to-become-a-child-actor"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
   },
   {
     chapterSlug: "representation",
-    slug: "understanding-talent-rep-commissions-in-the-entertainment-industry",
-    title: "Understanding Talent Rep Commissions In The Entertainment Industry",
-    subtitle:
-      "A plain-English lesson about how commissions work, where confusion starts, and what families should ask before agreeing to anything.",
-    summary:
-      "This lesson translates one of the most intimidating business topics into a parent-friendly guide that supports calmer, more informed decisions.",
-    teacherNote:
-      "When parents understand money, they are much harder to pressure. That is why this lesson belongs near the front of the library.",
+    slug: "understanding-talent-rep-commissions",
+    title: "Understanding Talent Rep Commissions",
+    subtitle: "A classroom lesson on understanding talent rep commissions.",
+    summary: "Money confusion is a major trust issue. This lesson reduces misunderstanding around percentages, norms, and what families should question.",
+    teacherNote: "Retain the explanation, but add cleaner examples and parent-first plain language around what is standard versus suspicious.",
     featuredImageSrc: images.chapterRepresentation.src,
     featuredImageAlt: images.chapterRepresentation.alt,
     keyTakeaways: [
-      "Commission structure should feel understandable before anything gets signed.",
-      "Confusion is a sign to slow down, not to keep nodding.",
-      "Representation and money conversations belong inside the same educational frame.",
+      "Money confusion is a major trust issue. This lesson reduces misunderstanding around percentages, norms, and what families should question.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-      "is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
-      "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
+    relatedLessonSlugs: ["agents-vs-managers-for-child-actors","booking-out-for-child-actors","child-acting-budget-what-families-really-spend"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/understanding-talent-rep-commissions-in-the-entertainment-industry",
+  },
+  {
+    chapterSlug: "representation",
+    slug: "booking-out-for-child-actors",
+    title: "Booking Out for Child Actors",
+    subtitle: "A classroom lesson on booking out for child actors.",
+    summary: "Practical professionalism topic that parents rarely understand until they make an avoidable mistake. Good trust and operations lesson for Batch 01.",
+    teacherNote: "Strip any announcement framing and rebuild it as a clear lesson on when to book out, how to communicate it, and what happens if you do not.",
+    featuredImageSrc: images.chapterRepresentation.src,
+    featuredImageAlt: images.chapterRepresentation.alt,
+    keyTakeaways: [
+      "Practical professionalism topic that parents rarely understand until they make an avoidable mistake. Good trust and operations lesson for Batch 01.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    resources: [sharedResources.podcast, sharedResources.ecosystem, sharedResources.callback],
-    bodySections: [
-      {
-        heading: "Why commissions feel more confusing than they should",
-        paragraphs: [
-          "Parents are often hearing commission language at the same moment they are trying to decode auditions, profiles, and representation expectations. That stack of unfamiliar ideas is what makes a normal business percentage start feeling mysterious.",
-          "The classroom version of this lesson should lower the temperature. The point is not to make families suspicious of every relationship. The point is to help them understand the structure well enough to ask calm, specific questions before agreeing to anything.",
-        ],
-      },
-      {
-        heading: "Use plain language before agreeing to terms",
-        paragraphs: [
-          "In the finished library, this section would walk parents through what a commission is tied to, when it applies, and how it connects to the work a representative is actually doing. The tone should stay educational, not alarmist.",
-          "A parent does not need to know every edge case on day one. They do need to know whether the agreement makes sense, whether the expectations were clearly explained, and whether the relationship feels transparent.",
-        ],
-        bullets: [
-          "What work is the commission attached to?",
-          "When is it collected, and by whom?",
-          "What questions still feel unclear after the explanation?",
-        ],
-      },
-      {
-        heading: "How this lesson connects to the rest of the classroom",
-        paragraphs: [
-          "Commission lessons should never sit alone. They should point parents toward readiness, contracts, taxes, and the larger question of whether a family is moving too fast.",
-          "That cross-linking is part of the prototype here. A reader should always understand the next lesson to open, not feel trapped inside one topic with no direction.",
-        ],
-      },
-    ],
+    relatedLessonSlugs: ["agents-vs-managers-for-child-actors","understanding-talent-rep-commissions","how-to-track-auditions-and-expenses"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/booking-out-a-critical-practice-for-child-actors-in-the-entertainment-industry",
   },
   {
     chapterSlug: "auditions",
     slug: "self-tape-equipment-for-child-actors",
-    title: "Self Tape Equipment For Child Actors",
-    subtitle:
-      "A sample classroom lesson on building a clean, workable self tape setup without turning the house into a production set.",
-    summary:
-      "This lesson helps families understand which equipment choices actually improve clarity and which purchases mostly feed anxiety.",
-    teacherNote:
-      "The goal is a reliable setup, not a perfect studio. Families need a standard they can repeat calmly.",
+    title: "Self Tape Equipment for Child Actors",
+    subtitle: "A classroom lesson on self tape equipment for child actors.",
+    summary: "Evergreen, practical, and immediately useful. It lowers wasted spending and answers one of the first concrete audition questions parents face.",
+    teacherNote: "Keep the equipment guidance, then lightly fold in the backdrop and sound duplicate cluster so families do not need several overlapping lessons.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
-      "Simple, repeatable setups beat expensive overproduction.",
-      "Clarity matters more than gear obsession.",
-      "The equipment lesson should always point back to performance.",
+      "Evergreen, practical, and immediately useful. It lowers wasted spending and answers one of the first concrete audition questions parents face.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "how-to-build-a-better-audition-slate",
-      "what-makes-a-child-actors-self-tape-audition-competitive",
-      "how-to-track-auditions-and-expenses",
-    ],
-    resources: [sharedResources.selfTapeFeedback, sharedResources.ecosystem],
+    relatedLessonSlugs: ["how-to-build-a-better-audition-slate","how-to-use-a-slate-shot-well","what-makes-a-child-actors-self-tape-competitive"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/self-tape-equipment-for-child-actors",
   },
   {
     chapterSlug: "auditions",
     slug: "how-to-build-a-better-audition-slate",
-    title: "How To Build a Better Audition Slate",
-    subtitle:
-      "A focused lesson prototype on how slates introduce the actor without becoming stiff, overdone, or confusing.",
-    summary:
-      "This lesson shows how the classroom can turn saved curriculum source material into a clean, single-question lesson about slates.",
-    teacherNote:
-      "Keep this lesson narrow. Parents should finish it knowing exactly what a better slate sounds and looks like.",
+    title: "How to Build a Better Audition Slate",
+    subtitle: "A classroom lesson on how to build a better audition slate.",
+    summary: "Slates are small but high-stakes. Parents repeatedly need direct, practical instruction here, and the saved curriculum already contains the raw material.",
+    teacherNote: "Extract one focused lesson from module 08. Keep it narrowly about slate purpose, delivery, framing, and what not to overdo.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
-      "A good slate is clear, grounded, and easy to review.",
-      "Over-directing a child often hurts more than it helps.",
-      "Slates should support trust, not performance tricks.",
+      "Slates are small but high-stakes. Parents repeatedly need direct, practical instruction here, and the saved curriculum already contains the raw material.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "self-tape-equipment-for-child-actors",
-      "what-makes-a-child-actors-self-tape-audition-competitive",
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-    ],
-    resources: [sharedResources.selfTapeFeedback, sharedResources.podcast],
+    relatedLessonSlugs: ["how-to-use-a-slate-shot-well","self-tape-equipment-for-child-actors","what-makes-a-child-actors-self-tape-competitive"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
   },
   {
     chapterSlug: "auditions",
-    slug: "what-makes-a-child-actors-self-tape-audition-competitive",
-    title: "What Makes A Child Actors Self Tape Audition Competitive",
-    subtitle:
-      "A classroom lesson on the difference between a watchable tape and a truly competitive one.",
-    summary:
-      "This lesson gives parents a framework for judging self tapes without obsessing over tiny details that do not move the audition forward.",
-    teacherNote:
-      "This page should always bring the reader back to process. Better decisions come from a standard, not from panic.",
+    slug: "how-to-use-a-slate-shot-well",
+    title: "How to Use a Slate Shot Well",
+    subtitle: "A classroom lesson on how to use a slate shot well.",
+    summary: "This solves a recurring technical confusion point and pairs naturally with the slate lesson without bloating that page.",
+    teacherNote: "Pull this into its own lesson from module 08. Keep it separate from the slate lesson so each page answers one clear parent question.",
     featuredImageSrc: images.homeHero.src,
     featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
-      "Competitive tapes balance clear setup with truthful performance.",
-      "Parents need a repeatable review standard.",
-      "The goal is not perfection. The goal is clear, compelling work.",
+      "This solves a recurring technical confusion point and pairs naturally with the slate lesson without bloating that page.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "self-tape-equipment-for-child-actors",
-      "how-to-build-a-better-audition-slate",
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-    ],
-    resources: [sharedResources.selfTapeFeedback, sharedResources.podcast],
+    relatedLessonSlugs: ["how-to-build-a-better-audition-slate","self-tape-equipment-for-child-actors","what-makes-a-child-actors-self-tape-competitive"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
   },
   {
-    chapterSlug: "professional-materials",
-    slug: "actors-access",
-    title: "Actors Access",
-    subtitle:
-      "A sample lesson on what parents actually need to understand about this profile platform before it becomes another source of confusion.",
-    summary:
-      "This lesson explains how a profile platform fits into the larger materials system so parents understand setup, maintenance, and what matters most.",
-    teacherNote:
-      "Families do better when they know what a platform is for and what it is not for.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
+    chapterSlug: "auditions",
+    slug: "what-makes-a-child-actors-self-tape-competitive",
+    title: "What Makes a Child Actor's Self Tape Competitive",
+    subtitle: "A classroom lesson on what makes a child actor's self tape competitive.",
+    summary: "Strong practical bridge between technical setup and actual audition quality. It gives parents a clear standard without hype.",
+    teacherNote: "Keep the lesson intact, but trim overlap with first-impression articles and clarify the practical checklist parents can use during taping.",
+    featuredImageSrc: images.homeHero.src,
+    featuredImageAlt: images.homeHero.alt,
     keyTakeaways: [
-      "Profiles should reflect readiness, not inflate it.",
-      "Parents need clarity on which materials matter most inside the platform.",
-      "Actors Access is one tool in the system, not the whole strategy.",
+      "Strong practical bridge between technical setup and actual audition quality. It gives parents a clear standard without hype.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "getting-multifaceted-shots-from-a-3-look-headshot-session",
-      "headshot-hacks-mastering-the-no-makeup-look-for-your-child-actor-essential-makeup-tips-for-perfect-photos",
-      "is-my-child-ready-for-an-agent-a-parents-guide-to-knowing-the-right-time",
-    ],
-    resources: [sharedResources.resume101, sharedResources.ecosystem],
+    relatedLessonSlugs: ["self-tape-equipment-for-child-actors","how-to-build-a-better-audition-slate","when-rejection-stings-helping-your-child-actor-bounce-back"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/what-makes-a-child-actors-self-tape-audition-competitive",
   },
   {
     chapterSlug: "professional-materials",
-    slug: "getting-multifaceted-shots-from-a-3-look-headshot-session",
-    title: "Getting Multifaceted Shots From A 3 Look Headshot Session",
-    subtitle:
-      "A headshot timing and strategy lesson for parents who want useful images instead of a premature marketing package.",
-    summary:
-      "This lesson helps families understand what variety means in a headshot session and why useful range is different from dressing a child up as a collection of gimmicks.",
-    teacherNote:
-      "Headshot lessons need to reduce pressure. The classroom tone should make families feel smarter, not more sold to.",
+    slug: "when-to-update-child-actor-headshots",
+    title: "When Is It Time to Update Your Child Actor Headshots?",
+    subtitle: "A classroom lesson on when is it time to update your child actor headshots?.",
+    summary: "Headshot timing is a high-confusion money decision. This lesson helps parents avoid both stale photos and unnecessary repeat shoots.",
+    teacherNote: "Reframe the existing article from session variety into a clearer timing-and-readiness lesson, while keeping the original practical headshot advice.",
     featuredImageSrc: images.chapterGettingStarted.src,
     featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Variety should still look like the same real child.",
-      "Headshots work best when they match current readiness and type.",
-      "Parents should understand timing before investing again.",
+      "Headshot timing is a high-confusion money decision. This lesson helps parents avoid both stale photos and unnecessary repeat shoots.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "actors-access",
-      "headshot-hacks-mastering-the-no-makeup-look-for-your-child-actor-essential-makeup-tips-for-perfect-photos",
-      "the-business-side-to-acting",
-    ],
-    resources: [sharedResources.resume101, sharedResources.ecosystem],
+    relatedLessonSlugs: ["headshot-prep-no-makeup-look-for-child-actor-photos","actors-access-for-parents-of-child-actors","is-my-child-ready-for-an-agent"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/getting-multifaceted-shots-from-a-3-look-headshot-session",
   },
   {
     chapterSlug: "professional-materials",
-    slug: "headshot-hacks-mastering-the-no-makeup-look-for-your-child-actor-essential-makeup-tips-for-perfect-photos",
-    title:
-      "Headshot Hacks Mastering The No Makeup Look For Your Child Actor Essential Makeup Tips For Perfect Photos",
-    subtitle:
-      "A practical lesson on keeping child actor headshots natural, accurate, and aligned with how casting actually wants to see young actors.",
-    summary:
-      "This lesson keeps the headshot conversation focused on authenticity and age-appropriate presentation rather than polished overcorrection.",
-    teacherNote:
-      "This is a narrow, reassuring lesson. It should answer one real parent question and then get out cleanly.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
+    slug: "headshot-prep-no-makeup-look-for-child-actor-photos",
+    title: "Headshot Prep: The No-Makeup Look for Child Actor Photos",
+    subtitle: "A classroom lesson on headshot prep: the no-makeup look for child actor photos.",
+    summary: "Practical and evergreen. It solves a narrow parent question that frequently leads to overproduced or age-inaccurate materials.",
+    teacherNote: "Minimal update. Keep the article grounded and parent-first, with emphasis on authenticity over polish.",
+    featuredImageSrc: images.chapterGettingStarted.src,
+    featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Casting needs to recognize the child quickly and accurately.",
-      "Small preparation choices matter more than cosmetic polish.",
-      "Useful materials are honest materials.",
+      "Practical and evergreen. It solves a narrow parent question that frequently leads to overproduced or age-inaccurate materials.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "getting-multifaceted-shots-from-a-3-look-headshot-session",
-      "actors-access",
-      "what-it-takes-to-be-a-successful-child-actor",
+    relatedLessonSlugs: ["when-to-update-child-actor-headshots","actors-access-for-parents-of-child-actors","child-acting-budget-what-families-really-spend"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/headshot-hacks-mastering-the-no-makeup-look-for-your-child-actor-essential-makeup-tips-for-perfect-photos",
+  },
+  {
+    chapterSlug: "professional-materials",
+    slug: "actors-access-for-parents-of-child-actors",
+    title: "Actors Access for Parents of Child Actors",
+    subtitle: "A classroom lesson on actors access for parents of child actors.",
+    summary: "High-value practical platform knowledge. It supports profiles, submissions, and material readiness without forcing a sales angle.",
+    teacherNote: "Refresh any outdated platform detail and reframe the page around what parents actually need to set up and maintain.",
+    featuredImageSrc: images.chapterGettingStarted.src,
+    featuredImageAlt: images.chapterGettingStarted.alt,
+    keyTakeaways: [
+      "High-value practical platform knowledge. It supports profiles, submissions, and material readiness without forcing a sales angle.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    resources: [sharedResources.ecosystem, sharedResources.resume101],
+    relatedLessonSlugs: ["when-to-update-child-actor-headshots","is-my-child-ready-for-an-agent","how-to-track-auditions-and-expenses"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/Actorsaccess",
   },
   {
     chapterSlug: "parent-operations",
-    slug: "the-business-side-to-acting",
-    title: "The Business Side To Acting",
-    subtitle:
-      "A sample lesson about the routines, money awareness, and follow-through that make the child acting path workable for families.",
-    summary:
-      "This lesson shows that a family can be supportive and creative while still building practical systems around the work.",
-    teacherNote:
-      "This shelf matters because parents do not just need inspiration. They need operations.",
+    slug: "child-acting-budget-what-families-really-spend",
+    title: "Child Acting Budget: What Families Really Spend",
+    subtitle: "A classroom lesson on child acting budget: what families really spend.",
+    summary: "Critical money reality check for brand-new families. This lesson directly reduces wasted spending and builds trust fast.",
+    teacherNote: "Update the budgeting examples and remove date-framed language so the lesson stays evergreen. Separate must-have costs from optional spending.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "A business mindset reduces panic and missed details.",
-      "Parent systems make better creative decisions possible.",
-      "Organization is part of protecting the child.",
+      "Critical money reality check for brand-new families. This lesson directly reduces wasted spending and builds trust fast.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "how-to-track-auditions-and-expenses",
-      "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
-      "understanding-talent-rep-commissions-in-the-entertainment-industry",
-    ],
-    resources: [sharedResources.ecosystem, sharedResources.callback],
+    relatedLessonSlugs: ["how-to-become-a-child-actor","understanding-talent-rep-commissions","tax-guide-for-parents-of-child-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/2022budget",
   },
   {
     chapterSlug: "parent-operations",
     slug: "how-to-track-auditions-and-expenses",
-    title: "How To Track Auditions and Expenses",
-    subtitle:
-      "A sample lesson showing how the classroom can turn internal source material into a calm operational system for families.",
-    summary:
-      "This lesson helps parents keep a clearer view of auditions, spending, and follow-up so progress feels trackable instead of foggy.",
-    teacherNote:
-      "Tracking lowers stress because it replaces vague memory with a real family record.",
+    title: "How to Track Auditions and Expenses",
+    subtitle: "A classroom lesson on how to track auditions and expenses.",
+    summary: "Highly practical system-building lesson that supports calmer decision-making and better professional follow-through.",
+    teacherNote: "Extract the best standalone lesson first, then treat any deeper tracker templates or examples as related tools rather than part of the main lesson.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Tracking is a support tool, not extra homework.",
-      "Patterns become easier to see when families keep simple records.",
-      "Operational clarity protects both money and momentum.",
+      "Highly practical system-building lesson that supports calmer decision-making and better professional follow-through.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "the-business-side-to-acting",
-      "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
-      "self-tape-equipment-for-child-actors",
-    ],
-    resources: [sharedResources.resume101, sharedResources.ecosystem],
+    relatedLessonSlugs: ["child-acting-budget-what-families-really-spend","booking-out-for-child-actors","actors-access-for-parents-of-child-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
   },
   {
     chapterSlug: "parent-operations",
-    slug: "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
-    title:
-      "Tax Guide For Parents Of Child Actors Navigating Taxes Without Losing Your Marbles",
-    subtitle:
-      "A parent-first lesson on records, expectations, and the calm systems that make tax time less mysterious.",
-    summary:
-      "This lesson frames taxes as part of the larger family operation rather than as a panic topic that only matters at the end of the year.",
-    teacherNote:
-      "The tone here should be steady and practical. Parents need clarity, not more fear.",
+    slug: "tax-guide-for-parents-of-child-actors",
+    title: "Tax Guide for Parents of Child Actors",
+    subtitle: "A classroom lesson on tax guide for parents of child actors.",
+    summary: "Evergreen operational topic with real financial consequences. It also reinforces the platform's honest, non-hype authority positioning.",
+    teacherNote: "Keep the voice calm and practical. Make clear this is educational guidance, not tax advice, and emphasize what records families should keep.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Tax understanding starts with basic records and organization.",
-      "Parents need educational clarity even when formal advice comes from a professional.",
-      "Money systems connect directly to family calm.",
+      "Evergreen operational topic with real financial consequences. It also reinforces the platform's honest, non-hype authority positioning.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "the-business-side-to-acting",
-      "how-to-track-auditions-and-expenses",
-      "what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
-    ],
-    resources: [sharedResources.ecosystem, sharedResources.callback],
-  },
-  {
-    chapterSlug: "networking-professional-presence",
-    slug: "networking-in-showbiz",
-    title: "Networking in Showbiz",
-    subtitle:
-      "A relationship-first lesson on connecting professionally without turning every interaction into a pitch.",
-    summary:
-      "This lesson gives families a healthier definition of networking so their child can build genuine professional presence over time.",
-    teacherNote:
-      "Networking lessons should remove weirdness, not add pressure.",
-    featuredImageSrc: images.chapterRepresentation.src,
-    featuredImageAlt: images.chapterRepresentation.alt,
-    keyTakeaways: [
-      "Networking is relationship-building, not constant asking.",
-      "Parents can teach professional warmth without turning a child into a salesperson.",
-      "Consistency and courtesy matter more than polished scripts.",
-    ],
-    relatedLessonSlugs: [
-      "industry-event-networking-etiquette",
-      "social-media-as-professional-presence",
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-    ],
-    resources: [sharedResources.podcast, sharedResources.callback],
-  },
-  {
-    chapterSlug: "networking-professional-presence",
-    slug: "industry-event-networking-etiquette",
-    title: "Industry Event Networking Etiquette",
-    subtitle:
-      "A sample lesson on helping families show up prepared, respectful, and easy to interact with at events.",
-    summary:
-      "This lesson turns event behavior into something teachable instead of intimidating, especially for parents supporting younger actors.",
-    teacherNote:
-      "Parents should finish feeling less nervous about the room, not more self-conscious.",
-    featuredImageSrc: images.chapterRepresentation.src,
-    featuredImageAlt: images.chapterRepresentation.alt,
-    keyTakeaways: [
-      "Prepared introductions are more helpful than over-rehearsed pitches.",
-      "Professional presence includes exits, follow-up, and reading the room.",
-      "Event etiquette protects relationships before they even start.",
-    ],
-    relatedLessonSlugs: [
-      "networking-in-showbiz",
-      "social-media-as-professional-presence",
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-    ],
-    resources: [sharedResources.podcast, sharedResources.callback],
-  },
-  {
-    chapterSlug: "networking-professional-presence",
-    slug: "social-media-as-professional-presence",
-    title: "Social Media as Professional Presence",
-    subtitle:
-      "A classroom lesson on where online presence can help, where it can distract, and how families keep perspective.",
-    summary:
-      "This lesson positions social media as an optional professional tool rather than a requirement for legitimacy.",
-    teacherNote:
-      "This shelf should constantly remind parents that visibility is not the same thing as readiness.",
-    featuredImageSrc: images.chapterRepresentation.src,
-    featuredImageAlt: images.chapterRepresentation.alt,
-    keyTakeaways: [
-      "Social media should support the child, not consume the family.",
-      "Professional presence can exist without constant posting.",
-      "Boundaries matter more than aesthetic polish.",
-    ],
-    relatedLessonSlugs: [
-      "networking-in-showbiz",
-      "industry-event-networking-etiquette",
-      "tiktok-and-your-child-actor-a-guide-to-creativity-connection-and-safety",
-    ],
-    resources: [sharedResources.callback, sharedResources.podcast],
+    relatedLessonSlugs: ["child-acting-budget-what-families-really-spend","how-to-track-auditions-and-expenses","what-is-a-coogan-account"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
   },
   {
     chapterSlug: "wellness-resilience",
     slug: "when-rejection-stings-helping-your-child-actor-bounce-back",
-    title: "When Rejection Stings Helping Your Child Actor Bounce Back",
-    subtitle:
-      "A support lesson for the moments when disappointment threatens to become identity, panic, or pressure.",
-    summary:
-      "This lesson models the Child Actor 101 tone at its most parent-centered by helping families respond to rejection with steadiness, perspective, and usable next steps.",
-    teacherNote:
-      "Rejection lessons are about family regulation as much as actor resilience.",
+    title: "When Rejection Stings: Helping Your Child Actor Bounce Back",
+    subtitle: "A classroom lesson on when rejection stings: helping your child actor bounce back.",
+    summary: "Essential emotional support lesson that balances the more business-heavy early batch. Parents need this before rejection becomes a family identity issue.",
+    teacherNote: "Keep the tone warm and steady. Sharpen the parent actions after rejection so the page ends with practical next steps.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Parents set the emotional climate after a hard audition outcome.",
-      "Rejection needs context, not over-interpretation.",
-      "A child can keep growing without making every outcome mean something permanent.",
+      "Essential emotional support lesson that balances the more business-heavy early batch. Parents need this before rejection becomes a family identity issue.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "maintaining-self-esteem-as-a-child-actor",
-      "how-parents-support-without-pressuring",
-      "what-makes-a-child-actors-self-tape-audition-competitive",
-    ],
-    resources: [sharedResources.callback, sharedResources.podcast],
+    relatedLessonSlugs: ["what-makes-a-child-actors-self-tape-competitive","maintaining-self-esteem-as-a-child-actor","what-it-takes-to-be-a-successful-child-actor"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/when-rejection-stings-helping-your-child-actor-bounce-back",
   },
   {
     chapterSlug: "wellness-resilience",
     slug: "maintaining-self-esteem-as-a-child-actor",
     title: "Maintaining Self-Esteem as a Child Actor",
-    subtitle:
-      "A classroom lesson on protecting confidence and identity while a child participates in a high-feedback industry.",
-    summary:
-      "This lesson shows how the classroom can turn internal source material into a focused guide on self-worth, boundaries, and perspective.",
-    teacherNote:
-      "The strongest wellness lessons keep returning to the same question: what is protecting the child here?",
+    subtitle: "A classroom lesson on maintaining self-esteem as a child actor.",
+    summary: "Protecting the child's sense of self is foundational to the brand's parent-first ethos and builds trust in the classroom as more than an advice blog.",
+    teacherNote: "Use the saved module as source material, but keep the first lesson tightly scoped to self-esteem protection rather than broad emotional wellness.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Self-esteem needs active protection, not vague encouragement.",
-      "Parents can support confidence without tying worth to bookings.",
-      "Career growth should never cost a child's sense of self.",
+      "Protecting the child's sense of self is foundational to the brand's parent-first ethos and builds trust in the classroom as more than an advice blog.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-      "how-parents-support-without-pressuring",
-      "what-it-takes-to-be-a-successful-child-actor",
-    ],
-    resources: [sharedResources.callback, sharedResources.podcast],
-  },
-  {
-    chapterSlug: "wellness-resilience",
-    slug: "how-parents-support-without-pressuring",
-    title: "How Parents Support Without Pressuring",
-    subtitle:
-      "A parent-facing lesson on encouragement, boundaries, and the difference between guidance and emotional over-management.",
-    summary:
-      "This lesson helps adults stay useful to the child actor without accidentally becoming a source of performance stress.",
-    teacherNote:
-      "Parents come here because they care deeply. The lesson should help them feel guided, not blamed.",
-    featuredImageSrc: images.chapterForParents.src,
-    featuredImageAlt: images.chapterForParents.alt,
-    keyTakeaways: [
-      "Support works best when it stays specific, calm, and non-performative.",
-      "Pressure often hides inside good intentions.",
-      "A healthier family tone makes stronger long-term work possible.",
-    ],
-    relatedLessonSlugs: [
-      "when-rejection-stings-helping-your-child-actor-bounce-back",
-      "maintaining-self-esteem-as-a-child-actor",
-      "what-it-takes-to-be-a-successful-child-actor",
-    ],
-    resources: [sharedResources.startHere, sharedResources.callback],
+    relatedLessonSlugs: ["when-rejection-stings-helping-your-child-actor-bounce-back","what-it-takes-to-be-a-successful-child-actor","why-consistent-training-matters-for-young-actors"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
   },
   {
     chapterSlug: "safety-ethics",
     slug: "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
-    title: "The New Hollywood Casting Scam Every Parent Needs To Know About",
-    subtitle:
-      "A prototype lesson on recognizing pressure tactics, false urgency, and the kinds of offers that target new families.",
-    summary:
-      "This lesson demonstrates how the classroom can treat scam prevention as education and protection rather than as fear-based content.",
-    teacherNote:
-      "Safety lessons build trust fast when they are concrete, calm, and specific.",
+    title: "The New Hollywood Casting Scam Every Parent Needs to Know About",
+    subtitle: "A classroom lesson on the new hollywood casting scam every parent needs to know about.",
+    summary: "Direct trust builder and one of the clearest ways to prove the classroom protects families from costly mistakes.",
+    teacherNote: "Update any time-sensitive details, but keep the warning signs, parent filters, and what to do next if a family has already engaged.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Urgency and confusion are common scam tools.",
-      "Parents should know the difference between real guidance and a sales trap.",
-      "The safest next step is usually to slow down and verify.",
+      "Direct trust builder and one of the clearest ways to prove the classroom protects families from costly mistakes.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
-      "tiktok-and-your-child-actor-a-guide-to-creativity-connection-and-safety",
-      "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
-    ],
-    resources: [sharedResources.startHere, sharedResources.callback],
+    relatedLessonSlugs: ["agents-vs-managers-for-child-actors","is-my-child-ready-for-an-agent","child-acting-budget-what-families-really-spend"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
   },
   {
     chapterSlug: "safety-ethics",
-    slug: "what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
-    title: "What Is A Coogan Account And Do I Need One For My Child Actor",
-    subtitle:
-      "A family-protection lesson on one of the most common money and legal questions new parents hear early.",
-    summary:
-      "This lesson gives parents a clear, non-jargony orientation to what a Coogan account is and why it belongs in the larger protection conversation.",
-    teacherNote:
-      "Keep the legal explanation simple first. Parents can go deeper once the core purpose is clear.",
+    slug: "what-is-a-coogan-account",
+    title: "What Is a Coogan Account and Do I Need One for My Child Actor?",
+    subtitle: "A classroom lesson on what is a coogan account and do i need one for my child actor?.",
+    summary: "Foundational money-and-protection lesson. It answers a recurring parent question and supports legal literacy without overwhelming the reader.",
+    teacherNote: "Keep it concise and practical. Add a simple when-you-need-one explanation and connect it to broader family record-keeping.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Protection topics should feel understandable long before paperwork shows up.",
-      "Money clarity is part of child protection.",
-      "Parents do not need legal jargon to understand the purpose of a safeguard.",
+      "Foundational money-and-protection lesson. It answers a recurring parent question and supports legal literacy without overwhelming the reader.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
-      "tax-guide-for-parents-of-child-actors-navigating-taxes-without-losing-your-marbles",
-      "what-it-takes-to-be-a-successful-child-actor",
-    ],
-    resources: [sharedResources.startHere, sharedResources.callback],
+    relatedLessonSlugs: ["child-labor-laws-for-child-actors","tax-guide-for-parents-of-child-actors","child-acting-budget-what-families-really-spend"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
   },
   {
     chapterSlug: "safety-ethics",
-    slug: "tiktok-and-your-child-actor-a-guide-to-creativity-connection-and-safety",
-    title: "Tiktok And Your Child Actor A Guide To Creativity Connection And Safety",
-    subtitle:
-      "A modern classroom lesson on balancing creative participation, visibility, privacy, and family boundaries online.",
-    summary:
-      "This lesson explains how a parent can think about TikTok without treating it as either a magic career tool or an automatic requirement.",
-    teacherNote:
-      "Online safety lessons need nuance. Parents are looking for boundaries, not absolutism.",
+    slug: "child-labor-laws-for-child-actors",
+    title: "Child Labor Laws for Child Actors: A Parent Primer",
+    subtitle: "A classroom lesson on child labor laws for child actors: a parent primer.",
+    summary: "Parents need a simple legal orientation early. This builds authority and prevents avoidable confusion around set hours, school, and protection.",
+    teacherNote: "The source title is incomplete. Rebuild it into a clear primer and trim any jurisdiction-specific clutter that obscures the basic protections parents need to understand first.",
     featuredImageSrc: images.chapterForParents.src,
     featuredImageAlt: images.chapterForParents.alt,
     keyTakeaways: [
-      "Visibility is optional. Safety is not.",
-      "Parents need clear rules for privacy, DMs, and account oversight.",
-      "A platform should serve the family plan, not drive it.",
+      "Parents need a simple legal orientation early. This builds authority and prevents avoidable confusion around set hours, school, and protection.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "social-media-as-professional-presence",
-      "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
-      "what-is-a-coogan-account-and-do-i-need-one-for-my-child-actor",
+    relatedLessonSlugs: ["what-is-a-coogan-account","the-new-hollywood-casting-scam-every-parent-needs-to-know-about","how-to-become-a-child-actor"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/a-rundown-on-child-labor-laws-in",
+  },
+  {
+    chapterSlug: "safety-ethics",
+    slug: "tiktok-and-your-child-actor-safety",
+    title: "TikTok and Your Child Actor: Creativity, Connection, and Safety",
+    subtitle: "A classroom lesson on tiktok and your child actor: creativity, connection, and safety.",
+    summary: "Modern parent concern with ongoing relevance. It belongs in the first batch because it reduces risk while staying grounded rather than fear-based.",
+    teacherNote: "Keep the balanced tone. Tighten the distinction between creative use, professional presence, parental oversight, and risk boundaries.",
+    featuredImageSrc: images.chapterForParents.src,
+    featuredImageAlt: images.chapterForParents.alt,
+    keyTakeaways: [
+      "Modern parent concern with ongoing relevance. It belongs in the first batch because it reduces risk while staying grounded rather than fear-based.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    resources: [sharedResources.callback, sharedResources.podcast],
+    relatedLessonSlugs: ["the-new-hollywood-casting-scam-every-parent-needs-to-know-about","child-labor-laws-for-child-actors","what-it-takes-to-be-a-successful-child-actor"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/tiktok-and-your-child-actor-a-guide-to-creativity-connection-and-safety",
   },
   {
     chapterSlug: "career-growth",
-    slug: "olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
-    title: "Olympic Level Training For Aspiring Young Actors Why Consistency Is Key",
-    subtitle:
-      "A growth lesson on why patient, repeated skill-building matters more than bursts of intensity.",
-    summary:
-      "This lesson helps parents see training as a long-term rhythm that strengthens craft, confidence, and professionalism over time.",
-    teacherNote:
-      "Career growth should sound steady in the classroom. It is not a hype shelf.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
+    slug: "why-consistent-training-matters-for-young-actors",
+    title: "Why Consistent Training Matters for Young Actors",
+    subtitle: "A classroom lesson on why consistent training matters for young actors.",
+    summary: "Good bridge from beginner curiosity into long-term development. It helps families think in terms of skill-building rather than quick wins.",
+    teacherNote: "Keep the core message, but tone down any hype language and make the lesson about patient, durable skill-building for families.",
+    featuredImageSrc: images.chapterGettingStarted.src,
+    featuredImageAlt: images.chapterGettingStarted.alt,
     keyTakeaways: [
-      "Consistency produces stronger actors than urgency.",
-      "Training is a long-game habit, not a branding accessory.",
-      "Parents need to pace development without chasing every short-term win.",
+      "Good bridge from beginner curiosity into long-term development. It helps families think in terms of skill-building rather than quick wins.",
+      "Always start with practical steps before spending money.",
+      "Stay grounded and informed."
     ],
-    relatedLessonSlugs: [
-      "why-i-rebuilt-the-entire-actor-training-program",
-      "the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-is-just-a-hobbyist",
-      "when-should-my-child-start-acting-training-a-parents-guide-to-the-right-age",
-    ],
-    resources: [sharedResources.ecosystem, sharedResources.podcast],
-  },
-  {
-    chapterSlug: "career-growth",
-    slug: "why-i-rebuilt-the-entire-actor-training-program",
-    title: "Why I Rebuilt The Entire Actor Training Program",
-    subtitle:
-      "A lesson prototype about what strong training is supposed to accomplish for a young actor and their family.",
-    summary:
-      "This lesson helps readers understand the standards behind a more intentional training system without turning the page into a sales pitch.",
-    teacherNote:
-      "Even when the topic touches products, the public lesson should stay educational first.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
-    keyTakeaways: [
-      "Training should solve real developmental needs, not just create activity.",
-      "Families deserve clarity about why a program is structured the way it is.",
-      "Growth shelves should always lead back to skill and sustainability.",
-    ],
-    relatedLessonSlugs: [
-      "olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
-      "the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-is-just-a-hobbyist",
-      "what-it-takes-to-be-a-successful-child-actor",
-    ],
-    resources: [sharedResources.ecosystem, sharedResources.podcast],
-  },
-  {
-    chapterSlug: "career-growth",
-    slug: "the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-is-just-a-hobbyist",
-    title: "The Harsh Truth If Youre Not Taking Training Seriously Your Kid Is Just A Hobbyist",
-    subtitle:
-      "A growth lesson that reframes seriousness as commitment to skill, not pressure for faster outcomes.",
-    summary:
-      "This lesson gives the prototype a stronger point of view about the role of training while still keeping the tone practical and non-performative.",
-    teacherNote:
-      "The classroom version should keep the conviction but remove any unnecessary shame language.",
-    featuredImageSrc: images.chapterTechnique.src,
-    featuredImageAlt: images.chapterTechnique.alt,
-    keyTakeaways: [
-      "Skill development deserves consistent attention if the goal is professional work.",
-      "Seriousness should be measured by process, not by image.",
-      "Parents can raise the standard without increasing household panic.",
-    ],
-    relatedLessonSlugs: [
-      "olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
-      "why-i-rebuilt-the-entire-actor-training-program",
-      "maintaining-self-esteem-as-a-child-actor",
-    ],
-    resources: [sharedResources.ecosystem, sharedResources.callback],
+    relatedLessonSlugs: ["when-should-my-child-start-acting-training","what-it-takes-to-be-a-successful-child-actor","maintaining-self-esteem-as-a-child-actor"],
+    resources: [sharedResources.ecosystem, sharedResources.podcast, sharedResources.startHere],
+    sourceUrl: "https://www.childactor101.com/101-blog/olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
   },
 ];
 
 const lessonMap = new Map(classroomLessons.map((lesson) => [lesson.slug, lesson]));
 
 export const classroomFeaturedLessonSlugs = [
-  "what-it-takes-to-be-a-successful-child-actor",
-  "navigating-hollywood-do-you-need-a-talent-agent-or-a-manager",
+  "how-to-become-a-child-actor",
+  "agents-vs-managers-for-child-actors",
   "self-tape-equipment-for-child-actors",
-  "actors-access",
-  "the-business-side-to-acting",
+  "actors-access-for-parents-of-child-actors",
+  "child-acting-budget-what-families-really-spend",
   "the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
 ] as const;
 
@@ -1042,23 +737,22 @@ export function getLessonPagination(chapterSlug: string, lessonSlug: string) {
 
 export const getAdjacentLessons = getLessonPagination;
 
-export function getClassroomPlaceholderSections(
+export function getClassroomPreviewSections(
   lesson: ClassroomLesson,
   chapter: ClassroomChapter,
 ): ClassroomLessonSection[] {
   return [
     {
-      heading: "Why this lesson lives in the classroom",
+      heading: "Lesson Preview",
       paragraphs: [
-        `${lesson.title} belongs in the ${chapter.title} chapter because it answers a recurring parent question in a more structured way than a traditional blog archive would.`,
-        `For the prototype, this page uses short sample copy instead of a full imported lesson so we can see how the educational layout scales across the library.`,
+        lesson.title + " belongs in the " + chapter.title + " chapter because it answers a recurring parent question in a more structured way than a traditional blog archive would.",
+        "This is a short classroom preview. The complete lesson will provide examples, calmer framing, and one clear next step for the reader.",
       ],
     },
     {
-      heading: "What the finished lesson will do",
+      heading: "What you will learn",
       paragraphs: [
-        `${lesson.summary} In the finished library, this section would expand the explanation with examples, calmer framing, and one clear next step for the reader.`,
-        `The important part here is the flow: context, education, takeaways, related tools, and a guided path into the next lesson instead of a dead end.`,
+        lesson.summary + " This lesson helps families build a solid foundation by focusing on context, education, takeaways, related tools, and a guided path into the next step instead of a dead end.",
       ],
     },
   ];

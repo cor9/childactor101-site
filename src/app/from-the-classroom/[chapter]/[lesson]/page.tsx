@@ -19,7 +19,7 @@ import {
   getAdjacentLessons,
   getClassroomChapter,
   getClassroomLesson,
-  getClassroomPlaceholderSections,
+  getClassroomPreviewSections,
   getClassroomStaticLessonParams,
   getRelatedLessons,
 } from "@/content/classroom";
@@ -64,7 +64,7 @@ export default async function ClassroomLessonPage({
     notFound();
   }
 
-  const sections = lesson.bodySections ?? getClassroomPlaceholderSections(lesson, chapter);
+  const sections = lesson.bodySections ?? getClassroomPreviewSections(lesson, chapter);
   const relatedLessons = getRelatedLessons(lesson);
   const { previous, next } = getAdjacentLessons(chapter.slug, lesson.slug);
 

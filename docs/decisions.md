@@ -138,6 +138,18 @@ The source material is useful because it identifies the smallest practical lesso
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Prototype the classroom as a typed Next.js chapter-and-lesson library with representative sample data before importing the full inventory.
+
+### Reason
+
+The team needs to validate the browsing flow, lesson layout, reusable route structure, and chapter-based IA before migrating all 200 audited sources. A sample library makes the system visible without forcing premature full-content migration.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

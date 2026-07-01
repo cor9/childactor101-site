@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowDown, Mic2, NotebookText } from "lucide-react";
+import { ArrowRight, BookOpenText, LibraryBig, NotebookTabs, Sparkles } from "lucide-react";
 
 import { PageHero } from "@/components/PageHero";
+import { Card } from "@/components/ui/Card";
 import { ArticleCard } from "@/components/content/ArticleCard";
 import { ChapterShelfCard } from "@/components/content/ChapterShelfCard";
 import { Newsletter } from "@/components/content/Newsletter";
-import { PodcastCard } from "@/components/content/PodcastCard";
 import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 import { ChalkDust } from "@/components/primitives/ChalkDust";
 import { Container } from "@/components/layout/Container";
@@ -14,66 +14,51 @@ import { Section } from "@/components/layout/Section";
 import { Pill } from "@/components/ui/Pill";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
-  chapterCards,
-  featuredLessons,
-  mostPopularLessons,
-  newestLessons,
-} from "@/content/from-the-classroom";
+  classroomChapters,
+  getFeaturedLessons,
+  getLessonsForChapter,
+} from "@/content/classroom";
 import { images } from "@/content/images";
-import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 export const metadata: Metadata = {
-  title: "From the Classroom",
+  title: "From the Classroom | Child Actor 101",
   description:
-    "Browse the Child Actor 101 classroom by chapter instead of chronology, with practical lessons for real TV and film families.",
+    "Explore the Child Actor 101 classroom by chapter with a sample lesson library that shows how the parent curriculum will scale.",
 };
 
 export default function FromTheClassroomPage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "From the Classroom | Child Actor 101",
-    description:
-      "The digital version of the Child Actor 101 classroom, organized into logical learning chapters for parents of young actors.",
-    url: "https://www.childactor101.com/from-the-classroom",
-    hasPart: featuredLessons.map((lesson, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: lesson.title,
-      url: `https://www.childactor101.com/from-the-classroom${lesson.href}`,
-    })),
-  };
+  const featuredLessons = getFeaturedLessons();
 
   return (
     <main className="overflow-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-
       <PageHero
         label="From the Classroom"
         title="Open to the chapter you need."
-        description="Every lesson is illustrated, practical, and written for real TV & film families. Browse by topic instead of digging through a traditional blog."
+        description="This is the Child Actor 101 learning library prototype: a textbook-style classroom where lessons are organized by chapter, not buried in a traditional blog feed."
         primaryAction={{
-          href: "#featured-lessons",
-          label: "Browse Lessons",
-          icon: <ArrowDown className="h-5 w-5" />,
+          href: "#chapter-shelves",
+          label: "Browse chapters",
+          icon: <ArrowRight className="h-5 w-5" />,
+        }}
+        secondaryAction={{
+          href: "/from-the-classroom/start-here",
+          label: "Open a sample chapter",
+          icon: <BookOpenText className="h-5 w-5" />,
         }}
         supportingPoints={[
-          "Textbook, not timeline",
-          "Browse by chapter",
-          "Built for real TV & film families",
+          "Chapters, not dates",
+          "Parents first",
+          "Built to scale into a full library",
         ]}
       >
         <div className="space-y-5">
           <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
-            Classroom library
+            Classroom prototype
           </div>
           <div className="overflow-hidden rounded-[30px] border border-chalk/10 shadow-[0_22px_48px_rgba(7,21,17,0.22)]">
             <Image
               src={images.homeHero.src}
-              alt="Young actor studying at a desk to represent the Child Actor 101 classroom library"
+              alt="Sample Child Actor 101 classroom illustration showing a young actor learning at a desk"
               width={900}
               height={720}
               className="aspect-[4/3] w-full object-cover"
@@ -83,53 +68,62 @@ export default function FromTheClassroomPage() {
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-[22px] bg-paper p-5 text-ink shadow-soft">
               <p className="text-xs uppercase tracking-[0.22em] text-chalkboard/75">
-                Shelf system
+                What this is
               </p>
               <p className="mt-3 font-display text-3xl text-chalkboard">
-                Browse by chapter, not by date.
+                A chapter-based learning library.
               </p>
             </div>
             <div className="rounded-[22px] border border-chalk/10 bg-chalkboard-soft/60 p-5">
               <p className="text-xs uppercase tracking-[0.22em] text-chalk/65">
-                What this page is
+                What this is not
               </p>
               <p className="mt-3 text-sm leading-7 text-chalk/80">
-                The digital version of the Child Actor 101 classroom, where parents open the lesson they need instead of scrolling a timeline.
+                Not a timeline, not a course marketplace, and not a pile of disconnected articles.
               </p>
             </div>
           </div>
         </div>
       </PageHero>
 
-      <Section id="featured-lessons" className="px-4 py-20 sm:px-6 lg:px-8">
+      <Section className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="These cornerstone lessons answer the questions parents ask first and return to most often. Think of them as the opening chapters of the Child Actor 101 parent curriculum."
+            description="Every lesson should answer one practical parent question, teach something useful, and point to the next right step. The prototype below shows that system before the full library is imported."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Featured Lessons"
-            title="Begin with the lessons that frame the whole classroom."
+            label="How the Library Works"
+            title="The classroom teaches in a sequence, even when readers jump in midstream."
             titleClassName="mt-6 text-chalkboard"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-            {featuredLessons.map((lesson) => (
-              <ArticleCard
-                key={lesson.title}
-                category={lesson.category}
-                className="h-full"
-                description={lesson.description}
-                href={lesson.href}
-                imageAlt={lesson.imageAlt}
-                imageSrc={lesson.imageSrc}
-                title={lesson.title}
-              />
-            ))}
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <Card>
+              <LibraryBig className="h-10 w-10 text-purple-deep" />
+              <h3 className="mt-5 font-display text-3xl text-chalkboard">Choose a shelf</h3>
+              <p className="mt-3 text-sm leading-7 text-ink-soft">
+                Browse by need instead of by publish date. Each chapter groups the lessons the way a family actually experiences the business.
+              </p>
+            </Card>
+            <Card>
+              <NotebookTabs className="h-10 w-10 text-purple-deep" />
+              <h3 className="mt-5 font-display text-3xl text-chalkboard">Open one lesson</h3>
+              <p className="mt-3 text-sm leading-7 text-ink-soft">
+                Every lesson uses a consistent structure: context, teacher guidance, takeaways, related resources, and one clear next step.
+              </p>
+            </Card>
+            <Card>
+              <Sparkles className="h-10 w-10 text-purple-deep" />
+              <h3 className="mt-5 font-display text-3xl text-chalkboard">Keep moving</h3>
+              <p className="mt-3 text-sm leading-7 text-ink-soft">
+                The goal is not to trap families inside a single post. The goal is to keep the classroom moving like a thoughtful curriculum.
+              </p>
+            </Card>
           </div>
         </Container>
       </Section>
 
       <Section
-        id="chapter-browse"
+        id="chapter-shelves"
         className="relative bg-[radial-gradient(circle_at_top_left,rgba(49,99,71,0.45),transparent_28%),linear-gradient(180deg,#173226_0%,#10261d_100%)] px-4 py-20 text-white sm:px-6 lg:px-8"
       >
         <ChalkDust />
@@ -138,22 +132,25 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="This is a structured learning library. Each chapter is a learning shelf that groups lessons the way a parent actually experiences the business."
+            description="Each card below shows how a chapter shelf can feel: a clear purpose, a planned lesson count, a few sample lesson titles, and a clean way into that part of the classroom."
             descriptionClassName="mt-4 text-lg leading-8 text-white/72"
             label="Browse by Chapter"
             labelClassName="text-[#bcefdc]"
-            title="Open the classroom like a curriculum."
+            title="Open the library like a classroom, not an archive."
             titleClassName="mt-6 text-white"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {chapterCards.map((chapter) => (
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {classroomChapters.map((chapter) => (
               <ChapterShelfCard
-                key={chapter.id}
+                key={chapter.slug}
+                browseHref={`/from-the-classroom/${chapter.slug}`}
+                browseLabel={chapter.browseLabel}
                 description={chapter.description}
-                id={chapter.id}
-                imageAlt={chapter.imageAlt}
-                imageSrc={chapter.imageSrc}
-                lessons={chapter.lessons}
+                id={`chapter-${chapter.slug}`}
+                imageAlt={chapter.featuredImageAlt}
+                imageSrc={chapter.featuredImageSrc}
+                lessonCountLabel={chapter.lessonCountLabel}
+                lessons={getLessonsForChapter(chapter.slug).map((lesson) => lesson.title)}
                 title={chapter.title}
               />
             ))}
@@ -161,48 +158,25 @@ export default function FromTheClassroomPage() {
         </Container>
       </Section>
 
-      <Section id="newest-lessons" className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
+      <Section className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Recent additions to the classroom still behave like lessons, not posts. The value is in the question they answer, not the date they were published."
+            description="A small sample of real lesson titles from the inventory, shown here as article-style cards so the library can feel readable before the full import work begins."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Newest Lessons"
-            title="What's new in the classroom."
+            label="Featured Sample Lessons"
+            title="The prototype already reads like a learning library."
             titleClassName="mt-6 text-chalkboard"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {newestLessons.map((lesson) => (
+            {featuredLessons.map((lesson) => (
               <ArticleCard
-                key={lesson.title}
-                category={lesson.category}
-                description={lesson.description}
-                href={lesson.href}
-                title={lesson.title}
-                tone="warm"
-              />
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="popular-lessons" className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
-        <Container>
-          <SectionHeader
-            className="max-w-3xl"
-            description="These are the lessons families return to when they need clarity fast. They tend to answer the questions that create the most confusion, stress, or expensive mistakes."
-            descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Most Popular"
-            title="The lessons parents come back to most."
-            titleClassName="mt-6 text-chalkboard"
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {mostPopularLessons.map((lesson) => (
-              <ArticleCard
-                key={lesson.title}
-                category={lesson.category}
-                description={lesson.description}
-                href={lesson.href}
+                key={lesson.slug}
+                category={classroomChapters.find((chapter) => chapter.slug === lesson.chapterSlug)?.title}
+                description={lesson.summary}
+                href={`/from-the-classroom/${lesson.chapterSlug}/${lesson.slug}`}
+                imageAlt={lesson.featuredImageAlt}
+                imageSrc={lesson.featuredImageSrc}
                 title={lesson.title}
               />
             ))}
@@ -210,43 +184,66 @@ export default function FromTheClassroomPage() {
         </Container>
       </Section>
 
-      <Section className="bg-chalkboard px-4 py-20 text-chalk sm:px-6 lg:px-8">
-        <ChalkDust />
-        <Container className="grid gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
-          <div className="max-w-3xl">
-            <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="chalk">
-              Podcast Lesson
-            </Pill>
-            <h2 className="mt-6 font-display text-4xl leading-tight text-white sm:text-5xl">
-              Keep learning between the articles.
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-white/74">
-              The podcast extends the same classroom into conversations about auditions, parenting, representation, and the business behind the dream.
-            </p>
-            <div className="mt-6 flex items-center gap-3 text-sm font-medium text-[#bcefdc]">
-              <NotebookText className="h-5 w-5" />
-              The same curriculum, taught in a different format.
+      <Section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
+        <Container className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div className="max-w-2xl">
+            <SectionHeader
+              description="This section previews the flow every lesson page will share: teacher guidance, concise reading blocks, key takeaways, related resources, and a clean route to the next lesson."
+              descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
+              label="Lesson Layout Preview"
+              title="Every lesson should feel teachable, not dumped on the page."
+              titleClassName="mt-6 text-chalkboard"
+            />
+          </div>
+          <Card className="relative overflow-hidden">
+            <ChalkDoodle variant="arrow-right" className="left-8 top-10 h-16 w-24 text-[#c8a8ff]" />
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[24px] bg-paper p-5">
+                <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
+                  Teacher Note
+                </Pill>
+                <p className="mt-4 text-sm leading-7 text-ink-soft">
+                  A short Corey-style note that frames why this topic matters before the lesson content begins.
+                </p>
+              </div>
+              <div className="rounded-[24px] bg-white p-5 shadow-[0_10px_24px_rgba(22,36,58,0.06)]">
+                <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="paper">
+                  Takeaways
+                </Pill>
+                <p className="mt-4 text-sm leading-7 text-ink-soft">
+                  Clear, skimmable reminders of what the reader should understand before moving on.
+                </p>
+              </div>
+              <div className="rounded-[24px] bg-white p-5 shadow-[0_10px_24px_rgba(22,36,58,0.06)]">
+                <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="paper">
+                  Related Resources
+                </Pill>
+                <p className="mt-4 text-sm leading-7 text-ink-soft">
+                  Tools, podcast episodes, and next lessons that feel like a logical step instead of an ad interruption.
+                </p>
+              </div>
+              <div className="rounded-[24px] bg-paper p-5">
+                <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
+                  Previous / Next
+                </Pill>
+                <p className="mt-4 text-sm leading-7 text-ink-soft">
+                  Simple lesson navigation so the classroom can scale into a real curriculum over time.
+                </p>
+              </div>
             </div>
-          </div>
-          <PodcastCard
-            ctaHref={SPOTIFY_PODCAST_URL}
-            ctaLabel="Start Listening"
-            description="Conversations from inside Hollywood that connect real industry perspective back to the Child Actor 101 classroom."
-            icon={<Mic2 className="h-5 w-5" />}
-            label="On Air"
-            title="Conversations from inside Hollywood"
-          />
+          </Card>
         </Container>
       </Section>
 
       <Section id="newsletter" className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
           <Newsletter
-            ctaHref="#newsletter"
-            ctaLabel="Join The Callback"
-            description="The Callback keeps the classroom moving with new lessons, honest industry perspective, podcast updates, and practical guidance parents can actually use."
-            label="Newsletter"
-            title="Get the next lesson in your inbox."
+            ctaHref="/podcast"
+            ctaLabel="Keep learning"
+            description="The Callback and the podcast keep the classroom moving between lessons with fresh guidance, honest industry perspective, and the next useful thing to read or hear."
+            label="Classroom Follow-Up"
+            note="This is still a prototype, but the underlying experience is already clear: browse by chapter, open one lesson, and keep moving with confidence."
+            title="The learning library is built to grow without losing its shape."
           />
         </Container>
       </Section>

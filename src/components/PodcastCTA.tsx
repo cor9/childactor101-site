@@ -5,6 +5,7 @@ import { Button } from "@/components/Button";
 import { ChalkDoodle } from "@/components/ChalkDoodle";
 import { ChalkDust } from "@/components/ChalkDust";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 export function PodcastCTA() {
   return (
@@ -36,7 +37,12 @@ export function PodcastCTA() {
             The Callback — honest talks about auditions, the business, and
             keeping kids kids while they chase the dream. New every week.
           </p>
-          <Button href="/podcast" className="mt-10 w-fit">
+          <Button
+            href={SPOTIFY_PODCAST_URL}
+            rel="noreferrer"
+            className="mt-10 w-fit"
+            target="_blank"
+          >
             Start listening
             <Headphones className="h-5 w-5" />
           </Button>

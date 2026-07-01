@@ -4,7 +4,9 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   href: string;
+  rel?: string;
   size?: "sm" | "md" | "lg";
+  target?: string;
   variant?: "primary" | "secondary" | "chalk" | "outlineLight" | "ghost";
 };
 
@@ -31,12 +33,16 @@ export function Button({
   children,
   className = "",
   href,
+  rel,
   size = "md",
+  target,
   variant = "primary",
 }: ButtonProps) {
   return (
     <Link
       href={href}
+      rel={rel}
+      target={target}
       className={[
         "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple",
         variantClasses[variant],

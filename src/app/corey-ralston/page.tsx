@@ -6,6 +6,7 @@ import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { PageHero } from "@/components/PageHero";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 const roles = [
   {
@@ -48,7 +49,7 @@ const pathways = [
     title: "Listen to the podcast",
     description:
       "Industry conversations that bring the off-camera reality into the open.",
-    href: "/podcast",
+    href: SPOTIFY_PODCAST_URL,
   },
   {
     title: "See the ecosystem",
@@ -77,9 +78,11 @@ export default function CoreyRalstonPage() {
           icon: <ArrowRight className="h-5 w-5" />,
         }}
         secondaryAction={{
-          href: "/podcast",
+          href: SPOTIFY_PODCAST_URL,
           label: "Listen to the podcast",
           icon: <Headphones className="h-5 w-5" />,
+          rel: "noreferrer",
+          target: "_blank",
         }}
         supportingPoints={[
           "Former child actor",
@@ -207,7 +210,13 @@ export default function CoreyRalstonPage() {
                 <p className="mt-3 flex-1 text-sm leading-7 text-ink-soft">
                   {pathway.description}
                 </p>
-                <Button href={pathway.href} className="mt-6 w-fit" variant="secondary">
+                <Button
+                  href={pathway.href}
+                  rel={pathway.href.startsWith("http") ? "noreferrer" : undefined}
+                  className="mt-6 w-fit"
+                  target={pathway.href.startsWith("http") ? "_blank" : undefined}
+                  variant="secondary"
+                >
                   Open page
                   <ArrowRight className="h-5 w-5" />
                 </Button>

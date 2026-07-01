@@ -66,6 +66,18 @@ They have become one of the most recognizable visual assets of the Child Actor 1
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Send explicit podcast listening CTAs directly to the live Spotify show while keeping `/podcast` as the platform's editorial podcast front door.
+
+### Reason
+
+Families clicking a "listen" action should reach the real show immediately, while the internal `/podcast` page can continue serving as a branded orientation and archive-migration hub.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

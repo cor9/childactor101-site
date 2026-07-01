@@ -8,16 +8,19 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 
 ## Unreleased
 
-### Planned
+### Added
 
-- Build Next.js foundation
-- Design reusable component library
-- Create homepage
-- Build Corey Ralston authority page
-- Develop "Start Here" onboarding experience
-- Migrate selected Squarespace pages
-- Establish design system
+- Chalkboard texture guidance and homepage chalk doodle treatment across dark classroom sections
+
+### Changed
+
+- Replaced the homepage Meet Corey placeholder with the real `corey-ralston.jpg` headshot
+- Connected explicit podcast listening CTAs to the live Spotify show URL while keeping `/podcast` as the internal podcast front door
+
+### Remaining
+
 - Integrate blog content
+- Migrate the podcast archive
 - Deploy preview environment
 
 ---
@@ -107,4 +110,4 @@ Living Document
 
 ## Last Updated
 
-2026-06-30
+2026-07-01

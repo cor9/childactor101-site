@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { ArrowRight, Mic2, NotebookPen } from "lucide-react";
+import { ArrowRight, Mic2 } from "lucide-react";
 
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { PageHero } from "@/components/PageHero";
 import { PlaceholderBlock } from "@/components/PlaceholderBlock";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 const topics = [
   {
@@ -55,9 +56,11 @@ export default function PodcastPage() {
           icon: <ArrowRight className="h-5 w-5" />,
         }}
         secondaryAction={{
-          href: "/corey-ralston",
-          label: "Meet Corey",
-          icon: <NotebookPen className="h-5 w-5" />,
+          href: SPOTIFY_PODCAST_URL,
+          label: "Listen on Spotify",
+          icon: <Mic2 className="h-5 w-5" />,
+          rel: "noreferrer",
+          target: "_blank",
         }}
         supportingPoints={[
           "Featured episodes",
@@ -139,6 +142,9 @@ export default function PodcastPage() {
             ))}
           </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button href={SPOTIFY_PODCAST_URL} rel="noreferrer" target="_blank" variant="secondary">
+              Open on Spotify
+            </Button>
             <Button href="/" variant="secondary">
               Back to homepage
             </Button>

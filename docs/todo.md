@@ -16,7 +16,7 @@
 
 - Connect blog
 
-- Connect podcast
+- Migrate podcast archive into the new front door
 
 - Improve internal linking
 

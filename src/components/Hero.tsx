@@ -4,6 +4,7 @@ import { ArrowDown, Mic2 } from "lucide-react";
 import { Button } from "@/components/Button";
 import { ChalkDoodle } from "@/components/ChalkDoodle";
 import { ChalkDust } from "@/components/ChalkDust";
+import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 export function Hero() {
   return (
@@ -47,7 +48,13 @@ export function Hero() {
               Start here
               <ArrowDown className="h-5 w-5" />
             </Button>
-            <Button href="/podcast" size="lg" variant="outlineLight">
+            <Button
+              href={SPOTIFY_PODCAST_URL}
+              rel="noreferrer"
+              size="lg"
+              target="_blank"
+              variant="outlineLight"
+            >
               Conversations from inside Hollywood
               <Mic2 className="h-5 w-5" />
             </Button>

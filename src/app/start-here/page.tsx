@@ -8,6 +8,7 @@ import { JourneySteps } from "@/components/JourneySteps";
 import { PageHero } from "@/components/PageHero";
 import { PlaceholderBlock } from "@/components/PlaceholderBlock";
 import { SectionLabel } from "@/components/SectionLabel";
+import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 const checklist = [
   "Learn how agents, managers, casting, and auditions actually fit together.",
@@ -68,9 +69,11 @@ export default function StartHerePage() {
           icon: <ArrowRight className="h-5 w-5" />,
         }}
         secondaryAction={{
-          href: "/podcast",
+          href: SPOTIFY_PODCAST_URL,
           label: "Hear the real conversations",
           icon: <Headphones className="h-5 w-5" />,
+          rel: "noreferrer",
+          target: "_blank",
         }}
         supportingPoints={[
           "Industry overview",

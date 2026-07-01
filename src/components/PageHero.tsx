@@ -6,6 +6,8 @@ type HeroAction = {
   href: string;
   label: string;
   icon?: React.ReactNode;
+  rel?: string;
+  target?: string;
   variant?: "primary" | "secondary" | "ghost";
 };
 
@@ -48,7 +50,9 @@ export function PageHero({
             {secondaryAction ? (
               <Button
                 href={secondaryAction.href}
+                rel={secondaryAction.rel}
                 size="lg"
+                target={secondaryAction.target}
                 variant={secondaryAction.variant ?? "secondary"}
               >
                 {secondaryAction.label}

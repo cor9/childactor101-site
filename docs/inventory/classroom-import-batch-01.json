@@ -7,7 +7,7 @@
     "Support the /start-here onboarding journey.",
     "Choose topics that reduce scams, wasted money, and unrealistic expectations.",
     "Include no more than four lessons from any one chapter.",
-    "Use docs/level-up/source-lesson-inventory.md as the internal lesson-splitting map for module-derived lessons without exposing internal module naming publicly."
+    "Tell Codex: Before importing Batch 01, verify the final classroom lesson URL pattern (e.g. /from-the-classroom/[chapter]/[lesson]) and update all internal_links accordingly."
   ],
   "chapter_counts": {
     "Start Here": 4,

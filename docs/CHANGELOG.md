@@ -18,6 +18,7 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Connected explicit podcast listening CTAs to the live Spotify show URL while keeping `/podcast` as the internal podcast front door
 - Refactored the homepage into reusable `ui`, `layout`, `home`, and `content` component libraries without changing the approved visual design
 - Built the `/start-here` onboarding page as the primary parent-first roadmap using the existing reusable component system
+- Built `/from-the-classroom` as a chapter-based classroom library instead of a chronological blog feed
 
 ### Remaining
 

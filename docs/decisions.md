@@ -102,6 +102,18 @@ New families need clarity and order first. Leading with step-by-step education s
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Build `/from-the-classroom` as a textbook-style lesson library organized by learning chapters instead of publication dates.
+
+### Reason
+
+The educational library should feel like opening the Child Actor 101 classroom, not browsing a traditional blog archive. Chapter-based organization reinforces the platform's textbook model, improves clarity for parents, and supports long-term topical authority.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

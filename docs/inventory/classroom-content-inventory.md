@@ -52,6 +52,15 @@ Generated from the live sitemap, current blog corpus, accessible guide links, an
 - PDF assets discovered on `/freeguides` need a full document read to finalize exact lesson splits.
 - Product and hub pages should be reviewed section-by-section for embedded educational copy before generating new lessons.
 
+## Batch 01 Selected
+
+- First import plan created in:
+  - `docs/inventory/classroom-import-batch-01.md`
+  - `docs/inventory/classroom-import-batch-01.json`
+- Batch size: 25 lessons
+- Selection focus: evergreen onboarding, representation clarity, self-tape basics, money realities, resilience, and family safety
+- Chapter cap enforced: no more than 4 lessons from any one chapter
+
 ## Output Files
 
 - `docs/inventory/classroom-content-inventory.json`

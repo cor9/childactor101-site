@@ -1,69 +1,76 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-outfit), var(--font-inter), ui-sans-serif, system-ui;
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fredoka", "Avenir Next Rounded", "Trebuchet MS", ui-rounded,
+    ui-sans-serif, system-ui, sans-serif;
 
-  --color-primary-50: #fef5f2;
-  --color-primary-100: #fee8e1;
-  --color-primary-200: #fcd4c7;
-  --color-primary-300: #fab8a4;
-  --color-primary-400: #f69176;
-  --color-primary-500: #f16947;
-  --color-primary-600: #df4b28;
-  --color-primary-700: #ba381b;
-  --color-primary-800: #9b311a;
-  --color-primary-900: #802d1a;
-  --color-primary-950: #451308;
+  --color-chalkboard: #234f3b;
+  --color-chalkboard-deep: #17382b;
+  --color-chalkboard-soft: #3f6b55;
 
-  --color-secondary-50: #f4f6f8;
-  --color-secondary-100: #e3e9ef;
-  --color-secondary-200: #cdd8e2;
-  --color-secondary-300: #a9bed0;
-  --color-secondary-400: #7f9eb7;
-  --color-secondary-500: #60829e;
-  --color-secondary-600: #4c6882;
-  --color-secondary-700: #3f556b;
-  --color-secondary-800: #364859;
-  --color-secondary-900: #303e4d;
-  --color-secondary-950: #1f2834;
+  --color-paper: #fbf6ea;
+  --color-paper-warm: #f3e8d2;
+  --color-chalk: #f8f4e8;
 
-  --color-accent-50: #fcf6eb;
-  --color-accent-100: #f7e8ce;
-  --color-accent-200: #f1d19d;
-  --color-accent-300: #ebb667;
-  --color-accent-400: #e69d3a;
-  --color-accent-500: #e0821c;
-  --color-accent-600: #d16715;
-  --color-accent-700: #ad4c14;
-  --color-accent-800: #8b3c17;
-  --color-accent-900: #713316;
-  --color-accent-950: #401808;
+  --color-purple: #a678f2;
+  --color-purple-deep: #7046b8;
+  --color-gold: #f4c95d;
 
-  --color-surface-50: #ffffff;
-  --color-surface-100: #fafafa;
-  --color-surface-200: #f4f4f5;
-  --color-surface-300: #e4e4e7;
-  --color-surface-400: #d4d4d8;
-  --color-surface-900: #18181b;
-  --color-surface-950: #09090b;
+  --color-ink: #16243a;
+  --color-ink-soft: #31425c;
 
-  --color-text-primary: var(--color-surface-900);
-  --color-text-secondary: #52525b;
-  --color-text-tertiary: #71717a;
+  --color-primary-50: #eef6f0;
+  --color-primary-100: #d5e7da;
+  --color-primary-200: #b3d0bb;
+  --color-primary-300: #8bb293;
+  --color-primary-400: #648f6e;
+  --color-primary-500: var(--color-chalkboard-soft);
+  --color-primary-600: var(--color-chalkboard);
+  --color-primary-700: #1d4231;
+  --color-primary-800: var(--color-chalkboard-deep);
+  --color-primary-900: #102a21;
+  --color-primary-950: #081713;
+
+  --color-secondary-50: #f7f4ec;
+  --color-secondary-100: #efe7d8;
+  --color-secondary-200: #e2d4b7;
+  --color-secondary-300: #d3bd90;
+  --color-secondary-400: #bea16b;
+  --color-secondary-500: #a9874d;
+  --color-secondary-600: #8d6f3f;
+  --color-secondary-700: #705934;
+  --color-secondary-800: #5b492d;
+  --color-secondary-900: #4d3e29;
+  --color-secondary-950: #271f16;
+
+  --color-accent-50: #f6f0ff;
+  --color-accent-100: #ece2ff;
+  --color-accent-200: #dcc8ff;
+  --color-accent-300: #c7a6ff;
+  --color-accent-400: #b485ff;
+  --color-accent-500: var(--color-purple);
+  --color-accent-600: #8d5ce0;
+  --color-accent-700: var(--color-purple-deep);
+  --color-accent-800: #5e3898;
+  --color-accent-900: #4d2f79;
+  --color-accent-950: #2e1d49;
+
+  --shadow-soft: 0 18px 40px rgba(22, 36, 58, 0.08);
 }
 
 @layer base {
   :root {
-    --background: var(--color-surface-50);
-    --foreground: var(--color-text-primary);
+    --background: var(--color-paper);
+    --foreground: var(--color-ink);
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: var(--color-surface-950);
-      --foreground: var(--color-surface-50);
-    }
+  * {
+    border-color: rgba(35, 79, 59, 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -72,9 +79,42 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at top left, rgba(244, 201, 93, 0.18), transparent 28%),
+      radial-gradient(circle at top right, rgba(166, 120, 242, 0.16), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: rgba(166, 120, 242, 0.28);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

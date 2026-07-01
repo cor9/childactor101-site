@@ -42,7 +42,7 @@ export function TestimonialsSection() {
             <div key={i} className="bg-primary-950 p-8 rounded-2xl border border-primary-800 flex flex-col">
               <div className="flex-grow">
                 <p className="text-primary-100 italic mb-6 leading-relaxed">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </p>
               </div>
               <div>

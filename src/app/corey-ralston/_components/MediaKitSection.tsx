@@ -1,4 +1,5 @@
-import { Download, Copy } from 'lucide-react';
+import Image from 'next/image';
+import { Download } from 'lucide-react';
 
 export function MediaKitSection() {
   return (
@@ -48,7 +49,13 @@ export function MediaKitSection() {
               <h3 className="text-lg font-bold text-primary-900 mb-4">Approved Headshots</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative group rounded-xl overflow-hidden aspect-square border border-surface-200">
-                  <img src="/images/corey-ralston.jpg" alt="Corey Ralston Headshot 1" className="w-full h-full object-cover" />
+                  <Image
+                    src="/images/corey-ralston.jpg"
+                    alt="Corey Ralston Headshot 1"
+                    fill
+                    sizes="(min-width: 1024px) 12rem, 50vw"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-primary-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <Download className="w-6 h-6 text-white" />
                   </div>
@@ -63,7 +70,13 @@ export function MediaKitSection() {
             <div>
               <h3 className="text-lg font-bold text-primary-900 mb-4">Brand Assets</h3>
               <div className="bg-surface-100 p-4 rounded-xl border border-surface-200 flex items-center justify-center aspect-[2/1] relative group overflow-hidden">
-                <img src="/101logo.png" alt="Child Actor 101 Logo" className="max-h-full max-w-full object-contain mix-blend-multiply" />
+                <Image
+                  src="/101logo.png"
+                  alt="Child Actor 101 Logo"
+                  width={320}
+                  height={160}
+                  className="max-h-full max-w-full object-contain mix-blend-multiply"
+                />
                 <div className="absolute inset-0 bg-primary-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <Download className="w-6 h-6 text-white" />
                 </div>

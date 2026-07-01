@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { 
   ArrowRight, 
   PlayCircle, 
   ExternalLink,
-  ChevronDown,
   Video,
   Mic,
   BookOpen,
   GraduationCap,
-  Download,
-  Mail
 } from 'lucide-react';
 
 import { ArticlesSection } from './_components/ArticlesSection';
@@ -114,8 +112,14 @@ export default function CoreyRalstonPage() {
               </div>
             </div>
             <div className="relative mx-auto w-full max-w-md lg:max-w-full z-10">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-white border-4 border-white">
-                <img src="/images/corey-ralston.jpg" alt="Corey Ralston" className="w-full h-full object-cover" />
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-white border-4 border-white">
+                <Image
+                  src="/images/corey-ralston.jpg"
+                  alt="Corey Ralston"
+                  fill
+                  sizes="(min-width: 1024px) 40rem, 100vw"
+                  className="object-cover"
+                />
               </div>
               <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse"></div>
               <div className="absolute -top-6 -right-6 w-48 h-48 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -154,16 +158,16 @@ export default function CoreyRalstonPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-primary-950 mb-8 text-center">About Corey Ralston</h2>
           <div className="prose prose-lg md:prose-xl mx-auto text-text-secondary space-y-6">
             <p>
-              Corey's journey in the entertainment industry began in front of the camera as a child actor. Experiencing the highs, lows, and pressures of the business at a young age gave him a profound understanding of the emotional landscape young performers navigate daily. He learned firsthand that acting isn't just about memorizing lines—it's about understanding human behavior while carrying the weight of professional expectations.
+              Corey&apos;s journey in the entertainment industry began in front of the camera as a child actor. Experiencing the highs, lows, and pressures of the business at a young age gave him a profound understanding of the emotional landscape young performers navigate daily. He learned firsthand that acting isn&apos;t just about memorizing lines—it&apos;s about understanding human behavior while carrying the weight of professional expectations.
             </p>
             <p>
-              Transitioning into talent management and coaching allowed Corey to step behind the scenes, where he quickly recognized a glaring gap in the industry: parents were expected to manage their child's career without any formal education on how the business actually works. They were navigating a complex, highly competitive field armed only with fragmented advice from Facebook groups and well-meaning but inexperienced friends.
+              Transitioning into talent management and coaching allowed Corey to step behind the scenes, where he quickly recognized a glaring gap in the industry: parents were expected to manage their child&apos;s career without any formal education on how the business actually works. They were navigating a complex, highly competitive field armed only with fragmented advice from Facebook groups and well-meaning but inexperienced friends.
             </p>
             <p>
               This realization became the catalyst for Child Actor 101. What started as an effort to demystify the industry has grown into a comprehensive educational platform. Corey built Child Actor 101 to protect families from predatory practices, set realistic expectations, and provide the high-level training young actors need to succeed ethically and sustainably.
             </p>
             <p>
-              Today, Corey balances his time managing a select roster of youth talent, coaching actors for major television and film roles, and expanding the Child Actor 101 ecosystem to ensure that no parent ever has to guess their way through their child's career again.
+              Today, Corey balances his time managing a select roster of youth talent, coaching actors for major television and film roles, and expanding the Child Actor 101 ecosystem to ensure that no parent ever has to guess their way through their child&apos;s career again.
             </p>
           </div>
         </div>
@@ -221,12 +225,12 @@ export default function CoreyRalstonPage() {
       {/* 5. Coaching Philosophy */}
       <section className="py-24 bg-primary-950 text-white">
         <div className="container mx-auto px-4 max-w-7xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Corey's Approach to Young Actors</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Corey&apos;s Approach to Young Actors</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-primary-900 p-8 rounded-2xl border border-primary-800">
               <h3 className="text-2xl font-bold text-primary-100 mb-4">Acting Is Behavior</h3>
               <p className="text-primary-100/80 leading-relaxed">
-                Acting is never about pretending or playing dress-up. It's about understanding authentic human behavior. Corey teaches young actors how to make grounded choices, identify character needs, understand relationships, and live truthfully under imaginary circumstances.
+                Acting is never about pretending or playing dress-up. It&apos;s about understanding authentic human behavior. Corey teaches young actors how to make grounded choices, identify character needs, understand relationships, and live truthfully under imaginary circumstances.
               </p>
             </div>
             <div className="bg-primary-900 p-8 rounded-2xl border border-primary-800">
@@ -244,7 +248,7 @@ export default function CoreyRalstonPage() {
             <div className="bg-primary-900 p-8 rounded-2xl border border-primary-800">
               <h3 className="text-2xl font-bold text-primary-100 mb-4">Child Actors Are Children First</h3>
               <p className="text-primary-100/80 leading-relaxed">
-                The well-being of the child must always outrank the pursuit of the role. Corey advocates for healthy boundaries, age-appropriate material, safe set environments, and maintaining a humane process that respects the child's development outside the industry.
+                The well-being of the child must always outrank the pursuit of the role. Corey advocates for healthy boundaries, age-appropriate material, safe set environments, and maintaining a humane process that respects the child&apos;s development outside the industry.
               </p>
             </div>
           </div>
@@ -301,7 +305,7 @@ export default function CoreyRalstonPage() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <span className="text-primary-500 mr-3 text-xl">•</span>
-                <span><strong>Scam Awareness:</strong> Actively educating families on how to spot pay-to-play schemes, unethical representation, and expensive "shortcuts" that don't yield results.</span>
+                <span><strong>Scam Awareness:</strong> Actively educating families on how to spot pay-to-play schemes, unethical representation, and expensive &ldquo;shortcuts&rdquo; that don&apos;t yield results.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary-500 mr-3 text-xl">•</span>
@@ -349,16 +353,16 @@ export default function CoreyRalstonPage() {
         <div className="container mx-auto px-4 max-w-3xl relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-950 mb-8 text-center">A Note From Corey</h2>
           <div className="bg-white p-10 md:p-14 rounded-[2.5rem] shadow-xl border border-accent-100 relative">
-            <div className="absolute top-8 left-8 text-6xl text-accent-200 font-serif leading-none">"</div>
+            <div className="absolute top-8 left-8 text-6xl text-accent-200 font-serif leading-none">&ldquo;</div>
             <div className="prose prose-lg text-text-secondary relative z-10">
               <p>
-                When I started Child Actor 101, I didn't set out to build an empire of tools and training programs. I started it because I was tired of watching parents get taken advantage of. I was tired of the fear-mongering, the gatekeeping, and the sheer amount of bad advice circulating in the industry.
+                When I started Child Actor 101, I didn&apos;t set out to build an empire of tools and training programs. I started it because I was tired of watching parents get taken advantage of. I was tired of the fear-mongering, the gatekeeping, and the sheer amount of bad advice circulating in the industry.
               </p>
               <p>
                 Families deserve better. They deserve a space where they can ask questions without being judged. They deserve to know what casting directors actually want, how managers actually think, and how to keep their kids grounded and happy while pursuing this crazy dream.
               </p>
               <p>
-                Whether you're booking private coaching, reading the newsletter, or just hanging out in our community, my hope is that Child Actor 101 gives you a sense of relief. You don't have to figure this out alone. The business is tough, but it doesn't have to be a mystery. Take a breath, trust the process, and let's get to work.
+                Whether you&apos;re booking private coaching, reading the newsletter, or just hanging out in our community, my hope is that Child Actor 101 gives you a sense of relief. You don&apos;t have to figure this out alone. The business is tough, but it doesn&apos;t have to be a mystery. Take a breath, trust the process, and let&apos;s get to work.
               </p>
               <p className="mt-8 font-bold text-primary-900 text-xl">
                 — Corey Ralston
@@ -376,7 +380,7 @@ export default function CoreyRalstonPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Start With the Resource That Fits Your Family</h2>
           <p className="text-xl text-primary-200 mb-10 max-w-2xl mx-auto">
-            Whether you are just starting out or looking to level up your child's career, there is a place for you in the Child Actor 101 ecosystem. Explore our resources below.
+            Whether you are just starting out or looking to level up your child&apos;s career, there is a place for you in the Child Actor 101 ecosystem. Explore our resources below.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/101-blog" className="px-6 py-3 bg-white text-primary-950 font-bold rounded-full hover:bg-primary-50 transition-colors">Read the Blog</Link>

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -7,6 +8,8 @@ import { ChalkDust } from "@/components/primitives/ChalkDust";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export interface JourneyStep {
+  actionHref?: string;
+  actionLabel?: string;
   description: string;
   title: string;
 }
@@ -69,6 +72,15 @@ export function JourneyTimeline({
               <p className="mt-4 text-[1.15rem] leading-9 text-white/72">
                 {step.description}
               </p>
+              {step.actionHref && step.actionLabel ? (
+                <Link
+                  href={step.actionHref}
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#bcefdc] transition hover:text-white"
+                >
+                  {step.actionLabel}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              ) : null}
             </div>
           ))}
         </div>

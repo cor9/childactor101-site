@@ -17,6 +17,7 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Replaced the homepage Meet Corey placeholder with the real `corey-ralston.jpg` headshot
 - Connected explicit podcast listening CTAs to the live Spotify show URL while keeping `/podcast` as the internal podcast front door
 - Refactored the homepage into reusable `ui`, `layout`, `home`, and `content` component libraries without changing the approved visual design
+- Built the `/start-here` onboarding page as the primary parent-first roadmap using the existing reusable component system
 
 ### Remaining
 

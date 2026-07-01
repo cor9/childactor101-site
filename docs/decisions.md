@@ -90,6 +90,18 @@ Future pages need a shared design system, but the homepage already defines the a
 
 ---
 
+## 2026-07-01
+
+### Decision
+
+Make `/start-here` the main onboarding page for brand-new parents and structure it as a guided roadmap before deeper training, tools, or product-specific pages.
+
+### Reason
+
+New families need clarity and order first. Leading with step-by-step education supports the site architecture, lowers overwhelm, and keeps Child Actor 101 aligned with its trust-first teaching model.
+
+---
+
 # Related Documents
 
 - ROADMAP.md

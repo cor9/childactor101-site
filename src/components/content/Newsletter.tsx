@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 
 export interface NewsletterProps {
   ctaHref: string;
@@ -20,18 +18,14 @@ export function Newsletter({
   title,
 }: NewsletterProps) {
   return (
-    <Card tone="warm">
-      <SectionHeader
-        description={description}
-        descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-        label={label}
-        title={title}
-        titleClassName="mt-6 text-chalkboard lg:text-5xl"
-      />
-      {note ? <p className="mt-5 text-sm leading-7 text-ink-soft">{note}</p> : null}
-      <Button href={ctaHref} className="mt-8 w-fit" variant="secondary">
-        {ctaLabel}
-      </Button>
-    </Card>
+    <NewsletterSignup
+      ctaLabel={ctaLabel}
+      description={description}
+      eyebrow={label}
+      href={ctaHref}
+      note={note}
+      title={title}
+      variant="default"
+    />
   );
 }

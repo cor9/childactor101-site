@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { ArrowRight, CircleDollarSign, ShieldAlert, ShieldCheck, WalletCards } from "lucide-react";
 
 import { FAQ } from "@/components/content/FAQ";
-import { LessonCard } from "@/components/content/LessonCard";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { NextStepCTA } from "@/components/NextStepCTA";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { PageHero } from "@/components/PageHero";
+import { RelatedLessons } from "@/components/RelatedLessons";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -73,24 +75,28 @@ const directoryCategories = [
 const relatedGuidance = [
   {
     title: "The New Hollywood Casting Scam Every Parent Needs to Know About",
+    chapter: "Safety & Ethics",
     description:
       "A plain-English scam lesson for the parent who wants the warning signs before someone turns hope into a sales funnel.",
     href: "/from-the-classroom/safety-ethics/the-new-hollywood-casting-scam-every-parent-needs-to-know-about",
   },
   {
     title: "Understanding Talent Rep Commissions",
+    chapter: "Representation",
     description:
       "Use this before signing anything that touches money, percentages, or representation terms.",
     href: "/from-the-classroom/representation/understanding-talent-rep-commissions",
   },
   {
     title: "When to Update Child Actor Headshots",
+    chapter: "Professional Materials",
     description:
       "A useful timing check when someone is pushing a new photo package before the actor actually needs one.",
     href: "/from-the-classroom/professional-materials/when-to-update-child-actor-headshots",
   },
   {
     title: "Child Acting Budget: What Families Really Spend",
+    chapter: "Parent Operations",
     description:
       "A calmer budgeting lens for parents trying to separate normal costs from expensive noise.",
     href: "/from-the-classroom/parent-operations/child-acting-budget-what-families-really-spend",
@@ -332,78 +338,42 @@ export default function BeforeYouPayPage() {
 
       <Section className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container>
-          <SectionHeader
-            className="max-w-3xl"
+          <RelatedLessons
             description="Learn the rules before you spend. These classroom routes give parents the language, expectations, and caution signals that make expensive pitches easier to evaluate."
-            descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Related classroom guidance"
+            lessons={relatedGuidance.map((item) => ({
+              chapter: item.chapter,
+              href: item.href,
+              summary: item.description,
+              title: item.title,
+            }))}
             title="Learn the rules before you spend."
-            titleClassName="mt-6 text-chalkboard"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {relatedGuidance.map((item) => (
-              <LessonCard
-                key={item.title}
-                actionHref={item.href}
-                actionLabel="Read guidance"
-                description={item.description}
-                eyebrow="Classroom lesson"
-                title={item.title}
-                tone="paper"
-              />
-            ))}
-          </div>
         </Container>
       </Section>
 
       <Section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Card tone="warm">
-            <SectionHeader
-              description="A simple parent checklist for spotting high-pressure offers, suspicious fees, and too-good-to-be-true industry promises before you spend money."
-              descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-              label="Email magnet"
-              title="Get the Red Flags Checklist."
-              titleClassName="mt-6 text-chalkboard"
-            />
-            <Button
-              href={checklistHref}
-              className="mt-8 w-fit"
-              rel="noreferrer"
-              size="lg"
-              target="_blank"
-              variant="secondary"
-            >
-              Get the Checklist
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-          </Card>
+          <NewsletterSignup
+            ctaLabel="Get the Checklist"
+            description="A simple parent checklist for spotting high-pressure offers, suspicious fees, and too-good-to-be-true industry promises before you spend money."
+            eyebrow="Email magnet"
+            href={checklistHref}
+            title="Get the Red Flags Checklist."
+          />
         </Container>
       </Section>
 
       <Section className="bg-paper px-4 pb-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Card className="relative overflow-hidden bg-[linear-gradient(180deg,#fffdf8_0%,#f7efe0_100%)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-deep">
-              Final CTA
-            </p>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
-              Spend less like a target and more like a parent with context.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-ink-soft">
-              Start with the Directory, read the classroom guidance, and let any pitch survive a slower, smarter conversation before you hand over money.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href={directoryHref} rel="noreferrer" size="lg" target="_blank">
-                Check the Directory
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button href={checklistHref} rel="noreferrer" size="lg" target="_blank" variant="secondary">
-                Get the Checklist
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </Card>
+          <NextStepCTA
+            description="Start with the Directory, read the classroom guidance, and let any pitch survive a slower, smarter conversation before you hand over money."
+            eyebrow="Final CTA"
+            primaryHref={directoryHref}
+            primaryLabel="Check the Directory"
+            secondaryHref={checklistHref}
+            secondaryLabel="Get the Checklist"
+            title="Spend less like a target and more like a parent with context."
+          />
         </Container>
       </Section>
     </main>

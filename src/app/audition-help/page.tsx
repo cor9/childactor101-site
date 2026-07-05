@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { ArrowRight, Camera, CheckSquare, Clapperboard, MicVocal, MonitorPlay, TimerReset } from "lucide-react";
 
 import { LessonCard } from "@/components/content/LessonCard";
-import { Newsletter } from "@/components/content/Newsletter";
-import { Button } from "@/components/ui/Button";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { NextStepCTA } from "@/components/NextStepCTA";
 import { Card } from "@/components/ui/Card";
 import { PageHero } from "@/components/PageHero";
+import { RelatedLessons } from "@/components/RelatedLessons";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -86,24 +87,28 @@ const prepTools = [
 const relatedLessons = [
   {
     title: "Auditions Chapter",
+    chapter: "Auditions",
     description:
       "Open the full audition shelf when one urgent tape turns into a broader need for a better family process.",
     href: "/from-the-classroom/auditions",
   },
   {
     title: "Self Tape Equipment for Child Actors",
+    chapter: "Auditions",
     description:
       "A practical equipment lesson so families can stop wasting time and money on gear that does not improve the tape.",
     href: "/from-the-classroom/auditions/self-tape-equipment-for-child-actors",
   },
   {
     title: "How to Build a Better Audition Slate",
+    chapter: "Auditions",
     description:
       "Use this when the slate feels stiff, over-coached, or like it is competing with the scene.",
     href: "/from-the-classroom/auditions/how-to-build-a-better-audition-slate",
   },
   {
     title: "What Makes a Child Actor’s Self Tape Competitive",
+    chapter: "Auditions",
     description:
       "A grounded lesson on what actually helps a tape feel trustworthy, watchable, and castable.",
     href: "/from-the-classroom/auditions/what-makes-a-child-actors-self-tape-competitive",
@@ -242,37 +247,26 @@ export default function AuditionHelpPage() {
 
       <Section className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container>
-          <SectionHeader
-            className="max-w-3xl"
+          <RelatedLessons
             description="These classroom lessons cover the recurring problems behind last-minute tape stress, so families can improve the whole process instead of surviving one deadline at a time."
-            descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Related classroom guidance"
+            lessons={relatedLessons.map((lesson) => ({
+              chapter: lesson.chapter,
+              href: lesson.href,
+              summary: lesson.description,
+              title: lesson.title,
+            }))}
             title="Build a better audition process, not just a better panic response."
-            titleClassName="mt-6 text-chalkboard"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {relatedLessons.map((lesson) => (
-              <LessonCard
-                key={lesson.title}
-                actionHref={lesson.href}
-                actionLabel="Read lesson"
-                description={lesson.description}
-                eyebrow="Classroom lesson"
-                title={lesson.title}
-                tone="paper"
-              />
-            ))}
-          </div>
         </Container>
       </Section>
 
       <Section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Newsletter
-            ctaHref="/from-the-classroom#newsletter"
+          <NewsletterSignup
             ctaLabel="Get audition tips"
             description="Get practical audition help in your inbox: self tape fixes, slate guidance, callback notes, and the calm parent perspective that makes deadlines easier to manage."
-            label="Newsletter"
+            eyebrow="Newsletter"
+            href="/from-the-classroom#newsletter"
             title="Keep the next audition calmer."
           />
         </Container>
@@ -280,27 +274,15 @@ export default function AuditionHelpPage() {
 
       <Section className="bg-paper px-4 pb-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Card className="relative overflow-hidden bg-[linear-gradient(180deg,#fffdf8_0%,#f7efe0_100%)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-deep">
-              Final CTA
-            </p>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
-              Good audition help should make the room quieter.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-ink-soft">
-              Start with the basics, get focused feedback when you need it, and build a tape process your family can trust the next time the deadline gets tight.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="/ecosystem#self-tape-feedback" size="lg">
-                Get Self Tape Feedback
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button href="/ecosystem#prep101" size="lg" variant="secondary">
-                Use Prep101
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </Card>
+          <NextStepCTA
+            description="Start with the basics, get focused feedback when you need it, and build a tape process your family can trust the next time the deadline gets tight."
+            eyebrow="Final CTA"
+            primaryHref="/ecosystem#self-tape-feedback"
+            primaryLabel="Get Self Tape Feedback"
+            secondaryHref="/ecosystem#prep101"
+            secondaryLabel="Use Prep101"
+            title="Good audition help should make the room quieter."
+          />
         </Container>
       </Section>
     </main>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 
-import { Newsletter } from "@/components/content/Newsletter";
 import { LessonCard } from "@/components/content/LessonCard";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { PageHero } from "@/components/PageHero";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
@@ -122,11 +122,11 @@ export default function TrainingPage() {
 
       <Section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Newsletter
-            ctaHref="/from-the-classroom#newsletter"
+          <NewsletterSignup
             ctaLabel="Join The Callback"
             description="The Callback helps parents stay close to practical guidance on training, coaching, confidence, and pacing so growth can stay healthy as the work gets more serious."
-            label="Email follow-up"
+            eyebrow="Email follow-up"
+            href="/from-the-classroom#newsletter"
             title="Keep the long game in view."
           />
         </Container>

@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { ArrowRight, BriefcaseBusiness, Camera, CheckSquare, Clapperboard, FileText, Users } from "lucide-react";
 
 import { LessonCard } from "@/components/content/LessonCard";
-import { Newsletter } from "@/components/content/Newsletter";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { NextStepCTA } from "@/components/NextStepCTA";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { PageHero } from "@/components/PageHero";
+import { RelatedLessons } from "@/components/RelatedLessons";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -117,24 +119,28 @@ const materialTools = [
 const relatedLessons = [
   {
     title: "Agents vs. Managers for Child Actors",
+    chapter: "Representation",
     description:
       "Start here if your family still needs the role difference explained without industry jargon.",
     href: "/from-the-classroom/representation/agents-vs-managers-for-child-actors",
   },
   {
     title: "Understanding Talent Rep Commissions",
+    chapter: "Representation",
     description:
       "A practical commission lesson before money, percentages, and contracts get blurry.",
     href: "/from-the-classroom/representation/understanding-talent-rep-commissions",
   },
   {
     title: "Is My Child Ready for an Agent?",
+    chapter: "Representation",
     description:
       "The readiness lesson for families who want the honest answer before they submit too early.",
     href: "/from-the-classroom/representation/is-my-child-ready-for-an-agent",
   },
   {
     title: "Representation Chapter",
+    chapter: "Representation",
     description:
       "Browse the broader representation shelf for timing, etiquette, and the professional habits reps actually notice.",
     href: "/from-the-classroom/representation",
@@ -342,37 +348,26 @@ export default function GetRepresentedPage() {
 
       <Section className="bg-paper px-4 py-20 sm:px-6 lg:px-8">
         <Container>
-          <SectionHeader
-            className="max-w-3xl"
+          <RelatedLessons
             description="These classroom lessons cover the timing, money, and readiness questions that usually need to be settled before representation becomes a smart next move."
-            descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Related classroom lessons"
+            lessons={relatedLessons.map((lesson) => ({
+              chapter: lesson.chapter,
+              href: lesson.href,
+              summary: lesson.description,
+              title: lesson.title,
+            }))}
             title="Learn the rules before you submit."
-            titleClassName="mt-6 text-chalkboard"
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {relatedLessons.map((lesson) => (
-              <LessonCard
-                key={lesson.title}
-                actionHref={lesson.href}
-                actionLabel="Read lesson"
-                description={lesson.description}
-                eyebrow="Classroom lesson"
-                title={lesson.title}
-                tone="paper"
-              />
-            ))}
-          </div>
         </Container>
       </Section>
 
       <Section className="bg-paper-warm px-4 py-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Newsletter
-            ctaHref="/from-the-classroom#newsletter"
+          <NewsletterSignup
             ctaLabel="Get representation tips"
             description="Get practical representation notes in your inbox: readiness, submissions, materials, money questions, and the judgment calls that matter before a family reaches out to reps."
-            label="Newsletter"
+            eyebrow="Newsletter"
+            href="/from-the-classroom#newsletter"
             title="Stay sharp between submissions."
           />
         </Container>
@@ -380,27 +375,15 @@ export default function GetRepresentedPage() {
 
       <Section className="bg-paper px-4 pb-20 sm:px-6 lg:px-8">
         <Container className="max-w-6xl">
-          <Card className="relative overflow-hidden bg-[linear-gradient(180deg,#fffdf8_0%,#f7efe0_100%)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-deep">
-              Final CTA
-            </p>
-            <h2 className="mt-5 max-w-3xl font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
-              Representation isn&apos;t the finish line.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-ink-soft">
-              Great representation amplifies prepared actors. Build the materials, strengthen the process, and then let the right opportunity meet a family that is ready for it.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button href="#readiness" size="lg">
-                Start Preparing
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-              <Button href={openCallWaitlistHref} size="lg" variant="secondary">
-                Join the Waitlist
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </div>
-          </Card>
+          <NextStepCTA
+            description="Great representation amplifies prepared actors. Build the materials, strengthen the process, and then let the right opportunity meet a family that is ready for it."
+            eyebrow="Final CTA"
+            primaryHref="#readiness"
+            primaryLabel="Start Preparing"
+            secondaryHref={openCallWaitlistHref}
+            secondaryLabel="Join the Waitlist"
+            title="Representation isn&apos;t the finish line."
+          />
         </Container>
       </Section>
     </main>

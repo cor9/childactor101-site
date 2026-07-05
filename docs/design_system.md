@@ -363,6 +363,12 @@ Search
 
 Section Divider
 
+Related Lessons
+
+Next Step CTA
+
+Testimonial Band
+
 ---
 
 # Buttons
@@ -433,6 +439,41 @@ Every major lesson should include a custom illustration.
 See:
 
 ILLUSTRATION_GUIDELINES.md
+
+Page recipe illustration guidance now lives in:
+
+`docs/design-system/page-recipes.md`
+
+and the internal design-system route:
+
+`/design-system/page-recipes`
+
+---
+
+# Page Support Components
+
+Use reusable page support components instead of rebuilding recurring bottom-of-page patterns by hand.
+
+## Components
+
+- `NewsletterSignup`
+- `RelatedLessons`
+- `NextStepCTA`
+- `TestimonialBand`
+
+## Use Cases
+
+- Email magnets and waitlists
+- Related classroom guidance
+- Final next-step sections
+- Short testimonial or proof-point bands
+
+## Avoid
+
+- Rebuilding one-off newsletter sections for every new page
+- Creating multiple equally loud CTAs in one closing block
+- Inventing lesson URLs that do not already exist
+- Publishing fabricated testimonials
 
 ---
 

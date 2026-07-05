@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { ChapterCard } from "@/components/home/ChapterCard";
 import { EcosystemCard } from "@/components/home/EcosystemCard";
+import { FiveDoorsSection } from "@/components/five-doors/FiveDoorsSection";
 import { Hero } from "@/components/home/Hero";
 import { JourneyTimeline } from "@/components/home/JourneyTimeline";
 import { MeetCorey } from "@/components/home/MeetCorey";
@@ -147,6 +148,8 @@ export default function Home() {
           </>
         }
       />
+
+      <FiveDoorsSection />
 
       <JourneyTimeline
         description="Five steps, in order. This is the path every family walks."

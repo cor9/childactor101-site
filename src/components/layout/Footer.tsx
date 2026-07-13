@@ -89,7 +89,14 @@ export function Footer({ columns = defaultColumns }: FooterProps) {
         ))}
       </Container>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs uppercase tracking-[0.18em] text-white/56 sm:px-6 lg:px-8">
-        © Child Actor 101 · Privacy · Terms
+        <span>© Child Actor 101 · </span>
+        <Link className="transition hover:text-[#c7f2e4]" href="/privacy-policy">
+          Privacy
+        </Link>
+        <span> · Terms · </span>
+        <Link className="transition hover:text-[#c7f2e4]" href="/disclaimers">
+          Disclaimers
+        </Link>
       </div>
     </footer>
   );

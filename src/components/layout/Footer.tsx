@@ -93,7 +93,11 @@ export function Footer({ columns = defaultColumns }: FooterProps) {
         <Link className="transition hover:text-[#c7f2e4]" href="/privacy-policy">
           Privacy
         </Link>
-        <span> · Terms · </span>
+        <span> · </span>
+        <Link className="transition hover:text-[#c7f2e4]" href="/terms-and-conditions">
+          Terms
+        </Link>
+        <span> · </span>
         <Link className="transition hover:text-[#c7f2e4]" href="/disclaimers">
           Disclaimers
         </Link>

@@ -211,6 +211,42 @@ Every article written by Corey should link here.
 
 ---
 
+# Industry Professionals (Professional Entrance)
+
+The Five Doors are the parent and young-actor entrance.
+
+Industry Professionals are a separate audience with a separate entrance. They are not Door 6.
+
+Parent entrance:
+
+Five Doors
+
+Professional entrance:
+
+For Industry (`/industry`)
+
+---
+
+## Professional Paths
+
+- Talent discovery — `/industry` Open Call section, with `/industry/open-call` as an informational bridge into the existing Open Call and talent portal systems
+- Directory — links out to the existing Child Actor 101 Directory
+- Client resources — `/industry/resources`
+- Participate — `/industry/get-involved`
+- Media/collaboration — `/media`
+
+---
+
+## Meet Corey vs. Media
+
+`/corey-ralston` is biography, philosophy, and authority.
+
+`/media` is speaking, press, and collaboration: topics, ways to work together, suggested interview questions, and the media kit.
+
+`/corey-ralston` links to `/media` for speaking and press requests. `/media` links back to `/corey-ralston` for the full biography.
+
+---
+
 # Footer Navigation
 
 The footer contains the complete ecosystem.

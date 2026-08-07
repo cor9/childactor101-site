@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowRight, Headphones, NotebookPen, Sparkles } from "lucide-react";
+import { ArrowRight, Headphones, Mic2, NotebookPen, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
@@ -189,6 +189,28 @@ export default function CoreyRalstonPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl">
+          <Card className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-start gap-4">
+              <Mic2 className="mt-1 h-8 w-8 shrink-0 text-purple-deep" />
+              <div>
+                <SectionLabel>Media, Speaking & Collaborations</SectionLabel>
+                <p className="mt-3 max-w-xl text-lg leading-8 text-ink-soft">
+                  Looking for a speaker, podcast guest, contributor, or expert
+                  perspective on young performers and the entertainment
+                  industry?
+                </p>
+              </div>
+            </div>
+            <Button href="/media" className="w-fit shrink-0">
+              Invite Corey
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Card>
         </div>
       </section>
 

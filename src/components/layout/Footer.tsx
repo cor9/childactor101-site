@@ -43,6 +43,15 @@ const defaultColumns: FooterColumn[] = [
       { href: "/ecosystem", label: "Coaching with Corey" },
     ],
   },
+  {
+    heading: "Industry",
+    links: [
+      { href: "/industry", label: "For Industry" },
+      { href: "/industry/resources", label: "Industry Resources" },
+      { href: "/industry/get-involved", label: "Get Involved" },
+      { href: "/media", label: "Invite Corey" },
+    ],
+  },
 ];
 
 export function Footer({ columns = defaultColumns }: FooterProps) {
@@ -54,7 +63,7 @@ export function Footer({ columns = defaultColumns }: FooterProps) {
         <span className="h-2.5 w-12 rounded-full bg-[#A6E0C9]" />
         <span className="h-2.5 w-12 rounded-full bg-[#9A6536]" />
       </div>
-      <Container className="grid gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_repeat(3,minmax(0,1fr))] lg:px-8">
+      <Container className="grid gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_repeat(4,minmax(0,1fr))] lg:px-8">
         <div className="max-w-sm">
           <div className="flex items-center gap-3">
             <Image

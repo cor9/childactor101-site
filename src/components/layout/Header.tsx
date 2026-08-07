@@ -22,6 +22,7 @@ const defaultNavItems: HeaderNavItem[] = [
   { href: "/ecosystem", label: "Tools" },
   { href: "/ecosystem", label: "Training" },
   { href: "/corey-ralston", label: "About Corey" },
+  { href: "/industry", label: "For Industry" },
 ];
 
 export function Header({

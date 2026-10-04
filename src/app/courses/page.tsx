@@ -12,7 +12,7 @@ import { courses, getCourseReviewCount } from "@/content/courses";
 export const metadata: Metadata = {
   title: "Video Courses",
   description:
-    "Restored Child Actor 101 video courses, rebuilt in the classroom with every original lesson preserved.",
+    "Restored Child Actor 101 video courses, rebuilt in the classroom with every original section preserved.",
 };
 
 export default function CoursesIndexPage() {
@@ -34,7 +34,7 @@ export default function CoursesIndexPage() {
             Structured video courses, back in the classroom.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-ink-soft sm:text-xl">
-            These are the original Child Actor 101 courses, restored lesson by lesson in one
+            These are the original Child Actor 101 courses, restored module by module in one
             consistent place. Work through them in order, track your progress as you go, and
             pick up right where you left off.
           </p>
@@ -45,7 +45,7 @@ export default function CoursesIndexPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Each course is a complete walkthrough built from the original material - lessons, videos, worksheets, and resources kept in their intended order."
+            description="Each course is a complete walkthrough built from the original material - modules, videos, worksheets, and resources kept in their intended order."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="Available Courses"
             title="Choose your course."
@@ -57,7 +57,7 @@ export default function CoursesIndexPage() {
               return (
                 <Card key={course.slug} className="flex flex-col">
                   <Pill className="self-start px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-                    {course.sections.length} sections · {course.lessons.length} lessons
+                    {course.modules.length} modules
                   </Pill>
                   <h2 className="mt-5 font-display text-3xl leading-tight text-chalkboard sm:text-4xl">
                     {course.title}
@@ -70,7 +70,7 @@ export default function CoursesIndexPage() {
                   </p>
                   {reviewCount > 0 ? (
                     <p className="mt-4 text-xs leading-6 text-ink-soft/80">
-                      Note: {reviewCount} lesson{reviewCount === 1 ? "" : "s"} still{" "}
+                      Note: {reviewCount} module{reviewCount === 1 ? "" : "s"} still{" "}
                       {reviewCount === 1 ? "has" : "have"} an original video being verified and{" "}
                       {reviewCount === 1 ? "is" : "are"} marked as being restored.
                     </p>

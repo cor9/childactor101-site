@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Build typed course content files from recovered Adobe Express course pages.
+"""NOTE: SUPERSEDED. This emits the old lesson-based model (sections + lessons). The
+course data files have since been restructured into modules + content blocks and
+are now the source of truth; re-running this would overwrite them with the old shape.
+
+Build typed course content files from recovered Adobe Express course pages.
 
 Reads the recovered page extraction JSON (produced from the saved public Adobe
 Express webpages) and emits src/content/courses/no-excuses.ts and

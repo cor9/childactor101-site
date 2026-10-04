@@ -1,6 +1,6 @@
 import { BunnyPlayer } from "@/components/course/BunnyPlayer";
 import { ExternalVideoEmbed } from "@/components/course/ExternalVideoEmbed";
-import type { CourseVideo } from "@/content/courses";
+import type { CourseVideoBlock, MissingVideoBlock } from "@/content/courses";
 
 export function youtubeEmbedUrl(videoId: string): string {
   return `https://www.youtube.com/embed/${videoId}`;
@@ -10,17 +10,17 @@ export function vimeoEmbedUrl(vimeoId: string): string {
   return `https://player.vimeo.com/video/${vimeoId}`;
 }
 
-function MissingVideoPlaceholder({ video }: { video: Extract<CourseVideo, { kind: "missing" }> }) {
+function MissingVideoPlaceholder({ video }: { video: MissingVideoBlock }) {
   const isDevelopment = process.env.NODE_ENV !== "production";
 
   return (
     <div className="rounded-[28px] border-2 border-dashed border-chalkboard/25 bg-paper-warm px-6 py-8 text-center">
       <p className="font-display text-2xl text-chalkboard">
-        This lesson&apos;s video is being restored.
+        This video is being restored.
       </p>
       <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-ink-soft">
         The original hosted video is no longer available and its replacement is still
-        being verified. The lesson position and copy are preserved from the original course.
+        being verified. Its position and the surrounding copy are preserved from the original course.
       </p>
       {isDevelopment ? (
         <div className="mx-auto mt-6 max-w-xl rounded-[20px] border border-[#e7dcc7] bg-white px-5 py-4 text-left text-sm leading-7 text-ink-soft">
@@ -51,15 +51,15 @@ function MissingVideoPlaceholder({ video }: { video: Extract<CourseVideo, { kind
   );
 }
 
-export interface LessonVideoBlockProps {
+export interface ModuleVideoBlockProps {
   fallbackTitle: string;
-  video: CourseVideo;
+  video: CourseVideoBlock;
 }
 
-/** Renders any video carried by a lesson: Bunny player, third-party embed, or a restored later placeholder. */
-export function LessonVideoBlock({ fallbackTitle, video }: LessonVideoBlockProps) {
-  switch (video.kind) {
-    case "bunny":
+/** Renders any video block in a module: Bunny player, third-party embed, or a restoration placeholder. */
+export function ModuleVideoBlock({ fallbackTitle, video }: ModuleVideoBlockProps) {
+  switch (video.type) {
+    case "bunny-video":
       return (
         <BunnyPlayer
           guid={video.guid}
@@ -67,23 +67,19 @@ export function LessonVideoBlock({ fallbackTitle, video }: LessonVideoBlockProps
           title={video.title ?? fallbackTitle}
         />
       );
-    case "youtube":
+    case "external-video":
       return (
         <ExternalVideoEmbed
           note={video.note}
           title={video.title ?? `${fallbackTitle} (reference video)`}
-          url={youtubeEmbedUrl(video.videoId)}
+          url={
+            video.provider === "youtube"
+              ? youtubeEmbedUrl(video.videoId)
+              : vimeoEmbedUrl(video.videoId)
+          }
         />
       );
-    case "vimeo":
-      return (
-        <ExternalVideoEmbed
-          note={video.note}
-          title={video.title}
-          url={vimeoEmbedUrl(video.vimeoId)}
-        />
-      );
-    case "missing":
+    case "missing-video":
       return <MissingVideoPlaceholder video={video} />;
   }
 }

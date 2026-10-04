@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
 
-const STORAGE_KEY = "ca101:course-progress:v1";
+const STORAGE_KEY = "ca101:course-progress:v2";
 const EMPTY: string[] = [];
 
 type ProgressMap = Record<string, string[]>;
@@ -34,8 +34,8 @@ function getProgressMap(): ProgressMap {
   return cachedMap;
 }
 
-function setCompletedLessons(courseSlug: string, lessonSlugs: string[]) {
-  const next: ProgressMap = { ...getProgressMap(), [courseSlug]: lessonSlugs };
+function setCompletedModules(courseSlug: string, moduleSlugs: string[]) {
+  const next: ProgressMap = { ...getProgressMap(), [courseSlug]: moduleSlugs };
   cachedMap = next;
   cachedRaw = JSON.stringify(next);
 
@@ -58,39 +58,39 @@ function subscribe(listener: () => void) {
   };
 }
 
-function useCompletedLessons(courseSlug: string) {
+function useCompletedModules(courseSlug: string) {
   const completed = useSyncExternalStore(
     subscribe,
     () => getProgressMap()[courseSlug] ?? EMPTY,
     () => EMPTY,
   );
 
-  const toggleLesson = useCallback(
-    (lessonSlug: string) => {
+  const toggleModule = useCallback(
+    (moduleSlug: string) => {
       const current = new Set(getProgressMap()[courseSlug] ?? EMPTY);
 
-      if (current.has(lessonSlug)) {
-        current.delete(lessonSlug);
+      if (current.has(moduleSlug)) {
+        current.delete(moduleSlug);
       } else {
-        current.add(lessonSlug);
+        current.add(moduleSlug);
       }
 
-      setCompletedLessons(courseSlug, Array.from(current));
+      setCompletedModules(courseSlug, Array.from(current));
     },
     [courseSlug],
   );
 
-  return { completed: new Set(completed), toggleLesson };
+  return { completed: new Set(completed), toggleModule };
 }
 
 export interface MarkCompleteButtonProps {
   courseSlug: string;
-  lessonSlug: string;
+  moduleSlug: string;
 }
 
-export function MarkCompleteButton({ courseSlug, lessonSlug }: MarkCompleteButtonProps) {
-  const { completed, toggleLesson } = useCompletedLessons(courseSlug);
-  const isComplete = completed.has(lessonSlug);
+export function MarkCompleteButton({ courseSlug, moduleSlug }: MarkCompleteButtonProps) {
+  const { completed, toggleModule } = useCompletedModules(courseSlug);
+  const isComplete = completed.has(moduleSlug);
 
   return (
     <button
@@ -100,16 +100,16 @@ export function MarkCompleteButton({ courseSlug, lessonSlug }: MarkCompleteButto
           ? "bg-[linear-gradient(180deg,#3d845a_0%,#2f704d_100%)] text-white shadow-[0_18px_34px_rgba(35,79,59,0.28)]"
           : "border border-[#e7dcc7] bg-white text-chalkboard shadow-[0_12px_28px_rgba(23,56,43,0.09)] hover:bg-paper-warm"
       }`}
-      onClick={() => toggleLesson(lessonSlug)}
+      onClick={() => toggleModule(moduleSlug)}
       type="button"
     >
       {isComplete ? (
         <>
           <Check className="h-4 w-4" aria-hidden />
-          Lesson completed
+          Module completed
         </>
       ) : (
-        "Mark lesson complete"
+        "Mark module complete"
       )}
     </button>
   );
@@ -117,16 +117,16 @@ export function MarkCompleteButton({ courseSlug, lessonSlug }: MarkCompleteButto
 
 export interface CompletionDotProps {
   courseSlug: string;
-  lessonSlug: string;
+  moduleSlug: string;
 }
 
-export function CompletionDot({ courseSlug, lessonSlug }: CompletionDotProps) {
-  const { completed } = useCompletedLessons(courseSlug);
-  const isComplete = completed.has(lessonSlug);
+export function CompletionDot({ courseSlug, moduleSlug }: CompletionDotProps) {
+  const { completed } = useCompletedModules(courseSlug);
+  const isComplete = completed.has(moduleSlug);
 
   return (
     <span
-      aria-label={isComplete ? "Lesson completed" : "Lesson not completed"}
+      aria-label={isComplete ? "Module completed" : "Module not completed"}
       className={`inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border transition ${
         isComplete ? "border-transparent bg-chalkboard text-chalk" : "border-chalkboard/25 bg-white text-transparent"
       }`}
@@ -139,16 +139,16 @@ export function CompletionDot({ courseSlug, lessonSlug }: CompletionDotProps) {
 
 export interface CourseProgressOverviewProps {
   courseSlug: string;
-  lessons: { slug: string; title: string }[];
+  modules: { slug: string; title: string }[];
 }
 
-export function CourseProgressOverview({ courseSlug, lessons }: CourseProgressOverviewProps) {
-  const { completed } = useCompletedLessons(courseSlug);
+export function CourseProgressOverview({ courseSlug, modules }: CourseProgressOverviewProps) {
+  const { completed } = useCompletedModules(courseSlug);
 
-  const completedCount = lessons.filter((lesson) => completed.has(lesson.slug)).length;
-  const total = lessons.length;
+  const completedCount = modules.filter((module) => completed.has(module.slug)).length;
+  const total = modules.length;
   const percent = total > 0 ? Math.round((completedCount / total) * 100) : 0;
-  const resumeLesson = lessons.find((lesson) => !completed.has(lesson.slug)) ?? lessons[0];
+  const resumeModule = modules.find((module) => !completed.has(module.slug)) ?? modules[0];
   const isFinished = completedCount === total && total > 0;
 
   return (
@@ -158,7 +158,7 @@ export function CourseProgressOverview({ courseSlug, lessons }: CourseProgressOv
           Your progress
         </p>
         <p className="text-sm font-semibold text-chalkboard">
-          {completedCount} of {total} lessons · {percent}%
+          {completedCount} of {total} modules · {percent}%
         </p>
       </div>
       <div
@@ -179,9 +179,9 @@ export function CourseProgressOverview({ courseSlug, lessons }: CourseProgressOv
           <p className="text-sm font-semibold text-chalkboard">
             You finished this course. Nice work keeping the momentum going.
           </p>
-        ) : resumeLesson ? (
-          <Button href={`/courses/${courseSlug}/${resumeLesson.slug}`} size="md" variant="chalk">
-            {completedCount > 0 ? `Resume: ${resumeLesson.title}` : "Start the first lesson"}
+        ) : resumeModule ? (
+          <Button href={`/courses/${courseSlug}/${resumeModule.slug}`} size="md" variant="chalk">
+            {completedCount > 0 ? `Resume: ${resumeModule.title}` : "Start the first module"}
           </Button>
         ) : null}
       </div>

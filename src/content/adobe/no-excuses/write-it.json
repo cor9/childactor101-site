@@ -1,0 +1,851 @@
+{
+  "title": {
+    "position": "title-center",
+    "title": "Write It",
+    "subtitle": "Section One",
+    "image": "/courses/no-excuses/write-it/images/1642D705-5206-4E67-9066-3A5E570B8BF9.jpg",
+    "imageWidth": 1668,
+    "imageHeight": 736,
+    "backgroundPosition": "66.66666666666667% 63.07692307692308%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218224",
+          "bunny": {
+            "guid": "95d84379-5f4a-4719-b58f-4c81068bcea8",
+            "title": "Research",
+            "needsReview": true
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Deciding What To Write",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Before writing a word we must decide what is needed for the Actor. A lot of variables can play into this."
+        },
+        {
+          "type": "p",
+          "html": "Has the Agent or Manager requested a particular genre or character type?"
+        },
+        {
+          "type": "p",
+          "html": "Is there a genre or character type missing from their current clips or reel?"
+        },
+        {
+          "type": "p",
+          "html": "What type of roles or genres are submitting to often?"
+        },
+        {
+          "type": "p",
+          "html": "Which types or genres are you wanting to get more auditions for?"
+        },
+        {
+          "type": "h3",
+          "html": "GENRES",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A sampling of what types of Television &amp; Film Productions you can emulate when creating clips."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/FA7AEE3D-A381-4BE6-AD3B-CADB712D26A0.png",
+          "width": 1546,
+          "height": 2000
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "TYPES",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "<b>Types are the roles an actor fits well. These are usually naturally them based on personalilty or looks. Over time you will see a pattern based on roles casting often brings them on for. It should be no surprise or stretch to where an actor falls. Make clips that show their types within a genre.</b>"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/6F05E883-9262-4975-845B-D52A94A694DD.png",
+          "width": 794,
+          "height": 1123
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218442",
+          "missing": {
+            "note": "Genres & Types teaching video. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Inspiration Station"
+        },
+        {
+          "type": "h4",
+          "html": "Re-work other Works that Work",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "We want to ONLY produce ORIGINAL Scenes!",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Several reasons exist. Like copyright laws for one. But a great reason is to not draw comparisons to something well known. Iconic or familiar scenes, speeches, etc are most often copied by Actors. It is unlikely your self produced version is going to rival or differ enough from the original. It is only going to give a viewer something to score it against and that is probably not a good idea. We want to give them something fresh and new."
+        },
+        {
+          "type": "p",
+          "html": "But what is new? Every plot line or episode is reminiscent of one you have already seen, This gives us license to pay homage or be inspired by a piece and change it up to fit the Actor&#39;s needs and strengths."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377213706",
+          "bunny": {
+            "guid": "3d6315f4-a7f5-482e-9937-b9a79a543b83",
+            "title": "Paying Homage",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Inspired Rules",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Change The Basics",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Characters Names, Gender, Ages",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "This is a huge step. We are erasing a major familiarity to the original work."
+        },
+        {
+          "type": "h4",
+          "html": "Change The Setting or Time Period"
+        },
+        {
+          "type": "p",
+          "html": "Put us somewhere new. From an Office to a Diner. From a Classroom to a Courtroom. Turn a period piece into modern. Takes us to a park instead of a livingroom."
+        },
+        {
+          "type": "h4",
+          "html": "Switch Up The Dialogue",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Start by putting it into your own words. Don&#39;t copy any of it down. Your changed characters should have a voice of their own. Stay in the Actor&#39;s comfort zone with vocabulary."
+        },
+        {
+          "type": "h4",
+          "html": "Example of Inspired Scene",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "<b>From the Showtime Series SHAMELESS</b>",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "hkxRu3Osc0U",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "Re-worked Shameless Scene",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "<b>Keeping the Drama With High Stakes</b>",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "HARDLY ANY OF THE DIALOGUE IS KEPT. THE SITUATION REMAINS THE SAME WITH SOME BACKSTORY INCLUDED. USING THE CHARACTERS AS A REFERENCE MADE IT EASY TO THINK OF THINGS THEY MIGHT ALSO SAY IN THIS SITUATION. ADDED A SLAP FOR SURPRISE AND A PEAK FOR THE CLIP."
+        },
+        {
+          "type": "p",
+          "html": "**GRAPHIC LANGUAGE**"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "324792551",
+          "missing": {
+            "note": "Re-worked Shameless scene example clip (student sample). Vimeo is dead; no candidate identified.",
+            "candidates": []
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/C78708D1-539E-48F6-9ED6-2F0BFC0B4CA2.jpg",
+          "width": 960,
+          "height": 560
+        },
+        {
+          "type": "h4",
+          "html": "Who else can act?",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Before writing it is best to take Inventory or available talent. I have seen a lot of clips ruined by the performance of another performer."
+        },
+        {
+          "type": "p",
+          "html": "The believability of a scene only works if every actor is adept in their performance Try to cast other actors or limit the degree of skill necessary for a scene partner with the type of dialogue written."
+        },
+        {
+          "type": "p",
+          "html": "Limit the amount of emotional range required for secondary characters if you are unsure."
+        },
+        {
+          "type": "p",
+          "html": "Sometimes children want to cast their friends only to find out they are stiff or camera shy. We want to compliment the actor with supporting cast members. We do not want to pull focus or overshadow a performance."
+        },
+        {
+          "type": "h4",
+          "html": "Do I have access to a location?",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A lot of times I will write a scene to the location I already know is being used. Keep in mind environmental noises when choosing outdoor locations such as airplanes, birds, wind, cars, etc."
+        },
+        {
+          "type": "button",
+          "label": "Location Scouting",
+          "href": "https://www.raindance.org/film-locations-on-a-budget/",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/25AAFEA9-36ED-44A3-89B5-586450D18791.jpg",
+          "width": 318,
+          "height": 159,
+          "caption": "<b>Keep The Focus</b>"
+        },
+        {
+          "type": "p",
+          "html": "An actor makes a clip to showcase themselves. A good rule of thumb is to keep the scene partner&#39;s presence to a minimum with dialogue and screen time."
+        },
+        {
+          "type": "p",
+          "html": "Having a scene partner ask questions in dialogue is an easy way to make their role Important but not command a scene."
+        },
+        {
+          "type": "p",
+          "html": "We mainly want them to have great reaction shots to cut to in editing and provide conflict or connection in a scene."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218490",
+          "bunny": {
+            "guid": "3ae82d41-3502-4076-b81d-a136e539bd62",
+            "title": "Location, Location, Location",
+            "needsReview": true
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/4B5D3C08-2BF1-4659-9FF0-9264519536A5.jpg",
+          "width": 852,
+          "height": 480
+        },
+        {
+          "type": "h3",
+          "html": "A CLIP FOR TWO",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "What if more than one actor needs a clip?"
+        },
+        {
+          "type": "p",
+          "html": "You can write longer scenes with strong characters and great dialogue. But you should ideally target a 2-3 minute scene that can be edited to accommodate both of the Actors."
+        },
+        {
+          "type": "p",
+          "html": "This is a major incentive to offer when looking for skilled scene partners and it doesn&#39;t require much more effort than you are already putting out."
+        },
+        {
+          "type": "h4",
+          "html": "Two Actor Clip",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "371529420",
+          "missing": {
+            "note": "Two-actor clip example (student sample). Vimeo is dead; no candidate identified.",
+            "candidates": []
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Writing Engaging Scripts",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "High Stakes",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A script about nothing ends up being SEINFELD. Entertainment comes from the extraordinary. By keeping stakes high we are creating a reason for a performance to be great. What great thing is there for a character to earn, lose or learn from."
+        },
+        {
+          "type": "h4",
+          "html": "Jokes That Land",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "If you are writing a comedy script keep in mind that the average sitcom gets 6-8 laughs per minute. You want every line to get a laugh or setup the next line for a laugh. Comedy is snappy. It is likely you will write more dialogue than a dramatic clip."
+        },
+        {
+          "type": "h4",
+          "html": "Real People Language",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "The average person speaks at a 7th grade level. Resist pulling out the dictionary words. Bad grammar, slang and regional colloquiums are found in every script because it sounds real and is accessible. Go to a Starbucks and eavesdrop with a notepad and see for."
+        },
+        {
+          "type": "h3",
+          "html": "Your First Mission"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218287",
+          "bunny": {
+            "guid": "99cad305-1d4a-41eb-b9e2-40203a2b8b47",
+            "title": "Mission For You",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/3CAA4219-47C6-4B2D-B785-8A6BCE49FF73.jpg",
+          "width": 626,
+          "height": 626
+        },
+        {
+          "type": "h4",
+          "html": "Screenwriting is a style formatted way of writing a story that is much like a Stage Play.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Scenes start with a SCENE SLUG",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A) INT or EXT denotes inside or outside"
+        },
+        {
+          "type": "p",
+          "html": "B) Location ex Smith Living Room"
+        },
+        {
+          "type": "p",
+          "html": "C) Time ex: Day, moments later, 3:14pm, 1965, Dawn"
+        },
+        {
+          "type": "p",
+          "html": "** INT. Corey&#39;s Rusted Pinto - Midnight **"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/FA150922-2119-4ED9-B464-61C4A6C75C32.jpg",
+          "width": 500,
+          "height": 333
+        },
+        {
+          "type": "h4",
+          "html": "Action is written in paragraph form and tells the reader everything that is being shown onscreen. ALL things happening that are not spoken must be written."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/BDA58588-1903-42A7-8C2C-08396B4506B8.jpg",
+          "width": 5476,
+          "height": 3656
+        },
+        {
+          "type": "h4",
+          "html": "Action is like narrating a film to a blind friend"
+        },
+        {
+          "type": "p",
+          "html": "Action is the catchall element of screenwriting. It’s where you tell the reader what happens on the screen. Action lines are also where the tone, pace, visual and visceral experiences of your screenplay are. We want to describe not how something looks but how it should make us feel. **ScriptAngel**"
+        },
+        {
+          "type": "h3",
+          "html": "Characters &amp; Dialogue",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Character is written above each respective line"
+        },
+        {
+          "type": "p",
+          "html": "Dialogue is in paragraph form and should read as it is intended to sound"
+        },
+        {
+          "type": "p",
+          "html": "The only way an actor gets to communicate with a screenwriter is through the clues left by them. A careful use of punctuation, parenthetical direction, bold, italics, underlines and accented or slang spelling is important to include."
+        },
+        {
+          "type": "h4",
+          "html": "Formatted Screenwriting tools"
+        },
+        {
+          "type": "p",
+          "html": "<b>Sites, Apps &amp; Programs</b>",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "StudioBinder Screenwriting Software – Free This is a great web and mobile-friendly screenwriting software that’s free to create professionally formatted screenplays."
+        },
+        {
+          "type": "p",
+          "html": "WriterDuet – Android&#x2F;iOS – Free &amp; Premium WriterDuet is quickly becoming the new standard for screenwriting It combines natural process and user-friendliness."
+        },
+        {
+          "type": "p",
+          "html": "Celtx Script – Android&#x2F;iOS – Free A well-known mobile app complete with a website version too, that includes script writing as well as collaboration options."
+        },
+        {
+          "type": "p",
+          "html": "Final Draft – iOS – $$ The Longest held Industry Standard software for Screenwriting with a list of tools and specific formats. An investment for the serious writer."
+        },
+        {
+          "type": "h3",
+          "html": "Extended Reading",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/4FCA0A22-54AB-4E98-AB11-8970B26C300C.jpg",
+          "width": 1441,
+          "height": 1441,
+          "caption": "A layman&#39;s guide to aspects of filmmaking. Click the button to an article on crafting a scene."
+        },
+        {
+          "type": "button",
+          "label": "Crafting a Scene",
+          "href": "https://nofilmschool.com/2014/07/infographic-john-august-writing-a-scene",
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/82819963-D17E-4DFB-9193-3563718DF969.jpg",
+          "width": 920,
+          "height": 485,
+          "caption": "Another awesome resource. Click to see a screenwriting and film term glossary with definitions"
+        },
+        {
+          "type": "button",
+          "label": "A Great Glossary",
+          "href": "http://www.movieoutline.com/articles/a-glossary-of-screenwriting-terms-and-filmmaking-definitions.html",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/2B0CC3F4-B0AE-400B-80BD-4DD0E695FA93.jpg",
+          "width": 200,
+          "height": 200,
+          "caption": "Tons of writing resources. Here&#39;s a Dialogue Writing Prompt List that can kick start your scene if stuck,"
+        },
+        {
+          "type": "button",
+          "label": "Writing Prompts",
+          "href": "https://www.dailywritingtips.com/writing-prompts-101/",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/4BC05838-7D89-4090-A623-768A89F6F245.jpg",
+          "width": 4896,
+          "height": 3264
+        },
+        {
+          "type": "h4",
+          "html": "When “the sky’s the limit is too much”",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Creative Fencing",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "For Me, too many options&#x2F;choices brings on anxiety. Especially in a creative format. What happens when asked to name something? You freeze because your brain has too wide of a search to pull from. A truth I know is that the absolute best creative work&#x2F;thinking&#x2F;ideas come from boundaries. You need a zone to see the billions of things that exist in that tiny corner of the universe."
+        },
+        {
+          "type": "p",
+          "html": "You can force these boundaries when creating by using prompts or creating rules for yourself."
+        },
+        {
+          "type": "p",
+          "html": "For example when naming a character, limit yourself to a letter of the alphabet."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218581",
+          "bunny": {
+            "guid": "2e57a4c2-a5ed-4e8b-ae0e-89c8e5e004bb",
+            "title": "Fences",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/7139A897-ACCB-4C85-8CE0-03283FAEB298.jpg",
+          "width": 600,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Tone: Match the Mood by WritIng for the Tone of a Genre",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "The Feel",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "How does a scene from a medical drama make you feel? Anxious, perhaps"
+        },
+        {
+          "type": "p",
+          "html": "Is a Tween Comedy going to be bright and bouncy? Most likely"
+        },
+        {
+          "type": "h4",
+          "html": "The Weight",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "The lightness or heaviness of subject matter and the intensity of the performance needed. Find the balance needed to settle into a genre."
+        },
+        {
+          "type": "h4",
+          "html": "The Style",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Down to the dialogue - every show has similar style in their corner of our world. If you start to see a formulaic pattern it is because we as viewers are comfortable with that. Draw in the color and lines these types of programs offer."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218960",
+          "missing": {
+            "note": "Tone / writing-for-genre teaching video.",
+            "candidates": [
+              "bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa - The 80-20 Rule.mp4"
+            ]
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/2BFFC326-8AC6-4FDA-B58A-C261604CC01A.png",
+          "width": 1280,
+          "height": 2560
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Monologue as a Clip",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Good place to start",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Most of you or your kid have a short monologue that&#39;s probably on tape in front of a wall. Good job, now let&#39;s do better. What if you take that monologue and set it in it&#39;s intended environment Then make sure it has another character that is being spoken to. Create a connection and reason for speaking."
+        },
+        {
+          "type": "p",
+          "html": "**CONFESSION: Monologues where actors speak into the void about cats or homework make me wanna run for the hills screaming!**"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/6887D5C9-518A-46CC-9018-05B696A0CCD9.jpg",
+          "width": 789,
+          "height": 1209
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Mono-Clip",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "288832063",
+          "bunny": {
+            "guid": "893a07b7-0282-4740-baa0-16e7966fb3f4",
+            "title": "Beautiful Scar",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/DD47D2EA-BB14-4F7B-ADBA-D44F03389D7B.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377219246",
+          "missing": {
+            "note": "Second monologue-clip video.",
+            "candidates": [
+              "bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Remember, It’s just a Clip!",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/DEB8181F-5E43-4E73-8B7C-549E063AE891.png",
+          "width": 2550,
+          "height": 1700
+        },
+        {
+          "type": "h4",
+          "html": "Clips are meant to be edited to show performance - Not Story.",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "YOU DO NOT HAVE TO HAVE A BEGINNING, MIDDLE AND END."
+        },
+        {
+          "type": "p",
+          "html": "WE SHOULD FEEL FAMILIARITY BUT STRONG INTRIGUE WITH SCENE."
+        },
+        {
+          "type": "p",
+          "html": "START WITH SOMETHING HEIGHTENED THEN ADD ONE MORE PEAK."
+        },
+        {
+          "type": "p",
+          "html": "SELL THE GENRE WITH ITS TRADITIONAL DIALOGUE PACING."
+        },
+        {
+          "type": "p",
+          "html": "THIS IS THE HIGHLIGHT OF THE EPISODE OR FILM TRAILER SCENE."
+        },
+        {
+          "type": "h3",
+          "html": "Don’t Be Scared",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Let it flow",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218336",
+          "bunny": {
+            "guid": "ef3f1d7e-1cf5-44ec-9a17-d6e549c4d005",
+            "title": "Don't be scared",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/write-it/images/03D3AC19-AD38-40FA-A1F5-98248D4F0C40.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    }
+  ],
+  "author": "Corey Ralston",
+  "credits": [
+    "Created with images by Ryoji Iwata - \"blindness\""
+  ]
+}

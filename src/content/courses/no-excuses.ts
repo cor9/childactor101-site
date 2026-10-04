@@ -10,7 +10,7 @@ export const noExcusesCourse: Course = {
   "slug": "no-excuses",
   "title": "NO EXCUSES! DIY Actor Demo Reel Clips",
   "subtitle": "Write it, prep it, shoot it, edit it, use it.",
-  "description": "The recovered Child Actor 101 demo clip course. Across five sections, families learn how to plan, write, shoot, edit, and actually use professional demo reel clips for their young actor - without excuses and without a Hollywood budget. Migrated from the original course so every lesson, video position, and resource is preserved.",
+  "description": "A thorough and in-depth course on creating quality & effective demo clips. Five multi-media sections: Write It, Plan It, Shoot It, Edit It, Use It.",
   "legacyAdobeUrl": "https://express.adobe.com/page/srf8IpDO7ZkIU/",
   "modules": [
     {

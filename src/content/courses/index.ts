@@ -74,6 +74,26 @@ export function getModuleSubsections(module: CourseModule) {
   );
 }
 
+export interface ModuleSubsection {
+  heading: HeadingBlock;
+  blocks: CourseBlock[];
+}
+
+/** Splits a module's blocks into its original subsections (one per level-2 heading). */
+export function getModuleSubsectionBlocks(module: CourseModule): ModuleSubsection[] {
+  const sections: ModuleSubsection[] = [];
+
+  for (const block of module.blocks) {
+    if (block.type === "heading" && block.level === 2) {
+      sections.push({ heading: block, blocks: [] });
+    } else if (sections.length > 0) {
+      sections[sections.length - 1].blocks.push(block);
+    }
+  }
+
+  return sections;
+}
+
 export function getModuleVideoCount(module: CourseModule) {
   return module.blocks.filter(isVideoBlock).length;
 }
@@ -86,10 +106,6 @@ export function moduleNeedsReview(module: CourseModule) {
       (block.type === "bunny-video" && block.needsReview === true) ||
       (block.type === "heading" && block.needsReview === true),
   );
-}
-
-export function getCourseReviewCount(course: Course) {
-  return course.modules.filter(moduleNeedsReview).length;
 }
 
 /** Old per-lesson routes now live as anchors inside their module page. */

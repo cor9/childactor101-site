@@ -1,0 +1,247 @@
+/*
+ * Layout glue for recreated Adobe Express (Spark) pages.
+ *
+ * The original page gets its section/column/video/image layout from Adobe's runtime
+ * stylesheet, which we do not have. This file reproduces that layout for the
+ * pieces the pages use; typography, colors and spacing come from adobe-theme.css.
+ */
+
+.adobe-page .article iframe,
+.adobe-page .article img {
+  max-width: 100%;
+}
+
+.adobe-page .article {
+  color: #000;
+}
+
+.adobe-page .article p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.adobe-page .article a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.adobe-page .article h1,
+.adobe-page .article h2,
+.adobe-page .article h3,
+.adobe-page .article h4,
+.adobe-page .article h5,
+.adobe-page .article h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.adobe-page .article .content-container {
+  overflow: hidden;
+}
+
+.adobe-page {
+  background: #fff;
+  color: rgba(17, 26, 11, 1);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+.adobe-page *,
+.adobe-page *::before,
+.adobe-page *::after {
+  box-sizing: border-box;
+}
+
+.adobe-page .section {
+  position: relative;
+}
+
+.adobe-page .section-view,
+.adobe-page .section-content,
+.adobe-page .section-content-view {
+  position: relative;
+}
+
+.adobe-page .content-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.adobe-page .full-width-section .content-container {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Title section: full-height photo with centered title block */
+.adobe-page .title-section {
+  position: relative;
+  height: 100vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.adobe-page .title-section .section-view,
+.adobe-page .title-section .section-background {
+  position: absolute;
+  inset: 0;
+}
+
+.adobe-page .title-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.adobe-page .title-section .title-header {
+  position: relative;
+  z-index: 1;
+}
+
+.adobe-page .title-header-view .gradient-overlay {
+  position: absolute;
+  top: -200%;
+  bottom: -200%;
+  height: auto;
+  min-height: 0;
+  z-index: 0;
+}
+
+.adobe-page .title-header .subtitle,
+.adobe-page .title-header .title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.adobe-page .title-header .title,
+.adobe-page .title-header .subtitle {
+  display: block;
+}
+
+.adobe-page .navigation-hint.down {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0.85;
+}
+
+/* Images */
+.adobe-page div.image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adobe-page .image-wrapper {
+  display: block;
+}
+
+.adobe-page .image-wrapper img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.adobe-page .full-width-section .image-wrapper,
+.adobe-page .full-width-section .image-wrapper img {
+  width: 100%;
+}
+
+/* Embedded videos: 16:9 box at full column width */
+.adobe-page .embedded-link-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.adobe-page .embedded-link-wrapper.widescreen-aspect-ratio {
+  padding-top: 56.25%;
+}
+
+.adobe-page .embedded-link-wrapper iframe,
+.adobe-page .embedded-link-wrapper .video-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.adobe-page .video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e8ea;
+  color: #5b646b;
+  font-family: adobe-caslon-pro, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.adobe-page .link-button-wrapper {
+  display: block;
+}
+
+.adobe-page .author-appreciation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.adobe-page .section.author-section .author {
+  flex: 1;
+  overflow: hidden;
+  text-align: left;
+}
+
+.adobe-page .section.author-section .info {
+  margin: 7px 0;
+  min-height: 64px;
+  padding-right: 16px;
+}
+
+.adobe-page .section.author-section .name {
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.adobe-page .section.credits-section {
+  font-family: adobe-clean, sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.adobe-page .section.credits-section .section-content .content-container {
+  padding-bottom: 40px;
+}
+
+.adobe-page .section.credits-section .photo-credits {
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+}
+
+.adobe-page .section.credits-section .credits-label {
+  font-weight: 700;
+}
+
+.adobe-page .section.credits-section .photo-credits p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2;
+  text-align: center;
+}

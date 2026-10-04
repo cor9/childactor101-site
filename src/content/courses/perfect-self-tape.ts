@@ -10,7 +10,7 @@ export const perfectSelfTapeCourse: Course = {
   "slug": "perfect-self-tape",
   "title": "The Perfect Self Tape",
   "subtitle": "A Parent Course",
-  "description": "The recovered Child Actor 101 self tape course for parents. Ten sections covering equipment, lighting, framing, slates, readers, performance coaching, editing, parent survival, sending tapes, and when to bend the rules - migrated from the original course with every lesson, video position, and resource preserved.",
+  "description": "Ten sections on making effective self tape auditions for TV/film roles.",
   "legacyAdobeUrl": "https://express.adobe.com/page/4N3CH5BgyUPgp/",
   "modules": [
     {

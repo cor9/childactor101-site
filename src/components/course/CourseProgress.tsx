@@ -3,6 +3,8 @@
 import { useCallback, useSyncExternalStore } from "react";
 import { Check } from "lucide-react";
 
+import Link from "next/link";
+
 import { Button } from "@/components/ui/Button";
 
 const STORAGE_KEY = "ca101:course-progress:v2";
@@ -58,7 +60,7 @@ function subscribe(listener: () => void) {
   };
 }
 
-function useCompletedModules(courseSlug: string) {
+export function useCompletedModules(courseSlug: string) {
   const completed = useSyncExternalStore(
     subscribe,
     () => getProgressMap()[courseSlug] ?? EMPTY,
@@ -106,85 +108,178 @@ export function MarkCompleteButton({ courseSlug, moduleSlug }: MarkCompleteButto
       {isComplete ? (
         <>
           <Check className="h-4 w-4" aria-hidden />
-          Module completed
+          Marked complete
         </>
       ) : (
-        "Mark module complete"
+        "Mark this complete"
       )}
     </button>
   );
 }
 
-export interface CompletionDotProps {
+export interface CompletionMarkProps {
   courseSlug: string;
+  /** Shown inside the circle until the module is completed. */
+  label: string;
   moduleSlug: string;
+  className?: string;
+  tone?: "light" | "dark";
 }
 
-export function CompletionDot({ courseSlug, moduleSlug }: CompletionDotProps) {
+/** Numbered circle that turns into a check once the module is complete. */
+export function CompletionMark({
+  className = "",
+  courseSlug,
+  label,
+  moduleSlug,
+  tone = "light",
+}: CompletionMarkProps) {
   const { completed } = useCompletedModules(courseSlug);
   const isComplete = completed.has(moduleSlug);
+  const idle =
+    tone === "light"
+      ? "border-chalkboard/20 bg-white text-chalkboard"
+      : "border-white/30 bg-white/10 text-white";
 
   return (
     <span
-      aria-label={isComplete ? "Module completed" : "Module not completed"}
-      className={`inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border transition ${
-        isComplete ? "border-transparent bg-chalkboard text-chalk" : "border-chalkboard/25 bg-white text-transparent"
-      }`}
-      role="img"
+      className={`inline-flex flex-none items-center justify-center rounded-full border font-display transition ${
+        isComplete ? "border-transparent bg-[#3d845a] text-white" : idle
+      } ${className}`}
     >
-      <Check className="h-3.5 w-3.5" aria-hidden />
+      {isComplete ? <Check className="h-[55%] w-[55%]" aria-hidden /> : label}
+      <span className="sr-only">{isComplete ? " (completed)" : ""}</span>
     </span>
   );
 }
 
-export interface CourseProgressOverviewProps {
+export interface ModuleActionProps {
   courseSlug: string;
-  modules: { slug: string; title: string }[];
+  moduleSlug: string;
+  /** All module slugs in course order; the first incomplete one is "Continue". */
+  order: string[];
+  className?: string;
 }
 
-export function CourseProgressOverview({ courseSlug, modules }: CourseProgressOverviewProps) {
+/** Start / Continue / Review button for one module, based on saved progress. */
+export function ModuleAction({ className = "", courseSlug, moduleSlug, order }: ModuleActionProps) {
   const { completed } = useCompletedModules(courseSlug);
-
-  const completedCount = modules.filter((module) => completed.has(module.slug)).length;
-  const total = modules.length;
-  const percent = total > 0 ? Math.round((completedCount / total) * 100) : 0;
-  const resumeModule = modules.find((module) => !completed.has(module.slug)) ?? modules[0];
-  const isFinished = completedCount === total && total > 0;
+  const isComplete = completed.has(moduleSlug);
+  const resumeSlug = order.find((slug) => !completed.has(slug));
+  const isCurrent = resumeSlug === moduleSlug;
+  const anyDone = completed.size > 0;
+  const label = isComplete ? "Review" : isCurrent ? (anyDone ? "Continue" : "Start") : "Open";
+  const classes = isCurrent
+    ? "bg-[linear-gradient(180deg,#3d845a_0%,#2f704d_100%)] text-white shadow-[0_14px_28px_rgba(35,79,59,0.25)]"
+    : "border border-[#e7dcc7] bg-white text-chalkboard hover:bg-paper-warm";
 
   return (
-    <div className="rounded-[28px] border border-[#e7dcc7] bg-white px-6 py-5 shadow-soft">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-purple-deep">
-          Your progress
-        </p>
-        <p className="text-sm font-semibold text-chalkboard">
-          {completedCount} of {total} modules · {percent}%
-        </p>
+    <Link
+      className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple ${classes} ${className}`}
+      href={`/courses/${courseSlug}/${moduleSlug}`}
+    >
+      {label}
+    </Link>
+  );
+}
+
+export interface ResumePanelProps {
+  courseSlug: string;
+  modules: { slug: string; name: string }[];
+  /** "stage" / "part" - used in the progress sentence. */
+  unit: string;
+}
+
+/** Hero progress + "resume course" action; sends the learner to the right module. */
+export function ResumePanel({ courseSlug, modules, unit }: ResumePanelProps) {
+  const { completed } = useCompletedModules(courseSlug);
+  const done = modules.filter((module) => completed.has(module.slug)).length;
+  const total = modules.length;
+  const percent = total > 0 ? Math.round((done / total) * 100) : 0;
+  const resume = modules.find((module) => !completed.has(module.slug));
+  const target = resume ?? modules[0];
+
+  return (
+    <div className="mt-8 max-w-md">
+      <div className="flex items-center justify-between text-sm text-[#cfe8dc]">
+        <span>
+          {done === 0
+            ? `${total} ${unit}s to work through`
+            : resume
+              ? `${done} of ${total} ${unit}s complete`
+              : `All ${total} ${unit}s complete`}
+        </span>
+        <span aria-hidden>{percent}%</span>
       </div>
       <div
         aria-label={`Course completion ${percent}%`}
         aria-valuemax={100}
         aria-valuemin={0}
         aria-valuenow={percent}
-        className="mt-4 h-3 overflow-hidden rounded-full bg-paper-warm"
+        className="mt-2 h-2 overflow-hidden rounded-full bg-white/15"
         role="progressbar"
       >
         <div
-          className="h-full rounded-full bg-[linear-gradient(90deg,#a678f2_0%,#7046b8_100%)] transition-[width] duration-500"
+          className="h-full rounded-full bg-gold transition-[width] duration-500"
           style={{ width: `${percent}%` }}
         />
       </div>
-      <div className="mt-5">
-        {isFinished ? (
-          <p className="text-sm font-semibold text-chalkboard">
-            You finished this course. Nice work keeping the momentum going.
-          </p>
-        ) : resumeModule ? (
-          <Button href={`/courses/${courseSlug}/${resumeModule.slug}`} size="md" variant="chalk">
-            {completedCount > 0 ? `Resume: ${resumeModule.title}` : "Start the first module"}
+      {target ? (
+        <div className="mt-6">
+          <Button href={`/courses/${courseSlug}/${target.slug}`} size="lg" variant="primary">
+            {done === 0 ? "Start the course" : resume ? `Resume: ${target.name}` : "Review the course"}
           </Button>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </div>
+  );
+}
+
+export interface ModuleTrackerProps {
+  courseSlug: string;
+  currentSlug: string;
+  steps: { slug: string; name: string; label: string }[];
+}
+
+/** Compact progress path shown at the top of a module page. */
+export function ModuleTracker({ courseSlug, currentSlug, steps }: ModuleTrackerProps) {
+  const showAllNames = steps.length <= 6;
+
+  return (
+    <nav aria-label="Course progress" className="mt-8">
+      <ol className="flex flex-wrap items-center gap-x-2 gap-y-3">
+        {steps.map((step, index) => {
+          const isCurrent = step.slug === currentSlug;
+
+          return (
+            <li className="flex items-center gap-2" key={step.slug}>
+              {index > 0 ? <span aria-hidden className="h-px w-3 bg-white/25 sm:w-5" /> : null}
+              <Link
+                aria-current={isCurrent ? "step" : undefined}
+                className={`group flex items-center gap-2 rounded-full py-1 pr-3 transition ${
+                  isCurrent ? "bg-white/15 pl-1" : "pl-1 hover:bg-white/10"
+                }`}
+                href={`/courses/${courseSlug}/${step.slug}`}
+              >
+                <CompletionMark
+                  className={`h-7 w-7 text-xs ${isCurrent ? "ring-2 ring-gold" : ""}`}
+                  courseSlug={courseSlug}
+                  label={step.label}
+                  moduleSlug={step.slug}
+                  tone="dark"
+                />
+                <span
+                  className={`text-sm font-medium text-white ${
+                    isCurrent || showAllNames ? (isCurrent ? "" : "hidden lg:inline") : "sr-only"
+                  }`}
+                >
+                  {step.name}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
   );
 }

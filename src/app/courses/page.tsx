@@ -1,91 +1,75 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { Pill } from "@/components/ui/Pill";
-import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import { courses, getCourseReviewCount } from "@/content/courses";
+import { courses } from "@/content/courses";
+import { coursePresentation } from "@/content/courses/presentation";
 
 export const metadata: Metadata = {
   title: "Video Courses",
   description:
-    "Restored Child Actor 101 video courses, rebuilt in the classroom with every original section preserved.",
+    "Guided Child Actor 101 video courses: make your own demo clips, and film the perfect self tape.",
 };
 
 export default function CoursesIndexPage() {
   return (
-    <main className="overflow-hidden">
-      <Section className="px-4 pt-10 sm:px-6 lg:px-8">
-        <Container>
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Courses" }]} />
-        </Container>
-      </Section>
-
-      <Section className="relative px-4 pb-16 pt-10 sm:px-6 lg:px-8 lg:pb-20">
-        <div className="absolute inset-x-0 top-0 h-[32rem] bg-[radial-gradient(circle_at_top_left,_rgba(244,201,93,0.22),_transparent_42%),radial-gradient(circle_at_top_right,_rgba(166,120,242,0.18),_transparent_30%)]" />
-        <Container className="relative">
-          <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-            From the Child Actor 101 archive
-          </Pill>
-          <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[0.95] text-chalkboard sm:text-6xl">
-            Structured video courses, back in the classroom.
+    <main>
+      <section className="bg-chalkboard-deep text-chalk">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pb-16">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Courses" }]} tone="chalk" />
+          <h1 className="mt-10 max-w-3xl font-display text-5xl leading-[0.98] text-white sm:text-6xl">
+            Video courses from Corey.
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-ink-soft sm:text-xl">
-            These are the original Child Actor 101 courses, restored module by module in one
-            consistent place. Work through them in order, track your progress as you go, and
-            pick up right where you left off.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#d8ede2]">
+            Two guided workshops, built to be worked through in order. Watch, learn, make
+            something, and pick up right where you left off.
           </p>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
-      <Section className="bg-paper px-4 pb-20 sm:px-6 lg:px-8">
-        <Container>
-          <SectionHeader
-            className="max-w-3xl"
-            description="Each course is a complete walkthrough built from the original material - modules, videos, worksheets, and resources kept in their intended order."
-            descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Available Courses"
-            title="Choose your course."
-            titleClassName="mt-6 text-chalkboard"
-          />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {courses.map((course) => {
-              const reviewCount = getCourseReviewCount(course);
-              return (
-                <Card key={course.slug} className="flex flex-col">
-                  <Pill className="self-start px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-                    {course.modules.length} modules
-                  </Pill>
-                  <h2 className="mt-5 font-display text-3xl leading-tight text-chalkboard sm:text-4xl">
+      <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto grid w-full max-w-6xl gap-8">
+          {courses.map((course) => {
+            const presentation = coursePresentation[course.slug];
+
+            if (!presentation) {
+              return null;
+            }
+
+            return (
+              <Link
+                className="group grid items-center gap-8 rounded-[36px] border border-[#e7dcc7] bg-white p-6 shadow-soft transition hover:-translate-y-1 sm:p-8 md:grid-cols-[18rem_minmax(0,1fr)]"
+                href={`/courses/${course.slug}`}
+                key={course.slug}
+              >
+                <Image
+                  alt=""
+                  className="w-full max-w-xs justify-self-center rounded-[24px] md:max-w-none"
+                  placeholder="blur"
+                  sizes="(min-width: 768px) 288px, 320px"
+                  src={presentation.heroImage}
+                />
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-purple-deep">
+                    {presentation.tagline}
+                  </p>
+                  <h2 className="mt-3 font-display text-4xl leading-tight text-chalkboard group-hover:text-purple-deep">
                     {course.title}
                   </h2>
-                  <p className="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-purple-deep">
-                    {course.subtitle}
+                  <p className="mt-4 max-w-xl text-base leading-8 text-ink-soft">
+                    {presentation.intro}
                   </p>
-                  <p className="mt-4 flex-1 text-sm leading-7 text-ink-soft sm:text-base">
-                    {course.description}
-                  </p>
-                  {reviewCount > 0 ? (
-                    <p className="mt-4 text-xs leading-6 text-ink-soft/80">
-                      Note: {reviewCount} module{reviewCount === 1 ? "" : "s"} still{" "}
-                      {reviewCount === 1 ? "has" : "have"} an original video being verified and{" "}
-                      {reviewCount === 1 ? "is" : "are"} marked as being restored.
-                    </p>
-                  ) : null}
-                  <div className="mt-6">
-                    <Button href={`/courses/${course.slug}`} size="lg" variant="chalk">
-                      Open the course
-                    </Button>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-        </Container>
-      </Section>
+                  {presentation.promise ? <p className="mt-5 font-display text-xl text-chalkboard">{presentation.promise}</p> : null}
+                  <span className="mt-6 inline-flex rounded-full bg-[linear-gradient(180deg,#3d845a_0%,#2f704d_100%)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(35,79,59,0.25)]">
+                    Open the course
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 }

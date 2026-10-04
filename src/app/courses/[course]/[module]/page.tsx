@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CourseProgressOverview, MarkCompleteButton } from "@/components/course/CourseProgress";
+import { MarkCompleteButton, ModuleTracker } from "@/components/course/CourseProgress";
 import { ModuleVideoBlock } from "@/components/course/ModuleVideoBlock";
-import { Card } from "@/components/ui/Card";
-import { Pill } from "@/components/ui/Pill";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
 import {
   getCourse,
   getCourseModule,
   getCourseStaticModuleParams,
   getModulePagination,
-  getModuleSubsections,
+  getModuleSubsectionBlocks,
+  getModuleVideoCount,
   isVideoBlock,
-  moduleNeedsReview,
 } from "@/content/courses";
-import type { CourseBlock, ResourceBlock } from "@/content/courses";
+import type { CourseBlock, CourseVideoBlock, ResourceBlock } from "@/content/courses";
+import { coursePresentation, getSubsectionVariant } from "@/content/courses/presentation";
 
 type ModulePageProps = {
   params: Promise<{
@@ -37,35 +35,36 @@ export async function generateMetadata({ params }: ModulePageProps): Promise<Met
   const { course: courseSlug, module: moduleSlug } = await params;
   const course = getCourse(courseSlug);
   const courseModule = getCourseModule(courseSlug, moduleSlug);
+  const info = coursePresentation[courseSlug]?.modules[moduleSlug];
 
   if (!course || !courseModule) {
-    return { title: "Module | Child Actor 101" };
+    return { title: "Course | Child Actor 101" };
   }
 
   return {
-    title: `${courseModule.title} | ${course.title}`,
-    description: course.description,
+    title: `${info?.name ?? courseModule.title} | ${course.title}`,
+    description: info?.outcome,
   };
 }
 
+const normalize = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
 function ResourceList({ resources }: { resources: ResourceBlock[] }) {
-  return (
-    <ul className="space-y-3">
+  const list = (
+    <ul className="grid gap-2 sm:grid-cols-2">
       {resources.map((resource) => (
         <li key={`${resource.href}-${resource.title}`}>
           <a
-            className="group flex items-start gap-2 rounded-[18px] border border-[#e7dcc7] bg-white px-4 py-3 text-sm font-semibold text-chalkboard transition hover:border-chalkboard/20"
+            className="group flex h-full items-start gap-2 rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-chalkboard transition hover:bg-paper"
             href={resource.href}
             rel="noopener noreferrer"
             target="_blank"
           >
             <ExternalLink className="mt-0.5 h-4 w-4 flex-none text-purple-deep" aria-hidden />
-            <span>
-              <span className="group-hover:text-purple-deep">{resource.title}</span>
+            <span className="min-w-0">
+              <span className="break-words group-hover:text-purple-deep">{resource.title}</span>
               {resource.note ? (
-                <span className="mt-0.5 block text-xs font-normal text-ink-soft">
-                  {resource.note}
-                </span>
+                <span className="mt-0.5 block text-xs font-normal text-ink-soft">{resource.note}</span>
               ) : null}
             </span>
           </a>
@@ -73,49 +72,86 @@ function ResourceList({ resources }: { resources: ResourceBlock[] }) {
       ))}
     </ul>
   );
+
+  const label = `Links & resources (${resources.length})`;
+
+  return resources.length > 6 ? (
+    <details className="group rounded-[24px] bg-paper-warm px-5 py-4">
+      <summary className="cursor-pointer text-sm font-semibold text-chalkboard">{label}</summary>
+      <div className="mt-4">{list}</div>
+    </details>
+  ) : (
+    <div className="rounded-[24px] bg-paper-warm px-5 py-4">
+      <p className="mb-3 text-sm font-semibold text-chalkboard">{label}</p>
+      {list}
+    </div>
+  );
 }
 
-/** Renders blocks in order; consecutive resource blocks collapse into one list. */
-function renderBlocks(blocks: CourseBlock[], fallbackTitle: string) {
+function VideoGroup({ fallbackTitle, videos }: { fallbackTitle: string; videos: CourseVideoBlock[] }) {
+  const sideBySide = videos.length > 1 && videos.every((video) => video.type === "external-video");
+
+  return (
+    <div className={sideBySide ? "grid gap-5 sm:grid-cols-2" : "space-y-6"}>
+      {videos.map((video, index) => (
+        <ModuleVideoBlock fallbackTitle={fallbackTitle} key={`${video.type}-${index}`} video={video} />
+      ))}
+    </div>
+  );
+}
+
+/** Renders a subsection's blocks in order, grouping adjacent videos and resources. */
+function renderBlocks(blocks: CourseBlock[], sectionTitle: string) {
   const nodes: ReactNode[] = [];
-  let currentTitle = fallbackTitle;
 
   for (let index = 0; index < blocks.length; index += 1) {
     const block = blocks[index];
     const key = `${block.type}-${index}`;
 
-    if (block.type === "heading") {
-      if (block.level === 2) {
-        currentTitle = block.text;
+    if (isVideoBlock(block)) {
+      const videos: CourseVideoBlock[] = [block];
+      while (index + 1 < blocks.length && isVideoBlock(blocks[index + 1])) {
+        index += 1;
+        videos.push(blocks[index] as CourseVideoBlock);
       }
+      nodes.push(<VideoGroup fallbackTitle={sectionTitle} key={key} videos={videos} />);
+    } else if (block.type === "resource") {
+      const resources: ResourceBlock[] = [block];
+      while (index + 1 < blocks.length && blocks[index + 1].type === "resource") {
+        index += 1;
+        resources.push(blocks[index] as ResourceBlock);
+      }
+      nodes.push(<ResourceList key={key} resources={resources} />);
+    } else if (block.type === "heading") {
+      // Level-3 headings that only repeat the subsection title are extraction echoes.
+      if (normalize(block.text) === normalize(sectionTitle)) {
+        continue;
+      }
+      // Very long "headings" are really sentences of teaching copy - keep them as lead-in text.
       nodes.push(
-        block.level === 2 ? (
-          <h2
-            className="scroll-mt-8 border-t border-[#e7dcc7] pt-10 font-display text-3xl text-chalkboard sm:text-4xl"
-            id={block.anchor}
-            key={key}
-          >
+        block.text.length > 90 ? (
+          <p className="max-w-[42rem] text-xl font-semibold leading-8 text-chalkboard" key={key}>
             {block.text}
-          </h2>
+          </p>
         ) : (
-          <h3 className="font-display text-2xl text-chalkboard sm:text-3xl" key={key}>
+          <h3 className="max-w-[42rem] pt-2 font-display text-2xl text-chalkboard sm:text-3xl" key={key}>
             {block.text}
           </h3>
         ),
       );
     } else if (block.type === "richText") {
       nodes.push(
-        <div key={key}>
-          <div className="space-y-5 text-[1.05rem] leading-8 text-ink-soft">
+        <div className="max-w-[42rem]" key={key}>
+          <div className="space-y-5 text-[1.1rem] leading-[1.85] text-ink">
             {block.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 48)}>{paragraph}</p>
             ))}
           </div>
           {block.bullets?.length ? (
-            <ul className="mt-6 space-y-3 rounded-[24px] bg-paper-warm px-6 py-5 text-sm leading-7 text-chalkboard">
+            <ul className="mt-5 space-y-2 text-[1.05rem] leading-8 text-ink">
               {block.bullets.map((bullet) => (
-                <li key={bullet.slice(0, 48)} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 flex-none rounded-full bg-purple" />
+                <li className="flex gap-3" key={bullet.slice(0, 48)}>
+                  <span className="mt-3 h-2 w-2 flex-none rounded-full bg-purple" />
                   <span>{bullet}</span>
                 </li>
               ))}
@@ -123,25 +159,15 @@ function renderBlocks(blocks: CourseBlock[], fallbackTitle: string) {
           ) : null}
         </div>,
       );
-    } else if (isVideoBlock(block)) {
-      nodes.push(<ModuleVideoBlock fallbackTitle={currentTitle} key={key} video={block} />);
-    } else if (block.type === "resource") {
-      const resources: ResourceBlock[] = [block];
-      while (blocks[index + 1]?.type === "resource") {
-        index += 1;
-        resources.push(blocks[index] as ResourceBlock);
-      }
-      nodes.push(<ResourceList key={key} resources={resources} />);
     } else if (block.type === "callout") {
+      // Restoration notes are development-only migration metadata.
+      if (block.tone === "restoration") {
+        continue;
+      }
       nodes.push(
-        <div
-          className="rounded-[24px] border border-[#e7dcc7] bg-paper-warm px-6 py-5 text-sm leading-7 text-ink-soft"
-          key={key}
-        >
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-purple-deep">
-            {block.title ?? (block.tone === "restoration" ? "Restored course note" : "Note")}
-          </p>
-          <p className="mt-2">{block.text}</p>
+        <div className="max-w-[42rem] rounded-[24px] bg-paper-warm px-6 py-5 leading-7 text-ink" key={key}>
+          {block.title ? <p className="font-display text-xl text-chalkboard">{block.title}</p> : null}
+          <p className={block.title ? "mt-2" : ""}>{block.text}</p>
         </div>,
       );
     } else if (block.type === "image") {
@@ -149,9 +175,7 @@ function renderBlocks(blocks: CourseBlock[], fallbackTitle: string) {
         <figure key={key}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img alt={block.alt} className="w-full rounded-[24px]" src={block.src} />
-          {block.caption ? (
-            <figcaption className="mt-2 text-sm text-ink-soft">{block.caption}</figcaption>
-          ) : null}
+          {block.caption ? <figcaption className="mt-2 text-sm text-ink-soft">{block.caption}</figcaption> : null}
         </figure>,
       );
     }
@@ -164,156 +188,210 @@ export default async function CourseModulePage({ params }: ModulePageProps) {
   const { course: courseSlug, module: moduleSlug } = await params;
   const course = getCourse(courseSlug);
   const courseModule = getCourseModule(courseSlug, moduleSlug);
+  const presentation = coursePresentation[courseSlug];
 
-  if (!course || !courseModule) {
+  if (!course || !courseModule || !presentation) {
     notFound();
   }
 
+  const info = presentation.modules[courseModule.slug];
+  const name = info?.name ?? courseModule.title;
   const { previous, next, index, total } = getModulePagination(course.slug, courseModule.slug);
-  const subsections = getModuleSubsections(courseModule);
+  const sections = getModuleSubsectionBlocks(courseModule);
+  const videoCount = getModuleVideoCount(courseModule);
+  const nameOf = (slug: string, fallback: string) => presentation.modules[slug]?.name ?? fallback;
+  const steps = course.modules.map((entry, entryIndex) => ({
+    slug: entry.slug,
+    name: nameOf(entry.slug, entry.title),
+    label: String(
+      presentation.layout === "journey" && presentation.introModule
+        ? entryIndex // Start Here is 0 so the stages read 1-5.
+        : entryIndex + 1,
+    ),
+  }));
+  if (presentation.layout === "journey" && presentation.introModule) {
+    steps[0].label = "★";
+  }
+
+  const outline = (
+    <ol className="space-y-1">
+      {sections.map(({ heading }, sectionIndex) => (
+        <li key={heading.anchor}>
+          <a
+            className="flex gap-3 rounded-xl px-3 py-1.5 text-sm text-ink-soft transition hover:bg-paper-warm hover:text-chalkboard"
+            href={`#${heading.anchor}`}
+          >
+            <span className="w-5 flex-none text-right font-display text-purple-deep">{sectionIndex + 1}</span>
+            <span>{heading.text}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  );
 
   return (
-    <main className="overflow-hidden">
-      <Section className="px-4 pt-10 sm:px-6 lg:px-8">
-        <Container>
+    <main>
+      <section className="bg-chalkboard-deep text-chalk">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
               { label: "Courses", href: "/courses" },
               { label: course.title, href: `/courses/${course.slug}` },
-              { label: courseModule.title },
+              { label: name },
             ]}
+            tone="chalk"
           />
-        </Container>
-      </Section>
-
-      <Section className="relative px-4 pb-12 pt-10 sm:px-6 lg:px-8">
-        <div className="absolute inset-x-0 top-0 h-[30rem] bg-[radial-gradient(circle_at_top_left,_rgba(244,201,93,0.22),_transparent_42%),radial-gradient(circle_at_top_right,_rgba(166,120,242,0.18),_transparent_30%)]" />
-        <Container className="relative max-w-5xl">
-          <div className="flex flex-wrap items-center gap-3">
-            <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-              Module {index + 1} of {total}
-            </Pill>
-            {moduleNeedsReview(courseModule) ? (
-              <Pill className="bg-accent-100 px-4 py-2 text-xs uppercase tracking-[0.22em] text-accent-700" tone="light">
-                Being restored
-              </Pill>
+          <div className="mt-10 grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_14rem]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">
+                {info?.eyebrow ?? `Module ${index + 1} of ${total}`}
+              </p>
+              <h1 className="mt-3 font-display text-5xl leading-[0.98] text-white sm:text-6xl">{name}</h1>
+              {info?.outcome ? (
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-[#d8ede2]">{info.outcome}</p>
+              ) : null}
+              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-[#9fd3bb]">
+                {sections.length} topic{sections.length === 1 ? "" : "s"} · {videoCount} video
+                {videoCount === 1 ? "" : "s"}
+              </p>
+            </div>
+            {info?.image ? (
+              <Image
+                alt=""
+                className="hidden w-56 justify-self-end rounded-[24px] shadow-board md:block"
+                placeholder="blur"
+                priority
+                sizes="224px"
+                src={info.image}
+              />
             ) : null}
           </div>
-          <h1 className="mt-6 max-w-4xl font-display text-4xl leading-[1.02] text-chalkboard sm:text-6xl">
-            {courseModule.title}
-          </h1>
-        </Container>
-      </Section>
+          <ModuleTracker courseSlug={course.slug} currentSlug={courseModule.slug} steps={steps} />
+        </div>
+      </section>
 
-      <Section className="bg-paper px-4 py-12 sm:px-6 lg:px-8">
-        <Container className="grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
-          <article className="min-w-0 space-y-8">
-            {renderBlocks(courseModule.blocks, courseModule.title)}
-          </article>
+      <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[minmax(0,1fr)_15rem]">
+          <div className="min-w-0">
+            {sections.length > 1 ? (
+              <details className="mb-10 rounded-[24px] border border-[#e7dcc7] bg-white px-5 py-4 lg:hidden">
+                <summary className="cursor-pointer font-display text-xl text-chalkboard">In this chapter</summary>
+                <div className="mt-3">{outline}</div>
+              </details>
+            ) : null}
 
-          {subsections.length > 0 ? (
-            <aside className="lg:sticky lg:top-8">
-              <Card>
-                <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-                  In this module
-                </Pill>
-                <ul className="mt-5 max-h-96 space-y-1 overflow-y-auto pr-1">
-                  {subsections.map((subsection) => (
-                    <li key={subsection.anchor}>
-                      <a
-                        className="block rounded-2xl px-4 py-2 text-sm font-medium text-ink transition hover:bg-paper-warm hover:text-chalkboard"
-                        href={`#${subsection.anchor}`}
-                      >
-                        {subsection.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-purple-deep transition hover:text-chalkboard"
-                  href={`/courses/${course.slug}`}
-                >
-                  Full course outline
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Card>
+            <div className="space-y-16">
+              {sections.map(({ heading, blocks }, sectionIndex) => {
+                const variant = getSubsectionVariant(heading.text, heading.anchor ?? "");
+                const content = (
+                  <div className="space-y-7">{renderBlocks(blocks, heading.text)}</div>
+                );
+
+                return (
+                  <section className="scroll-mt-28" id={heading.anchor} key={heading.anchor}>
+                    <header className="mb-7">
+                      <p className="font-display text-sm uppercase tracking-[0.2em] text-purple-deep">
+                        {variant === "assignment"
+                          ? "Your assignment"
+                          : variant === "example"
+                            ? "Example"
+                            : sections.length > 1
+                              ? `Topic ${sectionIndex + 1}`
+                              : ""}
+                      </p>
+                      <h2 className="mt-1 font-display text-4xl leading-tight text-chalkboard sm:text-5xl">
+                        {heading.text}
+                      </h2>
+                    </header>
+                    {variant === "assignment" ? (
+                      <div className="rounded-[32px] border-2 border-gold/70 bg-[#fff8e1] p-6 sm:p-8">
+                        {content}
+                      </div>
+                    ) : variant === "example" ? (
+                      <div className="border-l-4 border-purple/60 pl-5 sm:pl-8">{content}</div>
+                    ) : (
+                      content
+                    )}
+                  </section>
+                );
+              })}
+            </div>
+          </div>
+
+          {sections.length > 1 ? (
+            <aside className="hidden lg:block">
+              <div className="sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto rounded-[24px] border border-[#e7dcc7] bg-white px-3 py-4">
+                <p className="px-3 pb-2 font-display text-lg text-chalkboard">In this chapter</p>
+                {outline}
+              </div>
             </aside>
           ) : null}
-        </Container>
-      </Section>
+        </div>
+      </section>
 
-      <Section className="bg-paper px-4 pb-6 sm:px-6 lg:px-8">
-        <Container className="max-w-6xl">
-          <MarkCompleteButton courseSlug={course.slug} moduleSlug={courseModule.slug} />
-        </Container>
-      </Section>
-
-      <Section className="bg-paper px-4 pb-20 sm:px-6 lg:px-8">
-        <Container className="max-w-6xl">
-          <div className="grid gap-6 md:grid-cols-2">
+      <section className="border-t border-[#e7dcc7] bg-paper-warm px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-display text-3xl text-chalkboard">
+              {next ? `Finished ${name}?` : `That's the whole course.`}
+            </p>
+            <MarkCompleteButton courseSlug={course.slug} moduleSlug={courseModule.slug} />
+          </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {previous ? (
               <Link
-                className="group rounded-[32px] border border-[#e7dcc7] bg-white px-7 py-6 shadow-soft transition hover:-translate-y-1"
+                className="group rounded-[28px] border border-[#e7dcc7] bg-white px-7 py-6 transition hover:-translate-y-1"
                 href={`/courses/${course.slug}/${previous.slug}`}
               >
-                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-purple-deep">
-                  <ArrowLeft className="h-4 w-4" />
-                  Previous module
-                </div>
-                <h3 className="mt-4 font-display text-2xl leading-tight text-chalkboard group-hover:text-purple-deep sm:text-3xl">
-                  {previous.title}
-                </h3>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-purple-deep">
+                  <ArrowLeft className="h-4 w-4" aria-hidden />
+                  Previous
+                </span>
+                <span className="mt-3 block font-display text-2xl text-chalkboard group-hover:text-purple-deep">
+                  {nameOf(previous.slug, previous.title)}
+                </span>
               </Link>
             ) : (
-              <Card className="border-dashed">
-                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-chalkboard/55">
-                  <ArrowLeft className="h-4 w-4" />
-                  Previous module
-                </div>
-                <h3 className="mt-4 font-display text-2xl leading-tight text-chalkboard sm:text-3xl">
-                  This is the first module in the course.
-                </h3>
-              </Card>
+              <Link
+                className="group rounded-[28px] border border-[#e7dcc7] bg-white px-7 py-6 transition hover:-translate-y-1"
+                href={`/courses/${course.slug}`}
+              >
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-purple-deep">
+                  <ArrowLeft className="h-4 w-4" aria-hidden />
+                  Course home
+                </span>
+                <span className="mt-3 block font-display text-2xl text-chalkboard group-hover:text-purple-deep">
+                  {course.title}
+                </span>
+              </Link>
             )}
-
             {next ? (
               <Link
-                className="group rounded-[32px] border border-[#e7dcc7] bg-white px-7 py-6 shadow-soft transition hover:-translate-y-1"
+                className="group rounded-[28px] bg-chalkboard-deep px-7 py-6 text-chalk shadow-board transition hover:-translate-y-1"
                 href={`/courses/${course.slug}/${next.slug}`}
               >
-                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-purple-deep">
-                  Next module
-                  <ArrowRight className="h-4 w-4" />
-                </div>
-                <h3 className="mt-4 font-display text-2xl leading-tight text-chalkboard group-hover:text-purple-deep sm:text-3xl">
-                  {next.title}
-                </h3>
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  Next
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </span>
+                <span className="mt-3 block font-display text-2xl text-white">{nameOf(next.slug, next.title)}</span>
               </Link>
             ) : (
-              <Card className="border-dashed">
-                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-chalkboard/55">
-                  Next module
-                  <ArrowRight className="h-4 w-4" />
-                </div>
-                <h3 className="mt-4 font-display text-2xl leading-tight text-chalkboard sm:text-3xl">
-                  You&apos;ve completed the course.
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-ink-soft">
-                  Head back to the course outline to review any module, or explore the classroom
-                  for what to learn next.
-                </p>
-              </Card>
+              <Link
+                className="group rounded-[28px] bg-chalkboard-deep px-7 py-6 text-chalk shadow-board transition hover:-translate-y-1"
+                href={`/courses/${course.slug}`}
+              >
+                <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  Back to the course
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </span>
+                <span className="mt-3 block font-display text-2xl text-white">Review any stage</span>
+              </Link>
             )}
           </div>
-          <div className="mt-10 max-w-2xl">
-            <CourseProgressOverview
-              courseSlug={course.slug}
-              modules={course.modules.map((entry) => ({ slug: entry.slug, title: entry.title }))}
-            />
-          </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
     </main>
   );
 }

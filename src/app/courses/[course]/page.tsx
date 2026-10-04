@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { CourseModuleCard } from "@/components/course/CourseModuleCard";
-import { CourseProgressOverview } from "@/components/course/CourseProgress";
-import { Pill } from "@/components/ui/Pill";
-import { Container } from "@/components/layout/Container";
-import { Section } from "@/components/layout/Section";
-import {
-  courses,
-  getCourse,
-  getCourseReviewCount,
-} from "@/content/courses";
+import { JourneyOverview, PartsOverview } from "@/components/course/CourseOverviewModules";
+import { ResumePanel } from "@/components/course/CourseProgress";
+import { courses, getCourse } from "@/content/courses";
+import { coursePresentation } from "@/content/courses/presentation";
 
 type CoursePageProps = {
   params: Promise<{
@@ -26,94 +21,90 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: CoursePageProps): Promise<Metadata> {
   const { course: courseSlug } = await params;
   const course = getCourse(courseSlug);
+  const presentation = coursePresentation[courseSlug];
 
-  if (!course) {
+  if (!course || !presentation) {
     return { title: "Course | Child Actor 101" };
   }
 
   return {
     title: `${course.title} | Courses`,
-    description: course.description,
+    description: presentation.intro,
   };
 }
 
 export default async function CourseOverviewPage({ params }: CoursePageProps) {
   const { course: courseSlug } = await params;
   const course = getCourse(courseSlug);
+  const presentation = coursePresentation[courseSlug];
 
-  if (!course) {
+  if (!course || !presentation) {
     notFound();
   }
 
-  const reviewCount = getCourseReviewCount(course);
+  const isJourney = presentation.layout === "journey";
+  const resumeModules = course.modules.map((module) => ({
+    slug: module.slug,
+    name: presentation.modules[module.slug]?.name ?? module.title,
+  }));
+
   return (
-    <main className="overflow-hidden">
-      <Section className="px-4 pt-10 sm:px-6 lg:px-8">
-        <Container>
+    <main>
+      <section className="bg-chalkboard-deep text-chalk">
+        <div className="mx-auto w-full max-w-6xl px-4 pb-14 pt-8 sm:px-6 lg:px-8 lg:pb-20">
           <Breadcrumbs
             items={[
               { label: "Home", href: "/" },
               { label: "Courses", href: "/courses" },
               { label: course.title },
             ]}
+            tone="chalk"
           />
-        </Container>
-      </Section>
-
-      <Section className="relative px-4 pb-14 pt-10 sm:px-6 lg:px-8">
-        <div className="absolute inset-x-0 top-0 h-[30rem] bg-[radial-gradient(circle_at_top_left,_rgba(244,201,93,0.22),_transparent_42%),radial-gradient(circle_at_top_right,_rgba(166,120,242,0.18),_transparent_30%)]" />
-        <Container className="relative">
-          <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-            Video course · {course.modules.length} modules
-          </Pill>
-          <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[0.95] text-chalkboard sm:text-6xl">
-            {course.title}
-          </h1>
-          <p className="mt-3 text-base font-semibold uppercase tracking-[0.22em] text-purple-deep">
-            {course.subtitle}
-          </p>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-ink-soft">{course.description}</p>
-          {reviewCount > 0 ? (
-            <p className="mt-5 max-w-3xl rounded-[20px] border border-[#e7dcc7] bg-white px-5 py-4 text-sm leading-7 text-ink-soft shadow-soft">
-              This course was restored from the original Child Actor 101 material.{" "}
-              {reviewCount} module{reviewCount === 1 ? "" : "s"} still{" "}
-              {reviewCount === 1 ? "has" : "have"} a video that is being verified or replaced -{" "}
-              {reviewCount === 1 ? "it is" : "they are"} marked as being restored, and the module
-              copy is fully preserved in the meantime.
-            </p>
-          ) : null}
-          <div className="mt-8 max-w-2xl">
-            <CourseProgressOverview
-              courseSlug={course.slug}
-              modules={course.modules.map((module) => ({ slug: module.slug, title: module.title }))}
+          <div className="mt-10 grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_22rem]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">
+                {presentation.tagline}
+              </p>
+              <h1 className="mt-4 font-display text-5xl leading-[0.98] text-white sm:text-6xl">
+                {course.title}
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#d8ede2]">{presentation.intro}</p>
+              {presentation.promise ? <p className="mt-4 max-w-2xl font-display text-xl text-white">{presentation.promise}</p> : null}
+              <ResumePanel
+                courseSlug={course.slug}
+                modules={resumeModules}
+                unit={presentation.unitLabel.toLowerCase()}
+              />
+            </div>
+            <Image
+              alt={`${course.title} course artwork`}
+              className="w-full max-w-sm justify-self-center rounded-[28px] shadow-board lg:max-w-none"
+              placeholder="blur"
+              priority
+              sizes="(min-width: 1024px) 352px, 384px"
+              src={presentation.heroImage}
             />
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
-      <Section className="bg-paper px-4 py-12 sm:px-6 lg:px-8">
-        <Container>
-          <div className="grid gap-5">
-            {course.modules.map((module, moduleIndex) => (
-              <CourseModuleCard
-                courseSlug={course.slug}
-                index={moduleIndex}
-                key={module.slug}
-                module={module}
-              />
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-paper px-4 pb-16 pt-4 sm:px-6 lg:px-8">
-        <Container>
-          <p className="text-xs leading-6 text-ink-soft/70">
-            Restored from the original Child Actor 101 course. Module copy, topic order, video
-            positions, and resource links are preserved from the archived course pages.
-          </p>
-        </Container>
-      </Section>
+      <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto w-full max-w-6xl">
+          {isJourney ? (
+            <JourneyOverview course={course} presentation={presentation} />
+          ) : (
+            <>
+              <div className="mb-8 flex items-center gap-4">
+                <h2 className="font-display text-3xl text-chalkboard sm:text-4xl">
+                  The {course.modules.length} parts
+                </h2>
+                <span aria-hidden className="h-px flex-1 bg-chalkboard/15" />
+              </div>
+              <PartsOverview course={course} presentation={presentation} />
+            </>
+          )}
+        </div>
+      </section>
     </main>
   );
 }

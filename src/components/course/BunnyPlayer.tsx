@@ -2,11 +2,10 @@ import { bunnyEmbedUrl } from "@/lib/bunny";
 
 export interface BunnyPlayerProps {
   guid: string;
-  needsReview?: boolean;
   title: string;
 }
 
-export function BunnyPlayer({ guid, needsReview = false, title }: BunnyPlayerProps) {
+export function BunnyPlayer({ guid, title }: BunnyPlayerProps) {
   return (
     <div className="overflow-hidden rounded-[28px] border border-chalkboard/10 bg-chalkboard-deep shadow-board">
       <div className="aspect-video">
@@ -19,11 +18,6 @@ export function BunnyPlayer({ guid, needsReview = false, title }: BunnyPlayerPro
           title={title}
         />
       </div>
-      {needsReview ? (
-        <p className="bg-chalkboard-deep px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#bcefdc]">
-          Video match is being verified from the original course
-        </p>
-      ) : null}
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
 import "@/content/adobe/no-excuses/shoot-it.theme.css";
+import { AdobeCourseNav } from "@/components/adobe/AdobeCourseNav";
 import { AdobePage } from "@/components/adobe/AdobePage";
 import type { AdobePageSpec } from "@/components/adobe/AdobePage";
+import { noExcusesPages } from "@/content/adobe/no-excuses/order";
 import spec from "@/content/adobe/no-excuses/shoot-it.json";
 
 export const metadata: Metadata = {
@@ -10,5 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <AdobePage spec={spec as AdobePageSpec} />;
+  return (
+    <>
+      <AdobePage spec={spec as AdobePageSpec} />
+      <AdobeCourseNav
+        courseSlug="no-excuses"
+        courseTitle="NO EXCUSES!"
+        current="shoot-it"
+        pages={noExcusesPages}
+      />
+    </>
+  );
 }

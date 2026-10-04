@@ -68,10 +68,11 @@
   width: 100%;
 }
 
-.adobe-page .full-width-section .content-container {
+.adobe-page .article .section.full-width-section .section-content .content-container {
   max-width: none;
   padding-left: 0;
   padding-right: 0;
+  margin: 0;
 }
 
 /* Title section: full-height photo with centered title block */
@@ -136,9 +137,9 @@
 }
 
 /* Images */
-.adobe-page div.image {
-  margin-left: auto;
-  margin-right: auto;
+.adobe-page .article .image {
+  margin: 0;
+  text-align: center;
 }
 
 .adobe-page .image-wrapper {
@@ -247,13 +248,102 @@
 }
 
 /* Scroll-reveal start states (mirrors the theme's .hidden rules; see RevealOnScroll). */
-.trek-theme div.image.adobe-reveal-hidden {
+.adobe-page div.image.adobe-reveal-hidden, .adobe-page figure.image.adobe-reveal-hidden {
   opacity: 0;
   transform: translate3d(0, 40px, 0);
 }
 
-.trek-theme .caption.adobe-reveal-hidden,
-.trek-theme blockquote.adobe-reveal-hidden {
+.adobe-page .caption.adobe-reveal-hidden,
+.adobe-page blockquote.adobe-reveal-hidden {
   opacity: 0;
   transform: translate3d(20px, 0, 0);
+}
+
+/* --- Section types beyond single-column / full-width --------------------------------- */
+
+.adobe-page .section.spacer-section {
+  display: block;
+}
+
+/* Window section: a band showing a background photo; height comes from the height-NN class. */
+.adobe-page .window-section .section-view {
+  position: relative;
+  overflow: hidden;
+}
+
+.adobe-page .window-section .section-background,
+.adobe-page .window-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Split layout: photo fills one half, content the other. */
+.adobe-page .single-column-section.split-layout {
+  min-height: 100vh;
+}
+
+.adobe-page .single-column-section.split-layout .section-view {
+  position: relative;
+  min-height: 100vh;
+}
+
+.adobe-page .single-column-section.split-layout .section-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+}
+
+.adobe-page .single-column-section.split-layout .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.adobe-page .single-column-section.split-layout.image-on-right .section-background {
+  left: auto;
+  right: 0;
+}
+
+.adobe-page .single-column-section.split-layout .section-content {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.adobe-page .single-column-section.split-layout.image-on-right .section-content {
+  margin-left: 0;
+}
+
+@media (max-width: 767px) {
+  .adobe-page .single-column-section.split-layout,
+  .adobe-page .single-column-section.split-layout .section-view {
+    min-height: 0;
+  }
+
+  .adobe-page .single-column-section.split-layout .section-background {
+    position: relative;
+    width: 100%;
+    height: 60vw;
+  }
+
+  .adobe-page .single-column-section.split-layout .section-content,
+  .adobe-page .single-column-section.split-layout.image-on-right .section-content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* Newer Adobe Express runtime: inline-block image wrapper, centered by .image. */
+.adobe-rt-new .article .image-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.adobe-rt-new .article .full-width-section .image-wrapper {
+  display: block;
 }

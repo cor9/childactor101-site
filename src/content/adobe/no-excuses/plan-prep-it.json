@@ -1,0 +1,1907 @@
+{
+  "source": "https://new.express.adobe.com/webpage/6DKzqO1Wiw758",
+  "theme": "adobe-theme-no-excuses-plan-prep-it",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/gom8xuo.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Plan & Prep It",
+    "subtitle": "Section Two",
+    "image": "/courses/no-excuses/plan-prep-it/images/20ABBA1B-BD92-4261-BEEF-0A5B3936A63B.jpg",
+    "imageWidth": 5016,
+    "imageHeight": 3344,
+    "backgroundPosition": "26.139088729016787% 64.87179487179488%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Welcome Back",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387346357",
+          "bunny": {
+            "guid": "2db093b6-05c7-419a-b65c-57b097abb8af",
+            "title": "Intro Two",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/E1A4BBB9-E5BC-43F8-8ECD-C1C97832B1EF.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387357732",
+          "missing": {
+            "note": "Plan & Prep intro block video 2 of 4. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/7F38897A-1B84-4CE1-957D-24FA083F2363.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/451CC10F-28A0-4152-A919-55E9744FACC0.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387347988",
+          "missing": {
+            "note": "Plan & Prep intro block video 3 of 4. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/67EFCA0D-ECDC-4FDC-A057-D5869A728856.jpg",
+          "width": 500,
+          "height": 500
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387348581",
+          "missing": {
+            "note": "Plan & Prep intro block video 4 of 4. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/924E7011-34BA-4581-97BB-3527BBA18D06.jpg",
+          "width": 2175,
+          "height": 1417,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/A1B6225A-6F2E-4D7F-95E7-267A0C782663.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/78557A20-28DE-4F2B-BBA6-A5DFDE71B450.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Smartphone Videokit",
+          "href": "https://amzn.to/2tJi36I",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/81FA325D-6C6B-4EEC-8DFD-59FD3CF01750.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387349854",
+          "bunny": {
+            "guid": "591fc3a7-f974-4ab1-8ca0-09a4d7e59629",
+            "title": "Let There Be Light",
+            "needsReview": true
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/F291E45A-F58B-4C90-8C06-7561F6362713.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "3 Soft box kit",
+          "href": "https://amzn.to/37ufVhr",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/4C297492-8C7B-44F6-8041-AEEBC722FEDE.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Tall Soft Box Kit",
+          "href": "https://amzn.to/37FI3P7",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Octagon Softbox Kit",
+          "href": "https://amzn.to/36uAeu2",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Two Soft Box Kit",
+          "href": "https://amzn.to/2GmEXDw",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/3BC6F06C-DF08-45C8-98DB-4DD0FA5BD6DF.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/15DEDF31-F953-434C-8DFE-5AC059BFCD31.jpg",
+          "width": 720,
+          "height": 720
+        },
+        {
+          "type": "button",
+          "label": "Sale! 18 In Ring Light",
+          "href": "https://amzn.to/2Gu4RFa",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "12 Inch Ring Light",
+          "href": "https://amzn.to/2Gwc5sh",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "14 Inch Ring Light",
+          "href": "https://amzn.to/37tC0wF",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "$20 10 Inch Ring Light",
+          "href": "https://amzn.to/2RrBPMR",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "RGB Colors Ring Light",
+          "href": "https://amzn.to/2NYYbU0",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/085B3803-BF9B-4F31-AA6F-1C4DF677CE64.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/CA38A892-891F-4218-925F-27CCED7B40D8.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "LED Light Stick Kit",
+          "href": "https://amzn.to/2U0Dk6C",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "LED Light Panel",
+          "href": "https://amzn.to/2vpyXro",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "LED Mini Set",
+          "href": "https://amzn.to/36vSumN",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/ED5073F3-55A0-4A43-B9C6-DA84E2F719FD.jpg",
+          "width": 2550,
+          "height": 1700,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "LED Kit",
+          "href": "https://amzn.to/37viGiO",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/2B644ABB-BE96-475A-9594-CAD285784644.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/103E9B82-ED8F-40C1-8B93-828323CA4215.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Step Stool",
+          "href": "https://amzn.to/2RQKUOr",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Light stands deal",
+          "href": "https://amzn.to/2GrraLO",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Clamps",
+          "href": "https://amzn.to/2vs97TL",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Tripod Deal",
+          "href": "https://amzn.to/30XC59B",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/49D20CDF-7817-40E5-9C62-3EF97E9841D6.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Reflectors 5 In 1",
+          "href": "https://amzn.to/37wkTdA",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Reflectors Set",
+          "href": "https://amzn.to/2sZjBJc",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/E761DFD3-72EB-4888-882E-CA28A0A9A769.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Flag Set",
+          "href": "https://amzn.to/37vjyUC",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Scrim Diffuser",
+          "href": "https://amzn.to/2O325Lp",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/F5D716EB-F987-4B01-9A48-946CD4E0BE59.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/BB1FB278-8C24-45DA-9393-4C39D747E4B8.jpg",
+          "width": 2560,
+          "height": 1440,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Microphones are key to consistent quality sound",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/E17E27AD-DEED-49EF-9380-52F4E4FB23F6.jpg",
+          "width": 4096,
+          "height": 2731,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387349950",
+          "bunny": {
+            "guid": "5199be9f-8ade-4fd7-99da-c04766a72770",
+            "title": "Sound is HUGE",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "window",
+      "classes": [
+        "window-section",
+        "height-50",
+        "caption-left"
+      ],
+      "background": {
+        "image": "/courses/no-excuses/plan-prep-it/images/C78140E1-E870-44DA-9951-EA1B2682F348.jpg",
+        "width": 960,
+        "height": 540,
+        "position": "50% 50%"
+      },
+      "elements": []
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/4CCC2B68-3195-43FF-97BF-6FF46C13F185.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/595C9E29-AEE3-4BA8-AAAD-B7436B1E2FBE.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Lapel W/ 16 Ft Cord",
+          "href": "https://amzn.to/2uDp6xS",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "iOS Adapters",
+          "href": "https://amzn.to/2RSYRet",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/12DBDFCF-B962-48E0-881E-C09D5D79E80D.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Boom Stand",
+          "href": "https://amzn.to/2uvJQaB",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Budget Shotgun Mic",
+          "href": "https://amzn.to/30XZCqI",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Medium Grade Shotgun Microphone",
+          "href": "https://amzn.to/36nhzAk",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Rode Boom Kit",
+          "href": "https://amzn.to/2Gsx27u",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Director Chair",
+          "href": "https://amzn.to/36nhSLu",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Clapboard",
+          "href": "https://amzn.to/38HSbqt",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "71838170",
+          "thirdParty": true,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/D0134EC8-D5CF-4574-AB53-B5B3FA3CED05.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/8C4D3BA7-23E3-4560-9427-B885B4A73A73.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "0A33YDw23KQ",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/D933A974-20AC-48BB-86F4-CEB8F4B07654.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "4GnHbXXE16Y",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/54BF8E1F-BA90-4352-B7D6-AA0A35F9B31C.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "NAvn7CNpdB8",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/74AF83E0-C759-4917-A417-C72463B1A7ED.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "X1y5-z9pGFc",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/7B12EA98-A14D-445E-9647-281FA98959C5.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "UKRiVyJRtnI",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/C944A8CD-E31D-44D7-854B-74DDEB56E7C8.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "vPJwVUYl0Nk",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/5C59B4D7-9EA1-4A58-8156-CCD72230B9C6.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "srwsr1gM-Mw",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/F10D6C2F-2ED5-4DE5-9DFC-89B00EE197EF.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "VTwzOeyV1bw",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/A87B91F3-557E-42DB-B763-CB3D64D7323D.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "b8ppTuW6jkU",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/10FB79EA-78E9-4C7D-AA3C-A4CB99EC543C.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "9lnk8TtjYDc",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "window",
+      "classes": [
+        "window-section",
+        "height-50",
+        "caption-left"
+      ],
+      "background": {
+        "image": "/courses/no-excuses/plan-prep-it/images/5EE671FA-4E27-4672-85A0-F28B9DB92F57.jpg",
+        "width": 500,
+        "height": 500,
+        "position": "50% 50%"
+      },
+      "elements": []
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387350883",
+          "missing": {
+            "note": "Plan & Prep closing block video 1 of 5. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/694304B1-302A-4413-B3B9-A324246D6F49.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/ADF6EABD-DA12-42A1-BC91-2B3C0A8D9772.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/713EBFF9-0FC8-4589-AF67-33301110BB34.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/F79D7154-EC11-43E2-B08A-7D10A690343F.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/4858DEEC-9A8F-4399-93E2-71C7DB082F32.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/D68FFCFF-A173-4D16-85AE-6AEDDDEA9504.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/E71543CC-C161-4C72-AB5B-968FC61A2269.jpg",
+          "width": 2387,
+          "height": 1518,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/DB3879AA-0C4E-4DDA-B960-374D10479067.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387350986",
+          "missing": {
+            "note": "Plan & Prep closing block video 2 of 5. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/383875E3-A069-4E97-A4DD-F650B7C8F8AA.jpg",
+          "width": 1024,
+          "height": 768
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387352092",
+          "missing": {
+            "note": "Plan & Prep closing block video 3 of 5. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/55EF4103-D743-42C6-8CCE-50B7E7E34109.jpg",
+          "width": 1276,
+          "height": 980,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387351912",
+          "missing": {
+            "note": "Plan & Prep closing block video 4 of 5. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/D1645A8E-2FD3-41E5-8B0D-10A96207FF3D.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387352511",
+          "missing": {
+            "note": "Plan & Prep closing block video 5 of 5. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/plan-prep-it/images/6AD3E063-BDFF-4DCC-90B3-56C632F2B256.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    }
+  ],
+  "author": "Corey Ralston",
+  "credits": [
+    "Created with images by Monfocus - \"list sticky notes note\" • vancouverfilmschool - \"VFS Sound Design for Visual Media: Aquarium Recording\""
+  ],
+  "runtime": "new"
+}

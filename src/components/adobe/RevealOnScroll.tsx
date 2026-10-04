@@ -14,7 +14,7 @@ export function RevealOnScroll() {
     }
 
     const items = Array.from(
-      document.querySelectorAll<HTMLElement>(".adobe-page div.image, .adobe-page .caption, .adobe-page blockquote"),
+      document.querySelectorAll<HTMLElement>(".adobe-page .image, .adobe-page .caption, .adobe-page blockquote"),
     ).filter((item) => item.getBoundingClientRect().top > window.innerHeight);
 
     const observer = new IntersectionObserver(

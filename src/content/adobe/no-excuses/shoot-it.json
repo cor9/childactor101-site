@@ -1,0 +1,1732 @@
+{
+  "source": "https://new.express.adobe.com/webpage/f5hjv4sMwNeA3",
+  "theme": "adobe-theme-no-excuses-shoot-it",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/pwy8yyx.css",
+    "https://use.typekit.net/oea2wtv.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Shoot It",
+    "subtitle": "Section Three",
+    "image": "/courses/no-excuses/shoot-it/images/2FFD89F5-2E5A-48C3-B1DB-ECF08786AEDD.jpg",
+    "imageWidth": 4752,
+    "imageHeight": 3168,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387353415",
+          "bunny": {
+            "guid": "f4c48c85-90e1-4bf4-ba79-3d28b067a23c",
+            "title": "Clip Day",
+            "needsReview": true
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/247E6395-48B0-438B-A668-3E9A75EF3579.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/3874A796-81DC-4C1A-8A64-187D07F9B564.jpg",
+          "width": 1658,
+          "height": 1146,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Production Designer",
+          "href": "https://www.studiobinder.com/blog/what-does-production-designer-do/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/940CAB81-D580-407C-A732-466243070583.jpg",
+          "width": 2194,
+          "height": 1290,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "KjtQ9vSnnCw",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/1A05EA9A-0358-4E96-8A80-A08A9654EA73.jpg",
+          "width": 2218,
+          "height": 1390,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "hPHGpOrNT_A",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Location Scouting",
+          "href": "https://filmmakerfreedom.com/blog/find-and-manage-locations-no-budget-filmmaker",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/38DB2758-77FA-4291-B436-BB68B14D32EB.jpg",
+          "width": 2167,
+          "height": 1489,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "143619334",
+          "thirdParty": true,
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/8EE3593C-3D6C-407F-9BA4-11F77B2860C2.jpg",
+          "width": 2387,
+          "height": 1369,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "M-E14zQhAyM",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/57DB27CD-5644-4000-B725-5FD08C732DDA.jpg",
+          "width": 2387,
+          "height": 1326,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Y2wmFKV9vd0",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Cinematic Lighting",
+          "href": "https://www.studiobinder.com/blog/film-lighting-techniques/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/E246DA7F-D1A6-44C1-A533-0E1FA65ED64D.jpg",
+          "width": 2388,
+          "height": 1484,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ZJ__r8QQ7Yc",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/342EF60A-5BB0-4FE5-ABC9-F70CE3ECA784.jpg",
+          "width": 2387,
+          "height": 1300,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Hair/MU Design",
+          "href": "https://www.screenskills.com/careers/job-profiles/film-and-tv-drama/craft/hair-and-make-up-designer/",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Some extra accessories for Smartphone Filmmakers",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Ycpqv36s0Fg",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/BB0849EB-F772-4647-90BF-FCCE5651C83F.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/043E644F-BACA-46B6-8EAC-79CAADCA2068.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "9AGaECt9j4g",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/F6E1A8D6-A329-4D2E-814A-228C5E9BA08E.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/D017B0E2-88E1-48AE-A50C-741670C01F28.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "GouHne1nPGk",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Essential Makeup Kit",
+          "href": "http://maketimemove.com/hair-makeup-kit/",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Wardrobe Tips",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/95E04603-FD58-4D71-80AE-1BC094947FC3.jpg",
+          "width": 6000,
+          "height": 4000,
+          "displayWidth": 1024
+        },
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Tips",
+          "href": "https://www.ballmediainnovations.com/article-wardrobe-tips-for-your-video-production/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/47C38D49-4E15-47FB-95E2-7D316F9C7166.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Seeing your clothes with a fresh eye"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Lighting",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/7D91CC8E-7F87-469C-9CF9-B049E033D2A5.jpg",
+          "width": 1200,
+          "height": 800,
+          "displayWidth": 1024,
+          "caption": "Paint and shape with light"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "13 Film Lighting Techniques",
+          "href": "https://nofilmschool.com/film-lighting-techniques-and-examples",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "zuwnNSgb3p8",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "IWYHJwO9TSg",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/99A6F870-0278-49CD-8B79-FE28C0DEF517.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Lighting Tips for Low or No Budget"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "RES5bZFx1Cc",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "2Y6bB86HmdA",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "IApcdo6OGcs",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "My Lighting Obsession",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387392930",
+          "bunny": {
+            "guid": "14128357-4e1f-49a8-b8b9-7059a429badb",
+            "title": "My lighting obsession",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/09E337A4-DE0E-4087-9B6E-0C41AE16E457.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "In fact 480 is good for compression.. more info later"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "NqcHoVs3fKY",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "xZkrgDxTogE",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Co21Gw7zqNY",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/9F0FDAEA-7F8F-4548-A3F4-D97126E7D13A.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Get comfy with these staples"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "RWJ5HxQVTzk",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Shot Guide",
+          "href": "https://www.bhphotovideo.com/explora/video/tips-and-solutions/filmmaking-101-camera-shot-types",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/FFF5F619-C289-4478-92D1-797F6197B562.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/9C266E4E-798C-41CC-A999-D0935E82E873.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Filmmaking Lingo"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Reaction Shots",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/B32B0E89-A72C-4555-8B07-8A52903834C2.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "EBykqNDKbKY",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Three Shot Example",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "easy peasy lemon squeezie"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "344516472",
+          "missing": {
+            "note": "Three shot example sample clip. Vimeo is dead; no candidate identified.",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/B57F14EB-2DC3-4BF2-AD22-669851A4BE49.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Get all Actors in frame"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "VwbSxxm6skM",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "IK2IAEO-FUI",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/20949EB1-BD08-4846-9CE3-A5BA319D13C9.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "4zDMwCZDKSI",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/ECF82648-EA0C-40CA-9117-648E47D6A49B.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/486414B7-ED1D-45A3-AFD2-6B83D2183B82.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Nail this if anything!"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "T4hfGzDtzXk",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/DD4F0604-1DD9-42F3-B8BC-570EF4F227CE.jpg",
+          "width": 2387,
+          "height": 1314,
+          "displayWidth": 1024,
+          "caption": "Looks pro and saves a performance"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "wDjr0vaCTx8",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "SHOT BY SHOT EXAMPLE",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387395199",
+          "bunny": {
+            "guid": "08d45d8d-b3da-4e5e-addb-81aa05a010eb",
+            "title": "Shot by shot",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "What is a mark?",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A mark helps an actor find a landing spot when blocking a scene. This mark keeps a consistent distance between Actor and Camera and helps maintain focus and composition."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/B88B2B02-68B1-435D-BFB7-04BE61AC9AFD.jpg",
+          "width": 1500,
+          "height": 821,
+          "displayWidth": 1024
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "i9uynS5ZrW4",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/D4BC34B4-7F32-4030-9343-3C86F4DFCBB0.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/E57669E5-0383-47E9-B9EC-DB4D89947D64.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Basics Of Audio",
+          "href": "https://www.studiobinder.com/blog/sound-recording/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/CCA9A49B-78B8-42C4-931D-9068FC1E76AD.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Microphones",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ptV0FQQRFPI",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/F4B1A4AC-426F-4D9A-8B7D-C758E85B1C2E.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Lavalier “Lapel” Mics",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "FG78T1l88_w",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Let me Save You the trouble",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387501390",
+          "bunny": {
+            "guid": "d0a15047-7b7c-4995-8f9a-984170135d60",
+            "title": "Learn from my Mistakes",
+            "needsReview": true
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/2A43C9E9-7E5B-4FF0-B1AB-FEA3B62FCA0E.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "We are showing examples of acting in a genre. Keep the tone in tact."
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-item-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/79D378EF-D18C-49F9-A9DB-64D3D055A38E.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "The style of the genre is in the look and filming style. Do your homework."
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-item-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/FE967D13-EF66-4838-A3D2-F7F33FF9637B.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Whenever you need to. Do not push it. Give yourselves the best chance at success by pausing and not forcing."
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-item-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/ED82ACEA-7D89-4AA8-ACA0-5B5A8F9AA073.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Take a Chill Pill",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387609679",
+          "bunny": {
+            "guid": "2ecc9825-90cb-496f-8760-2357d94b2188",
+            "title": "Chill Pill",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/AE6794A4-D3F6-41D5-928A-0E6E10AD5B3D.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "Mom of Neo Geiger and 101 Mom"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387612134",
+          "missing": {
+            "note": "Second 'Take a Chill Pill' video.",
+            "candidates": [
+              "ed3ea1af-ac78-4c13-b063-c876cf0a5348 - Mr Rogers.mp4"
+            ]
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/8372144A-C149-46A6-A3D1-831E4E90A34E.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "caption": "For the brave creative souls"
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Filming with Flair",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "wNXNEs2eBkg",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Extra Reading on this",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Getting Creative = Gets You Noticed"
+        },
+        {
+          "type": "button",
+          "label": "Read More",
+          "href": "https://www.studiobinder.com/blog/10-production-design-tips-for-filmmakers-on-a-budget/",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Color Theory",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/A21721EF-E2BD-49A2-A83B-8747F0265834.jpg",
+          "width": 1226,
+          "height": 794,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Read This",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Color Theory",
+          "href": "https://nofilmschool.com/Film-color-theory-and-color-schemes",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Check The Gate",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387615832",
+          "bunny": {
+            "guid": "c0b67795-97c0-411b-83a3-0b25997d1b1f",
+            "title": "Check the gate",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/shoot-it/images/44115CDF-9A36-4824-8944-C9177D5DD23C.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    }
+  ],
+  "author": "Corey Ralston",
+  "credits": [
+    "Created with images by Bokskapet - \"video production video movie\" • PinTour - \"Pin Sculpture Color Swatches\""
+  ],
+  "runtime": "new"
+}

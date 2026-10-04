@@ -1,0 +1,1111 @@
+{
+  "source": "https://new.express.adobe.com/webpage/z4dBmikw9rtLK",
+  "theme": "adobe-theme-no-excuses-use-it",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/qhv3iqj.css",
+    "https://use.typekit.net/egu7lee.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Use It",
+    "subtitle": "Section Five",
+    "image": "/courses/no-excuses/use-it/images/279A3603-90B2-4A11-92F5-4FFCDE1B5617.jpg",
+    "imageWidth": 4152,
+    "imageHeight": 2768,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Welcome to the Very last Section!",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "396112238",
+          "bunny": {
+            "guid": "715876c7-ae22-4e13-8293-7613804c0130",
+            "title": "Welcome, Welcome",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/AA4380A8-D15E-4F33-8E72-F6C8DEAB0F87.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "You have accomplished what was once thought to be impossible!",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Now put it to work.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/C1A5CA44-E3CC-41A8-AF47-C86556866075.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/7C0D6341-D8D6-4D46-A432-6EE20FFAB9DE.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Ask the Creative People and Industry Professionals in your life to tell you their honest opinion. You are a Big Kid and you can take it!",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Ask them if there..."
+        },
+        {
+          "type": "blockquote",
+          "html": "is quality to the Production Value?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Does the writing seem fitting for the intended genre?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Is the acting a good representation of the Actor’s skill set?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Was their type identifiable?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Was it engaging the whole way through?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Was the sound quality an issue?"
+        },
+        {
+          "type": "blockquote",
+          "html": "Did they want to see more?"
+        },
+        {
+          "type": "h4",
+          "html": "HOPEFULLY YOU WILL RECEIVE SOME BENEFICAL COMMENTS TO HELP YOU GROW AND ENCOURAGE YOUR BUDDING FILMMAKER ASPIRATIONS 🙏🏻🤗🌟",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Critical Distance In Your Own Work",
+          "href": "https://researchinsiders.blog/2019/09/12/the-critical-distance-break/",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/5FAB0836-E987-4E09-A16F-70E5A7731CCC.jpg",
+          "width": 618,
+          "height": 618
+        },
+        {
+          "type": "h4",
+          "html": "If during your own critical review of the clip and the trusted opinions of your creative people and the Industry Pros, you decide to reshoot or shoot a portion of it again, then try to make that decision as soon as you are able."
+        },
+        {
+          "type": "blockquote",
+          "html": "Even professional produductions have trouble matching sets &amp; look while starting up again"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/EFB02066-9414-4E12-9C48-3B87FF8FA6E1.jpg",
+          "width": 640,
+          "height": 360
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/575001F0-0538-422A-9B0A-2EE4E11E63FB.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/cef74629-88bb-4dea-9d44-aebdf2e606ad.jpg",
+          "width": 225,
+          "height": 225
+        },
+        {
+          "type": "h4",
+          "html": "Probably the most IMPORTANT place to showcase this clip is on their casting profile on Actors Access. Actors Access is the Talent side of the BREAKDOWNS which is a casting service that allows Talent Reps to submit their roster to available roles in TV/Film."
+        },
+        {
+          "type": "h4",
+          "html": "Actors manage their profiles and can submit to publicly made available castings on Actors Access."
+        },
+        {
+          "type": "h4",
+          "html": "You would want to log in and navigate to Media Uploads."
+        },
+        {
+          "type": "h4",
+          "html": "This service is currently priced at $22 per minute. So keep those clips under 60 seconds. It is not worth it to pay another $22 for just a few seconds."
+        },
+        {
+          "type": "h4",
+          "html": "Remember the attention span of Casting watching videos is very short and not usually longer than 42 seconds max."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "5oNzfh-kYV4",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Labeling your video correctly is very important and often done wrong."
+        },
+        {
+          "type": "h4",
+          "html": "We must think like a Casting Director. They see a profile with videos submitted to them. Do they care what the TITLE of the project is unless it is some BLOCKBUSTER movie or HIT TV SHOW?"
+        },
+        {
+          "type": "h3",
+          "html": "NOPE.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "What they do care about it what they are watching and why would it be relevant to them."
+        },
+        {
+          "type": "h4",
+          "html": "So a Title displaying an Emotion and a type and genre is a good eye catching idea."
+        },
+        {
+          "type": "blockquote",
+          "html": "Frustrated Band Geek in Tween Multi-Cam Sitcom"
+        },
+        {
+          "type": "blockquote",
+          "html": "Curious Youngest Daughter in Thriller Film"
+        },
+        {
+          "type": "blockquote",
+          "html": "Hopeful Son on Witness Stand in Primetime Cop Drama"
+        },
+        {
+          "type": "button",
+          "label": "Actors Access",
+          "href": "http://www.actorsaccess.com",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/8EC2517A-FF49-4D63-8526-7E6DD753C06B.jpg",
+          "width": 630,
+          "height": 383
+        },
+        {
+          "type": "h3",
+          "html": "Casting Networks is accessible in many regions in the US.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "In Los Angeles it is called LA Casting."
+        },
+        {
+          "type": "h4",
+          "html": "It is predominantly used as a Commercial Casting site although there are a fair number of TV/Film, Student Film, New Media, Music Video, Print, etc casting notices posted daily."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "cXjbBZrB5Ow",
+          "align": "left"
+        },
+        {
+          "type": "blockquote",
+          "html": "A majority of subscribers find it cost effective to pay for a “Pro” account with unlimited Media uploads. This allows you to host many clips, longer reels, video examples of special skills and more."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "d_f71yAnYyk",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "Same rules of labeling apply to this an any Casting Profile."
+        },
+        {
+          "type": "h4",
+          "html": "While you are not limited by cost per minute, you should still edit your selections to time. Casting Directors have limited time to view materials in their daily tasks."
+        },
+        {
+          "type": "button",
+          "label": "Casting Networks",
+          "href": "http://Www.castingnetworks.com",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Casting Directors Advice On Demo Reels",
+          "href": "https://www.backstage.com/magazine/article/casting-director-advice-demo-reels-68721/",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/B14096B7-4725-4D12-AFBF-ED63EDE840E2.jpg",
+          "width": 328,
+          "height": 86
+        },
+        {
+          "type": "h4",
+          "html": "Casting Frontier profiles are required by many Commercial Agencies.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "They have predominant commercial castings and a smaller mix of Short Film, New Media and other projects."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Ll4QfdBl48s",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Casting Frontier",
+          "href": "http://www.castingfrontier.com",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/6496E064-259A-4DB0-84AD-32A422D16EDF.jpg",
+          "width": 257,
+          "height": 262
+        },
+        {
+          "type": "h4",
+          "html": "Backstage is a resource site tied to a publication geared towards actors. They have free profiles and host a sizable amount of casting notices."
+        },
+        {
+          "type": "h4",
+          "html": "This is an option to maintain and update your profile with media to be viewed when submitting for Casting opportunities."
+        },
+        {
+          "type": "button",
+          "label": "How To Get Discovered On Backstage",
+          "href": "https://www.backstage.com/magazine/article/how-to-get-discovered-on-backstage-in-2019-66605/",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Backstage",
+          "href": "http://www.backstage.com",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/7423BB12-80A3-42D2-8935-13A15BE10DE2.jpg",
+          "width": 670,
+          "height": 335
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/030A5D03-4F60-4C44-8BDD-997B600A78FF.jpg",
+          "width": 320,
+          "height": 320
+        },
+        {
+          "type": "h3",
+          "html": "IMDb is the Internet Movie Database and has been a valuable collective resource for everyone in the Entertainment Industry.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Virtually every TV product, Web Series, Film is listed on this site and searchable by Cast and Crew."
+        },
+        {
+          "type": "h4",
+          "html": "It is an easy way to verify the legitimacy of someone in the Industry."
+        },
+        {
+          "type": "blockquote",
+          "html": "Even Talent Reps and Public Relation Firms have listings and client lists available."
+        },
+        {
+          "type": "h4",
+          "html": "IMDbPRO is a paid subscription that allows users to have control over their listings. And gives subscribers more detailed information on people as well as Contact Information for anyone listed."
+        },
+        {
+          "type": "h4",
+          "html": "A subscription runs about $20 a month and you may have an infinite number of photo and video uploads to showcase on your page."
+        },
+        {
+          "type": "h4",
+          "html": "Uploading Reels and Clips is a great idea here because of the frequency of its use. As well as search engine optimization it provides on google.",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "vjOQSMV_j9A",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "IMDb",
+          "href": "http://www.imdb.com",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "IMDBPRO",
+          "href": "http://www.imdbpro.com",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/7E5667B5-FA14-40CF-AD2D-B02450E9BBAC.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "A very important message from Corey",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "396114925",
+          "missing": {
+            "note": "'A very important message from Corey', next to child internet-safety links.",
+            "candidates": [
+              "fe7bb938-4235-4a64-b399-73d3dd8f8fe2 - coaching_priority (720p).mp4",
+              "b2d1c50a-4c38-498a-832c-b0fa0b227898 - Net Safety.mp4 (main library)"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/D4811BF2-65FC-48C4-B51F-9B2E8A7F1664.jpg",
+          "width": 1080,
+          "height": 1920,
+          "displayWidth": 576
+        },
+        {
+          "type": "button",
+          "label": "Child Actor Net Safety",
+          "href": "https://marketing4actors.com/child-actor-social-media/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/6E70C2C6-2357-4570-82E8-308DA20EF791.jpg",
+          "width": 640,
+          "height": 423
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "kf4noMCdDIc",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Child Actor Internet Privacy",
+          "href": "https://debmcalister.com/2017/09/02/social-media-basics-for-child-actors-their-parents-part-1/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/0128B359-676F-497E-9300-2BD24A2922E3.jpg",
+          "width": 602,
+          "height": 321
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Video Hosting",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "You should keep your video hosted at a reliable site with security options available."
+        },
+        {
+          "type": "h4",
+          "html": "The sheer convenience of having a link to your Clips and Reels make this a must have."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/C789BE04-9E58-41FA-BBFD-B4B559D52C78.jpg",
+          "width": 1200,
+          "height": 1200,
+          "displayWidth": 1024
+        },
+        {
+          "type": "h3",
+          "html": "The most famous video hosting platform is free to use.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "It has high Search Engine Visibility and is a social media platform in itself with subscriber options and monetizing capabilities."
+        },
+        {
+          "type": "blockquote",
+          "html": "They do lack in the privacy department so not a wise choice when wanting to password protect a top secret video."
+        },
+        {
+          "type": "button",
+          "label": "YouTube",
+          "href": "http://www.youtube.com",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/0E669492-A796-46AA-AFC4-8E0941A290E8.jpg",
+          "width": 771,
+          "height": 418
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Vimeo is also at the top of the list in video hosting options."
+        },
+        {
+          "type": "h4",
+          "html": "It does have a lot less regulation and restrictions. It offers paid accounts for longer uploads and other features."
+        },
+        {
+          "type": "h4",
+          "html": "It is widely used by Filmmakers because of its Privacy features and password protection."
+        },
+        {
+          "type": "blockquote",
+          "html": "I highly recommend it to everyone for that reason."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "359315033",
+          "missing": {
+            "note": "Video about Vimeo hosting. Possibly a Vimeo-produced promo (external). No candidate identified.",
+            "candidates": []
+          },
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Vimeo",
+          "href": "http://www.vimeo.com",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/736A4C91-5E9B-4A2E-9843-A59D6743DC89.jpg",
+          "width": 1200,
+          "height": 801,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Personal Website",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "It is advisable to have a personal website at your child’s actor name as the domain.",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Even if you have not built a website, you should buy a domain for relatively cheap.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "If sudden success arises then that domain can be held hostage and sold back to you for a lot of money."
+        },
+        {
+          "type": "blockquote",
+          "html": "Or even worse turned into a pornography redirected web address"
+        },
+        {
+          "type": "button",
+          "label": "Discounted domain names",
+          "href": "https://www.tkqlhce.com/click-9259021-13269564",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "BAHZo07NGE4",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "u2TIogm-lP0",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "What To Put On Actor Website",
+          "href": "https://www.backstage.com/magazine/article/actor-websites-when-its-time-to-invest-in-yours-67631/",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "A simple website landing page can host links, headshots, videos and contact info."
+        },
+        {
+          "type": "blockquote",
+          "html": "I love carrd.co because hosting is under $20 a year!"
+        },
+        {
+          "type": "blockquote",
+          "html": "And they have fast easy templates!"
+        },
+        {
+          "type": "button",
+          "label": "CARRD",
+          "href": "https://try.carrd.co/bdm9dsxh",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/08F58760-61BD-4CCC-B0C9-2747FDA567F1.jpg",
+          "width": 1668,
+          "height": 1841,
+          "displayWidth": 928,
+          "caption": "My client uses CARRD."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/906D1071-CB43-48E5-B3D4-62BF789193AC.jpg",
+          "width": 1668,
+          "height": 2115,
+          "displayWidth": 808
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/2C0666D6-3208-4944-86D7-8CA1267A8B59.jpg",
+          "width": 1668,
+          "height": 1453,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/C58287B6-8CFF-4D29-A4D4-562AFD395B7E.jpg",
+          "width": 1668,
+          "height": 1772,
+          "displayWidth": 964
+        },
+        {
+          "type": "button",
+          "label": "Zander Grable",
+          "href": "http://www.zandergrable.com",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/BFE46A6E-797D-4850-B155-17A0C85EC81B.jpg",
+          "width": 1730,
+          "height": 1155,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Social Media",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "It is a Parent’s choice to use Social Media as a marketing tool for their young actors."
+        },
+        {
+          "type": "h4",
+          "html": "Most brands in general have a Social Media presence if only to redirect people to their main source of information."
+        },
+        {
+          "type": "h4",
+          "html": "Some use the power of Social Media to gain a following and become a paid social influencer by brands. These opportunities can be more lucrative than a Commercial Career."
+        },
+        {
+          "type": "blockquote",
+          "html": "Different Demographics use various platforms."
+        },
+        {
+          "type": "h3",
+          "html": "Facebook and Instagram have the largest engagement of users.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "The ability to Direct Message a user is a networking tool many actors use to connect to Industry Professionals. You can send a note with a link to video and materials and potentially reach someone in a new way."
+        },
+        {
+          "type": "blockquote",
+          "html": "Caution: Everyone had their own ideas and boundaries to this form of communication and it is best to only Direct Message Business and not Personal accounts."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/B6E7915F-7BB1-4B95-9529-FC6E76487709.jpg",
+          "width": 1328,
+          "height": 747,
+          "displayWidth": 1024
+        },
+        {
+          "type": "h4",
+          "html": "Facebook is slipping in younger demographics but holds steady as the number one social network.",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Connecting a billion people together on one platform is impressive.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Using Facebook to Network can be easy to do."
+        },
+        {
+          "type": "h4",
+          "html": "You can share links, upload &amp; share videos from your personal profile."
+        },
+        {
+          "type": "h3",
+          "html": "Or set up a PAGE as an entity.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "Videos can be shared by uploading to Facebook manually or by posting a video hosted link."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "QeCcFeiR6hI",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Heidi Dean",
+          "href": "http://www.marketing4actors.com",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Facebook",
+          "href": "http://www.facebook.com",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/56BC5BC3-E275-4656-A320-F540486A0422.jpg",
+          "width": 728,
+          "height": 455
+        },
+        {
+          "type": "h3",
+          "html": "Instagram is HUGE with the younger demographics and gaining popularity among all ages."
+        },
+        {
+          "type": "h4",
+          "html": "It has great brand interaction and is successful for businesses of all kinds."
+        },
+        {
+          "type": "h4",
+          "html": "Social Influencers are heavily active on this platform and earn money by the amount of followers they have."
+        },
+        {
+          "type": "blockquote",
+          "html": "Actors can post limited timed video clips to engage followers on Instagram. Videos can be longer and uploaded to IGTv"
+        },
+        {
+          "type": "h4",
+          "html": "Or a link to full video cam be shared within a post or story.",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "KHWzla2xyqM",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "fmlrY9g5QEg",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Instagram",
+          "href": "http://www.instagram.com",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/use-it/images/87476EDA-0BCB-447B-975A-3E471EBCF705.jpg",
+          "width": 410,
+          "height": 320
+        },
+        {
+          "type": "h3",
+          "html": "Email",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Email is by far the fastest, most convenient and highly effective way to contact people and especially network.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "All actors should have an official account to use in related communication."
+        },
+        {
+          "type": "h4",
+          "html": "Email has the ability to post links or embed video into message."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "MNyyKkryKlc",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "It also has the best return rate for replies and has taken over telephone calls in the business world as preferred communication.",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "How to contact a Casting Director",
+          "href": "https://www.nickdunning.com/blog/how-to-contact-a-casting-director-in-2019",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "J95rAND9mpE",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "And That is...",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "396116394",
+          "missing": {
+            "note": "Course wrap-up video ('And That is... A Wrap!').",
+            "candidates": [
+              "13ec489d-8eb4-4fc9-9494-2645061082ea - 5-1.mp4",
+              "7f0d7d40-7914-4b7c-beb2-72e809a9ffa7 - The e n d.mp4 (main library)"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "A Wrap!",
+          "align": "center"
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with an image by Peter Lewicki - \"Theatre Interior\""
+  ],
+  "runtime": "new"
+}

@@ -1,0 +1,428 @@
+{
+  "source": "https://express.adobe.com/page/srf8IpDO7ZkIU/",
+  "theme": "adobe-theme-no-excuses-welcome",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/icc1sfj.css",
+    "https://use.typekit.net/oea2wtv.css",
+    "https://use.typekit.net/yfs6lii.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "NO EXCUSES! DIY Actor Demo Reel Clips",
+    "subtitle": "",
+    "image": "/courses/no-excuses/welcome/images/96A930EB-E6A2-4840-B96C-94CE0DA280D4.png",
+    "imageWidth": 1080,
+    "imageHeight": 1080,
+    "backgroundPosition": "39.804822808419935% 11.844729344729357%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "WELCOME MESSAGE",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "379943966",
+          "bunny": {
+            "guid": "f642726e-8dc1-412e-9d97-f0ba82548121",
+            "title": "NO EXCUSES! Demo Clip Course for Actor's",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "split",
+      "classes": [
+        "single-column-section",
+        "split-layout",
+        "image-on-left"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "LA training anywhere",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": ""
+        },
+        {
+          "type": "h3",
+          "html": "Training for Actors in TV/Film Through Coaching and Classes.",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Founded by <a href=\"https://www.imdb.com/name/nm0707799/\" target=\"_blank\" rel=\"noopener noreferrer\">Corey Ralston</a>",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Website",
+          "href": "https://childactor101.com",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Corey Ralston",
+          "align": "center"
+        },
+        {
+          "type": "p",
+          "html": "Corey has been in the Industry since the age of seven as a child actor in L.A. He then went on to pursue talent management in 2000 and again in 2017. He is currently repping kids&#x2F;adults at Bohemia Group. Corey founded a resource community for called Child Actor 101 which has 30+ agents, managers &amp; casting directors moderating discussions and giving frank free advice to those pursuing a career for their children. In addition to he has put years as an acting coach, headshot photographer &amp; theatre director giving him 30 years in the &quot;Biz.&quot;"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/FEC0DAE4-9258-4530-BD8D-A4FA924CC645.jpg",
+          "width": 1779,
+          "height": 1320,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "His production company RALSTON ENTERTAINMENT recently produced a pilot \"Les Moore\" and is developing other Family-Friendly Projects.",
+          "caption": "His production company RALSTON ENTERTAINMENT recently produced a pilot &quot;Les Moore&quot; and is developing other Family-Friendly Projects."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "377218725",
+          "missing": {
+            "note": "Corey bio video on the welcome page. No collection match.",
+            "candidates": [
+              "4ecd0502-fcd3-49be-b552-8c64b3adf5e0 - Corey Ralston Reel.mp4",
+              "5783a098-acad-48c4-b094-63a129d7cd0b - Corey Ralston Reel (1).mp4"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/3B6A3142-BBD8-4D6D-9F93-6E12AD9225CE.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Child Actor 101 is a Facebook Community group built for Parent’s of Child Actors. It is moderated by 40+ Industry Professionals including Talent Agents, Casting Directors, Talent Managers, Headshot Photographers, Acting Coaches, Etc.",
+          "caption": "<i><b>Child Actor 101 is a Facebook Community group built for Parent’s of Child Actors. It is moderated by 40+ Industry Professionals including Talent Agents, Casting Directors, Talent Managers, Headshot Photographers, Acting Coaches, Etc.</b></i>"
+        }
+      ],
+      "background": {
+        "image": "/courses/no-excuses/welcome/images/D3732DA4-D780-4EEB-BF2C-473398509256.jpg",
+        "width": 1920,
+        "height": 2560,
+        "position": "50% 50%"
+      }
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "It’s a Confusing Road",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/40108801-9336-4274-A8AC-2403F9EE3832.jpg",
+          "width": 3992,
+          "height": 2992,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "As a former Child Actor I know first hand what sacrifices parents make in order to pursue a dream for their kids. Especially one as big as a professional acting career. When I started Child Actor 101 with my Industry Pro Friends I envisioned a place that warned parents of the many scams that exist and vowed to always answer questions honestly even if it stings. What the group became was a community far more in need than I imagined. Based on these needs I began to offer Parent 101 training classes on various subjects that required in-depth detaill and discussion. Two years later and we find ourselves here exploring a topic in a new innovative way that has the potential to give so many more a competitive edge.",
+          "caption": "As a former Child Actor I know first hand what sacrifices parents make in order to pursue a dream for their kids. Especially one as big as a professional acting career. When I started Child Actor 101 with my Industry Pro Friends I envisioned a place that warned parents of the many scams that exist and vowed to always answer questions honestly even if it stings. What the group became was a community far more in need than I imagined. Based on these needs I began to offer Parent 101 training classes on various subjects that required in-depth detaill and discussion. Two years later and we find ourselves here exploring a topic in a new innovative way that has the potential to give so many more a competitive edge."
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Got Tape?",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/03ED4EC5-2716-4D57-8C2D-41FD0EC47657.jpg",
+          "width": 3120,
+          "height": 4208,
+          "displayWidth": 759,
+          "figure": true,
+          "label": "FOOTAGE: Clips or pieces from a finished TV or Film job. These are obtained through air check or copy being provided to you from production. In many cases, this copy is the consideration of the performers contract.",
+          "caption": "<b>FOOTAGE</b>: Clips or pieces from a finished TV or Film job. These are obtained through air check or copy being provided to you from production. In many cases, this copy is the consideration of the performers contract."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/C6A284F6-EC3C-4FEF-8086-19FD6E5E1785.jpg",
+          "width": 500,
+          "height": 333,
+          "figure": true,
+          "label": "SELF TAPE: Casting provides an opportunity to audition for roles at home by self taping the sides with given instructions. These videos are proprietary & copyrighted and not for public consumption On rare occasion can you share or use these self tapes as a marketing tool.",
+          "caption": "<b>SELF TAPE: </b>Casting provides an opportunity to audition for roles at home by self taping the sides with given instructions. These videos are proprietary &amp; copyrighted and not for public consumption On rare occasion can you share or use these self tapes as a marketing tool."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/EAAA0762-5834-4C59-8A7D-BD0FBDED04F6.jpg",
+          "width": 5472,
+          "height": 3648,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "REEL: compilation of footage cut to a specific time that showcases the resume or skill of an actor. Standard lengths do not exceed 2.5 minutes. Individual clips from reel should be posted on casting profiles for submissions to casting opportunities.",
+          "caption": "<b>REEL</b>: compilation of footage cut to a specific time that showcases the resume or skill of an actor. Standard lengths do not exceed 2.5 minutes. Individual clips from reel should be posted on casting profiles for submissions to casting opportunities."
+        },
+        {
+          "type": "h3",
+          "html": "Why are Clips soo Important?",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/F995EC5A-3FF3-41D6-95CA-740940323DB6.jpg",
+          "width": 512,
+          "height": 512,
+          "figure": true,
+          "label": "These clips are hosted on an actor's casting profile & attached with headshots to a submission for an open role. Casting Directors invite 25-50 actors to a udition out of 2500+ submissions .",
+          "caption": "These clips are hosted on an actor&#39;s casting profile &amp; attached with headshots to a submission for an open role. Casting Directors invite 25-50 actors to a udition out of 2500+ submissions ."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/FDCCEB55-3A10-4A6D-B128-652CFA7B1090.jpg",
+          "width": 5760,
+          "height": 3840,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Showcase Skill: Quality clips show the skill and range of an actor as well as the experience gained while creating it. These clips should be a prime example of what an actor can do.",
+          "caption": "<b>Showcase Skill</b>: Quality clips show the skill and range of an actor as well as the experience gained while creating it. These clips should be a prime example of what an actor can do."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/457F3182-C4AD-4B10-8C7C-6C0D92D96CA4.jpg",
+          "width": 6016,
+          "height": 4000,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Identify Type: Multiple clips can showcase the types of roles an actor can play. If you pair this with genres of productions then it is simple for casting to envision & Trust this actor to audition.",
+          "caption": "<b>Identify Type</b>: Multiple clips can showcase the types of roles an actor can play. If you pair this with genres of productions then it is simple for casting to envision &amp; Trust this actor to audition."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "387252761",
+          "missing": {
+            "note": "'Why are Clips soo Important?' teaching video.",
+            "candidates": [
+              "bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "How Talent Agents &amp; Managers use Demo Clips",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/9AE6BE5F-D07F-4993-BC4C-B6FF2A133355.png",
+          "width": 1280,
+          "height": 800,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Submissions: Talent Reps attach a video along with an appropriate headshot/slate shot for an actor when submitting them through Breakdowns/Casting Networks. A clip versus a full reel is preferred to streamline the process and pinpoint skill or type sought.",
+          "caption": "<b>Submissions</b>: Talent Reps attach a video along with an appropriate headshot&#x2F;slate shot for an actor when submitting them through Breakdowns&#x2F;Casting Networks. A clip versus a full reel is preferred to streamline the process and pinpoint skill or type sought."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/8144B425-3F28-436A-954F-CBFFE222AF75.jpg",
+          "width": 4000,
+          "height": 2667,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Pitching to Casting: Talent Reps additionally pitch talent to casting on roles in which they are particularly right for. Sending an email with materials including clips and a reel are essential in proving why the actor is such a good fit and deserves a coveted appointment .",
+          "caption": "<b>Pitching to Casting:</b> Talent Reps additionally pitch talent to casting on roles in which they are particularly right for. Sending an email with materials including clips and a reel are essential in proving why the actor is such a good fit and deserves a coveted appointment ."
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/F0F54796-0925-48F7-8A05-C1B337ACC684.jpg",
+          "width": 500,
+          "height": 500,
+          "figure": true,
+          "label": "Reps celebrate their client's achievements and promote their performance skill while reminding our peers they exist. Under one minute clips are perfect attachments for Instagram, Facebook, etc. A quick grab to create another positive impression.",
+          "caption": "Reps celebrate their client&#39;s achievements and promote their performance skill while reminding our peers they exist. Under one minute clips are perfect attachments for Instagram, Facebook, etc. A quick grab to create another positive impression."
+        },
+        {
+          "type": "h3",
+          "html": "The Submission Process",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/FA920DBE-92E9-46CA-B2A8-973EDD6A908B.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/C0857BDA-E9D0-4D40-B112-2B927EAAC2CB.jpg",
+          "width": 640,
+          "height": 480
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Let’s get started with the learning. First stop is The Writer’s Room"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/welcome/images/B2C614B3-B7BB-46FF-8B6C-9FB1FAA2711A.png",
+          "width": 1200,
+          "height": 630,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Do not forget to join the a Private Facebook group which accompanies this course. It is an additional resource for you to grow, share and learn.",
+          "caption": "Do not forget to join the a Private Facebook group which accompanies this course. It is an additional resource for you to grow, share and learn."
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "On to Section One"
+        },
+        {
+          "type": "button",
+          "label": "Section One - Write It",
+          "href": "https://express.adobe.com/page/MltFArqt4mOOT/",
+          "align": "center"
+        }
+      ]
+    }
+  ],
+  "author": "Corey Ralston",
+  "credits": [
+    "Created with images by shinya - \"Hollywood\"  •  Jack Anstey - \"Into the mountains\"  •  Avel Chuklanov - \"On set\"  •  Victoria_Borodinova - \"music headsets listening to music\""
+  ],
+  "runtime": "new"
+}

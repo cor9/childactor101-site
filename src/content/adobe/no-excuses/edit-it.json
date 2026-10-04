@@ -1,0 +1,1928 @@
+{
+  "source": "https://new.express.adobe.com/webpage/GMt6OK0rvfYVm",
+  "theme": "adobe-theme-no-excuses-edit-it",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/apq5qjv.css",
+    "https://use.typekit.net/lyd0hdu.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Edit It",
+    "subtitle": "Section Four",
+    "image": "/courses/no-excuses/edit-it/images/DFA23418-46ED-4FD5-9A05-88604FF2A370.jpg",
+    "imageWidth": 6000,
+    "imageHeight": 4000,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "WELCOME BACK!",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391173336",
+          "bunny": {
+            "guid": "452637f1-69f2-4f2f-85f8-4c2d23f28919",
+            "title": "Editing intro",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "We will cover...",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/91F10F61-53F2-4029-BAD8-AB8A8F2C1625.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/3A96E00B-D65E-4E3D-B426-722C4BD876C4.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/0ED6AD57-0E5D-47F6-B13B-E4F8DF183BE6.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/45A9F5AB-DE82-4785-9317-1B8ABCD86EB3.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/2A4B864A-2386-453A-8F91-EDB83829EB81.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/86090DBB-EF46-41A5-95CB-2FDA9AB009D5.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/FDA819D7-AAE0-4717-A5A0-C626A39F1569.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/71E453E5-17A6-4729-A2A6-7BF613F025A0.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "aJ0_SP5nBMg",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "lL0CSAj5NRk",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/6DE4E8A1-48C6-4372-B8C1-758A588C1BA1.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/43141A0D-8370-4AAC-B3BE-AB11DE4D8087.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "3OoQ7H0vZmg",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "6vHwk2ocHy0",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "F3oCPLMUdF0",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/89D20B23-164D-4828-933B-AB94AAC048A9.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "_4xFwiUAaMY",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "WUXNpxXsUZs",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "AcanZUMYup0",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/C6F5A355-61BA-4827-B679-FE52CD48545C.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "8maIJExywLo",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Z-Y375vxfTE",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "FGp0N7nI84w",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/13DF221B-AFCE-41A5-B80E-553D7D73032B.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ISO44m3T93o",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "gUjvmvdDWjo",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "WyP-YnAgIWo",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/186C2109-B434-48A1-BEC3-E9AC02D39C9B.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Corey’s Enlight overview",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391760430",
+          "missing": {
+            "note": "Corey's Enlight (Videoleap) app overview. Also embedded on Perfect Self Tape 'Quick Editing'.",
+            "candidates": [
+              "f5b0854e-6c52-44f3-ae0d-ab13c364d774 - Untitled (5).mp4",
+              "a855464e-d499-4221-98fa-dd884df2146d - Untitled (6).mp4",
+              "1067ad2b-49aa-48e6-a4ed-cc533e61ec07 - Videoleap-459739BD export.mp4 (main library)"
+            ]
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/72E5F44F-15E2-49E9-85DC-FA73DBCD7D14.jpg",
+          "width": 3208,
+          "height": 3168
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Read why a Clapboard Slate is soo important and helps with Sound Editing and Sync"
+        },
+        {
+          "type": "button",
+          "label": "Clacker",
+          "href": "https://www.studiobinder.com/blog/how-to-use-a-film-slate/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "_q9s3n7PGuk",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Sound Recording Basics",
+          "href": "https://www.studiobinder.com/blog/sound-recording/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "X8cr0_wfKdI",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "sfmyjPr4k_g",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "*Corey Walks you through an edit*",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391763750",
+          "bunny": {
+            "guid": "e2c4531b-5651-423e-bdc4-4a5866104e10",
+            "title": "Walk through an Edit",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "blockquote",
+          "html": "More Awesome Videos to Learn From"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "FxKkzb5gJEw",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "oeFlJCgxN-A",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "d2fyviJHwWQ",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "6mvjS-sl39E",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "QChWIFi8fOY",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Essential Cuts",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Amazing Read With Video Examples",
+          "href": "https://www.premiumbeat.com/blog/8-essential-cuts-every-editor-should-know/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "oie7yQgMzVw",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/B1AAED7C-D036-49A5-B886-64B0849F7022.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/A5FE4797-9FF1-4D21-A2E9-113C7453DFEC.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/7AC89419-A12A-4751-BBB8-422A2BF9F587.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/C9F58C96-4949-4B78-B488-709CDF2B5D42.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/4E85555C-7CA1-4F4A-B609-7C9356FC2E22.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/5DEECF4F-7207-4368-95B4-6A03ADE2FD41.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/37A4ADCC-C7E2-4668-B2B0-83746FA17168.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Special Guest Interview with Filmmaker &amp; Editor KASEY ATKINS",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "390130720",
+          "bunny": {
+            "guid": "3205b169-cf47-42b7-9ee6-807175b8fadc",
+            "title": "Q&A with Film Editor - Kasey Atkins",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Tips",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "No matter how long your scene is. Edit a full version of the scene first. You can use this full version in Social Media Marketing. It is also just a nice thing to do and gives respect to the scene that you wrote and was performed."
+        },
+        {
+          "type": "h3",
+          "html": "Remember: 60 seconds or under!",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "NO MORE THAN THAT!",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "The reason we say this is for a few reasons...."
+        },
+        {
+          "type": "h4",
+          "html": "A. Actor’s Access charges per minute of upload and it is only necessary to pay the one minute fee for a clip"
+        },
+        {
+          "type": "h4",
+          "html": "B. Casting Directors have an average attention span of 42 seconds. And that is IF they are liking what they are seeing. You have to grab them in the first 15 seconds."
+        },
+        {
+          "type": "h4",
+          "html": "C. When compiling clips to a reel you will only want less than 30 seconds per clip. So get used to trimming."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/09B928D4-6728-4CBA-8A6D-0D6C9A232CE5.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "59PjgIjImEk",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ptXlYulVAsM",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/6303044C-C1FE-457F-817C-FB79316C1FC5.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/E0878431-5F22-4F2C-8803-0375046C4D7E.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "O2NqB8HtBhI",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "EBykqNDKbKY",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/472E0BD3-28EC-4125-9325-7222237EC8E2.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/C1245C3C-952F-4C38-B29D-5AB5E0B47196.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Every editing program is going to give an option to add an overlay over your video. These overlays MUST be used.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/0A29F468-1695-46F5-B34D-EFBF64721F36.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/21842656-C39D-48B3-8B61-0D13D6FCDFC6.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/BD1F5063-FF37-4D78-8A83-13FD5223CE25.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "390282478",
+          "missing": {
+            "note": "Overlays / finishing teaching video.",
+            "candidates": [
+              "88c59b5d-ae82-443c-bc8e-98a74f358c68 - Color Correction.mp4"
+            ]
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/B6777A6F-33AF-4DDA-9B06-280F15D03F5D.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/297C2105-0749-4A30-AF5A-E965D14F61CC.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/E6817F77-3D53-4610-B1AC-D993F525A483.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/54A391C0-45DD-4735-BBDC-17F474D8DC10.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/881EE90E-051B-42B1-9AB6-1876E7AACE7B.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/BB4A8046-DA13-4422-B02B-30D562D5D77F.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "D9RHy4c_NuM",
+          "align": "left"
+        },
+        {
+          "type": "h4",
+          "html": "VideoSoap",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/98651CB3-B7D2-4E8A-A3F4-AB46E30F2ACB.jpg",
+          "width": 512,
+          "height": 512,
+          "caption": "In the App Store"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/DD7B207D-990F-4962-89EA-CC909F881F3E.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/257363CA-E3CD-4775-95EB-9E633D8F6CDC.jpg",
+          "width": 825,
+          "height": 884
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "F7LK9QUXrD8",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "GviVrkBypcM",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/3DC5EAF3-C98B-47DC-8499-E0A9415CE396.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Corey sets the score"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391178618",
+          "bunny": {
+            "guid": "c715830e-8708-468e-b404-73a2b5cb7fcb",
+            "title": "Score",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/5DEA8667-1B72-46BF-8D9F-60A08D2F9A7B.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/2A4BC40E-275C-40DB-90C6-8DDDE4188ACC.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/AC3E0D7E-489F-4696-BE6D-6C9D7C041A22.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/66395CB1-CA94-4F42-87D4-68C42CDEE30D.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/5216F2E9-B919-407A-A63F-37743FF78029.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/7223D534-A996-4420-8F2E-69F0F5EF9B91.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/E2858B3C-C168-4022-8ACE-DD088C1BE791.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Article"
+        },
+        {
+          "type": "button",
+          "label": "Choosing Music",
+          "href": "https://adventurefilmschool.com/music/how-to-choose-music-for-your-video-a-few-tips-to-get-you-started/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "CWfQQStRf24",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "rEfXv-XxPqA",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ttjXfVQi0Mg",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/32446316-9DAA-42D1-8AF1-F650A266554B.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "YOUTUBE Royalty Free Music Library",
+          "href": "https://www.youtube.com/audiolibrary/music",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "More Resources",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "SOUNDSTRIPE  Membership Music",
+          "href": "https://www.soundstripe.com/?gspk=c2VtYW50aWNsYWJz&gsxid=EokA8FjVxc1B&sid=1-g-Cj0KCQiAyp7yBRCwARIsABfQsnTAnefV2Ly6nwFgFbPJjtvkjqvwndvKo8HVk-QqYxES-m0Ft20Eq5gaAvK8EALw_wcB&utm_source=growsumo",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "EPIDEMIC SOUND  Membership Music",
+          "href": "https://www.epidemicsound.com/?_us=adwords&_usx=386879319&gclid=Cj0KCQiAyp7yBRCwARIsABfQsnSzRAVHd5AbcztdUMb1v6J8eoLOjuLCSJaCJgpDH7s1pIEq3kKVZIgaAnn_EALw_wcB",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Free Music Archive",
+          "href": "https://freemusicarchive.org/curator/Video",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Article: 13 Places To Get Great Music For Videos",
+          "href": "https://buffer.com/library/background-music-video",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/FDB81A09-FAB1-4AFC-86F8-5742435C29F7.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/C526E970-3665-4C25-A2D9-D2434E23760E.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/83C96D64-B960-478C-AA15-F163569054C7.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/CF8501CD-4C32-4F4A-B8CE-536125C3E1DE.jpg",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "WRAPPING up Unit 4",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391183772",
+          "bunny": {
+            "guid": "f4b38625-9437-4095-bc70-153ae32ec756",
+            "title": "Edit wrap",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Up next...",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "The final section",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Section 5",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/no-excuses/edit-it/images/E21CBC78-25D6-43C4-A8C9-7BFE0BB21C98.jpg",
+          "width": 1668,
+          "height": 1234
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with images by George Kroeker - \"IDS_UNTITLED_PHOTO_NAME\" • Bokskapet - \"video production headphones lavalier\""
+  ],
+  "runtime": "new"
+}

@@ -1,12 +1,10 @@
 import Image from "next/image";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { bunnyEmbedUrl } from "@/lib/bunny";
 
-import { RevealOnScroll } from "./RevealOnScroll";
-
-import "./adobe-theme.css";
 import "./adobe-layout.css";
+import { RevealOnScroll } from "./RevealOnScroll";
 
 /** Page spec produced by scripts/adobe_page_to_spec.py from a public Adobe Express page. */
 export type AdobeVideo = {
@@ -21,19 +19,47 @@ export type AdobeVideo = {
 };
 
 export type AdobeElement =
-  | { type: "h3" | "h4" | "p" | "blockquote"; html: string; align?: "center" }
+  | { type: "h2" | "h3" | "h4" | "p" | "blockquote"; html: string; align?: "center" }
   | { type: "ul" | "ol"; items: string[] }
   | { type: "button"; label: string; href: string; align: "left" | "center" }
-  | { type: "image"; src: string; width: number; height: number; caption?: string }
+  | {
+      type: "image";
+      src: string;
+      width: number;
+      height: number;
+      caption?: string;
+      /** Width Adobe displays the image at, when smaller than the stored file. */
+      displayWidth?: number;
+      /** Published as <figure> with an aria-label that carries the copy shown in the image. */
+      figure?: boolean;
+      label?: string;
+    }
+  | { type: "raw"; tag: string; class: string; html: string }
   | AdobeVideo;
 
+export interface AdobeBackground {
+  image: string;
+  width: number;
+  height: number;
+  position: string;
+}
+
 export interface AdobeSection {
-  kind: "single-column" | "full-width";
-  spacing: { top: "large" | "normal"; bottom: "large" | "normal" };
+  kind: "single-column" | "full-width" | "spacer" | "window" | "split";
+  /** Original section classes minus "section" (e.g. "single-item-content-section", "height-50"). */
+  classes?: string[];
+  spacing?: { top: "large" | "normal"; bottom: "large" | "normal" };
+  background?: AdobeBackground | null;
   elements: AdobeElement[];
 }
 
 export interface AdobePageSpec {
+  /** Scope class the page's theme CSS was re-written to (see scripts/adobe_page_to_spec.py). */
+  theme?: string;
+  /** Adobe Fonts kit stylesheets the original page loaded. */
+  fontKits?: string[];
+  /** Which Adobe runtime published the page ("new" = Adobe Express webpages). */
+  runtime?: "classic" | "new";
   title: {
     position: string;
     title: string;
@@ -48,12 +74,14 @@ export interface AdobePageSpec {
   credits?: string[];
 }
 
-function Html({ html, tag: Tag, className }: { html: string; tag: "h3" | "h4" | "p" | "blockquote" | "li"; className?: string }) {
-  // Trusted: produced by our own extraction script from the Adobe page (b/i/a/br only).
+type HtmlTag = "h2" | "h3" | "h4" | "p" | "blockquote" | "li";
+
+function Html({ html, tag: Tag, className }: { html: string; tag: HtmlTag; className?: string }) {
+  // Trusted: produced by our own extraction script from the Adobe page (inline b/i/a/br only).
   return <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-function VideoEmbed({ video }: { video: AdobeVideo }) {
+function VideoEmbed({ index, video }: { index: number; video: AdobeVideo }) {
   let src: string | undefined;
   let title = "Video";
 
@@ -69,7 +97,7 @@ function VideoEmbed({ video }: { video: AdobeVideo }) {
   }
 
   return (
-    <div className={`link-button-wrapper link-${video.align ?? "left"}`}>
+    <div className={`link-button-wrapper link-${video.align ?? "left"}`} data-video-index={index} id={`video-${index}`}>
       <div className="embedded-link-wrapper widescreen-aspect-ratio">
         {src ? (
           <iframe
@@ -89,8 +117,55 @@ function VideoEmbed({ video }: { video: AdobeVideo }) {
   );
 }
 
-function renderElement(element: AdobeElement, index: number, priority: boolean, fullWidth: boolean): ReactNode {
+function ImageElement({
+  element,
+  fullWidth,
+  priority,
+}: {
+  element: Extract<AdobeElement, { type: "image" }>;
+  fullWidth: boolean;
+  priority: boolean;
+}) {
+  const wrapper = (
+    <div className="image-wrapper">
+      <Image
+        alt={element.label ?? ""}
+        height={element.height}
+        priority={priority}
+        sizes={fullWidth ? "100vw" : "(min-width: 1300px) 50vw, 100vw"}
+        src={element.src}
+        style={fullWidth ? undefined : { width: element.displayWidth ?? element.width }}
+        width={element.width}
+      />
+    </div>
+  );
+
+  if (element.figure) {
+    return (
+      <figure aria-label={element.label} className="image" role="group">
+        {wrapper}
+        {element.caption ? <figcaption className="caption" dangerouslySetInnerHTML={{ __html: element.caption }} /> : null}
+      </figure>
+    );
+  }
+
+  return (
+    <div className="image">
+      {wrapper}
+      {element.caption ? <div className="caption" dangerouslySetInnerHTML={{ __html: element.caption }} /> : null}
+    </div>
+  );
+}
+
+function renderElement(
+  element: AdobeElement,
+  index: number,
+  priority: boolean,
+  fullWidth: boolean,
+  videoIndex: (video: AdobeVideo) => number,
+): ReactNode {
   switch (element.type) {
+    case "h2":
     case "h3":
     case "h4":
     case "p":
@@ -118,38 +193,47 @@ function renderElement(element: AdobeElement, index: number, priority: boolean, 
         </div>
       );
     case "image":
-      return (
-        <div className="image" key={index}>
-          <div className="image-wrapper">
-            <Image
-              alt=""
-              height={element.height}
-              priority={priority}
-              style={fullWidth ? undefined : { width: element.width }}
-              sizes={fullWidth ? "100vw" : "(min-width: 1300px) 50vw, 100vw"}
-              src={element.src}
-              width={element.width}
-            />
-          </div>
-          {element.caption ? <div className="caption" dangerouslySetInnerHTML={{ __html: element.caption }} /> : null}
-        </div>
-      );
+      return <ImageElement element={element} fullWidth={fullWidth} key={index} priority={priority} />;
     case "video":
-      return <VideoEmbed key={index} video={element} />;
+      return <VideoEmbed index={videoIndex(element)} key={index} video={element} />;
+    case "raw": {
+      const Tag = element.tag as "div";
+      return <Tag className={element.class || undefined} dangerouslySetInnerHTML={{ __html: element.html }} key={index} />;
+    }
   }
+}
+
+/** Window sections show a background photo in a band whose height comes from the original height-NN class. */
+function windowHeight(classes: string[] = []): CSSProperties {
+  const match = classes.find((name) => /^height-\d+$/.test(name));
+  const percent = match ? Number(match.replace("height-", "")) : 50;
+  return { height: `${percent}vh` };
 }
 
 export function AdobePage({ spec }: { spec: AdobePageSpec }) {
   const { title } = spec;
+  const theme = spec.theme ?? "";
+  // Number videos in page order so placeholders can be located as #video-N.
+  const videoNumbers = new Map<AdobeVideo, number>();
+  let videoTotal = 0;
+  for (const section of spec.sections) {
+    for (const element of section.elements) {
+      if (element.type === "video") {
+        videoTotal += 1;
+        videoNumbers.set(element, videoTotal);
+      }
+    }
+  }
+  const videoIndex = (video: AdobeVideo) => videoNumbers.get(video) ?? 0;
 
   return (
-    <div className="adobe-page">
-      {/* Adobe Fonts kits used by the original page: adobe-caslon-pro and spark-local-brewery-four. */}
-      <link href="https://use.typekit.net/qhv3iqj.css" precedence="default" rel="stylesheet" />
-      <link href="https://use.typekit.net/txs8zsv.css" precedence="default" rel="stylesheet" />
-      <link href="https://use.typekit.net/onz5gap.css" precedence="default" rel="stylesheet" />
+    <div className={`adobe-page${spec.runtime === "new" ? " adobe-rt-new" : ""}`}>
+      {/* Adobe Fonts kits the original page loaded. */}
+      {(spec.fontKits ?? []).map((href) => (
+        <link href={href} key={href} precedence="default" rel="stylesheet" />
+      ))}
       <RevealOnScroll />
-      <div className="article trek-theme sections-article-layout">
+      <div className={`article ${theme} sections-article-layout`}>
         {title ? (
           <div className={`section title-section ${title.position}`}>
             <div className="section-view">
@@ -165,7 +249,7 @@ export function AdobePage({ spec }: { spec: AdobePageSpec }) {
                 <h1 className="title-header-view">
                   <span className="gradient-overlay" />
                   <span className="title">{title.title}</span>
-                  <span className="subtitle">{title.subtitle}</span>
+                  {title.subtitle ? <span className="subtitle">{title.subtitle}</span> : null}
                 </h1>
               </div>
               <div className="navigation-hint down" aria-hidden />
@@ -174,22 +258,67 @@ export function AdobePage({ spec }: { spec: AdobePageSpec }) {
         ) : null}
 
         {spec.sections.map((section, sectionIndex) => {
-          const spacing = [
-            section.spacing.top === "large" ? "large-content-spacing-top" : "",
-            section.spacing.bottom === "large" ? "large-content-spacing-bottom" : "",
-          ].join(" ");
+          const classes = (section.classes ?? []).join(" ");
+
+          if (section.kind === "spacer") {
+            return <div className={`section spacer-section content-spacer`} key={sectionIndex} />;
+          }
+
+          if (section.kind === "window") {
+            return (
+              <div className={`section window-section ${classes}`} key={sectionIndex}>
+                <div className="section-view" style={windowHeight(section.classes)}>
+                  <div className="window section-background">
+                    {section.background ? (
+                      <div
+                        className="section-background-image"
+                        role="img"
+                        aria-label=""
+                        style={{
+                          backgroundImage: `url("${section.background.image}")`,
+                          backgroundPosition: section.background.position,
+                        }}
+                      />
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          const spacing = section.spacing
+            ? [
+                section.spacing.top === "large" ? "large-content-spacing-top" : "",
+                section.spacing.bottom === "large" ? "large-content-spacing-bottom" : "",
+              ].join(" ")
+            : "";
+          const sectionClass =
+            section.kind === "full-width"
+              ? "full-width-section"
+              : `single-column-section ${section.kind === "split" ? classes : classes.replace("single-column-section", "")} ${spacing}`;
+          const fullWidth = section.kind === "full-width";
 
           return (
-            <div
-              className={`section ${section.kind === "full-width" ? "full-width-section" : `single-column-section ${spacing}`}`}
-              key={sectionIndex}
-            >
+            <div className={`section ${sectionClass}`} key={sectionIndex}>
               <div className="section-view">
+                {section.kind === "split" && section.background ? (
+                  <div className="section-background">
+                    <div
+                      className="section-background-image"
+                      role="img"
+                      aria-label=""
+                      style={{
+                        backgroundImage: `url("${section.background.image}")`,
+                        backgroundPosition: section.background.position,
+                      }}
+                    />
+                  </div>
+                ) : null}
                 <div className="section-content">
                   <div className="section-content-view">
                     <div className="content-container">
                       {section.elements.map((element, elementIndex) =>
-                        renderElement(element, elementIndex, sectionIndex === 0, section.kind === "full-width"),
+                        renderElement(element, elementIndex, sectionIndex === 0, fullWidth, videoIndex),
                       )}
                     </div>
                   </div>

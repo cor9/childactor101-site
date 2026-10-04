@@ -279,14 +279,16 @@
   background-repeat: no-repeat;
 }
 
-/* Split layout: photo fills one half, content the other. */
+/* Split layout: one screen tall; photo fixed on one half, the text column scrolls on the other. */
 .adobe-page .single-column-section.split-layout {
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 0;
 }
 
 .adobe-page .single-column-section.split-layout .section-view {
   position: relative;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 0;
 }
 
 .adobe-page .single-column-section.split-layout .section-background {
@@ -310,30 +312,41 @@
 }
 
 .adobe-page .single-column-section.split-layout .section-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
   width: 50%;
-  margin-left: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: auto;
+  scrollbar-width: thin;
 }
 
 .adobe-page .single-column-section.split-layout.image-on-right .section-content {
-  margin-left: 0;
+  right: auto;
+  left: 0;
 }
 
 @media (max-width: 767px) {
-  .adobe-page .single-column-section.split-layout,
-  .adobe-page .single-column-section.split-layout .section-view {
-    min-height: 0;
-  }
-
-  .adobe-page .single-column-section.split-layout .section-background {
-    position: relative;
+  /* Stacked: photo fixed in the top half, text column scrolls in the bottom half. */
+  .adobe-page .single-column-section.split-layout .section-background,
+  .adobe-page .single-column-section.split-layout.image-on-right .section-background {
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 0;
     width: 100%;
-    height: 60vw;
   }
 
   .adobe-page .single-column-section.split-layout .section-content,
   .adobe-page .single-column-section.split-layout.image-on-right .section-content {
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    margin-left: 0;
   }
 }
 

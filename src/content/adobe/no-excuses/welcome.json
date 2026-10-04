@@ -4,8 +4,8 @@
   "fontKits": [
     "https://use.typekit.net/onz5gap.css",
     "https://use.typekit.net/icc1sfj.css",
-    "https://use.typekit.net/oea2wtv.css",
-    "https://use.typekit.net/yfs6lii.css"
+    "https://use.typekit.net/yfs6lii.css",
+    "https://use.typekit.net/oea2wtv.css"
   ],
   "title": {
     "position": "title-center",
@@ -414,8 +414,9 @@
         {
           "type": "button",
           "label": "Section One - Write It",
-          "href": "https://express.adobe.com/page/MltFArqt4mOOT/",
-          "align": "center"
+          "href": "/courses/no-excuses/write-it",
+          "align": "center",
+          "internal": true
         }
       ]
     }

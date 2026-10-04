@@ -114,6 +114,38 @@ def walk(n):
             yield from walk(c)
 
 
+# Adobe page ids of the recreated courses -> local routes, so links between the original
+# pages keep working inside the site.
+PAGE_ROUTES = {
+    # NO EXCUSES!
+    "srf8IpDO7ZkIU": "/courses/no-excuses/welcome",
+    "MltFArqt4mOOT": "/courses/no-excuses/write-it",
+    "6DKzqO1Wiw758": "/courses/no-excuses/plan-prep-it",
+    "f5hjv4sMwNeA3": "/courses/no-excuses/shoot-it",
+    "GMt6OK0rvfYVm": "/courses/no-excuses/edit-it",
+    "z4dBmikw9rtLK": "/courses/no-excuses/use-it",
+    # The Perfect Self Tape
+    "4N3CH5BgyUPgp": "/courses/perfect-self-tape",
+    "t89Ol45aZnWWO": "/courses/perfect-self-tape/equipment-guide",
+    "fKEcYmY4tk1Ru": "/courses/perfect-self-tape/properly-lit",
+    "5HkJaHOKEnWA5": "/courses/perfect-self-tape/perfect-frame",
+    "HTdXKtkSq3Ksq": "/courses/perfect-self-tape/slates-that-shine",
+    "9h9pR9OX1OZq7": "/courses/perfect-self-tape/role-of-the-reader",
+    "FrbVFiuNM7Jxy": "/courses/perfect-self-tape/performance-coaching",
+    "OQdMObzEI8etD": "/courses/perfect-self-tape/quick-editing",
+    "ZYQXknWCAzt3i": "/courses/perfect-self-tape/parent-survival-tips",
+    "E3kmokZywrFef": "/courses/perfect-self-tape/sending-tapes",
+    "ko5JZe1bqtBnz": "/courses/perfect-self-tape/bending-the-rules",
+}
+
+
+def local_href(href):
+    m = re.match(r"https?://(?:express|spark|new\.express)\.adobe\.com/(?:page|webpage)/([A-Za-z0-9]+)/?$", href or "")
+    if m and m.group(1) in PAGE_ROUTES:
+        return PAGE_ROUTES[m.group(1)], True
+    return href, False
+
+
 INLINE = ("b", "strong", "i", "em", "u", "br", "a", "span", "sup", "sub")
 
 
@@ -128,7 +160,8 @@ def inner_html(n):
             else:
                 attrs = ""
                 if c.tag == "a":
-                    attrs = f' href="{html.escape(c.attrs.get("href", ""), quote=True)}" target="_blank" rel="noopener noreferrer"'
+                    target, internal = local_href(html.unescape(c.attrs.get("href", "")))
+                    attrs = f' href="{html.escape(target, quote=True)}"' + ("" if internal else ' target="_blank" rel="noopener noreferrer"')
                 out.append(f"<{c.tag}{attrs}>{inner_html(c)}</{c.tag}>")
         else:
             out.append(inner_html(c))
@@ -225,7 +258,11 @@ def element(c):
             e["align"] = "center" if "link-center" in cl else "left"
             return e
         a = next((x for x in walk(c) if x.tag == "a"), None)
-        return {"type": "button", "label": text(a), "href": html.unescape(a.attrs.get("href", "")), "align": "center" if "link-center" in cl else "left"}
+        target, internal = local_href(html.unescape(a.attrs.get("href", "")))
+        btn = {"type": "button", "label": text(a), "href": target, "align": "center" if "link-center" in cl else "left"}
+        if internal:
+            btn["internal"] = True
+        return btn
     elif (t == "div" or t == "figure") and "image" in cl:
         span = next((x for x in walk(c) if "image-placeholder-link" in x.cls()), None)
         cap = next((x for x in walk(c) if "caption" in x.cls()), None)
@@ -239,7 +276,7 @@ def element(c):
         # Adobe loads inline images at the placeholder's size=N variant (longest side <= N) and shows
         # them at that natural size, so a 1080x1920 portrait with size=1024 displays 576px wide.
         size = re.search(r"[?&]size=(\d+)", html.unescape(href or ""))
-        if size and max(e["width"], e["height"]) > int(size.group(1)):
+        if NEW_RUNTIME and size and max(e["width"], e["height"]) > int(size.group(1)):
             e["displayWidth"] = round(e["width"] * int(size.group(1)) / max(e["width"], e["height"]))
         if t == "figure":
             e["figure"] = True
@@ -271,6 +308,11 @@ def background(sec):
         "position": pos.group(1).strip() if pos else "50% 50%",
     }
 
+
+# Runtime generation: Adobe Express webpages and runtime >= 1.23 size inline images to their loaded
+# (size=N capped) variant; the older 1.22 runtime scales them to the column width instead.
+_rt = re.search(r"page\.adobespark-assets\.com/runtime/([0-9]+\.[0-9]+)", raw)
+NEW_RUNTIME = "/webpage/static/runtime/" in raw or bool(_rt and float(_rt.group(1)) >= 1.23)
 
 # --- parse -------------------------------------------------------------------------
 b = Builder()
@@ -304,6 +346,52 @@ for sec in article.children:
         }
     elif "spacer-section" in cl:
         result["sections"].append({"kind": "spacer", "classes": cl[1:], "elements": []})
+    elif "fullscreen-photo-section" in cl:
+        result["sections"].append({"kind": "fullscreen", "classes": cl[1:], "background": background(sec), "elements": []})
+    elif "photo-grid-section" in cl:
+        grid = []
+        for group in (x for x in walk(sec) if "photo-group" in x.cls() and x.tag == "div"):
+            tiles = []
+            for a in (x for x in walk(group) if "photo-image" in x.cls()):
+                href = a.attrs.get("data-src") or a.attrs.get("href")
+                tiles.append({
+                    "src": fetch_image(href),
+                    "width": int(a.attrs.get("data-image-width", 0)),
+                    "height": int(a.attrs.get("data-image-height", 0)),
+                })
+            layout = next((c for c in group.cls() if re.match(r"t\d-layout-", c)), "")
+            grid.append({"layout": layout, "tiles": tiles})
+        result["sections"].append({
+            "kind": "photo-grid",
+            "classes": cl[1:],
+            "spacing": {
+                "top": "large" if "large-content-spacing-top" in cl else "normal",
+                "bottom": "large" if "large-content-spacing-bottom" in cl else "normal",
+            },
+            "grid": grid,
+            "elements": [],
+        })
+    elif "card-flipbook-section" in cl:
+        backs = []
+        for holder in (x for x in walk(sec) if "section-background-image" in x.cls()):
+            link = next((x for x in walk(holder) if "background-image-placeholder-link" in x.cls()), None)
+            if link:
+                pos = re.search(r"background-position:\s*([^;]+)", holder.attrs.get("style", ""))
+                backs.append({
+                    "image": fetch_image(link.attrs["href"]),
+                    "width": int(link.attrs.get("data-image-width", 0)),
+                    "height": int(link.attrs.get("data-image-height", 0)),
+                    "position": pos.group(1).strip() if pos else "50% 50%",
+                })
+        cards = []
+        for view in (x for x in walk(sec) if "section-content-view" in x.cls()):
+            container = next((x for x in walk(view) if "content-container" in x.cls()), None)
+            if container:
+                cards.append({
+                    "classes": [c for c in view.cls() if c != "section-content-view"],
+                    "elements": [e for e in (element(c) for c in container.children if isinstance(c, Node)) if e],
+                })
+        result["sections"].append({"kind": "flipbook", "classes": cl[1:], "backgrounds": backs, "cards": cards, "elements": []})
     elif "window-section" in cl:
         bg = background(sec)
         result["sections"].append({"kind": "window", "classes": cl[1:], "background": bg, "elements": []})
@@ -332,30 +420,88 @@ for sec in article.children:
     # bumper/footer is Adobe chrome and is intentionally dropped
 
 # --- theme css (re-scoped so pages never collide) ---------------------------------------
-style = "\n".join(re.findall(r"<style[^>]*>(.*?)</style>", raw, flags=re.S))
-style = re.sub(r"\.%s\b" % re.escape(theme_class), "." + SCOPE, style)
-with open(css_path, "w", encoding="utf-8") as f:
-    f.write(f"/* Inline theme CSS from {args.page_url} (theme class {theme_class}, re-scoped to .{SCOPE}). */\n{style.strip()}\n")
-
-# --- adobe fonts used by the page -------------------------------------------------------
+# Adobe's built-in themes (luca, crisp, ...) ship as external stylesheets; custom themes are
+# inlined in the page. The external sheet loads first, the inline <style> overrides it.
 if "/webpage/static/runtime/" in raw:
     runtime = "https://new.express.adobe.com/webpage/static/runtime"
 else:
     m = re.search(r"page\.adobespark-assets\.com/runtime/([0-9.]+)/", raw)
     runtime = f"https://page.adobespark-assets.com/runtime/{m.group(1) if m else '1.22'}"
-families = sorted(set(re.findall(r"font-subgroup-kits/([a-z0-9-]+)\.gz\.js", raw)))
-kits = ["onz5gap"]  # adobe-clean + proxima-nova base kit used by credits/author chrome
-for fam in families:
+
+
+def fetch_text(url):
+    data, _ = get(url)
+    return (gzip.decompress(data) if data[:2] == b"\x1f\x8b" else data).decode("utf-8", "replace")
+
+
+theme_asset_dir = os.path.join(ROOT, "public", "courses", args.course, args.slug, "theme")
+
+
+def localize_css_assets(css, base_url):
+    """Store relative url(...) assets (e.g. a theme's quote mark) locally so nothing depends on Adobe."""
+
+    def swap(match):
+        ref = match.group(2).strip()
+        if ref.startswith(("data:", "http:", "https:", "/", "#")):
+            return match.group(0)
+        absolute = urllib.parse.urljoin(base_url, ref)
+        os.makedirs(theme_asset_dir, exist_ok=True)
+        name = os.path.basename(urllib.parse.urlsplit(absolute).path)
+        dest = os.path.join(theme_asset_dir, name)
+        if not os.path.exists(dest):
+            data, _ = get(absolute)
+            with open(dest, "wb") as fh:
+                fh.write(data)
+        return f"url({match.group(1)}/courses/{args.course}/{args.slug}/theme/{name}{match.group(1)})"
+
+    return re.sub(r"""url\(\s*(['"]?)([^'")]+)\1\s*\)""", swap, css)
+
+
+external = []
+for href in re.findall(r'<link[^>]+href="([^"]*/themes/[^"]+\.css)"', raw):
+    href = urllib.parse.urljoin(args.page_url, href.replace("&amp;", "&"))
+    external.append(localize_css_assets(fetch_text(href), href))
+inline = "\n".join(re.findall(r"<style[^>]*>(.*?)</style>", raw, flags=re.S))
+style = "\n".join(external + [inline])
+style = re.sub(r"\.%s\b" % re.escape(theme_class), "." + SCOPE, style)
+with open(css_path, "w", encoding="utf-8") as f:
+    f.write(f"/* Theme CSS from {args.page_url} (theme class {theme_class}, re-scoped to .{SCOPE}). */\n{style.strip()}\n")
+
+# --- adobe fonts used by the page -------------------------------------------------------
+# The page loads its Adobe Fonts kits through small scripts (base-fonts, themes/<theme>-fonts,
+# font-subgroup-kits/<family>); each one names the kit ids it pulls in. Font names found in the
+# theme CSS are also tried as subgroup kits for families the scripts do not cover.
+kits = []
+resolved = []
+font_scripts = re.findall(r'src="([^"]*(?:-fonts|font-subgroup-kits/[a-z0-9-]+)\.gz\.js)"', raw)
+# Built-in themes (luca, ...) are linked as themes/<name>.gz.css; the runtime loads themes/<name>-fonts.gz.js for them.
+font_scripts += [re.sub(r"\.gz\.css$", "-fonts.gz.js", h) for h in re.findall(r'<link[^>]+href="([^"]*/themes/[^"]+\.gz\.css)"', raw)]
+for src in dict.fromkeys(font_scripts):
     try:
-        data, _ = get(f"{runtime}/font-subgroup-kits/{fam}.gz.js")
-        js = gzip.decompress(data).decode() if data[:2] == b"\x1f\x8b" else data.decode()
-        kits += re.findall(r"typekit\.net/([a-z0-9]{7})", js)
-    except Exception as exc:  # noqa: BLE001
-        print(f"warning: could not resolve font kit {fam}: {exc}", file=sys.stderr)
+        found = re.findall(r"typekit\.net/([a-z0-9]{7})", fetch_text(urllib.parse.urljoin(args.page_url, src)))
+        if found:
+            kits += found
+            resolved.append(os.path.basename(src).replace(".gz.js", ""))
+    except Exception:  # noqa: BLE001
+        pass
+names = set()
+for group in re.findall(r"font-family:\s*([^;}]+)", style):
+    for fam in group.split(","):
+        fam = fam.strip().strip("\"'").lower()
+        if re.fullmatch(r"[a-z0-9-]+", fam) and fam not in ("sans-serif", "serif", "inherit", "initial", "monospace", "helvetica", "arial"):
+            names.add(fam)
+for fam in sorted(names):
+    try:
+        found = re.findall(r"typekit\.net/([a-z0-9]{7})", fetch_text(f"{runtime}/font-subgroup-kits/{fam}.gz.js"))
+        if found:
+            kits += found
+            resolved.append(fam)
+    except Exception:  # noqa: BLE001 - not every family has a subgroup kit (system fonts etc.)
+        pass
+kits = ["onz5gap"] + kits  # adobe-clean + proxima-nova base kit used by credits/author chrome
+families = resolved
 result["fontKits"] = [f"https://use.typekit.net/{k}.css" for k in dict.fromkeys(kits)]
-_ver = re.search(r"runtime/([0-9]+\.[0-9]+)", runtime)
-# Runtime 1.23+ and Adobe Express webpages share the inline-block image wrapper behaviour.
-result["runtime"] = "new" if "/webpage/static/runtime/" in raw or (_ver and float(_ver.group(1)) >= 1.23) else "classic"
+result["runtime"] = "new" if NEW_RUNTIME else "classic"
 
 with open(spec_path, "w", encoding="utf-8") as f:
     json.dump(result, f, indent=2, ensure_ascii=False)

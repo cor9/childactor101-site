@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 
 import { bunnyEmbedUrl } from "@/lib/bunny";
@@ -21,7 +22,7 @@ export type AdobeVideo = {
 export type AdobeElement =
   | { type: "h2" | "h3" | "h4" | "p" | "blockquote"; html: string; align?: "center" }
   | { type: "ul" | "ol"; items: string[] }
-  | { type: "button"; label: string; href: string; align: "left" | "center" }
+  | { type: "button"; label: string; href: string; align: "left" | "center"; internal?: boolean }
   | {
       type: "image";
       src: string;
@@ -44,12 +45,32 @@ export interface AdobeBackground {
   position: string;
 }
 
+export interface AdobePhotoTile {
+  src: string;
+  width: number;
+  height: number;
+}
+
+export interface AdobePhotoGroup {
+  /** Adobe layout class, e.g. "t2-layout-ll-1" (two landscape tiles side by side). */
+  layout: string;
+  tiles: AdobePhotoTile[];
+}
+
+export interface AdobeFlipCard {
+  classes: string[];
+  elements: AdobeElement[];
+}
+
 export interface AdobeSection {
-  kind: "single-column" | "full-width" | "spacer" | "window" | "split";
+  kind: "single-column" | "full-width" | "spacer" | "window" | "split" | "fullscreen" | "photo-grid" | "flipbook";
   /** Original section classes minus "section" (e.g. "single-item-content-section", "height-50"). */
   classes?: string[];
   spacing?: { top: "large" | "normal"; bottom: "large" | "normal" };
   background?: AdobeBackground | null;
+  grid?: AdobePhotoGroup[];
+  backgrounds?: AdobeBackground[];
+  cards?: AdobeFlipCard[];
   elements: AdobeElement[];
 }
 
@@ -187,9 +208,15 @@ function renderElement(
     case "button":
       return (
         <div className={`link-button-wrapper link-${element.align}`} key={index}>
-          <a className="link-button" href={element.href} rel="nofollow noreferrer" target="_blank">
-            {element.label}
-          </a>
+          {element.internal ? (
+            <Link className="link-button" href={element.href}>
+              {element.label}
+            </Link>
+          ) : (
+            <a className="link-button" href={element.href} rel="nofollow noreferrer" target="_blank">
+              {element.label}
+            </a>
+          )}
         </div>
       );
     case "image":
@@ -262,6 +289,100 @@ export function AdobePage({ spec }: { spec: AdobePageSpec }) {
 
           if (section.kind === "spacer") {
             return <div className={`section spacer-section content-spacer`} key={sectionIndex} />;
+          }
+
+          if (section.kind === "fullscreen") {
+            return (
+              <div className={`section fullscreen-photo-section ${classes}`} key={sectionIndex}>
+                <div className="section-view">
+                  <div className="section-background">
+                    {section.background ? (
+                      <div
+                        className="section-background-image"
+                        role="img"
+                        aria-label=""
+                        style={{
+                          backgroundImage: `url("${section.background.image}")`,
+                          backgroundPosition: section.background.position,
+                        }}
+                      />
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          if (section.kind === "photo-grid") {
+            const gridSpacing = [
+              section.spacing?.top === "large" ? "large-content-spacing-top" : "",
+              section.spacing?.bottom === "large" ? "large-content-spacing-bottom" : "",
+            ].join(" ");
+            return (
+              <div className={`section photo-grid-section ${gridSpacing}`} key={sectionIndex}>
+                <div className="section-view">
+                  <div className="section-content">
+                    <div className="section-content-view">
+                      <div className="content-container">
+                        <div className="photo-grid">
+                          {(section.grid ?? []).map((group, groupIndex) => (
+                            <div className="photo-group-container" key={groupIndex}>
+                              <div className={`photo-group ${group.layout}`}>
+                                {group.tiles.map((tile, tileIndex) => (
+                                  <div className="photo-container tile" key={tileIndex}>
+                                    <div
+                                      aria-label="thumbnail image"
+                                      className="photo-image"
+                                      role="img"
+                                      style={{ backgroundImage: `url("${tile.src}")` }}
+                                    />
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          }
+
+          if (section.kind === "flipbook") {
+            // Adobe advances these cards over a pinned photo as you scroll; here each card sits
+            // over its photo in one full-screen band, in the original order.
+            return (
+              <div className={`section card-flipbook-section ${classes}`} key={sectionIndex}>
+                {(section.cards ?? []).map((card, cardIndex) => {
+                  const back = section.backgrounds?.[cardIndex];
+                  return (
+                    <div className="flip-slide" key={cardIndex}>
+                      <div className="section-background">
+                        {back ? (
+                          <div
+                            className="section-background-image"
+                            role="img"
+                            aria-label=""
+                            style={{ backgroundImage: `url("${back.image}")`, backgroundPosition: back.position }}
+                          />
+                        ) : null}
+                      </div>
+                      <div className="section-content">
+                        <div className={`section-content-view ${card.classes.join(" ")}`}>
+                          <div className="content-container">
+                            {card.elements.map((element, elementIndex) =>
+                              renderElement(element, elementIndex, false, false, videoIndex),
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
           }
 
           if (section.kind === "window") {

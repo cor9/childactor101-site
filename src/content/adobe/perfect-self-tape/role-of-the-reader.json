@@ -1,0 +1,403 @@
+{
+  "source": "https://express.adobe.com/page/9h9pR9OX1OZq7/",
+  "theme": "adobe-theme-perfect-self-tape-role-of-the-reader",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/gom8xuo.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "The Role of The Reader",
+    "subtitle": "Acting Lessons for Mom & Dad",
+    "image": "/courses/perfect-self-tape/role-of-the-reader/images/9746143b-5fe2-467a-a529-bcd326aacb56.jpg",
+    "imageWidth": 2560,
+    "imageHeight": 3839,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/cdd48f7b-5c23-473a-b4dc-531c9a9412fc.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Sides - Pages from a Script that is chosen for an Actor to Audition with for a particular role.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/a8202b15-008a-48dc-aa4a-655408dc38f8.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/e169fa65-7c7f-4c7e-9767-a0196aa45ee5.jpg",
+          "width": 400,
+          "height": 117
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/3f31840e-dd2e-4f6d-8bfa-4f75294a0c0e.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/c9335c75-d499-40cf-b03c-3b1daf47b3b8.jpg",
+          "width": 2160,
+          "height": 1080,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/70bbc6c1-11cc-42bf-8eba-e7db22a81c25.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/807a18db-9868-4c8d-871f-f70670b47a4b.jpg",
+          "width": 1705,
+          "height": 956,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/5a7f69b7-d094-41f1-83fc-774c0bb6c410.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/07d4ae61-4b66-43a5-96ea-05a9c73ce4b6.jpg",
+          "width": 2560,
+          "height": 1440,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/477f77ea-6c22-4795-9a74-73a3eb24552a.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Teaching cements Learning!"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/aefe3388-8ccb-4dda-a067-8d11b2d99334.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/62972073-6d7c-49e5-8c96-60d4d0c694c2.jpg",
+          "width": 2496,
+          "height": 2496,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/a03a34d6-4d97-4765-83c2-ed357020f58c.jpg",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/7f5e927c-7bf6-4bc0-a9c8-d42f4924ea2f.jpg",
+          "width": 850,
+          "height": 400
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/role-of-the-reader/images/5CF20AEA-A7FD-48F8-B69B-E045ED81C095.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "MEGA TIP"
+        },
+        {
+          "type": "blockquote",
+          "html": "Be half the volume of the actor as the reader!"
+        },
+        {
+          "type": "h3",
+          "html": "Excerpts from a LIVE Parent Course called &quot;The Reader&quot;",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "392546804",
+          "bunny": {
+            "guid": "ca3cb3c4-aea2-455c-8b26-490b28013684",
+            "title": "The role of the reader - Parent Self Tape course for Child Actor 101",
+            "needsReview": false
+          },
+          "align": "left"
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with an image by John Schnobrich - \"I was doing a photo shoot for a book company and made the decision to create an open book scenario that designs/photographers could use in mockups either for ads or other photos!\""
+  ],
+  "runtime": "new"
+}

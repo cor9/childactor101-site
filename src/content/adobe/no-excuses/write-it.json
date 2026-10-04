@@ -3,8 +3,8 @@
   "theme": "adobe-theme-no-excuses-write-it",
   "fontKits": [
     "https://use.typekit.net/onz5gap.css",
-    "https://use.typekit.net/qhv3iqj.css",
-    "https://use.typekit.net/txs8zsv.css"
+    "https://use.typekit.net/txs8zsv.css",
+    "https://use.typekit.net/qhv3iqj.css"
   ],
   "title": {
     "position": "title-center",
@@ -89,8 +89,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/FA7AEE3D-A381-4BE6-AD3B-CADB712D26A0.png",
           "width": 1546,
-          "height": 2000,
-          "displayWidth": 792
+          "height": 2000
         }
       ]
     },
@@ -131,8 +130,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/6F05E883-9262-4975-845B-D52A94A694DD.png",
           "width": 794,
-          "height": 1123,
-          "displayWidth": 724
+          "height": 1123
         }
       ]
     },
@@ -474,8 +472,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/BDA58588-1903-42A7-8C2C-08396B4506B8.jpg",
           "width": 5476,
-          "height": 3656,
-          "displayWidth": 1024
+          "height": 3656
         },
         {
           "type": "h4",
@@ -537,7 +534,6 @@
           "src": "/courses/no-excuses/write-it/images/4FCA0A22-54AB-4E98-AB11-8970B26C300C.jpg",
           "width": 1441,
           "height": 1441,
-          "displayWidth": 1024,
           "caption": "A layman&#39;s guide to aspects of filmmaking. Click the button to an article on crafting a scene."
         },
         {
@@ -576,8 +572,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/4BC05838-7D89-4090-A623-768A89F6F245.jpg",
           "width": 4896,
-          "height": 3264,
-          "displayWidth": 1024
+          "height": 3264
         },
         {
           "type": "h4",
@@ -708,8 +703,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/2BFFC326-8AC6-4FDA-B58A-C261604CC01A.png",
           "width": 1280,
-          "height": 2560,
-          "displayWidth": 512
+          "height": 2560
         }
       ]
     },
@@ -759,8 +753,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/6887D5C9-518A-46CC-9018-05B696A0CCD9.jpg",
           "width": 789,
-          "height": 1209,
-          "displayWidth": 668
+          "height": 1209
         }
       ]
     },
@@ -808,8 +801,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/DD47D2EA-BB14-4F7B-ADBA-D44F03389D7B.png",
           "width": 2560,
-          "height": 1920,
-          "displayWidth": 1024
+          "height": 1920
         }
       ]
     },
@@ -846,8 +838,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/DEB8181F-5E43-4E73-8B7C-549E063AE891.png",
           "width": 2550,
-          "height": 1700,
-          "displayWidth": 1024
+          "height": 1700
         },
         {
           "type": "h4",
@@ -911,8 +902,7 @@
           "type": "image",
           "src": "/courses/no-excuses/write-it/images/03D3AC19-AD38-40FA-A1F5-98248D4F0C40.png",
           "width": 2560,
-          "height": 1920,
-          "displayWidth": 1024
+          "height": 1920
         }
       ]
     }

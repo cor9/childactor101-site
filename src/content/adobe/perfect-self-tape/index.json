@@ -1,0 +1,189 @@
+{
+  "source": "https://express.adobe.com/page/4N3CH5BgyUPgp/",
+  "theme": "adobe-theme-perfect-self-tape-index",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/icc1sfj.css",
+    "https://use.typekit.net/yfs6lii.css",
+    "https://use.typekit.net/oea2wtv.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "The Perfect Self Tape",
+    "subtitle": "A Parent Course",
+    "image": "/courses/perfect-self-tape/index/images/491F854A-6F1E-4C8D-B74C-715963F34C28.jpg",
+    "imageWidth": 800,
+    "imageHeight": 800,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Welcome!"
+        },
+        {
+          "type": "h4",
+          "html": "This page will have all the Master Links to the ten sections within this course. I hope you enjoy the process and see the bigger picture. And I am here to help. Ask away if you are confused!"
+        },
+        {
+          "type": "blockquote",
+          "html": "If for some reason any of the video links are not working please let me know via email coaching@coreyralston.pro. From time to time some videos get permission changes on Youtube."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/FDC7A95C-395D-4D7F-86C0-9A41457A4B3B.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access",
+          "href": "/courses/perfect-self-tape/equipment-guide",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/c6878b36-eb73-40d1-88df-507147588bf6.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access PROPERLY LIT",
+          "href": "/courses/perfect-self-tape/properly-lit",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/de9934a5-dd8c-4e54-82e8-9512d3505128.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access PERFECT FRAME",
+          "href": "/courses/perfect-self-tape/perfect-frame",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/f6ec0a6a-c71b-4442-b3e2-31ec15252bd3.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access SLATES THAT POP",
+          "href": "/courses/perfect-self-tape/slates-that-shine",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/b3af36ac-6f97-44ec-a46a-2cd443c89170.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access ROLE OF READER",
+          "href": "/courses/perfect-self-tape/role-of-the-reader",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/1e0b3c65-89a4-4f95-b538-41df842bf830.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access COACHING",
+          "href": "/courses/perfect-self-tape/performance-coaching",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/3efb51c2-018b-4711-825b-82e373cdfd24.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access QUICK EDITING",
+          "href": "/courses/perfect-self-tape/quick-editing",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/244a9639-d8df-4fda-a6dd-e15bbeba48f6.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access Parent Survival Tips",
+          "href": "/courses/perfect-self-tape/parent-survival-tips",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/f2421cca-6ac6-4ab5-9bdd-f3d2508bd615.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access SEND OFF",
+          "href": "/courses/perfect-self-tape/sending-tapes",
+          "align": "center",
+          "internal": true
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/index/images/e8bfadcf-6fb8-4d46-ad2b-f1d4aaeacff2.png",
+          "width": 2560,
+          "height": 2560,
+          "displayWidth": 1024
+        },
+        {
+          "type": "button",
+          "label": "Access Bending The Rules",
+          "href": "/courses/perfect-self-tape/bending-the-rules",
+          "align": "center",
+          "internal": true
+        }
+      ]
+    }
+  ],
+  "author": "Corey Ralston",
+  "runtime": "new"
+}

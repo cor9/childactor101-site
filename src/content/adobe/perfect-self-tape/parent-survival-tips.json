@@ -1,0 +1,725 @@
+{
+  "source": "https://express.adobe.com/page/ZYQXknWCAzt3i/",
+  "theme": "adobe-theme-perfect-self-tape-parent-survival-tips",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/iwt0scc.css",
+    "https://use.typekit.net/xfq6xbo.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Survival Tips",
+    "subtitle": "Stress Free Taping",
+    "image": "/courses/perfect-self-tape/parent-survival-tips/images/c6233cdf-7c08-454f-9710-6823140fb55f.jpg",
+    "imageWidth": 800,
+    "imageHeight": 744,
+    "backgroundPosition": "30.078125% 23.72583479789104%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "A Favorite Interview on Self Tapes",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "7htgIHQikMI",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/715A9DDF-DD35-4FFE-B55B-8A46AF2E376A.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/EB2ED6D2-6D1D-4857-A2E5-F01BE55B8689.jpg",
+          "width": 630,
+          "height": 300
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Article",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Mom’s Advice - Bonnie Wallace",
+          "href": "https://bonniejwallace.com/self-tapes-pros-cons-and-how-tos/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/609E247A-99BC-4885-B553-0E2D049D12A1.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "You don’t want a stale performance. If it is not coming out after a few takes... Do not force it! Take a step back, take a break. Attempting it Fresh will always be in your best interest."
+        },
+        {
+          "type": "h4",
+          "html": "It is always painfully clear when an actor has done 10 or more takes in a Self Tape. It loses all it’s magic."
+        },
+        {
+          "type": "blockquote",
+          "html": "Over rehearsed is a COMMON COMPLAINT of Casting Directors."
+        },
+        {
+          "type": "h3",
+          "html": "Being Prepared is not the same as Over Rehearsed!",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/811D1D90-5A74-4D1C-898B-106236CE0010.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Article",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Advice On Parent Stress With Tapes",
+          "href": "https://www.backstage.com/magazine/article/deal-stress-last-minute-self-tape-child-actor-692/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/4F6C5CFA-9F59-44C6-8737-05CF1E7D6205.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Don’t rush to turn it in if you have adequate time to get it right!",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/2CD028B5-98CA-4A52-987C-2571F9D1DF45.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Course Language, Romantic Situations, Adult Content"
+        },
+        {
+          "type": "h4",
+          "html": "Article",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Children & Adult Content",
+          "href": "https://variety.com/2013/film/features/sex-and-violence-involving-minors-poses-major-hurdles-for-hollywood-1200566053/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/A5F4AFA6-E56A-47DE-B93E-20807BC3C274.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Disney Bound is a great sample at character hints with casual clothing",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/026D71B0-108E-44C6-86FC-980606EDB130.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/2DE54D53-DDF0-4A78-A550-8733EC6114EB.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/95A88F3C-6602-4BDE-B88B-07F76CD935B3.jpg",
+          "width": 463,
+          "height": 604
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/C95589B1-BD66-4C31-8318-68CC0680AC05.png",
+          "width": 400,
+          "height": 500
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/16F65E02-7645-4E25-9127-E41853D95691.jpg",
+          "width": 640,
+          "height": 753
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/8CBE29CC-BCDD-4199-B443-4EE32EA193A0.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/65782AFB-2908-485C-A9DE-1CD8A4A28581.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/D5F346C3-CFD5-4E4C-A0FF-070B82A39DF1.jpg",
+          "width": 503,
+          "height": 601
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/DF1C58EF-9141-40FF-90CC-C6A5086EFF23.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/EE7E4DBB-D0D4-41B8-9659-5419A6EFF557.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/CBB48ABF-0954-4192-A830-62A34A1507C0.jpg",
+          "width": 1280,
+          "height": 1280,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/3773F392-C829-4C9B-BE86-398A847FAD86.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "No!",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/2490C0BA-56D5-4BC2-AC0F-0E95012F35D3.jpg",
+          "width": 801,
+          "height": 1001
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/0B11E42B-74ED-47EE-997A-C5851B5A2F27.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "No!",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/07C7EE8F-085A-4C52-B9FF-E68855ADB94E.jpg",
+          "width": 600,
+          "height": 337
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/2E127D0E-85E7-4981-A12A-7AE1E317FC66.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/96490708-A249-4652-9DE4-DA4545516A3B.jpg",
+          "width": 1142,
+          "height": 830,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/80665463-1C47-4C0E-ACFD-AE7366CF0E8A.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "I’ve seen situations where Child Actor’s felt inhibited because of judgement by other Family Members within earshot."
+        },
+        {
+          "type": "h4",
+          "html": "Also filming after the family has gone to bed make the actor fearful of giving as much energy as they may need to give in their taped audition."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/A8A23894-4BFA-4B98-81CE-8EAF415F5A8A.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Sometimes a kid can produce a more natural performance with a peer versus their parent."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/1983CD26-4CF2-4104-B79D-BE49112C08E7.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Especially in sitcoms... Like History, TV Repeats itself!"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/2DD8A2F6-A95D-4D89-9997-65A54124C435.jpg",
+          "width": 2048,
+          "height": 2048,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Remember...",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/parent-survival-tips/images/FE64B7D1-E56F-42B3-9D3F-C052B9825068.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    }
+  ],
+  "runtime": "new"
+}

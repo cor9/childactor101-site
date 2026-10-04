@@ -1,0 +1,1008 @@
+{
+  "source": "https://express.adobe.com/page/E3kmokZywrFef/",
+  "theme": "adobe-theme-perfect-self-tape-sending-tapes",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/qja1fkh.css",
+    "https://use.typekit.net/qhv3iqj.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "The Send Off",
+    "subtitle": "Getting the self tape to its destination without hiccups",
+    "image": "/courses/perfect-self-tape/sending-tapes/images/DEFAA9D9-2B0B-4556-B290-6912A6D9B220.jpg",
+    "imageWidth": 4501,
+    "imageHeight": 3214,
+    "backgroundPosition": "65.46762589928058% 50.598290598290596%"
+  },
+  "sections": [
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/85912C9C-E509-449C-A3F4-DE149A51DC3B.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/e9b2c10c-9b78-462d-8d1e-aa8b89dbb6c4.png",
+          "width": 730,
+          "height": 577
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/E16A9F85-8C2C-464C-BB14-8C7A9C5B89EE.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/d45cd137-4175-4e80-8b6d-becf633dc83b.png",
+          "width": 452,
+          "height": 512
+        },
+        {
+          "type": "blockquote",
+          "html": "Check the extension of your video file to see if it an .mp4 or .mov If it is not either you will want to use a file converter app or software to make sure it is a compatible video file that everyone can view with ease."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/F8687A5A-73F6-4ACB-87E2-040EAA2BFBD5.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/5E94B0F8-1E90-43BE-B118-302C172856C1.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/655e9a51-ab10-418d-bbc7-d26b720c460a.jpg",
+          "width": 1500,
+          "height": 1034,
+          "caption": "BIGGER IS NOT ALWAYS BETTER"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/97493099-BA26-4155-937F-F4A69F3BF978.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/682c4284-560f-41b1-aac4-e87ffbc9851a.jpg",
+          "width": 2560,
+          "height": 1441,
+          "caption": "Nobody likes HUGE attachments!"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/44D83D5D-F436-461E-97AF-A304F60F6ECF.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "z_VtxrKolZU",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/0E7DD821-276D-434E-8295-CC99E984B8EB.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/DB525846-7C7C-462B-823F-3703F1BC3DE2.jpg",
+          "width": 852,
+          "height": 480
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/806DB6B6-FE21-4FC8-AB8E-5E5E0793EDBB.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/CA66650B-2649-410B-A52F-1845AC848F81.png",
+          "width": 624,
+          "height": 376
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/3E67EFF0-F68F-410F-9F05-B5D8E4080A65.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/612EEFA9-BE1E-45C1-B09A-41CD8916611C.png",
+          "width": 1239,
+          "height": 736
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/E08B4AC6-EA0F-4BFC-9F00-B88C433BC9E4.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/043B8047-C526-4B66-98B3-E4323D8AA0FF.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Android Users",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/6C062FE2-6EFB-4C9D-BD82-BBF1ADE845C0.jpg",
+          "width": 300,
+          "height": 650
+        },
+        {
+          "type": "h4",
+          "html": "Quality, Easy and Free",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "VidCompact For Android",
+          "href": "https://play.google.com/store/apps/details?id=com.xvideostudio.videocompress",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "iOS Users",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Easy presets to shrink.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/8D6BB7F6-25BA-41D5-976F-BFA4413AA223.jpg",
+          "width": 680,
+          "height": 382
+        },
+        {
+          "type": "button",
+          "label": "Video Compress - iOS Apple",
+          "href": "https://apps.apple.com/app/video-compress-shrink-vids/id997699744",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "Desktop/Laptop (MAC &amp; Windows)",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/DAEB344F-5324-4314-9093-BDF64D5D20BB.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "type": "h4",
+          "html": "Free. Open Source. Amazing Results. No quality loss in reduction.",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "j4xs37QFDE8",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "How to Use Handbrake",
+          "href": "https://www.imore.com/how-compress-video-handbrake",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Download Handbrake - FREE",
+          "href": "https://handbrake.fr",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/C41D5F37-C888-4301-B1FD-A4B3119CD160.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/195A8D7E-2762-4A00-9193-ABEAE685811A.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "My Favorite is WeTransfer",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/59A66C71-8A7C-42D6-BE3A-EFC66C3CA898.png",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "type": "h4",
+          "html": "It’s free, fast and you get notifications once party downloads.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Giving you peace of mind.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/7235DB71-1506-47F4-9870-DC95EEF5B2F3.jpg",
+          "width": 554,
+          "height": 337
+        },
+        {
+          "type": "h3",
+          "html": "Uploading to EcoCast via Actors Access",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/A9E7D77C-7C1B-478F-A551-F7296024604C.jpg",
+          "width": 500,
+          "height": 119
+        },
+        {
+          "type": "h4",
+          "html": "Eco Cast® is a &quot;virtual pre-read system&quot; provided by Breakdown Services. With it, Casting Directors can send invitations to Talent Representatives or Actors directly to record an audition themselves, expanding the range of people Casting Directors can see for each role."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "2c5bGtJJt4o",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "EcoCast Tutorial",
+          "href": "https://actorsaccess.freshdesk.com/support/solutions/articles/17000056214-how",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "TMGcgzR4le8",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/FB2BFDEA-E92A-4872-9254-79B1DECAD7A5.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/17F23023-380E-4178-B425-2163F1A37D08.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/02621F05-4842-4C0F-A465-E393B4E4245D.jpg",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "type": "h4",
+          "html": "You cannot have private enough security measures for some NDA projects",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/dcd4c0d3-67b6-48d6-b36f-a7e775dc8c4b.png",
+          "width": 540,
+          "height": 326
+        },
+        {
+          "type": "h3",
+          "html": "Use Vimeo Instead",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/16913840-6BDC-428F-956E-AEF23F925DAC.png",
+          "width": 771,
+          "height": 418
+        },
+        {
+          "type": "button",
+          "label": "Vimeo",
+          "href": "http://vimeo.com",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Better security. Trusted in Industry.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/342B24F7-4C05-45EF-9559-CB351D205609.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/4289EC84-8ED7-417C-89B6-C17EDBB855F0.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/7DFAEB5E-C570-46EA-B844-E8C0CC114D7D.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Feel free and encouraged to send TWO TAKES of each scene to display an ALTERNATE CHOICE.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/897095D2-DD5E-4604-99CC-CC0FD9791133.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/222b9cd6-b882-4e85-9b1f-69e3f6aa3583.png",
+          "width": 299,
+          "height": 168,
+          "caption": "<b>Reps have a trained eye to see what needs strengthening and have a better idea of what Casting is looking for. If they are able to review your self tape then they are getting a glimpse into what the actor&#39;s audition is like and this can be very helpful.</b>"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/790A7158-A140-43EA-92D3-D01C541C5BF6.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/b9af8653-408b-499a-94b7-189012eef28d.jpg",
+          "width": 610,
+          "height": 250
+        },
+        {
+          "type": "h3",
+          "html": "Keep your EYE on the CLOCK!",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/9FC634BA-4355-4078-A77D-F5EEDAFB8547.jpg",
+          "width": 3360,
+          "height": 2240
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/00650707-D4DA-46E9-8926-7455DA7FE531.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/26816e4f-80f9-49c5-b3d5-fe6521723fea.jpg",
+          "width": 500,
+          "height": 334
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/725A3545-0EF0-41B8-9F78-14FB5E575C6D.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/sending-tapes/images/B8BB374D-B08A-4F26-B77E-394FE6728526.jpg",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with images by anSICHThoch3 - \"mailbox wall post\" • Malvestida Magazine - \"IDS_UNTITLED_PHOTO_NAME\""
+  ],
+  "runtime": "classic"
+}

@@ -1,0 +1,338 @@
+{
+  "source": "https://express.adobe.com/page/ko5JZe1bqtBnz/",
+  "theme": "adobe-theme-perfect-self-tape-bending-the-rules",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/icc1sfj.css",
+    "https://use.typekit.net/lyd0hdu.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Bending The Rules",
+    "subtitle": "Make it Count",
+    "image": "/courses/perfect-self-tape/bending-the-rules/images/3a4601f5-93a3-446b-9847-90eb62964ce2.jpg",
+    "imageWidth": 600,
+    "imageHeight": 399,
+    "backgroundPosition": "46.19140625% 97.71528998242532%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "There is always a &quot;Gray Area&quot;",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "And for every Industry Standard there are 100 caveats",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "If you are going to “Break a Rule”..."
+        },
+        {
+          "type": "h4",
+          "html": "My advice is to make it count and the project should be worth it!",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/bending-the-rules/images/BA78D071-2A5A-405F-875E-365E8D25940A.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "This is a major rule that should almost never be broken.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Most people do not have the skill to film a scene environmentally would look good enough to make an impact and not hurt a performance.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Using another Actor on screen with the auditioning Actor is very frowned upon. It can hurt a performance if the other Actor is bad or not the appropriate type for role."
+        },
+        {
+          "type": "h4",
+          "html": "Even an arm or hand from an off-screen reader can be distracting and look Amateurish."
+        },
+        {
+          "type": "h3",
+          "html": "BUT...",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "On occasion it has been a worthy gamble."
+        },
+        {
+          "type": "h4",
+          "html": "A challenging scene with a lot of Action can come to life when taken out if the confinements of a Self Tape Frame."
+        },
+        {
+          "type": "blockquote",
+          "html": "Running from a bad guy."
+        },
+        {
+          "type": "blockquote",
+          "html": "Having a Physical Altercation."
+        },
+        {
+          "type": "h4",
+          "html": "A better performance may need some reality infused to really showcase the right emotions or reactions.",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/bending-the-rules/images/CE8FFDFC-2FA3-4E8D-B987-A7DCD97F89FD.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Self Tapes do not need music or sound effects to be effective. Casting is looking at the Actor’s performance.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "But there are times when an Actor can get into mood by hearing some underscore or music that would be played in the environment of the scene.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "In fact, a great coaching technique I use is listening to a dramatic score that is typical of the genre to find the right tone of the performance."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "cJ1zhq3yNBM",
+          "align": "left"
+        },
+        {
+          "type": "p",
+          "html": "Dacre famously booked this Stranger Things Role by taking a chance."
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "336444157",
+          "missing": {
+            "note": "Dacre Montgomery Stranger Things audition tape (third-party example). Vimeo is dead; decide on replacement or removal.",
+            "candidates": []
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/bending-the-rules/images/5546FCE4-6913-4406-96FA-DE13E63DE2D9.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Casting does not want your filmmaker interpretation of the sides.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "But what if adding a fitting touch to the scene could really give it the proper tone and enhance the performance."
+        },
+        {
+          "type": "blockquote",
+          "html": "What if it promised to be enjoyable too?"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "395384847",
+          "missing": {
+            "note": "Nicholas' black-and-white self tape example (client example).",
+            "candidates": [
+              "46fa375d-1ba0-4692-a857-bf128af53bfa - Nicholas Young - Scared.mp4 (main library)"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "p",
+          "html": "Nicholas booked this job right off the Self Tape by taking this risky idea of making it Black &amp; White and adding a studio laugh track."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/bending-the-rules/images/BC231B48-3504-4D4E-BC81-7A72F6AA84F8.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "If you were not given a request to audition via Self Tape then you are not allowed to audition.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "Even Talent Reps break this rule."
+        },
+        {
+          "type": "h3",
+          "html": "Some projects are roles are too perfect to not have a shot at getting seen for.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "If you somehow knew how to get the sides to a role that is currently casting."
+        },
+        {
+          "type": "h3",
+          "html": "And..",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Somehow had the email address of where to send the Self Tape."
+        },
+        {
+          "type": "h4",
+          "html": "Would you get in trouble for sending a tape unsolicited?"
+        },
+        {
+          "type": "h4",
+          "html": "Would Casting watch it?"
+        },
+        {
+          "type": "h3",
+          "html": "The Answer: Possibly.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Actor’s have received Callbacks, official invitations to audition and even booked roles from pushing their tapes through to casting at the right moment."
+        },
+        {
+          "type": "h3",
+          "html": "It better be GOOD!",
+          "align": "center"
+        }
+      ]
+    }
+  ],
+  "runtime": "classic"
+}

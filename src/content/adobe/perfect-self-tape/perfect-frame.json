@@ -1,0 +1,1138 @@
+{
+  "source": "https://express.adobe.com/page/5HkJaHOKEnWA5/",
+  "theme": "adobe-theme-perfect-self-tape-perfect-frame",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/txs8zsv.css",
+    "https://use.typekit.net/qhv3iqj.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "The Perfect Frame",
+    "subtitle": "Using Industry Standard Medium Close-Up",
+    "image": "/courses/perfect-self-tape/perfect-frame/images/9F46F4C8-2390-41F9-9660-3A7A2888C09D.jpg",
+    "imageWidth": 2388,
+    "imageHeight": 1791,
+    "backgroundPosition": "99.71138666955882% 48.60713825537946%"
+  },
+  "sections": [
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/BAE3FB99-CA48-452A-B9F9-3BED7737FB9F.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/DB74FE3C-198A-488A-9590-CD797AA4BB2B.jpg",
+          "width": 790,
+          "height": 450
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/4DD043CC-10C3-46E6-A0EA-AB390E41A525.png",
+          "width": 1000,
+          "height": 628
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/04F21EB3-CBAF-4E2E-82F2-5A124C8F3CDE.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/AAED024D-9769-47D8-A9F0-682A4B222915.jpg",
+          "width": 2500,
+          "height": 885
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/E4CAF1CD-D240-428E-963B-445D9AD625DA.jpg",
+          "width": 2119,
+          "height": 1415
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/A473E5DB-DD8E-4EF8-A678-401B0281EED7.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/B06F4A4D-8327-4954-B050-00682345D158.png",
+          "width": 970,
+          "height": 546
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/3202FB6C-1F4C-44FF-B4D6-FEB3C03D9037.jpg",
+          "width": 1108,
+          "height": 831
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/7C4A994C-7461-4650-AED9-28C08D5AC2B2.jpg",
+          "width": 1600,
+          "height": 863
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/A0569C1F-6832-492B-983C-6E82D78C72FC.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/F37FB1DF-B88C-4346-BA15-7FB6C143B5F2.jpg",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/04CA0D3B-130A-4EDF-8365-31BCBA547A54.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/912EFFBF-5671-412A-9FA0-06319DB16100.jpg",
+          "width": 1600,
+          "height": 775
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/99EE248C-786F-49F1-BA91-362DA268C84A.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "photo-grid",
+      "classes": [
+        "photo-grid-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "grid": [
+        {
+          "layout": "t1-layout-l-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/2DBD9268-BF02-4E49-A198-E33C68062C76.jpg",
+              "width": 755,
+              "height": 384
+            }
+          ]
+        },
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/B224E4D4-C101-4A76-A79D-0B80893BCFA5.jpg",
+              "width": 1200,
+              "height": 627
+            },
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/EAB0035E-ED85-4A25-A4A9-EC3B94C6C62C.jpg",
+              "width": 1200,
+              "height": 630
+            }
+          ]
+        },
+        {
+          "layout": "t1-layout-l-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/90F190AB-BA03-4314-B67F-01AFE06B28C4.jpg",
+              "width": 1138,
+              "height": 640
+            }
+          ]
+        },
+        {
+          "layout": "t3-layout-lll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/0D9827C7-46FF-4918-9DBB-A66194124229.png",
+              "width": 720,
+              "height": 404
+            },
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/24575DCD-49FB-4B93-856E-58998DF6A3EF.jpg",
+              "width": 1000,
+              "height": 584
+            },
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/183EDFA5-3C49-48E2-8020-DC9918CE7C69.jpg",
+              "width": 1024,
+              "height": 579
+            }
+          ]
+        },
+        {
+          "layout": "t1-layout-l-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/5EDCD752-3A85-4A1C-AB20-4421441DA65A.jpg",
+              "width": 500,
+              "height": 275
+            }
+          ]
+        }
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/63153D22-8638-423F-8071-E5557A547EDF.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/183E221B-D05A-4DC7-9301-E4FD02AE63CE.jpg",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/C66D93D3-AB9F-4C84-A94A-99873D5AAB00.jpg",
+          "width": 672,
+          "height": 372
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/3F476883-AC49-4669-B001-4177C234412E.jpg",
+          "width": 236,
+          "height": 354
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/67659FA2-C551-4ACA-A212-C3A9226432F3.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/50B6578C-E052-4452-8907-B0B2B751829E.jpg",
+          "width": 572,
+          "height": 356
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/7453C929-F85A-4514-A88D-1D38FA909842.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/5EC7CCF4-6E49-4CCE-83B5-7A1F9C194400.jpg",
+          "width": 1024,
+          "height": 576
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/2BCFBDC0-1D30-4C1C-B140-E9645877C98B.jpg",
+          "width": 1000,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/DF6732F8-B100-4735-8AA6-F68D3B93D9F3.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/BB2A665D-3016-4ACA-9ADB-A34D35EAE071.jpg",
+          "width": 1250,
+          "height": 704
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/F04A0D27-D9BF-45F2-A9CC-1505338D1C73.jpg",
+          "width": 700,
+          "height": 507
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/D6FCD732-CB18-4EB7-874C-496238759E7C.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/469F8E1C-7ED1-4D5A-8B84-10C3BA65742C.jpg",
+          "width": 1024,
+          "height": 640
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/52973F17-9312-444B-BE35-BB6EE2C0A441.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/2488015E-E686-431D-97B1-B07D2E3B02D5.jpg",
+          "width": 300,
+          "height": 276,
+          "caption": "Letterbox"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/59A52CB8-60E8-4157-A7DE-EF8275939E8B.jpg",
+          "width": 600,
+          "height": 573
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/27BC23F9-A3CF-4B21-874B-FC41ECFBCDCC.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/590B787C-FC7C-4843-9DFB-A6C387686994.jpg",
+          "width": 2388,
+          "height": 1791
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/9223A6F1-1E3D-4E20-ACAA-5308E5FF85E5.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/DDFEB9AD-E8EF-4294-8D99-169C3542927F.jpg",
+          "width": 2000,
+          "height": 1333
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/FB77D6F6-DE2B-4989-9AAB-ACF5E73FB7A5.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "No",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/AC31F672-64D0-4A85-923D-46C20341E1A3.jpg",
+          "width": 1668,
+          "height": 938
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/8F8CEE66-F489-42FD-9611-BF253162D6C6.jpg",
+          "width": 1668,
+          "height": 938
+        },
+        {
+          "type": "h3",
+          "html": "YES",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/98B277E2-22F7-453B-8A40-2F402A9DE93C.jpg",
+          "width": 800,
+          "height": 501
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/9FA1A5FD-D995-46DE-87E6-9458073A0FFC.jpg",
+          "width": 800,
+          "height": 501
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/7070BD2B-FC68-48DE-96A6-A37F497905E3.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/26C7D9FC-C92D-4340-A020-428CF831FC34.jpg",
+          "width": 800,
+          "height": 501
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/6C7D95DF-3BB8-49C6-96FA-BC9628741551.jpg",
+          "width": 800,
+          "height": 501
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/16D34ED2-9FD6-42CA-AEC8-F83E6F08387C.jpg",
+          "width": 596,
+          "height": 354
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/perfect-frame/images/F8472314-954F-491A-994E-AE6216B4C668.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "photo-grid",
+      "classes": [
+        "photo-grid-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "grid": [
+        {
+          "layout": "t1-layout-l-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/CF8B1A65-C69B-42A9-B8CA-43F45878AE20.jpg",
+              "width": 1000,
+              "height": 667
+            }
+          ]
+        },
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/EB5BC8B0-89BA-491A-BC2D-C66379D330E9.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/0C297F36-5CCF-4944-9347-F49A33E5111B.jpg",
+              "width": 1000,
+              "height": 667
+            }
+          ]
+        },
+        {
+          "layout": "t1-layout-l-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/perfect-frame/images/132FAE6A-7760-4958-9A3A-63C8A45AF6EB.jpg",
+              "width": 790,
+              "height": 450
+            }
+          ]
+        }
+      ],
+      "elements": []
+    }
+  ],
+  "runtime": "classic"
+}

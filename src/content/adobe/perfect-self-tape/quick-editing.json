@@ -1,0 +1,440 @@
+{
+  "source": "https://express.adobe.com/page/OQdMObzEI8etD/",
+  "theme": "adobe-theme-perfect-self-tape-quick-editing",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/gom8xuo.css",
+    "https://use.typekit.net/oea2wtv.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Quick Editing Guide",
+    "subtitle": "",
+    "image": "/courses/perfect-self-tape/quick-editing/images/86DB1973-CB91-4835-AC2E-047EF4EAC265.jpg",
+    "imageWidth": 4480,
+    "imageHeight": 6720,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/222FB5CB-9CAB-4A6B-AD8C-A390CA11D472.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/4DA1C79C-9792-461E-9690-EF4A06494E6B.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Trim videos Online",
+          "href": "https://spark.adobe.com/make/video-trimmer/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "ci0ivwWQ6vQ",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/6C768371-981C-4445-B980-FDD55E1371DF.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Merge On IPad",
+          "href": "https://www.lifewire.com/how-to-edit-video-ipad-4045025",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "VJOnSgoTcT8",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/E157D83A-AC9C-412D-84A3-57676C1D67DE.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "VideoSoap  Great App For Sound",
+          "href": "http://www.soundness-llc.com/products/videosoap5/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/C7F212A5-FE0A-41F8-A029-FFDD75E1A7BA.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/1DDDAD86-3AB7-4AC1-A0D3-7F153B23016F.jpg",
+          "width": 1668,
+          "height": 903
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/4218FA91-C5C8-4CCF-A079-715094C30AC3.png",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/9EF3DFFB-2E2C-4194-8CA0-9036E536CFDC.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "photo-grid",
+      "classes": [
+        "photo-grid-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "grid": [
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/quick-editing/images/BD9D97F4-3C9E-442A-ADBC-C5E037CC8315.jpg",
+              "width": 968,
+              "height": 681
+            },
+            {
+              "src": "/courses/perfect-self-tape/quick-editing/images/9F94B010-9AD1-448C-B079-F4D974B2BF7C.jpg",
+              "width": 1800,
+              "height": 1200
+            }
+          ]
+        },
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/quick-editing/images/F35226F3-F928-484F-99F9-07AB3160DCDB.jpg",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "src": "/courses/perfect-self-tape/quick-editing/images/F89BFBD0-6135-4EDA-9307-ECE40ABA7291.jpg",
+              "width": 768,
+              "height": 580
+            }
+          ]
+        }
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/13804861-482A-46AB-86B0-DC1FCAFE73D1.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/02F6940E-EA93-49F7-A0A9-D4F34F750FC9.png",
+          "width": 2560,
+          "height": 1920
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/04FA9358-BEEE-456C-9709-2CF57F289BAD.png",
+          "width": 2560,
+          "height": 1920
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/0F4EAA31-2394-499A-AD05-7B0848D3B086.png",
+          "width": 2560,
+          "height": 1920
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/F1DCABA3-4BC0-44C3-A36E-8D9060B9438F.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/quick-editing/images/22B5D175-5AB6-4DFD-9DF9-6B2DB2F3C589.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391760430",
+          "missing": {
+            "note": "Corey's Enlight (Videoleap) app overview. Also embedded on Perfect Self Tape 'Quick Editing'.",
+            "candidates": [
+              "f5b0854e-6c52-44f3-ae0d-ab13c364d774 - Untitled (5).mp4",
+              "a855464e-d499-4221-98fa-dd884df2146d - Untitled (6).mp4",
+              "1067ad2b-49aa-48e6-a4ed-cc533e61ec07 - Videoleap-459739BD export.mp4 (main library)"
+            ]
+          },
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "391763750",
+          "bunny": {
+            "guid": "e2c4531b-5651-423e-bdc4-4a5866104e10",
+            "title": "Walk through an Edit",
+            "needsReview": false
+          },
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "All In One Apps",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "Slatable App",
+          "href": "https://www.google.com/url?sa=t&source=web&cd=1&ved=2ahUKEwjYm_W-7vnnAhXJv54KHRveAdsQFjAAegQIAhAB&url=https%3A%2F%2Fwww.slatable.com%2F&usg=AOvVaw319KU3x6cJO6MUJNM0qYwO",
+          "align": "center"
+        },
+        {
+          "type": "button",
+          "label": "My Self Tape App",
+          "href": "https://www.myselftapeapp.com/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "cSmb2_zBFs4",
+          "align": "left"
+        },
+        {
+          "type": "button",
+          "label": "Shoot Me App",
+          "href": "https://www.shoot.me/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "YxIpZR1Vy1Q",
+          "align": "left"
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with an image by Jakob Owens - \"IDS_UNTITLED_PHOTO_NAME\""
+  ],
+  "runtime": "classic"
+}

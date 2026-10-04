@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0"
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0",
+    "predev": "node scripts/check-stale-routes.mjs",
+    "prebuild": "node scripts/check-stale-routes.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",

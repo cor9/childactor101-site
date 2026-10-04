@@ -245,3 +245,15 @@
   line-height: 2;
   text-align: center;
 }
+
+/* Scroll-reveal start states (mirrors the theme's .hidden rules; see RevealOnScroll). */
+.trek-theme div.image.adobe-reveal-hidden {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+}
+
+.trek-theme .caption.adobe-reveal-hidden,
+.trek-theme blockquote.adobe-reveal-hidden {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}

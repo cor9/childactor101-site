@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 /**
  * Adobe pages fade/slide images, captions and quotes in as they scroll into view
- * (the `hidden` state is defined in adobe-theme.css). Content is fully visible
+ * (the hidden state is defined in adobe-layout.css; not named `hidden` because Tailwind uses that for display:none). Content is fully visible
  * without JavaScript; this only adds the entrance effect for items below the fold.
  */
 export function RevealOnScroll() {
@@ -21,7 +21,7 @@ export function RevealOnScroll() {
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            entry.target.classList.remove("hidden");
+            entry.target.classList.remove("adobe-reveal-hidden");
             observer.unobserve(entry.target);
           }
         }
@@ -30,7 +30,7 @@ export function RevealOnScroll() {
     );
 
     for (const item of items) {
-      item.classList.add("hidden");
+      item.classList.add("adobe-reveal-hidden");
       observer.observe(item);
     }
 

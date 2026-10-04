@@ -7,7 +7,7 @@ import { bunnyEmbedUrl } from "@/lib/bunny";
 import "./adobe-layout.css";
 import { RevealOnScroll } from "./RevealOnScroll";
 
-/** Page spec produced by scripts/adobe_page_to_spec.py from a public Adobe Express page. */
+/** Page spec produced by scripts/adobe-extractor/adobe_page_to_spec.py from a public Adobe Express page. */
 export type AdobeVideo = {
   type: "video";
   provider: "vimeo" | "youtube" | "other";
@@ -75,7 +75,7 @@ export interface AdobeSection {
 }
 
 export interface AdobePageSpec {
-  /** Scope class the page's theme CSS was re-written to (see scripts/adobe_page_to_spec.py). */
+  /** Scope class the page's theme CSS was re-written to (see scripts/adobe-extractor/adobe_page_to_spec.py). */
   theme?: string;
   /** Adobe Fonts kit stylesheets the original page loaded. */
   fontKits?: string[];

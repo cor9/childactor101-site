@@ -83,6 +83,13 @@ const ecosystemColumns = [
     title: "Create",
     description: "Build your materials.",
     items: ["Resume101", "Pages101", "Prep101", "Reader101", "Bold Choices"],
+    itemDescriptions: {
+      Resume101: "Build a professional actor résumé",
+      Pages101: "Create your actor’s professional webpage",
+      Prep101: "Prepare for auditions with AI",
+      Reader101: "Get scene-specific coaching for parent readers",
+      "Bold Choices": "Explore stronger acting choices",
+    },
   },
   {
     title: "Perform",

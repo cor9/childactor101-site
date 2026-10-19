@@ -26,8 +26,8 @@ const defaultNavItems: HeaderNavItem[] = [
 ];
 
 export function Header({
-  ctaHref = "/corey-ralston",
-  ctaLabel = "Book coaching",
+  ctaHref = "/start-here",
+  ctaLabel = "Start Here",
   navItems = defaultNavItems,
 }: HeaderProps) {
   return (

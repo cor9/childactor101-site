@@ -3,12 +3,14 @@ import { Card } from "@/components/ui/Card";
 export interface EcosystemCardProps {
   description: string;
   items: string[];
+  itemDescriptions?: Record<string, string>;
   title: string;
 }
 
 export function EcosystemCard({
   description,
   items,
+  itemDescriptions,
   title,
 }: EcosystemCardProps) {
   return (
@@ -22,6 +24,11 @@ export function EcosystemCard({
         {items.map((item) => (
           <li key={item} className="border-t border-white/12 py-4 first:border-t-0 first:pt-0">
             {item}
+            {itemDescriptions?.[item] ? (
+              <p className="mt-1 text-sm leading-6 text-white/72">
+                {itemDescriptions[item]}
+              </p>
+            ) : null}
           </li>
         ))}
       </ul>

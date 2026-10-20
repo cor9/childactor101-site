@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { CompletionDot } from "@/components/course/CourseProgress";
 import type { CourseLesson } from "@/content/courses";
-import { lessonHasPlayableVideo } from "@/content/courses";
+import { lessonHasMissingVideo, lessonHasPlayableVideo } from "@/content/courses";
 
 export interface CourseLessonCardProps {
   courseSlug: string;
@@ -13,6 +13,7 @@ export interface CourseLessonCardProps {
 export function CourseLessonCard({ courseSlug, index, lesson }: CourseLessonCardProps) {
   const videoCount = lesson.videos?.length ?? (lesson.video ? 1 : 0);
   const playable = lessonHasPlayableVideo(lesson);
+  const missingVideo = lessonHasMissingVideo(lesson);
 
   return (
     <Link
@@ -44,9 +45,9 @@ export function CourseLessonCard({ courseSlug, index, lesson }: CourseLessonCard
               Reading
             </span>
           )}
-          {lesson.needsReview || !playable ? (
+          {lesson.needsReview || !playable || missingVideo ? (
             <span className="rounded-full bg-accent-100 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-accent-700">
-              Being restored
+              {missingVideo ? "Video being restored" : "Being restored"}
             </span>
           ) : null}
         </span>

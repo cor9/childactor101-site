@@ -21,7 +21,7 @@ import {
 import { images } from "@/content/images";
 
 export const metadata: Metadata = {
-  title: "From the Classroom | Child Actor 101",
+  title: "From the Classroom",
   description:
     "Explore the Child Actor 101 classroom by chapter with a sample lesson library that shows how the parent curriculum will scale.",
 };

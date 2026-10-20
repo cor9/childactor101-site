@@ -1,3 +1,6 @@
+// Canonical production origin used for metadata, sitemap.xml, and robots.txt.
+export const SITE_URL = "https://www.childactor101.com";
+
 export const SPOTIFY_PODCAST_URL =
   "https://open.spotify.com/show/4hu8Rb0mQA1YVSUiGwWrQl?si=a8e7c38dc1ec47f1";
 

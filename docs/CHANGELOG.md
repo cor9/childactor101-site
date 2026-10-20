@@ -26,6 +26,15 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Refined internal curriculum documentation to remove legacy course terminology
 - Generated the master blog-to-classroom curriculum mapping to guide future lesson extraction
 
+### Pre-launch repairs
+
+- Added permanent redirects for 20 legacy `/101-blog/` articles (plus the `/101-blog` index) to the classroom lessons built from them; full 155-URL audit in `docs/seo/legacy-blog-migration-map.md`
+- Fixed eight broken Start Here links, AB1319 lint errors, duplicate title suffixes, and the homepage's development meta description
+- Added `sitemap.xml`, `robots.txt`, and a default social sharing image built from the approved TV logo
+- Removed development placeholder copy from `/podcast`
+- Linked Video Courses from the footer
+- Marked the 25 course lessons still missing their original video, kept them out of search and the sitemap, and preserved all lesson content and video references
+
 ### Remaining
 
 - Integrate blog content

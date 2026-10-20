@@ -41,12 +41,12 @@ export async function generateMetadata({
 
   if (!chapter) {
     return {
-      title: "Classroom Chapter | Child Actor 101",
+      title: "Classroom Chapter",
     };
   }
 
   return {
-    title: `${chapter.title} | From the Classroom | Child Actor 101`,
+    title: `${chapter.title} | From the Classroom`,
     description: chapter.description,
   };
 }

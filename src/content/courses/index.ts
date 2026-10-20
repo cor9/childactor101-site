@@ -65,3 +65,13 @@ export function lessonHasPlayableVideo(lesson: CourseLesson) {
   const videos = lesson.videos ?? (lesson.video ? [lesson.video] : []);
   return videos.some((video) => video.kind !== "missing");
 }
+
+/** True when any of the lesson's original videos has not been recovered yet. */
+export function lessonHasMissingVideo(lesson: CourseLesson) {
+  const videos = lesson.videos ?? (lesson.video ? [lesson.video] : []);
+  return videos.some((video) => video.kind === "missing");
+}
+
+export function getCourseMissingVideoCount(course: Course) {
+  return course.lessons.filter(lessonHasMissingVideo).length;
+}

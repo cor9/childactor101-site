@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowRight, Mic2 } from "lucide-react";
 
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
 import { PageHero } from "@/components/PageHero";
-import { PlaceholderBlock } from "@/components/PlaceholderBlock";
 import { SectionLabel } from "@/components/SectionLabel";
 import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
@@ -31,16 +31,10 @@ const topics = [
   },
 ];
 
-const episodeCards = [
-  "Featured episodes will live here with artwork, summaries, and listening links.",
-  "The full archive is not migrated yet; this route is the new front door, not the finished library.",
-  "Related lessons and recommended resources will connect each episode back into the classroom.",
-];
-
 export const metadata: Metadata = {
   title: "Podcast",
   description:
-    "Conversations from inside Hollywood: the Child Actor 101 podcast front door for featured episodes, topics, and related resources.",
+    "Conversations from inside Hollywood: the Child Actor 101 podcast on auditions, representation, parenting, and building a healthy young actor career.",
 };
 
 export default function PodcastPage() {
@@ -62,28 +56,27 @@ export default function PodcastPage() {
           rel: "noreferrer",
           target: "_blank",
         }}
-        supportingPoints={[
-          "Featured episodes",
-          "Related lessons",
-          "Archive migration later",
-        ]}
+        supportingPoints={["Auditions", "Representation", "For parents"]}
       >
         <div className="space-y-5">
           <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
             Featured show
           </div>
-          <PlaceholderBlock
-            title="Episode artwork"
-            subtitle="Local podcast placeholder"
-            tone="dark"
-          />
+          <div className="flex aspect-[4/3] items-center justify-center rounded-[24px] border border-chalk/10 bg-[radial-gradient(circle_at_top,_rgba(248,244,232,0.16),transparent_45%)]">
+            <Image
+              src="/101logo.png"
+              alt="Child Actor 101 logo"
+              width={240}
+              height={288}
+              className="h-3/4 w-auto object-contain"
+            />
+          </div>
           <div className="rounded-[22px] border border-chalk/10 bg-chalkboard-soft/60 p-5">
             <p className="text-xs uppercase tracking-[0.22em] text-chalk/65">
-              For now
+              Where to listen
             </p>
             <p className="mt-3 text-sm leading-7 text-chalk/80">
-              This route establishes the new podcast front door while the
-              existing archive stays live elsewhere.
+              Episodes are available on Spotify.
             </p>
           </div>
         </div>
@@ -119,27 +112,15 @@ export default function PodcastPage() {
 
       <section className="bg-chalkboard px-4 py-20 text-chalk sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
-          <SectionLabel>Built in phases</SectionLabel>
+          <SectionLabel>Listen</SectionLabel>
           <div className="mt-6 max-w-3xl">
             <h2 className="font-display text-4xl leading-tight text-chalk sm:text-5xl">
-              The archive comes later. The point of this page is direction.
+              Pick an episode, then keep learning in the classroom.
             </h2>
             <p className="mt-4 text-lg leading-8 text-chalk/72">
-              Right now this page should orient new listeners and connect the
-              show to the broader Child Actor 101 ecosystem without forcing a
-              full migration yet.
+              Listen on Spotify, then use the Child Actor 101 classroom and
+              ecosystem to go deeper on the topics each conversation raises.
             </p>
-          </div>
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {episodeCards.map((item) => (
-              <Card
-                key={item}
-                tone="chalkboard"
-                className="border-chalk/10 bg-chalkboard-deep/65"
-              >
-                <p className="text-base leading-8 text-chalk/82">{item}</p>
-              </Card>
-            ))}
           </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button href={SPOTIFY_PODCAST_URL} rel="noreferrer" target="_blank" variant="secondary">

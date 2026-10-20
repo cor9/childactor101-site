@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { SITE_URL } from "@/lib/site-links";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.childactor101.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Child Actor 101 | The classroom for families navigating TV and film",
     template: "%s | Child Actor 101",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Child Actor 101",
     description:
       "Trusted education, practical tools, and professional training for families navigating TV and film.",
-    url: "https://www.childactor101.com",
+    url: SITE_URL,
     siteName: "Child Actor 101",
     type: "website",
   },

@@ -15,3 +15,12 @@ export const SELF_TAPE_SETUP_URL = "https://selftapetips.childactor101.com";
 export const MEMORIZATION_GUIDE_URL = "https://memorize.childactor101.com";
 export const ZOOM_CALLBACK_GUIDE_URL = "https://zoomcb.childactor101.com";
 export const COLLEGE_CHECKLIST_URL = "https://collegechecklist.childactor101.com";
+
+// Direct destinations for the five Create software tools.
+export const SOFTWARE_TOOL_URLS = {
+  Resume101: RESUME101_URL,
+  Pages101: PAGES101_URL,
+  Prep101: "https://prep101.childactor101.com",
+  Reader101: "https://reader101.childactor101.com",
+  "Bold Choices": "https://boldchoices.childactor101.com",
+};

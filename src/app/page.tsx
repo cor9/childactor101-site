@@ -106,9 +106,11 @@ const ecosystemColumns = [
 ];
 
 export const metadata: Metadata = {
-  title: "The classroom for families navigating TV and film",
+  title: {
+    absolute: "Child Actor 101 | The classroom for families navigating TV and film",
+  },
   description:
-    "Start with the foundational Child Actor 101 homepage shell: the parent-first path into learning, tools, training, and podcast conversations.",
+    "Child Actor 101 helps families navigate the television and film industry through trusted education, practical tools, and professional training.",
 };
 
 export default function Home() {

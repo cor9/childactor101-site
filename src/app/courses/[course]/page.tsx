@@ -10,6 +10,7 @@ import { Section } from "@/components/layout/Section";
 import {
   courses,
   getCourse,
+  getCourseMissingVideoCount,
   getCourseReviewCount,
   getCourseSectionsWithLessons,
 } from "@/content/courses";
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: CoursePageProps): Promise<Met
   const course = getCourse(courseSlug);
 
   if (!course) {
-    return { title: "Course | Child Actor 101" };
+    return { title: "Course" };
   }
 
   return {
@@ -48,6 +49,7 @@ export default async function CourseOverviewPage({ params }: CoursePageProps) {
 
   const sectionsWithLessons = getCourseSectionsWithLessons(course);
   const reviewCount = getCourseReviewCount(course);
+  const missingVideoCount = getCourseMissingVideoCount(course);
   const lessonIndexBySlug = new Map(
     course.lessons.map((lesson, index) => [lesson.slug, index] as const),
   );
@@ -86,6 +88,13 @@ export default async function CourseOverviewPage({ params }: CoursePageProps) {
               {reviewCount === 1 ? "has" : "have"} a video that is being verified or replaced -{" "}
               {reviewCount === 1 ? "it is" : "they are"} marked as being restored, and the lesson
               copy is fully preserved in the meantime.
+              {missingVideoCount > 0 ? (
+                <>
+                  {" "}
+                  {missingVideoCount} of {course.lessons.length} lessons do not have their original
+                  video yet, so this course is not complete until those videos are restored.
+                </>
+              ) : null}
             </p>
           ) : null}
           <div className="mt-8 max-w-2xl">

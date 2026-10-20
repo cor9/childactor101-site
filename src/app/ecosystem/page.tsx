@@ -15,7 +15,9 @@ import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 import { SOFTWARE_TOOL_URLS } from "@/lib/site-links";
 
 export const metadata: Metadata = {
-  title: "Child Actor 101 Ecosystem | Tools, Training & Resources",
+  title: {
+    absolute: "Child Actor 101 Ecosystem | Tools, Training & Resources",
+  },
   description:
     "Explore the connected Child Actor 101 ecosystem of lessons, tools, training, coaching, guides, and resources for parents of young actors.",
 };

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, LayoutList, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
 import { notFound } from "next/navigation";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -16,9 +16,10 @@ import { Section } from "@/components/layout/Section";
 import { Pill } from "@/components/ui/Pill";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
-  classroomChapters,
+  getChapterLessonCountLabel,
   getClassroomChapter,
   getLessonsForChapter,
+  getPublishedClassroomChapters,
 } from "@/content/classroom";
 
 type ChapterPageProps = {
@@ -28,7 +29,7 @@ type ChapterPageProps = {
 };
 
 export function generateStaticParams() {
-  return classroomChapters.map((chapter) => ({
+  return getPublishedClassroomChapters().map((chapter) => ({
     chapter: chapter.slug,
   }));
 }
@@ -41,12 +42,12 @@ export async function generateMetadata({
 
   if (!chapter) {
     return {
-      title: "Classroom Chapter | Child Actor 101",
+      title: "Classroom Chapter",
     };
   }
 
   return {
-    title: `${chapter.title} | From the Classroom | Child Actor 101`,
+    title: `${chapter.title} | From the Classroom`,
     description: chapter.description,
   };
 }
@@ -62,8 +63,14 @@ export default async function ClassroomChapterPage({
   }
 
   const lessons = getLessonsForChapter(chapter.slug);
+
+  // Chapters without published lessons yet are kept in the data but not shown.
+  if (lessons.length === 0) {
+    notFound();
+  }
+
   const firstLesson = lessons[0];
-  const otherChapters = classroomChapters
+  const otherChapters = getPublishedClassroomChapters()
     .filter((entry) => entry.slug !== chapter.slug)
     .slice(0, 3);
 
@@ -87,27 +94,27 @@ export default async function ClassroomChapterPage({
         description={chapter.description}
         primaryAction={{
           href: "#chapter-lessons",
-          label: "Browse sample lessons",
+          label: "Browse lessons",
           icon: <ArrowRight className="h-5 w-5" />,
         }}
         secondaryAction={
           firstLesson
             ? {
                 href: `/from-the-classroom/${chapter.slug}/${firstLesson.slug}`,
-                label: "Open sample lesson",
+                label: "Open the first lesson",
                 icon: <BookOpen className="h-5 w-5" />,
               }
             : undefined
         }
         supportingPoints={[
-          chapter.lessonCountLabel,
-          "3 sample lessons in this prototype shelf",
-          "Built to scale into a larger library",
+          getChapterLessonCountLabel(chapter),
+          "One parent question per lesson",
+          "Linked to related lessons",
         ]}
       >
         <div className="space-y-5">
           <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
-            Chapter preview
+            Chapter overview
           </div>
           <div className="overflow-hidden rounded-[30px] border border-chalk/10 shadow-[0_22px_48px_rgba(7,21,17,0.22)]">
             <Image
@@ -134,9 +141,9 @@ export default async function ClassroomChapterPage({
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="These are representative sample lessons for this chapter. They are enough to show the browsing flow, the card patterns, and the way future imports will live inside one consistent system."
+            description="The lessons available in this chapter, each answering one practical parent question."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Sample Lessons"
+            label="Lessons"
             title={`Open the ${chapter.title} shelf.`}
             titleClassName="mt-6 text-chalkboard"
           />
@@ -146,7 +153,7 @@ export default async function ClassroomChapterPage({
                 key={lesson.slug}
                 actionHref={`/from-the-classroom/${chapter.slug}/${lesson.slug}`}
                 description={lesson.summary}
-                eyebrow="Sample lesson"
+                eyebrow="Lesson"
                 imageAlt={lesson.featuredImageAlt}
                 imageSrc={lesson.featuredImageSrc}
                 title={lesson.title}
@@ -164,9 +171,9 @@ export default async function ClassroomChapterPage({
         <Container className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div className="max-w-2xl">
             <SectionHeader
-              description="Each chapter page should help readers understand the shape of that shelf before they start opening lessons. This section previews that framing."
+              description="A quick look at what this chapter covers before you start opening lessons."
               descriptionClassName="mt-4 text-lg leading-8 text-white/74"
-              label="Chapter Framing"
+              label="In This Chapter"
               labelClassName="text-[#bcefdc]"
               title={`What families usually learn inside ${chapter.title}.`}
               titleClassName="mt-6 text-white"
@@ -185,14 +192,6 @@ export default async function ClassroomChapterPage({
                   </div>
                 </div>
               ))}
-              <div className="rounded-[24px] border border-[#bcefdc]/20 bg-[#1d3b2d]/70 px-5 py-4">
-                <div className="flex items-start gap-3">
-                  <LayoutList className="mt-1 h-5 w-5 text-[#bcefdc]" />
-                  <p className="text-sm leading-7 text-white/82">
-                    The finished version of this chapter will expand lesson count, related tools, and cross-links while keeping this same educational frame intact.
-                  </p>
-                </div>
-              </div>
             </div>
           </Card>
         </Container>
@@ -202,7 +201,7 @@ export default async function ClassroomChapterPage({
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="The library should make it easy to pivot between shelves when a parent's next question changes. These chapters show how the larger system can keep expanding."
+            description="When your next question changes, these chapters are a good place to go next."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="Explore Another Shelf"
             title="The classroom is built to move laterally as well as forward."
@@ -212,7 +211,7 @@ export default async function ClassroomChapterPage({
             {otherChapters.map((entry) => (
               <Card key={entry.slug}>
                 <Pill className="px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
-                  {entry.lessonCountLabel}
+                  {getChapterLessonCountLabel(entry)}
                 </Pill>
                 <h3 className="mt-5 font-display text-3xl text-chalkboard">{entry.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-ink-soft">{entry.description}</p>
@@ -234,9 +233,9 @@ export default async function ClassroomChapterPage({
           <Newsletter
             ctaHref="/podcast"
             ctaLabel="Continue learning"
-            description="The classroom should always point to the next useful thing. That includes related lessons, tools, podcast conversations, and practical guidance parents can revisit."
+            description="Keep learning with related lessons, tools, podcast conversations, and practical guidance you can come back to."
             label="Keep Going"
-            title={`This ${chapter.title} shelf is a prototype, but the learning flow is already visible.`}
+            title={`Keep going after ${chapter.title}.`}
           />
         </Container>
       </Section>

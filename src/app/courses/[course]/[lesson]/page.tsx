@@ -16,6 +16,8 @@ import {
   getCourseLessonPagination,
   getCourseStaticLessonParams,
   getLessonsForSection,
+  lessonHasMissingVideo,
+  lessonHasPlayableVideo,
 } from "@/content/courses";
 
 type LessonPageProps = {
@@ -35,12 +37,14 @@ export async function generateMetadata({ params }: LessonPageProps): Promise<Met
   const lesson = getCourseLesson(courseSlug, lessonSlug);
 
   if (!course || !lesson) {
-    return { title: "Lesson | Child Actor 101" };
+    return { title: "Lesson" };
   }
 
   return {
     title: `${lesson.title} | ${course.title}`,
     description: lesson.summary ?? course.description,
+    // Lessons still waiting on a recovered video stay out of search until restored.
+    ...(lessonHasMissingVideo(lesson) ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -127,7 +131,13 @@ export default async function CourseLessonPage({ params }: LessonPageProps) {
               </div>
             ) : null}
 
-            {lesson.body.length === 0 ? (
+            {lesson.body.length === 0 && !lessonHasPlayableVideo(lesson) ? (
+              <p className="text-[1.05rem] leading-8 text-ink-soft">
+                This is a watch-first lesson, and its original video is still being restored. It
+                keeps its place in the course so the lesson order stays intact. Continue to the next
+                lesson in the meantime.
+              </p>
+            ) : lesson.body.length === 0 ? (
               <p className="text-[1.05rem] leading-8 text-ink-soft">
                 This lesson is a watch-first lesson from the original course. Press play above and
                 continue to the next lesson when you are ready.

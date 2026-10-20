@@ -7,7 +7,7 @@ import { Pill } from "@/components/ui/Pill";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
-import { courses, getCourseReviewCount } from "@/content/courses";
+import { courses, getCourseMissingVideoCount, getCourseReviewCount } from "@/content/courses";
 
 export const metadata: Metadata = {
   title: "Video Courses",
@@ -45,7 +45,7 @@ export default function CoursesIndexPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Each course is a complete walkthrough built from the original material - lessons, videos, worksheets, and resources kept in their intended order."
+            description="Each course is restored from the original material - lessons, videos, worksheets, and resources kept in their intended order. Lessons still waiting on a recovered video are clearly marked."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="Available Courses"
             title="Choose your course."
@@ -54,6 +54,7 @@ export default function CoursesIndexPage() {
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {courses.map((course) => {
               const reviewCount = getCourseReviewCount(course);
+              const missingVideoCount = getCourseMissingVideoCount(course);
               return (
                 <Card key={course.slug} className="flex flex-col">
                   <Pill className="self-start px-4 py-2 text-xs uppercase tracking-[0.22em]" tone="light">
@@ -73,6 +74,9 @@ export default function CoursesIndexPage() {
                       Note: {reviewCount} lesson{reviewCount === 1 ? "" : "s"} still{" "}
                       {reviewCount === 1 ? "has" : "have"} an original video being verified and{" "}
                       {reviewCount === 1 ? "is" : "are"} marked as being restored.
+                      {missingVideoCount > 0
+                        ? ` ${missingVideoCount} of ${course.lessons.length} lessons do not have their original video yet.`
+                        : null}
                     </p>
                   ) : null}
                   <div className="mt-6">

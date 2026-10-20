@@ -26,6 +26,21 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Refined internal curriculum documentation to remove legacy course terminology
 - Generated the master blog-to-classroom curriculum mapping to guide future lesson extraction
 
+### Pre-launch repairs
+
+- Added permanent redirects for 20 legacy `/101-blog/` articles (plus the `/101-blog` index) to the classroom lessons built from them; full 155-URL audit in `docs/seo/legacy-blog-migration-map.md`
+- Fixed eight broken Start Here links, AB1319 lint errors, duplicate title suffixes, and the homepage's development meta description
+- Added `sitemap.xml`, `robots.txt`, and a default social sharing image built from the approved TV logo
+- Removed development placeholder copy from `/podcast`
+- Linked Video Courses from the footer
+- Marked the 25 course lessons still missing their original video, kept them out of search and the sitemap, and preserved all lesson content and video references
+- Removed prototype and sample wording from the Classroom index and chapter pages. Chapter cards now show actual lesson counts, and the chapter with no published lessons is hidden (its data is kept)
+- Prepared a `/101-blog/:path+` fallback to the legacy Squarespace host, off unless `LEGACY_BLOG_ORIGIN` is set, plus `scripts/check-legacy-blog-origin.mjs` and a cutover runbook in `docs/seo/legacy-squarespace-cutover.md`
+- Preserved the 12 old non-blog pages and 2 PDFs on the legacy host with 14 temporary redirects behind the same `LEGACY_BLOG_ORIGIN` gate, with exact blog redirects still first. Candidate newer destinations are recorded for later review but not used (`docs/seo/legacy-page-preservation-map.md`)
+- Extended `scripts/check-legacy-blog-origin.mjs` to follow redirects hop by hop, check the 14 preserved URLs, and require real PDF bytes for the PDFs
+- Added `npm run test:redirects` (static data, readiness script against stub servers, inventory classifier, builds with the gate off and on, invalid values)
+- Started the Squarespace customer-access inventory (`docs/seo/squarespace-customer-access-inventory.md`): it is incomplete and gates the primary-domain change. Added `scripts/classify-legacy-urls.mjs`, which classifies exported URLs as handled, replaced by a new-site page, or unhandled, and flags customer-access paths; covered by `npm run test:redirects` (now 84 checks)
+
 ### Remaining
 
 - Integrate blog content

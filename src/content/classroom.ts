@@ -709,6 +709,17 @@ export function getLessonsForChapter(chapterSlug: string) {
     .filter((lesson): lesson is ClassroomLesson => Boolean(lesson));
 }
 
+/** Chapters that currently have at least one published lesson. Empty chapters stay in the data but are not shown. */
+export function getPublishedClassroomChapters() {
+  return classroomChapters.filter((chapter) => getLessonsForChapter(chapter.slug).length > 0);
+}
+
+/** Public lesson count for a chapter, based on the lessons available today. */
+export function getChapterLessonCountLabel(chapter: ClassroomChapter) {
+  const count = getLessonsForChapter(chapter.slug).length;
+  return `${count} lesson${count === 1 ? "" : "s"}`;
+}
+
 export function getFeaturedLessons() {
   return classroomFeaturedLessonSlugs
     .map((lessonSlug) => lessonMap.get(lessonSlug))

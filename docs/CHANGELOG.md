@@ -34,6 +34,8 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Removed development placeholder copy from `/podcast`
 - Linked Video Courses from the footer
 - Marked the 25 course lessons still missing their original video, kept them out of search and the sitemap, and preserved all lesson content and video references
+- Removed prototype and sample wording from the Classroom index and chapter pages. Chapter cards now show actual lesson counts, and the chapter with no published lessons is hidden (its data is kept)
+- Prepared a `/101-blog/:path+` fallback to the legacy Squarespace host, off unless `LEGACY_BLOG_ORIGIN` is set, plus `scripts/check-legacy-blog-origin.mjs` and a cutover runbook in `docs/seo/legacy-squarespace-cutover.md`
 
 ### Remaining
 

@@ -15,15 +15,17 @@ import { Pill } from "@/components/ui/Pill";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import {
   classroomChapters,
+  getChapterLessonCountLabel,
   getFeaturedLessons,
   getLessonsForChapter,
+  getPublishedClassroomChapters,
 } from "@/content/classroom";
 import { images } from "@/content/images";
 
 export const metadata: Metadata = {
   title: "From the Classroom",
   description:
-    "Explore the Child Actor 101 classroom by chapter with a sample lesson library that shows how the parent curriculum will scale.",
+    "Browse the Child Actor 101 classroom by chapter: practical lessons for parents on getting started, representation, auditions, materials, money, wellness, and safety.",
 };
 
 export default function FromTheClassroomPage() {
@@ -34,7 +36,7 @@ export default function FromTheClassroomPage() {
       <PageHero
         label="From the Classroom"
         title="Open to the chapter you need."
-        description="This is the Child Actor 101 learning library prototype: a textbook-style classroom where lessons are organized by chapter, not buried in a traditional blog feed."
+        description="The Child Actor 101 learning library: a textbook-style classroom where lessons are organized by chapter, not buried in a traditional blog feed."
         primaryAction={{
           href: "#chapter-shelves",
           label: "Browse chapters",
@@ -42,23 +44,23 @@ export default function FromTheClassroomPage() {
         }}
         secondaryAction={{
           href: "/from-the-classroom/start-here",
-          label: "Open a sample chapter",
+          label: "Open the Start Here chapter",
           icon: <BookOpenText className="h-5 w-5" />,
         }}
         supportingPoints={[
           "Chapters, not dates",
           "Parents first",
-          "Built to scale into a full library",
+          "Short, practical lessons",
         ]}
       >
         <div className="space-y-5">
           <div className="inline-flex rotate-[-4deg] rounded-full bg-paper px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-chalkboard shadow-soft">
-            Classroom prototype
+            The classroom
           </div>
           <div className="overflow-hidden rounded-[30px] border border-chalk/10 shadow-[0_22px_48px_rgba(7,21,17,0.22)]">
             <Image
               src={images.homeHero.src}
-              alt="Sample Child Actor 101 classroom illustration showing a young actor learning at a desk"
+              alt="Child Actor 101 classroom illustration showing a young actor learning at a desk"
               width={900}
               height={720}
               className="aspect-[4/3] w-full object-cover"
@@ -90,7 +92,7 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Every lesson should answer one practical parent question, teach something useful, and point to the next right step. The prototype below shows that system before the full library is imported."
+            description="Every lesson answers one practical parent question, teaches something useful, and points to the next right step."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
             label="How the Library Works"
             title="The classroom teaches in a sequence, even when readers jump in midstream."
@@ -132,7 +134,7 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="Each card below shows how a chapter shelf can feel: a clear purpose, a planned lesson count, a few sample lesson titles, and a clean way into that part of the classroom."
+            description="Each chapter groups the lessons for one part of the journey: what it covers, the lessons available now, and a clear way in."
             descriptionClassName="mt-4 text-lg leading-8 text-white/72"
             label="Browse by Chapter"
             labelClassName="text-[#bcefdc]"
@@ -140,7 +142,7 @@ export default function FromTheClassroomPage() {
             titleClassName="mt-6 text-white"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {classroomChapters.map((chapter) => (
+            {getPublishedClassroomChapters().map((chapter) => (
               <ChapterShelfCard
                 key={chapter.slug}
                 browseHref={`/from-the-classroom/${chapter.slug}`}
@@ -149,7 +151,7 @@ export default function FromTheClassroomPage() {
                 id={`chapter-${chapter.slug}`}
                 imageAlt={chapter.featuredImageAlt}
                 imageSrc={chapter.featuredImageSrc}
-                lessonCountLabel={chapter.lessonCountLabel}
+                lessonCountLabel={getChapterLessonCountLabel(chapter)}
                 lessons={getLessonsForChapter(chapter.slug).map((lesson) => lesson.title)}
                 title={chapter.title}
               />
@@ -162,10 +164,10 @@ export default function FromTheClassroomPage() {
         <Container>
           <SectionHeader
             className="max-w-3xl"
-            description="A small sample of real lesson titles from the inventory, shown here as article-style cards so the library can feel readable before the full import work begins."
+            description="Short, practical lessons from across the classroom for families who want a clear place to begin."
             descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-            label="Featured Sample Lessons"
-            title="The prototype already reads like a learning library."
+            label="Featured Lessons"
+            title="A few good places to start."
             titleClassName="mt-6 text-chalkboard"
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -188,10 +190,10 @@ export default function FromTheClassroomPage() {
         <Container className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div className="max-w-2xl">
             <SectionHeader
-              description="This section previews the flow every lesson page will share: teacher guidance, concise reading blocks, key takeaways, related resources, and a clean route to the next lesson."
+              description="Every lesson page follows the same flow: teacher guidance, concise reading blocks, key takeaways, related resources, and a clean route to the next lesson."
               descriptionClassName="mt-4 text-lg leading-8 text-ink-soft"
-              label="Lesson Layout Preview"
-              title="Every lesson should feel teachable, not dumped on the page."
+              label="Inside Each Lesson"
+              title="Every lesson is built to be taught, not dumped on the page."
               titleClassName="mt-6 text-chalkboard"
             />
           </div>
@@ -203,7 +205,7 @@ export default function FromTheClassroomPage() {
                   Teacher Note
                 </Pill>
                 <p className="mt-4 text-sm leading-7 text-ink-soft">
-                  A short Corey-style note that frames why this topic matters before the lesson content begins.
+                  A short note from Corey that frames why this topic matters before the lesson begins.
                 </p>
               </div>
               <div className="rounded-[24px] bg-white p-5 shadow-[0_10px_24px_rgba(22,36,58,0.06)]">
@@ -227,7 +229,7 @@ export default function FromTheClassroomPage() {
                   Previous / Next
                 </Pill>
                 <p className="mt-4 text-sm leading-7 text-ink-soft">
-                  Simple lesson navigation so the classroom can scale into a real curriculum over time.
+                  Simple lesson navigation so you can move through a chapter in order.
                 </p>
               </div>
             </div>
@@ -242,7 +244,7 @@ export default function FromTheClassroomPage() {
             ctaLabel="Keep learning"
             description="The Callback and the podcast keep the classroom moving between lessons with fresh guidance, honest industry perspective, and the next useful thing to read or hear."
             label="Classroom Follow-Up"
-            note="This is still a prototype, but the underlying experience is already clear: browse by chapter, open one lesson, and keep moving with confidence."
+            note="Browse by chapter, open one lesson, and keep moving with confidence."
             title="The learning library is built to grow without losing its shape."
           />
         </Container>

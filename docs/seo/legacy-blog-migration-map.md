@@ -7,6 +7,18 @@ Audit of every legacy `https://www.childactor101.com/101-blog/...` article (155,
 - The legacy site could not be fetched from the audit environment, so coverage judgments use the content inventory and the new lesson text, not a side-by-side read of each original post.
 - Important: every classroom lesson today is a short summary (subtitle, summary, three takeaways). None carries the original article body. "Topic match" therefore means the right destination, not equivalent depth.
 
+## Fallback for unmigrated URLs (prepared, off by default)
+
+Categories B–F are not redirected to the new site. An optional catch-all, `/101-blog/:path+` → `${LEGACY_BLOG_ORIGIN}/101-blog/:path+` (307, temporary), is defined in `src/lib/legacy-blog-fallback.ts` and appended after every exact redirect in `next.config.ts`.
+
+- **Off unless `LEGACY_BLOG_ORIGIN` is set at build time.** With it unset, unmigrated URLs return 404 exactly as before.
+- The value must be a bare `https://` origin that is not `childactor101.com`, `www.childactor101.com`, or a `*.vercel.app` host. Anything else fails the build.
+- Exact redirects (category A and `/101-blog`) always win. Query strings and nested paths (`/101-blog/category/...`, `/101-blog/tag/...`) pass through unchanged.
+- A request already on the legacy host is never forwarded again. That is the loop guard if the legacy host is ever attached to this project.
+- Before setting the variable, run `node scripts/check-legacy-blog-origin.mjs https://legacy.childactor101.com --all`. It fails if any unmigrated URL redirects back to the main domain, which is the remaining loop risk.
+- The 3 held articles (B) and 18 announcements (D) are unchanged on the new site. With the fallback on, they resolve on the legacy host.
+- Cutover steps: `docs/seo/legacy-squarespace-cutover.md`.
+
 ## Summary
 
 | Category | Count |

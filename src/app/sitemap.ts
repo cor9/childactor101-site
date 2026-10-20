@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getClassroomStaticLessonParams, classroomChapters } from "@/content/classroom";
+import { getClassroomStaticLessonParams, getPublishedClassroomChapters } from "@/content/classroom";
 import { courses, lessonHasMissingVideo } from "@/content/courses";
 import { SITE_URL } from "@/lib/site-links";
 
@@ -30,7 +30,7 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const chapterRoutes = classroomChapters.map((chapter) => `/from-the-classroom/${chapter.slug}`);
+  const chapterRoutes = getPublishedClassroomChapters().map((chapter) => `/from-the-classroom/${chapter.slug}`);
   const lessonRoutes = getClassroomStaticLessonParams().map(
     ({ chapter, lesson }) => `/from-the-classroom/${chapter}/${lesson}`,
   );

@@ -5,6 +5,7 @@ import {
   legacyBlogRedirects,
 } from "./src/content/legacy-blog-redirects";
 import { buildLegacyBlogFallbackRedirects } from "./src/lib/legacy-blog-fallback";
+import { buildLegacyPagePreservationRedirects } from "./src/lib/legacy-page-preservation";
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -22,7 +23,9 @@ const nextConfig: NextConfig = {
         destination,
         permanent: true,
       })),
-      // Must stay last: exact redirects above win. Off unless LEGACY_BLOG_ORIGIN is set.
+      // Everything below is off unless LEGACY_BLOG_ORIGIN is set, and must stay after the exact
+      // blog redirects above. The blog catch-all stays last so it never shadows an exact rule.
+      ...buildLegacyPagePreservationRedirects(process.env.LEGACY_BLOG_ORIGIN),
       ...buildLegacyBlogFallbackRedirects(process.env.LEGACY_BLOG_ORIGIN),
     ];
   },

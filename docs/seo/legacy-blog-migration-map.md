@@ -15,8 +15,10 @@ Categories B–F are not redirected to the new site. An optional catch-all, `/10
 - The value must be a bare `https://` origin that is not `childactor101.com`, `www.childactor101.com`, or a `*.vercel.app` host. Anything else fails the build.
 - Exact redirects (category A and `/101-blog`) always win. Query strings and nested paths (`/101-blog/category/...`, `/101-blog/tag/...`) pass through unchanged.
 - A request already on the legacy host is never forwarded again. That is the loop guard if the legacy host is ever attached to this project.
-- Before setting the variable, run `node scripts/check-legacy-blog-origin.mjs https://legacy.childactor101.com --all`. It fails if any unmigrated URL redirects back to the main domain, which is the remaining loop risk.
+- Before setting the variable, run `node scripts/check-legacy-blog-origin.mjs https://legacy.childactor101.com --all`. It follows redirects hop by hop and fails if any unmigrated blog URL, preserved page or PDF ends anywhere but a 200 on the legacy host. A hop back to the main domain, a loop, or a PDF URL that returns HTML all fail. That is the remaining loop risk.
+- `npm run test:redirects` rebuilds the site with the gate off and on and re-checks all of the above (74 checks).
 - The 3 held articles (B) and 18 announcements (D) are unchanged on the new site. With the fallback on, they resolve on the legacy host.
+- The 12 other old pages and 2 PDFs are preserved the same way, behind the same variable: `docs/seo/legacy-page-preservation-map.md`.
 - Cutover steps: `docs/seo/legacy-squarespace-cutover.md`.
 
 ## Summary

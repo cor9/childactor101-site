@@ -36,6 +36,9 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Marked the 25 course lessons still missing their original video, kept them out of search and the sitemap, and preserved all lesson content and video references
 - Removed prototype and sample wording from the Classroom index and chapter pages. Chapter cards now show actual lesson counts, and the chapter with no published lessons is hidden (its data is kept)
 - Prepared a `/101-blog/:path+` fallback to the legacy Squarespace host, off unless `LEGACY_BLOG_ORIGIN` is set, plus `scripts/check-legacy-blog-origin.mjs` and a cutover runbook in `docs/seo/legacy-squarespace-cutover.md`
+- Preserved the 12 old non-blog pages and 2 PDFs on the legacy host with 14 temporary redirects behind the same `LEGACY_BLOG_ORIGIN` gate, with exact blog redirects still first. Candidate newer destinations are recorded for later review but not used (`docs/seo/legacy-page-preservation-map.md`)
+- Extended `scripts/check-legacy-blog-origin.mjs` to follow redirects hop by hop, check the 14 preserved URLs, and require real PDF bytes for the PDFs
+- Added `npm run test:redirects` (74 checks: static data, readiness script against stub servers, builds with the gate off and on, invalid values)
 
 ### Remaining
 

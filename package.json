@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0"
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0",
+    "test:redirects": "node scripts/test-legacy-redirects.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",

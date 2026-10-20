@@ -12,8 +12,10 @@
  * Local only: it builds into .next, starts servers on localhost, and touches nothing else.
  */
 import { spawn, spawnSync } from "node:child_process";
-import { readdirSync, readFileSync } from "node:fs";
+import { mkdtempSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import http from "node:http";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
@@ -223,6 +225,77 @@ const refuse = await runReadiness(["https://www.childactor101.com"]);
 check("refuses to check the main domain", refuse.code === 2 && refuse.output.includes("must differ from the main site"), refuse.output);
 
 await Promise.all(stubs.map((server) => new Promise((done) => server.close(done))));
+
+// ---------------------------------------------------------------- 2b. inventory classifier
+section("2b. Inventory classifier (scripts/classify-legacy-urls.mjs)");
+
+const workDir = mkdtempSync(join(tmpdir(), "legacy-inventory-"));
+const sitemapFile = join(workDir, "sitemap.xml");
+const linksFile = join(workDir, "short-links.csv");
+const cleanFile = join(workDir, "clean.txt");
+
+writeFileSync(
+  sitemapFile,
+  `<urlset>
+<url><loc>https://www.childactor101.com/</loc></url>
+<url><loc>https://www.childactor101.com/parent-courses</loc></url>
+<url><loc>https://www.childactor101.com/101-blog/what-it-takes</loc></url>
+<url><loc>https://www.childactor101.com/101-blog/charisma</loc></url>
+<url><loc>https://www.childactor101.com/shop/p/workshop-pass</loc></url>
+<url><loc>https://www.childactor101.com/about-corey</loc></url>
+<url><loc>https://www.childactor101.com/podcast</loc></url>
+<url><loc>https://www.childactor101.com/courses</loc></url>
+</urlset>`,
+);
+writeFileSync(
+  linksFile,
+  [
+    "short,destination",
+    "https://go.Childactor101.com/hEAd,https://www.childactor101.com/S/7TIPS.PDF?utm_source=email",
+    "https://go.childactor101.com/abc,https://buy.stripe.com/xyz",
+    "https://pay.childactor101.com/b/123,https://pay.childactor101.com/b/123",
+    "/account/orders",
+    "",
+  ].join("\n"),
+);
+writeFileSync(cleanFile, ["https://www.childactor101.com/freeguides", "/101-blog/what-it-takes", "https://www.childactor101.com/start-here", ""].join("\n"));
+
+function runClassifier(args) {
+  return spawnSync("node", [`${ROOT}scripts/classify-legacy-urls.mjs`, ...args], { encoding: "utf8" });
+}
+
+const mixed = runClassifier([sitemapFile, linksFile]);
+const mixedOut = mixed.stdout;
+check("mixed inventory exits 1 (unhandled paths and a replaced customer-access path)", mixed.status === 1, `${mixed.status}\n${mixed.stderr}`);
+check(
+  "counts: 1 blog exact, 1 blog fallback, 2 preserved, 2 replaced, 3 unhandled",
+  /blog exact\s+1\b/.test(mixedOut) && /blog fallback\s+1\b/.test(mixedOut) && /preserved\s+2\b/.test(mixedOut) && /new-site route\s+2\b/.test(mixedOut) && /UNHANDLED\s+3\b/.test(mixedOut),
+  mixedOut.slice(0, 500),
+);
+check("flags unhandled /shop/p/... and /account/orders as CUSTOMER ACCESS", /CUSTOMER ACCESS\s+\/shop\/p\/workshop-pass/.test(mixedOut) && /CUSTOMER ACCESS\s+\/account\/orders/.test(mixedOut), mixedOut);
+check("flags /courses as a customer-access path replaced by the new site", /CUSTOMER ACCESS\s+\/courses/.test(mixedOut), mixedOut);
+check("an ordinary unhandled page is listed without the customer-access flag", /\n {19}\/about-corey/.test(mixedOut), mixedOut);
+check("preserved PDF matches despite different case and a query string", !/\/S\/7TIPS\.PDF/.test(mixedOut.split("Unhandled paths:")[1] ?? ""), mixedOut);
+check("lists subdomains whose DNS must stay (go., pay.) and ignores external hosts", mixedOut.includes("go.childactor101.com") && mixedOut.includes("pay.childactor101.com") && !mixedOut.includes("buy.stripe.com"), mixedOut);
+
+const json = runClassifier([sitemapFile, linksFile, "--json"]);
+let entries = [];
+try {
+  entries = JSON.parse(json.stdout.slice(json.stdout.indexOf("[\n")));
+} catch {
+  // reported by the check below
+}
+check(
+  "--json prints reviewable entries: customer-access paths are high risk, titles are TODO, no destination guessed",
+  entries.length === 3 && entries.filter((stub) => stub.risk === "high").length === 2 && entries.every((stub) => stub.title === "TODO" && stub.eventualDestination === null),
+  json.stdout.slice(-400),
+);
+
+const clean = runClassifier([cleanFile]);
+check("an inventory the repo already handles exits 0", clean.status === 0, `${clean.status}\n${clean.stdout}`);
+
+const noArgs = runClassifier([]);
+check("no input file prints usage and exits 2", noArgs.status === 2 && noArgs.stderr.includes("Usage"), noArgs.stderr);
 
 // ---------------------------------------------------------------- 3. gate off
 section("3. Production build, LEGACY_BLOG_ORIGIN unset");

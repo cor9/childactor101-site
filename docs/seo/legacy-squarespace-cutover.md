@@ -10,13 +10,13 @@ Plan: keep the current Squarespace site reachable at `legacy.childactor101.com`,
 - A catch-all fallback for every other `/101-blog/...` URL, **off until `LEGACY_BLOG_ORIGIN` is set** (see `docs/seo/legacy-blog-migration-map.md`).
 - 14 temporary redirects that preserve the 12 old non-blog pages and 2 PDFs on the legacy host, behind the same variable (see `docs/seo/legacy-page-preservation-map.md`). They are not redirected to new-site equivalents because nobody has compared the old page contents.
 - `scripts/check-legacy-blog-origin.mjs` checks that the legacy host serves the old blog paths, those 12 pages, and those 2 PDFs without bouncing back to the main domain. It does not cover store, course, member, account, checkout or delivery paths.
-- `npm run test:redirects` re-runs the redirect tests locally (74 checks).
+- `npm run test:redirects` re-runs the redirect tests locally (84 checks).
 
 The five phases below run in this order. Do not start a phase until the one before it passes.
 
 ## Phase 1: Connect and verify `legacy.childactor101.com` (main site stays live)
 
-1. **Record current DNS.** Export every record for `childactor101.com`: apex, `www`, MX, SPF/DKIM/DMARC TXT, verification TXT records, and every existing subdomain (`directory`, `resumes`, `pages`, `book101`, `talent`, `selftapetips`, `memorize`, `zoomcb`, `collegechecklist`, `prep101`, `reader101`, `boldchoices`, `101training`, `auditionmastery`, `characterlab`, `coaching`). This is the rollback copy. None of these may change during cutover except `legacy`, apex, and `www`.
+1. **Record current DNS.** Export every record for `childactor101.com`: apex, `www`, MX, SPF/DKIM/DMARC TXT, verification TXT records, and every existing subdomain (`directory`, `resumes`, `pages`, `book101`, `talent`, `selftapetips`, `memorize`, `zoomcb`, `collegechecklist`, `prep101`, `reader101`, `boldchoices`, `101training`, `auditionmastery`, `characterlab`, `coaching`, `pay` (Stripe checkout domain), `go` (Short.io short links)). This is the rollback copy. None of these may change during cutover except `legacy`, apex, and `www`.
 2. **Add `legacy.childactor101.com` to the Squarespace site** as an additional domain, using the exact DNS records Squarespace shows for it. Do not use values from memory. Leave `www.childactor101.com` as the primary domain for now.
 3. **Wait for Squarespace to show the subdomain as connected with SSL active.** `www.childactor101.com` must keep working throughout.
 
@@ -31,10 +31,12 @@ Do not change Stripe settings.
    - Check every delivery or download link in the receipt and confirmation pages, and note which host each one points to. A link that hard-codes `www.childactor101.com` will break once `www` moves to Vercel. Add it to the list in step 9.
 7. **Existing customer access:** log in with an existing customer account, reset a password, and confirm order history.
 8. **Course and video access:** log in as an existing course buyer and play a video from every course and member area. If videos are embedded from Vimeo or YouTube with domain-level privacy, add `legacy.childactor101.com` to each allowlist first. Otherwise playback will fail on the new host.
-9. **Full Squarespace sitemap and customer-access routes (required before Phase 4).** Export the complete page list from Squarespace (`/sitemap.xml` and the pages panel) and add any path that customers or search engines use beyond the 14 already preserved. Every store, course, member-area, account, cart, checkout and delivery path must be on this list. This is a separate verification, and the readiness script does not cover it.
+9. **Complete the customer-access inventory (required before Phase 3).** Follow `docs/seo/squarespace-customer-access-inventory.md`: export the Squarespace sitemap, pages, store and member areas, the Short.io links, and the Stripe Payment Link redirect URLs, then run `node scripts/classify-legacy-urls.mjs <exports>`. Add every unhandled path to `src/content/legacy-preserved-pages.json` and re-run `npm run test:redirects`. The inventory is **not complete as of this writing**, and the readiness script does not cover these paths until they are added.
 10. **Links customers already have:** receipts, delivery links, and course emails already sent link to `www.childactor101.com/...`. After cutover those land on Vercel. List the Squarespace paths customers use (account, member area, course, product, checkout, download and delivery links) and decide whether each needs its own forward to the legacy host. Only `/101-blog/...` is forwarded today. Any new forward needs approval and must be in place before Phase 4.
 
 ## Phase 3: Make the legacy subdomain Squarespace's primary domain
+
+**Do not start this phase until the gate in `docs/seo/squarespace-customer-access-inventory.md` is met** (inventory finished, no customer-access path left unhandled or replaced without a decision, and the `childactor101.sbs` Stripe success redirect issue resolved or accepted).
 
 11. **Set `legacy.childactor101.com` as the primary domain in Squarespace.** From this point Squarespace may redirect `www` visitors to `legacy.`. That is expected, but keep the window until Phase 4 short.
 12. **Check for unwanted redirects.** `https://legacy.childactor101.com/101-blog/<slug>` must answer directly and must not redirect to `www.` or the apex. Then run:

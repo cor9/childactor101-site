@@ -60,4 +60,4 @@ Sorted by risk. "Candidate newer destination" is a lead for later review only. *
 
 - Squarespace may serve `/s/...pdf` by redirecting to its own file host. The readiness script follows that and passes it only when real PDF bytes arrive. This has not been observed on the real site.
 - The old pages themselves have not been read. Everything above is based on titles in the inventory.
-- Customer-access, store, account, checkout and delivery paths are not in this list. They come from the full Squarespace sitemap, a separate check required before the domain switch (see `docs/seo/legacy-squarespace-cutover.md`).
+- Customer-access, store, account, checkout and delivery paths are not in this list. They come from the full inventory in `docs/seo/squarespace-customer-access-inventory.md`, which is **incomplete**. `node scripts/classify-legacy-urls.mjs` checks any new export against this list.

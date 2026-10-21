@@ -82,8 +82,8 @@ VIMEO_MAP = {
     "377218287": bunny("99cad305-1d4a-41eb-b9e2-40203a2b8b47", "Mission For You"),
     "377218581": bunny("2e57a4c2-a5ed-4e8b-ae0e-89c8e5e004bb", "Fences"),
     "377218336": bunny("ef3f1d7e-1cf5-44ec-9a17-d6e549c4d005", "Don't be scared"),
-    "288832063": {"kind": "bunny", "guid": "893a07b7-0282-4740-baa0-16e7966fb3f4", "title": "Beautiful Scar",
-                  "note": "Verified via live Vimeo oEmbed (title 'Beautiful Scar'). Lives in the main Bunny library, outside the No Excuses! collection."},
+    "288832063": {"kind": "bunny", "guid": "893a07b7-0282-4740-baa0-16e7966fb3e4", "title": "Beautiful Scar",
+                  "note": "Beautiful Scar. The earlier ...fb3f4 id returned 404 in library 712901; this is the id Corey supplied from the Bunny player URL."},
     "387346357": bunny("2db093b6-05c7-419a-b65c-57b097abb8af", "Intro Two"),
     "387349950": bunny("5199be9f-8ade-4fd7-99da-c04766a72770", "Sound is HUGE"),
     "387392930": bunny("14128357-4e1f-49a8-b8b9-7059a429badb", "My lighting obsession"),
@@ -119,7 +119,7 @@ VIMEO_MAP = {
     "371529420": bunny("367dd260-f086-4534-a4b0-e06273c9c568", "Two Actor Clip"),  # supplied by Corey
     "344516472": bunny("6193ad09-46a1-4315-9cbe-4876b55c8147", "Three Shot Example"),  # supplied by Corey
     "377218960": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "The Style (tone)"),  # supplied by Corey
-    "377219246": bunny("893a07b7-0282-4740-baa0-16e7966fb3f4", "Beautiful Scar"),  # Mono-Clip; supplied by Corey (same video as Beautiful Scar above)
+    "377219246": bunny("893a07b7-0282-4740-baa0-16e7966fb3e4", "Beautiful Scar"),  # Mono-Clip; supplied by Corey (same video as Beautiful Scar above)
     "387357732": bunny("b59870ff-3eb4-4e3b-9563-1efeef1062ff", "Welcome Back 2"),  # supplied by Corey
     "387347988": bunny("7f569a6b-8f87-4ccc-a250-2f09a93aedbf", "Welcome Back 3"),  # supplied by Corey
     "387348581": bunny("f4c48c85-90e1-4bf4-ba79-3d28b067a23c", "Welcome Back 4"),  # supplied by Corey

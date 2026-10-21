@@ -181,12 +181,9 @@
         },
         {
           "type": "video",
-          "provider": "vimeo",
-          "id": "336444157",
-          "missing": {
-            "note": "Dacre Montgomery Stranger Things audition tape (third-party example). Vimeo is dead; decide on replacement or removal.",
-            "candidates": []
-          },
+          "provider": "youtube",
+          "id": "cJ1zhq3yNBM",
+          "legacyVimeoId": "336444157",
           "align": "left"
         }
       ]
@@ -238,11 +235,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "395384847",
-          "missing": {
-            "note": "Nicholas' black-and-white self tape example (client example).",
-            "candidates": [
-              "46fa375d-1ba0-4692-a857-bf128af53bfa - Nicholas Young - Scared.mp4 (main library)"
-            ]
+          "bunny": {
+            "guid": "24a86371-7d6a-455f-ac0d-1b40b2d5991f",
+            "title": "Nicholas's black-and-white self tape",
+            "needsReview": false
           },
           "align": "left"
         },

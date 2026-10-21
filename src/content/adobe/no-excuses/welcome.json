@@ -107,12 +107,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218725",
-          "missing": {
-            "note": "Corey bio video on the welcome page. No collection match.",
-            "candidates": [
-              "4ecd0502-fcd3-49be-b552-8c64b3adf5e0 - Corey Ralston Reel.mp4",
-              "5783a098-acad-48c4-b094-63a129d7cd0b - Corey Ralston Reel (1).mp4"
-            ]
+          "bunny": {
+            "guid": "ed3ea1af-ac78-4c13-b063-c876cf0a5348",
+            "title": "Corey Ralston bio",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -260,11 +258,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "387252761",
-          "missing": {
-            "note": "'Why are Clips soo Important?' teaching video.",
-            "candidates": [
-              "bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"
-            ]
+          "bunny": {
+            "guid": "a855464e-d499-4221-98fa-dd884df2146d",
+            "title": "Why are Clips soo Important?",
+            "needsReview": false
           },
           "align": "left"
         },

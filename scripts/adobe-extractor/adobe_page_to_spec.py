@@ -31,7 +31,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 from page_routes import PAGE_ROUTES
-from video_map import VIMEO_MAP
+from video_map import VIMEO_MAP, vimeo_title
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_AGENT = {"User-Agent": "Mozilla/5.0"}
@@ -266,10 +266,12 @@ class PageExtractor:
             video = {"type": "video", "provider": "vimeo", "id": vimeo_id}
             if mapped and mapped.get("kind") == "bunny":
                 video["bunny"] = {"guid": mapped["guid"], "title": mapped.get("title"), "needsReview": bool(mapped.get("needsReview"))}
-            elif mapped and mapped.get("kind") in ("vimeo", "youtube"):
+            elif mapped and mapped.get("kind") == "youtube":
+                return {"type": "video", "provider": "youtube", "id": mapped["id"], "legacyVimeoId": vimeo_id}
+            elif mapped and mapped.get("kind") == "vimeo":
                 video["thirdParty"] = True
             else:
-                video["missing"] = {"note": (mapped or {}).get("note", "No mapping recorded."), "candidates": (mapped or {}).get("candidates", [])}
+                video["missing"] = {"note": (mapped or {}).get("note") or f"No mapping recorded. Vimeo library title: {vimeo_title(vimeo_id)}", "candidates": (mapped or {}).get("candidates", [])}
             return video
         match = re.search(r"youtube(?:-nocookie)?\.com/embed/([\w-]+)", src)
         if match:

@@ -94,14 +94,15 @@ The original pages embedded Vimeo videos, which Corey migrated to Bunny Stream (
 
 - **Mapped to Bunny** (`bunny(guid, title)`): rendered as the Bunny player. `review=True` marks a
   medium-confidence match worth double-checking.
-- **Third-party** (`external_vimeo(...)` for a still-live Vimeo video, and any YouTube embed): the original
+- **Third-party** (`external_vimeo(...)` for a still-live Vimeo video, `youtube(id, title)` for a Vimeo embed replaced by a YouTube video, and any YouTube embed): the original
   embed is preserved as-is.
-- **Unresolved** (`missing(...)`, or any Vimeo id not in the map): a neutral gray "Video coming soon" box in the exact
+- **Unresolved** (`missing(...)`, or any Vimeo id not in the map; none remain in the 17 current pages): a neutral gray "Video coming soon" box in the exact
   original position, with the legacy Vimeo id kept in the spec and `data-legacy-vimeo` on the element.
   Placeholders have an anchor: `/courses/<course>/<slug>#video-N` jumps to the Nth video on the page.
 
 To fill a placeholder: replace its `missing(...)` entry with `bunny("<guid>", "<title>")` in `video_map.py` and
-re-run the extractor for the pages containing it. Nothing is guessed; unknown videos stay placeholders.
+re-run the extractor for the pages containing it. Nothing is guessed; unknown videos stay placeholders. `vimeo_library.csv` is an export of Corey's Vimeo library
+(id, title, duration); match a legacy id's Vimeo title to the Bunny title before mapping it, and check durations when titles are generic.
 
 ## 7. Network access needed
 
@@ -149,6 +150,7 @@ At runtime the site additionally embeds `iframe.mediadelivery.net` (Bunny), `www
 |---|---|
 | `adobe_page_to_spec.py` | the extractor |
 | `video_map.py` | Vimeo id -> Bunny / third-party / placeholder |
+| `vimeo_library.csv` | Vimeo id -> original title/duration, for confirming Bunny matches |
 | `page_routes.py` | Adobe page id -> local route (internal links) |
 | `manifest.json` | pages archived so far (re-run them all with `--manifest`) |
 | `checks/compare-to-live.cjs` | measure a recreated page against the live original |

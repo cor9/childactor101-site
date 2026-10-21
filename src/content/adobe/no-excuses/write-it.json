@@ -32,10 +32,9 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218224",
-          "bunny": {
-            "guid": "95d84379-5f4a-4719-b58f-4c81068bcea8",
-            "title": "Research",
-            "needsReview": true
+          "missing": {
+            "note": "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match.",
+            "candidates": []
           },
           "align": "left"
         },
@@ -150,9 +149,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218442",
-          "missing": {
-            "note": "Genres & Types teaching video. Unverified collection candidates: Calendar (b59870ff-3eb4-4e3b-9563-1efeef1062ff), Casting Snafus (7f569a6b-8f87-4ccc-a250-2f09a93aedbf), Equipment Review (7bcd3991-6e37-4a61-86cb-25e0abc220cb), Plan B (73f63b46-d716-42ee-8b70-df2348e8408b), Producer Hat (0caf5463-c3d9-4d4b-a332-1c29d4a5ded7), The Test (1705e2e7-907c-468d-8241-5b63b9b3cc08), Mr Rogers (ed3ea1af-ac78-4c13-b063-c876cf0a5348), The 80-20 Rule (bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa), Untitled (5) (f5b0854e-6c52-44f3-ae0d-ab13c364d774), Untitled (6) (a855464e-d499-4221-98fa-dd884df2146d), Welcome to Mini Film School (2b5436fd-2083-4b52-84ff-34c52d8307a3), Da Crew (e75d57f3-78d6-4185-b2e8-7b7b7c9fff78).",
-            "candidates": []
+          "bunny": {
+            "guid": "f4819274-3445-4552-875a-d2e72ba0cf72",
+            "title": "Genres & Types",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -263,9 +263,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "324792551",
-          "missing": {
-            "note": "Re-worked Shameless scene example clip (student sample). Vimeo is dead; no candidate identified.",
-            "candidates": []
+          "bunny": {
+            "guid": "041962e4-c417-4b2b-81ab-237951eb25b7",
+            "title": "Re-worked Shameless Scene",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -335,9 +336,9 @@
           "provider": "vimeo",
           "id": "377218490",
           "bunny": {
-            "guid": "3ae82d41-3502-4076-b81d-a136e539bd62",
-            "title": "Location, Location, Location",
-            "needsReview": true
+            "guid": "bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa",
+            "title": "The 80/20 Rule",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -373,9 +374,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "371529420",
-          "missing": {
-            "note": "Two-actor clip example (student sample). Vimeo is dead; no candidate identified.",
-            "candidates": []
+          "bunny": {
+            "guid": "367dd260-f086-4534-a4b0-e06273c9c568",
+            "title": "Two Actor Clip",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -679,11 +681,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218960",
-          "missing": {
-            "note": "Tone / writing-for-genre teaching video.",
-            "candidates": [
-              "bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa - The 80-20 Rule.mp4"
-            ]
+          "bunny": {
+            "guid": "95d84379-5f4a-4719-b58f-4c81068bcea8",
+            "title": "The Style (tone)",
+            "needsReview": false
           },
           "align": "left"
         }
@@ -821,11 +822,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377219246",
-          "missing": {
-            "note": "Second monologue-clip video.",
-            "candidates": [
-              "bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"
-            ]
+          "bunny": {
+            "guid": "1705e2e7-907c-468d-8241-5b63b9b3cc08",
+            "title": "Mono-Clip",
+            "needsReview": false
           },
           "align": "left"
         },

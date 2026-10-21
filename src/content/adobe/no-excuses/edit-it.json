@@ -540,16 +540,9 @@
         },
         {
           "type": "video",
-          "provider": "vimeo",
-          "id": "391760430",
-          "missing": {
-            "note": "Corey's Enlight (Videoleap) app overview. Also embedded on Perfect Self Tape 'Quick Editing'.",
-            "candidates": [
-              "f5b0854e-6c52-44f3-ae0d-ab13c364d774 - Untitled (5).mp4",
-              "a855464e-d499-4221-98fa-dd884df2146d - Untitled (6).mp4",
-              "1067ad2b-49aa-48e6-a4ed-cc533e61ec07 - Videoleap-459739BD export.mp4 (main library)"
-            ]
-          },
+          "provider": "youtube",
+          "id": "AP23350iWzM",
+          "legacyVimeoId": "391760430",
           "align": "left"
         }
       ]
@@ -1191,11 +1184,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "390282478",
-          "missing": {
-            "note": "Overlays / finishing teaching video.",
-            "candidates": [
-              "88c59b5d-ae82-443c-bc8e-98a74f358c68 - Color Correction.mp4"
-            ]
+          "bunny": {
+            "guid": "88c59b5d-ae82-443c-bc8e-98a74f358c68",
+            "title": "Overlays & labeling",
+            "needsReview": false
           },
           "align": "left"
         }

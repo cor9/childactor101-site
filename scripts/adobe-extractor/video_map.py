@@ -47,6 +47,24 @@ def missing(vimeo_id, note, candidates=None):
     return video
 
 
+def vimeo_title(vimeo_id):
+    """Title of a video in Corey's Vimeo library export (vimeo_library.csv), or None. Use it to match ids to Bunny titles."""
+    import csv, os
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vimeo_library.csv")
+    if not os.path.exists(path):
+        return None
+    with open(path, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            if row["Video ID"] == vimeo_id:
+                return f'{row["Video Title"]} ({row["Duration"]}s)'
+    return None
+
+
+def youtube(youtube_id, title):
+    """A Vimeo embed that was replaced by a YouTube video (rendered as a plain YouTube embed)."""
+    return {"kind": "youtube", "id": youtube_id, "title": title}
+
+
 def external_vimeo(vimeo_id, title):
     return {"kind": "vimeo", "vimeoId": vimeo_id, "title": title, "thirdParty": True,
             "note": "Third-party reference video preserved from the legacy course. Still live on Vimeo."}
@@ -77,54 +95,40 @@ VIMEO_MAP = {
                   "title": "The role of the reader - Parent Self Tape course for Child Actor 101",
                   "note": "Bunny copy is the full 69-minute parent-course session; the legacy page described 'excerpts'."},
     # --- MEDIUM confidence (include, flagged needsReview) ---
-    "377218224": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "Research", review=True),
-    "377218490": bunny("3ae82d41-3502-4076-b81d-a136e539bd62", "Location, Location, Location", review=True),
+    "377218490": bunny("bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa", "The 80/20 Rule"),  # Vimeo title confirmed via vimeo_library.csv
     "387349854": bunny("591fc3a7-f974-4ab1-8ca0-09a4d7e59629", "Let There Be Light", review=True),
     "387501390": bunny("d0a15047-7b7c-4995-8f9a-984170135d60", "Learn from my Mistakes", review=True),
-    "387353415": bunny("f4c48c85-90e1-4bf4-ba79-3d28b067a23c", "Clip Day", review=True),
+    "387353415": bunny("2b5436fd-2083-4b52-84ff-34c52d8307a3", "Welcome to Mini Film School"),  # Vimeo title confirmed via vimeo_library.csv
     "393058496": bunny("435006c3-5890-4e01-8b65-81ad43b099d6", "Parent Coaching Tips", review=True),
     "334221482": bunny("d75ef465-5688-4d80-8ea2-59c595e44df3", "What is a Slate Shot-", review=True),
     # --- External third-party Vimeo, still live ---
     "71838170": external_vimeo("71838170", "Who's Who on a Movie Crew (Vimeo Video School, 2013)"),
     "143619334": external_vimeo("143619334", "Why Props Matter (Rishi Kaneria, 2015)"),
-    # --- LOW / UNMATCHED: preserved positions, no guessing ---
-    "377218725": missing("377218725", "Corey bio video on the welcome page. No collection match.",
-                         ["4ecd0502-fcd3-49be-b552-8c64b3adf5e0 - Corey Ralston Reel.mp4",
-                          "5783a098-acad-48c4-b094-63a129d7cd0b - Corey Ralston Reel (1).mp4"]),
-    "387252761": missing("387252761", "'Why are Clips soo Important?' teaching video.",
-                         ["bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"]),
-    "377218442": missing("377218442", "Genres & Types teaching video. " + S2_POOL),
-    "324792551": missing("324792551", "Re-worked Shameless scene example clip (student sample). Vimeo is dead; no candidate identified."),
-    "371529420": missing("371529420", "Two-actor clip example (student sample). Vimeo is dead; no candidate identified."),
-    "344516472": missing("344516472", "Three shot example sample clip. Vimeo is dead; no candidate identified."),
-    "377218960": missing("377218960", "Tone / writing-for-genre teaching video.",
-                         ["bf11ebe6-d5ac-4cde-a0cb-fa1675aa3cfa - The 80-20 Rule.mp4"]),
-    "377219246": missing("377219246", "Second monologue-clip video.",
-                         ["bd6bf1c8-d47b-4ed4-bbc1-1c2d0d10f3e0 - Make a Clip.mp4"]),
-    "387357732": missing("387357732", "Plan & Prep intro block video 2 of 4. " + S2_POOL),
-    "387347988": missing("387347988", "Plan & Prep intro block video 3 of 4. " + S2_POOL),
-    "387348581": missing("387348581", "Plan & Prep intro block video 4 of 4. " + S2_POOL),
-    "387350883": missing("387350883", "Plan & Prep closing block video 1 of 5. " + S2_POOL),
-    "387350986": missing("387350986", "Plan & Prep closing block video 2 of 5. " + S2_POOL),
-    "387352092": missing("387352092", "Plan & Prep closing block video 3 of 5. " + S2_POOL),
-    "387351912": missing("387351912", "Plan & Prep closing block video 4 of 5. " + S2_POOL),
-    "387352511": missing("387352511", "Plan & Prep closing block video 5 of 5. " + S2_POOL),
-    "387612134": missing("387612134", "Second 'Take a Chill Pill' video.",
-                         ["ed3ea1af-ac78-4c13-b063-c876cf0a5348 - Mr Rogers.mp4"]),
-    "390282478": missing("390282478", "Overlays / finishing teaching video.",
-                         ["88c59b5d-ae82-443c-bc8e-98a74f358c68 - Color Correction.mp4"]),
-    "391760430": missing("391760430", "Corey's Enlight (Videoleap) app overview. Also embedded on Perfect Self Tape 'Quick Editing'.",
-                         ["f5b0854e-6c52-44f3-ae0d-ab13c364d774 - Untitled (5).mp4",
-                          "a855464e-d499-4221-98fa-dd884df2146d - Untitled (6).mp4",
-                          "1067ad2b-49aa-48e6-a4ed-cc533e61ec07 - Videoleap-459739BD export.mp4 (main library)"]),
-    "396114925": missing("396114925", "'A very important message from Corey', next to child internet-safety links.",
-                         ["fe7bb938-4235-4a64-b399-73d3dd8f8fe2 - coaching_priority (720p).mp4",
-                          "b2d1c50a-4c38-498a-832c-b0fa0b227898 - Net Safety.mp4 (main library)"]),
-    "359315033": missing("359315033", "Video about Vimeo hosting. Possibly a Vimeo-produced promo (external). No candidate identified."),
-    "396116394": missing("396116394", "Course wrap-up video ('And That is... A Wrap!').",
-                         ["13ec489d-8eb4-4fc9-9494-2645061082ea - 5-1.mp4",
-                          "7f0d7d40-7914-4b7c-beb2-72e809a9ffa7 - The e n d.mp4 (main library)"]),
-    "336444157": missing("336444157", "Dacre Montgomery Stranger Things audition tape (third-party example). Vimeo is dead; decide on replacement or removal."),
-    "395384847": missing("395384847", "Nicholas' black-and-white self tape example (client example).",
-                         ["46fa375d-1ba0-4692-a857-bf128af53bfa - Nicholas Young - Scared.mp4 (main library)"]),
+    # Vimeo title is "Mikey, Likes It!" (vimeo_library.csv). Earlier guess of Bunny "Research" was wrong.
+    "377218224": missing("377218224", "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match."),
+    # --- Supplied by Corey (formerly unmatched placeholders) ---
+    "377218725": bunny("ed3ea1af-ac78-4c13-b063-c876cf0a5348", "Corey Ralston bio"),  # supplied by Corey
+    "387252761": bunny("a855464e-d499-4221-98fa-dd884df2146d", "Why are Clips soo Important?"),  # supplied by Corey
+    "377218442": bunny("f4819274-3445-4552-875a-d2e72ba0cf72", "Genres & Types"),  # supplied by Corey
+    "324792551": bunny("041962e4-c417-4b2b-81ab-237951eb25b7", "Re-worked Shameless Scene"),  # supplied by Corey
+    "371529420": bunny("367dd260-f086-4534-a4b0-e06273c9c568", "Two Actor Clip"),  # supplied by Corey
+    "344516472": bunny("6193ad09-46a1-4315-9cbe-4876b55c8147", "Three Shot Example"),  # supplied by Corey
+    "377218960": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "The Style (tone)"),  # supplied by Corey
+    "377219246": bunny("1705e2e7-907c-468d-8241-5b63b9b3cc08", "Mono-Clip"),  # supplied by Corey
+    "387357732": bunny("b59870ff-3eb4-4e3b-9563-1efeef1062ff", "Welcome Back 2"),  # supplied by Corey
+    "387347988": bunny("7f569a6b-8f87-4ccc-a250-2f09a93aedbf", "Welcome Back 3"),  # supplied by Corey
+    "387348581": bunny("f4c48c85-90e1-4bf4-ba79-3d28b067a23c", "Welcome Back 4"),  # supplied by Corey
+    "387350883": bunny("e75d57f3-78d6-4185-b2e8-7b7b7c9fff78", "Plan & Prep closing 1"),  # supplied by Corey
+    "387350986": bunny("fe7bb938-4235-4a64-b399-73d3dd8f8fe2", "Plan & Prep closing 2"),  # supplied by Corey
+    "387352092": bunny("3ae82d41-3502-4076-b81d-a136e539bd62", "Plan & Prep closing 3"),  # supplied by Corey
+    "387351912": bunny("73f63b46-d716-42ee-8b70-df2348e8408b", "Plan & Prep closing 4"),  # supplied by Corey
+    "387352511": bunny("0caf5463-c3d9-4d4b-a332-1c29d4a5ded7", "Plan & Prep closing 5"),  # supplied by Corey
+    "387612134": bunny("2ecc9825-90cb-496f-8760-2357d94b2188", "Take a Chill Pill"),  # supplied by Corey
+    "390282478": bunny("88c59b5d-ae82-443c-bc8e-98a74f358c68", "Overlays & labeling"),  # supplied by Corey
+    "391760430": youtube("AP23350iWzM", "Corey's Enlight overview"),  # supplied by Corey
+    "396114925": bunny("b2d1c50a-4c38-498a-832c-b0fa0b227898", "A very important message from Corey"),  # supplied by Corey
+    "359315033": youtube("zAFzZ6O2iOA", "Vimeo video hosting"),  # supplied by Corey
+    "396116394": bunny("7f0d7d40-7914-4b7c-beb2-72e809a9ffa7", "And That is... A Wrap!"),  # supplied by Corey
+    "336444157": youtube("cJ1zhq3yNBM", "Dacre Montgomery Stranger Things audition"),  # supplied by Corey
+    "395384847": bunny("24a86371-7d6a-455f-ac0d-1b40b2d5991f", "Nicholas's black-and-white self tape"),  # supplied by Corey
 }

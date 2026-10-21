@@ -533,12 +533,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "396114925",
-          "missing": {
-            "note": "'A very important message from Corey', next to child internet-safety links.",
-            "candidates": [
-              "fe7bb938-4235-4a64-b399-73d3dd8f8fe2 - coaching_priority (720p).mp4",
-              "b2d1c50a-4c38-498a-832c-b0fa0b227898 - Net Safety.mp4 (main library)"
-            ]
+          "bunny": {
+            "guid": "b2d1c50a-4c38-498a-832c-b0fa0b227898",
+            "title": "A very important message from Corey",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -720,12 +718,9 @@
         },
         {
           "type": "video",
-          "provider": "vimeo",
-          "id": "359315033",
-          "missing": {
-            "note": "Video about Vimeo hosting. Possibly a Vimeo-produced promo (external). No candidate identified.",
-            "candidates": []
-          },
+          "provider": "youtube",
+          "id": "zAFzZ6O2iOA",
+          "legacyVimeoId": "359315033",
           "align": "left"
         },
         {
@@ -1087,12 +1082,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "396116394",
-          "missing": {
-            "note": "Course wrap-up video ('And That is... A Wrap!').",
-            "candidates": [
-              "13ec489d-8eb4-4fc9-9494-2645061082ea - 5-1.mp4",
-              "7f0d7d40-7914-4b7c-beb2-72e809a9ffa7 - The e n d.mp4 (main library)"
-            ]
+          "bunny": {
+            "guid": "7f0d7d40-7914-4b7c-beb2-72e809a9ffa7",
+            "title": "And That is... A Wrap!",
+            "needsReview": false
           },
           "align": "left"
         },

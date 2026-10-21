@@ -34,9 +34,9 @@
           "provider": "vimeo",
           "id": "387353415",
           "bunny": {
-            "guid": "f4c48c85-90e1-4bf4-ba79-3d28b067a23c",
-            "title": "Clip Day",
-            "needsReview": true
+            "guid": "2b5436fd-2083-4b52-84ff-34c52d8307a3",
+            "title": "Welcome to Mini Film School",
+            "needsReview": false
           },
           "align": "left"
         }
@@ -984,9 +984,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "344516472",
-          "missing": {
-            "note": "Three shot example sample clip. Vimeo is dead; no candidate identified.",
-            "candidates": []
+          "bunny": {
+            "guid": "6193ad09-46a1-4315-9cbe-4876b55c8147",
+            "title": "Three Shot Example",
+            "needsReview": false
           },
           "align": "left"
         }
@@ -1569,11 +1570,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "387612134",
-          "missing": {
-            "note": "Second 'Take a Chill Pill' video.",
-            "candidates": [
-              "ed3ea1af-ac78-4c13-b063-c876cf0a5348 - Mr Rogers.mp4"
-            ]
+          "bunny": {
+            "guid": "2ecc9825-90cb-496f-8760-2357d94b2188",
+            "title": "Take a Chill Pill",
+            "needsReview": false
           },
           "align": "left"
         }

@@ -44,7 +44,7 @@ function routesFromContent() {
     if (!fs.statSync(dir).isDirectory()) continue;
     for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
       const slug = file.replace(/\.json$/, "");
-      routes.push(slug === "index" ? `/courses/${course}` : `${routeBase(course)}/${slug}`);
+      routes.push(slug === "index" ? routeBase(course) : `${routeBase(course)}/${slug}`);
     }
   }
   return routes;

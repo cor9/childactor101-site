@@ -62,7 +62,7 @@ export default function CoursesIndexPage() {
                   </p>
                   {presentation.promise ? <p className="mt-5 font-display text-xl text-chalkboard">{presentation.promise}</p> : null}
                   <span className="mt-6 inline-flex rounded-full bg-[linear-gradient(180deg,#3d845a_0%,#2f704d_100%)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_28px_rgba(35,79,59,0.25)]">
-                    {course.slug === "no-excuses" ? "Learn more" : "Open the course"}
+                    {course.slug === "no-excuses" || course.slug === "perfect-self-tape" ? "Learn more" : "Open the course"}
                   </span>
                 </div>
               </Link>

@@ -20,7 +20,7 @@ export type {
 export const courses: Course[] = [noExcusesCourse, perfectSelfTapeCourse];
 
 /** Courses that are sold behind a private link; the legacy public module routes must not serve them. */
-const PRIVATE_COURSES = new Set(["no-excuses"]);
+const PRIVATE_COURSES = new Set(["no-excuses", "perfect-self-tape"]);
 
 const courseMap = new Map(courses.map((course) => [course.slug, course]));
 

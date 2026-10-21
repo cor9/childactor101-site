@@ -82,7 +82,7 @@ export default function NoExcusesSalesPage() {
       </section>
 
       <section>
-        <img alt="" className="block w-full" src={`${promo}/noexcusesBANNER.jpg`} />
+        <img alt="" className="block w-full" src={`${promo}/noexcusesBANNER.png`} />
       </section>
 
       <section className="px-4 py-14 sm:px-6 lg:px-8 lg:py-20">

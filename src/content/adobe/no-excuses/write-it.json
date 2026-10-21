@@ -238,7 +238,7 @@
         {
           "type": "video",
           "provider": "youtube",
-          "id": "hkxRu3Osc0U",
+          "id": "q4j0btglDCM",
           "align": "left"
         },
         {
@@ -261,9 +261,13 @@
         },
         {
           "type": "video",
-          "provider": "youtube",
-          "id": "q4j0btglDCM",
-          "legacyVimeoId": "324792551",
+          "provider": "vimeo",
+          "id": "324792551",
+          "bunny": {
+            "guid": "041962e4-c417-4b2b-81ab-237951eb25b7",
+            "title": "Re-worked Shameless Scene",
+            "needsReview": false
+          },
           "align": "left"
         },
         {

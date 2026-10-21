@@ -31,7 +31,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 from page_routes import PAGE_ROUTES
-from video_map import VIMEO_MAP, vimeo_title
+from video_map import VIMEO_MAP, YOUTUBE_REPLACEMENTS, vimeo_title
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_AGENT = {"User-Agent": "Mozilla/5.0"}
@@ -275,7 +275,7 @@ class PageExtractor:
             return video
         match = re.search(r"youtube(?:-nocookie)?\.com/embed/([\w-]+)", src)
         if match:
-            return {"type": "video", "provider": "youtube", "id": match.group(1)}
+            return {"type": "video", "provider": "youtube", "id": YOUTUBE_REPLACEMENTS.get(match.group(1), match.group(1))}
         return {"type": "video", "provider": "other", "src": src}
 
     # -- elements inside a section's content container -----------------------------------------------

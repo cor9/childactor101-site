@@ -70,6 +70,11 @@ def external_vimeo(vimeo_id, title):
             "note": "Third-party reference video preserved from the legacy course. Still live on Vimeo."}
 
 
+# YouTube embeds on the original pages that were taken down and replaced: old id -> new id.
+YOUTUBE_REPLACEMENTS = {
+    "b8ppTuW6jkU": "VqpSLp9H-DY",  # Plan & Prep It, Grip video (after the Craft Services video)
+}
+
 VIMEO_MAP = {
     # --- HIGH confidence ---
     "379943966": bunny("f642726e-8dc1-412e-9d97-f0ba82548121", "NO EXCUSES! Demo Clip Course for Actor's"),
@@ -114,7 +119,7 @@ VIMEO_MAP = {
     "371529420": bunny("367dd260-f086-4534-a4b0-e06273c9c568", "Two Actor Clip"),  # supplied by Corey
     "344516472": bunny("6193ad09-46a1-4315-9cbe-4876b55c8147", "Three Shot Example"),  # supplied by Corey
     "377218960": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "The Style (tone)"),  # supplied by Corey
-    "377219246": bunny("1705e2e7-907c-468d-8241-5b63b9b3cc08", "Mono-Clip"),  # supplied by Corey
+    "377219246": bunny("893a07b7-0282-4740-baa0-16e7966fb3f4", "Beautiful Scar"),  # Mono-Clip; supplied by Corey (same video as Beautiful Scar above)
     "387357732": bunny("b59870ff-3eb4-4e3b-9563-1efeef1062ff", "Welcome Back 2"),  # supplied by Corey
     "387347988": bunny("7f569a6b-8f87-4ccc-a250-2f09a93aedbf", "Welcome Back 3"),  # supplied by Corey
     "387348581": bunny("f4c48c85-90e1-4bf4-ba79-3d28b067a23c", "Welcome Back 4"),  # supplied by Corey

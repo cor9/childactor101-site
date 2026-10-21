@@ -75,6 +75,11 @@ YOUTUBE_REPLACEMENTS = {
     "b8ppTuW6jkU": "VqpSLp9H-DY",  # Plan & Prep It, Grip video (after the Craft Services video)
 }
 
+# YouTube embeds that are private/removed and have no replacement: dropped from the page entirely.
+YOUTUBE_REMOVED = {
+    "RES5bZFx1Cc",  # Shoot It, "Lighting Tips for Low or No Budget": first video ("This video is private")
+}
+
 VIMEO_MAP = {
     # --- HIGH confidence ---
     "379943966": bunny("f642726e-8dc1-412e-9d97-f0ba82548121", "NO EXCUSES! Demo Clip Course for Actor's"),

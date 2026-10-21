@@ -110,7 +110,7 @@ VIMEO_MAP = {
     "377218725": bunny("ed3ea1af-ac78-4c13-b063-c876cf0a5348", "Corey Ralston bio"),  # supplied by Corey
     "387252761": bunny("a855464e-d499-4221-98fa-dd884df2146d", "Why are Clips soo Important?"),  # supplied by Corey
     "377218442": bunny("f4819274-3445-4552-875a-d2e72ba0cf72", "Genres & Types"),  # supplied by Corey
-    "324792551": bunny("041962e4-c417-4b2b-81ab-237951eb25b7", "Re-worked Shameless Scene"),  # supplied by Corey
+    "324792551": youtube("q4j0btglDCM", "Re-worked Shameless Scene"),  # supplied by Corey (Vimeo/Bunny copy taken down)
     "371529420": bunny("367dd260-f086-4534-a4b0-e06273c9c568", "Two Actor Clip"),  # supplied by Corey
     "344516472": bunny("6193ad09-46a1-4315-9cbe-4876b55c8147", "Three Shot Example"),  # supplied by Corey
     "377218960": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "The Style (tone)"),  # supplied by Corey

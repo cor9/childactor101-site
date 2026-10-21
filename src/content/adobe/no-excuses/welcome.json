@@ -371,28 +371,6 @@
       ]
     },
     {
-      "kind": "full-width",
-      "classes": [
-        "full-width-section"
-      ],
-      "spacing": {
-        "top": "normal",
-        "bottom": "normal"
-      },
-      "elements": [
-        {
-          "type": "image",
-          "src": "/courses/no-excuses/welcome/images/B2C614B3-B7BB-46FF-8B6C-9FB1FAA2711A.png",
-          "width": 1200,
-          "height": 630,
-          "displayWidth": 1024,
-          "figure": true,
-          "label": "Do not forget to join the a Private Facebook group which accompanies this course. It is an additional resource for you to grow, share and learn.",
-          "caption": "Do not forget to join the a Private Facebook group which accompanies this course. It is an additional resource for you to grow, share and learn."
-        }
-      ]
-    },
-    {
       "kind": "single-column",
       "classes": [
         "single-column-section",

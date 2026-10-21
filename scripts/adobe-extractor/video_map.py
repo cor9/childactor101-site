@@ -72,7 +72,13 @@ def external_vimeo(vimeo_id, title):
 
 # YouTube embeds on the original pages that were taken down and replaced: old id -> new id.
 YOUTUBE_REPLACEMENTS = {
+    "hkxRu3Osc0U": "q4j0btglDCM",  # Write It, original Shameless scene (YouTube account terminated)
     "b8ppTuW6jkU": "VqpSLp9H-DY",  # Plan & Prep It, Grip video (after the Craft Services video)
+}
+
+# YouTube embeds that are private/removed and have no replacement: dropped from the page entirely.
+YOUTUBE_REMOVED = {
+    "RES5bZFx1Cc",  # Shoot It, "Lighting Tips for Low or No Budget": first video ("This video is private")
 }
 
 VIMEO_MAP = {
@@ -82,8 +88,8 @@ VIMEO_MAP = {
     "377218287": bunny("99cad305-1d4a-41eb-b9e2-40203a2b8b47", "Mission For You"),
     "377218581": bunny("2e57a4c2-a5ed-4e8b-ae0e-89c8e5e004bb", "Fences"),
     "377218336": bunny("ef3f1d7e-1cf5-44ec-9a17-d6e549c4d005", "Don't be scared"),
-    "288832063": {"kind": "bunny", "guid": "893a07b7-0282-4740-baa0-16e7966fb3f4", "title": "Beautiful Scar",
-                  "note": "Verified via live Vimeo oEmbed (title 'Beautiful Scar'). Lives in the main Bunny library, outside the No Excuses! collection."},
+    "288832063": {"kind": "bunny", "guid": "893a07b7-0282-4740-baa0-16e7966fb3e4", "title": "Beautiful Scar",
+                  "note": "Beautiful Scar. The earlier ...fb3f4 id returned 404 in library 712901; this is the id Corey supplied from the Bunny player URL."},
     "387346357": bunny("2db093b6-05c7-419a-b65c-57b097abb8af", "Intro Two"),
     "387349950": bunny("5199be9f-8ade-4fd7-99da-c04766a72770", "Sound is HUGE"),
     "387392930": bunny("14128357-4e1f-49a8-b8b9-7059a429badb", "My lighting obsession"),
@@ -109,17 +115,16 @@ VIMEO_MAP = {
     # --- External third-party Vimeo, still live ---
     "71838170": external_vimeo("71838170", "Who's Who on a Movie Crew (Vimeo Video School, 2013)"),
     "143619334": external_vimeo("143619334", "Why Props Matter (Rishi Kaneria, 2015)"),
-    # Vimeo title is "Mikey, Likes It!" (vimeo_library.csv). Earlier guess of Bunny "Research" was wrong.
-    "377218224": missing("377218224", "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match."),
+    "377218224": bunny("446e543d-107e-4430-844e-f2b3b5effd03", "Mikey, Likes It!"),  # Write It opening video; supplied by Corey
     # --- Supplied by Corey (formerly unmatched placeholders) ---
     "377218725": bunny("ed3ea1af-ac78-4c13-b063-c876cf0a5348", "Corey Ralston bio"),  # supplied by Corey
     "387252761": bunny("a855464e-d499-4221-98fa-dd884df2146d", "Why are Clips soo Important?"),  # supplied by Corey
     "377218442": bunny("f4819274-3445-4552-875a-d2e72ba0cf72", "Genres & Types"),  # supplied by Corey
-    "324792551": youtube("q4j0btglDCM", "Re-worked Shameless Scene"),  # supplied by Corey (Vimeo/Bunny copy taken down)
+    "324792551": bunny("041962e4-c417-4b2b-81ab-237951eb25b7", "Re-worked Shameless Scene"),  # supplied by Corey
     "371529420": bunny("367dd260-f086-4534-a4b0-e06273c9c568", "Two Actor Clip"),  # supplied by Corey
     "344516472": bunny("6193ad09-46a1-4315-9cbe-4876b55c8147", "Three Shot Example"),  # supplied by Corey
     "377218960": bunny("95d84379-5f4a-4719-b58f-4c81068bcea8", "The Style (tone)"),  # supplied by Corey
-    "377219246": bunny("893a07b7-0282-4740-baa0-16e7966fb3f4", "Beautiful Scar"),  # Mono-Clip; supplied by Corey (same video as Beautiful Scar above)
+    "377219246": bunny("893a07b7-0282-4740-baa0-16e7966fb3e4", "Beautiful Scar"),  # Mono-Clip; supplied by Corey (same video as Beautiful Scar above)
     "387357732": bunny("b59870ff-3eb4-4e3b-9563-1efeef1062ff", "Welcome Back 2"),  # supplied by Corey
     "387347988": bunny("7f569a6b-8f87-4ccc-a250-2f09a93aedbf", "Welcome Back 3"),  # supplied by Corey
     "387348581": bunny("f4c48c85-90e1-4bf4-ba79-3d28b067a23c", "Welcome Back 4"),  # supplied by Corey

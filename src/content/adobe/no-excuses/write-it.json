@@ -32,9 +32,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218224",
-          "missing": {
-            "note": "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match.",
-            "candidates": []
+          "bunny": {
+            "guid": "446e543d-107e-4430-844e-f2b3b5effd03",
+            "title": "Mikey, Likes It!",
+            "needsReview": false
           },
           "align": "left"
         },
@@ -238,7 +239,7 @@
         {
           "type": "video",
           "provider": "youtube",
-          "id": "hkxRu3Osc0U",
+          "id": "q4j0btglDCM",
           "align": "left"
         },
         {
@@ -261,9 +262,13 @@
         },
         {
           "type": "video",
-          "provider": "youtube",
-          "id": "q4j0btglDCM",
-          "legacyVimeoId": "324792551",
+          "provider": "vimeo",
+          "id": "324792551",
+          "bunny": {
+            "guid": "041962e4-c417-4b2b-81ab-237951eb25b7",
+            "title": "Re-worked Shameless Scene",
+            "needsReview": false
+          },
           "align": "left"
         },
         {
@@ -776,7 +781,7 @@
           "provider": "vimeo",
           "id": "288832063",
           "bunny": {
-            "guid": "893a07b7-0282-4740-baa0-16e7966fb3f4",
+            "guid": "893a07b7-0282-4740-baa0-16e7966fb3e4",
             "title": "Beautiful Scar",
             "needsReview": false
           },
@@ -819,7 +824,7 @@
           "provider": "vimeo",
           "id": "377219246",
           "bunny": {
-            "guid": "893a07b7-0282-4740-baa0-16e7966fb3f4",
+            "guid": "893a07b7-0282-4740-baa0-16e7966fb3e4",
             "title": "Beautiful Scar",
             "needsReview": false
           },

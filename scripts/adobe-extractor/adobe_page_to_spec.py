@@ -31,7 +31,12 @@ import urllib.request
 from html.parser import HTMLParser
 
 from page_routes import PAGE_ROUTES
-from video_map import VIMEO_MAP, YOUTUBE_REPLACEMENTS, vimeo_title
+from video_map import VIMEO_MAP, YOUTUBE_REMOVED, YOUTUBE_REPLACEMENTS, vimeo_title
+
+# Images deliberately left off the recreated pages (match on the image id in the file name).
+DROPPED_IMAGES = (
+    "B2C614B3-B7BB-46FF-8B6C-9FB1FAA2711A",  # No Excuses welcome: "Private Facebook group for members only" banner
+)
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_AGENT = {"User-Agent": "Mozilla/5.0"}
@@ -307,6 +312,8 @@ class PageExtractor:
         alignment = "center" if "link-center" in classes else "left"
         if iframe:
             video = self.video_from_iframe(iframe.attrs.get("src", ""))
+            if video.get("provider") == "youtube" and video["id"] in YOUTUBE_REMOVED:
+                return None
             video["align"] = alignment
             return video
         link = find_first(node, "a")
@@ -384,7 +391,10 @@ class PageExtractor:
             elif "window-section" in classes:
                 result["sections"].append({"kind": "window", "classes": rest, "background": self.background(section), "elements": []})
             elif "single-column-section" in classes or "full-width-section" in classes:
-                result["sections"].append(self._column_section(section, classes))
+                column = self._column_section(section, classes)
+                column["elements"] = [e for e in column["elements"] if not (e["type"] == "image" and any(d in e["src"] for d in DROPPED_IMAGES))]
+                if column["elements"]:  # a section left empty by a dropped image goes with it
+                    result["sections"].append(column)
             elif "author-section" in classes:
                 name = find_first(section, css_class="name")
                 if name:

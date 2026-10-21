@@ -1,0 +1,930 @@
+{
+  "source": "https://express.adobe.com/page/t89Ol45aZnWWO/",
+  "theme": "adobe-theme-perfect-self-tape-equipment-guide",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/gom8xuo.css"
+  ],
+  "title": {
+    "position": "title-right",
+    "title": "Equipment Guide",
+    "subtitle": "Gear You Need to Have On Hand",
+    "image": "/courses/perfect-self-tape/equipment-guide/images/EA5FE4DB-E054-42E7-A2CD-5F55A8F3D46F.jpg",
+    "imageWidth": 4800,
+    "imageHeight": 3200,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "While you can surprisingly find a lot of items around your home to make-shift a Self Tape on the fly. It is wise to invest in some Essential Equipment that you can rely on to assist in producing great, professional looking self tapes. This gear will make the Actor look good, sound great and should pop out to a Casting Director."
+        },
+        {
+          "type": "blockquote",
+          "html": "And it doesn&#39;t have to cost you a small fortune! For under $150 you can get an arsenal of necessities in Self Tape Gear. At the end of this section there is a shopping guide with links to some of the best prices on Amazon for items mentioned."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/37d6e47b-3b36-4945-8d3d-9f82f9217c64.jpg",
+          "width": 2560,
+          "height": 1920
+        },
+        {
+          "type": "h3",
+          "html": "Video Recording Device",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "It is up to you which route you want to take in capturing video. Do not feel like you have to use a prosumer DSLR camera if that is not in the budget."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/14D099B4-9679-4427-AEA2-68E5B0D3D441.jpg",
+          "width": 750,
+          "height": 500
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Superb Self Tapes are sent out everyday using Smartphones and Tablets. Most newer models record at a quality so high that isn’t even necessary for a Self Tape."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/EB4A4237-DFB8-49EC-BFD7-90869544900E.jpg",
+          "width": 600,
+          "height": 400
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/B0FB5FDC-BAF1-420B-8AF2-1E95753C9986.jpg",
+          "width": 651,
+          "height": 700
+        },
+        {
+          "type": "blockquote",
+          "html": "720p will deliver exceptional looking results"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/D827F11D-F3A4-4D0D-AE62-AA466B31FC41.jpg",
+          "width": 626,
+          "height": 395
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/d517a6d2-5b19-4743-a90b-0bb59faa6362.jpg",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "split",
+      "classes": [
+        "single-column-section",
+        "split-layout",
+        "image-on-left"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Great Lighting is Essential in producing a quality Self Tape.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/327b81b2-345f-4a6d-a2d1-972edc3426cf.png",
+          "width": 325,
+          "height": 260
+        },
+        {
+          "type": "h4",
+          "html": "A Simple 3-Point Lighting Set Up will do wonders for your Self Tapes.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "The Strongest Light will be the Main Light.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "This Main Light will be 45% from the lens of your recording device. To the right or left."
+        },
+        {
+          "type": "h4",
+          "html": "The second brightest will be your Fill Light.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "A Fill Light is used to eliminate shadows on the face. This light will be powered to about 60% intensity and angled towards subject on the other side of the lens."
+        },
+        {
+          "type": "h4",
+          "html": "The third light...",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "A Hair Light or Backlight is often overlooked. This light will be used to separate the subject from the backdrop and really make you look like a professional. It creates depth and makes the Actor pop."
+        },
+        {
+          "type": "blockquote",
+          "html": "This light will be low intensity around 30%. And it will be fixed above or behind the subject."
+        }
+      ],
+      "background": {
+        "image": "/courses/perfect-self-tape/equipment-guide/images/f10d05d5-ff20-4d31-b747-af6dbed5ff50.jpg",
+        "width": 1080,
+        "height": 1080,
+        "position": "50% 50%"
+      }
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer",
+        "bottom-shadow"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "fullscreen",
+      "classes": [
+        "fullscreen-photo-section",
+        "caption-left"
+      ],
+      "background": {
+        "image": "/courses/perfect-self-tape/equipment-guide/images/e3383614-1337-4e3c-ba6f-18956c226ec1.jpg",
+        "width": 960,
+        "height": 640,
+        "position": "49.90234375% 40.19230769230769%"
+      },
+      "elements": []
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom",
+        "top-shadow"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Softboxes are the trusty standard in Video Lighting. They produce a soft filtered light. This light is even and pleasing to skin tones."
+        },
+        {
+          "type": "blockquote",
+          "html": "Softboxes are relatively inexpensive and very lightweight."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/cb7b9969-5b7e-4fcd-8264-3be7d1dc24be.jpg",
+          "width": 1200,
+          "height": 431
+        },
+        {
+          "type": "blockquote",
+          "html": "They come in Square, Rectangle and Octagon Shapes."
+        },
+        {
+          "type": "blockquote",
+          "html": "Most commonly for Self Tapes a 20&quot; - 28&quot; rectangle softbox is used."
+        },
+        {
+          "type": "button",
+          "label": "Softbox Article",
+          "href": "https://www.karltayloreducation.com/lighting-modifiers-softboxes/",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "Oum3SuOsAN4",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/0040ab79-4ad8-476e-83e8-3e951e812691.jpg",
+          "width": 750,
+          "height": 500
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Ring Light",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Ring Lights have increased in popularity the last few years. Consumer Ring Light production has given affordable options to those wanting the beauty enhancing qualities of light."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/57ee883c-a7a2-423f-94c7-2fc7f08a94db.jpg",
+          "width": 500,
+          "height": 666
+        },
+        {
+          "type": "blockquote",
+          "html": "Ring Lights come in sizes from 6&quot; to 24&quot; or above. Most common for Self Tapes is a 18&quot; Ring Light."
+        },
+        {
+          "type": "blockquote",
+          "html": "Ring Lights are Bi-Color meaning they can adjust from Warm Light to Cool Light. They also have variable intensity of brightness."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/1400f23f-a844-4849-b64c-565cd99c015c.jpg",
+          "width": 1426,
+          "height": 1495
+        },
+        {
+          "type": "h3",
+          "html": "Ring Lights are best used for your MAIN LIGHT."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "K4wsrW0VpLE",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "LED",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Video production loves the use of LED lights because they are low energy and last several times longer than traditional light bulbs."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/7538d697-130e-4756-bc00-02696e4b7912.png",
+          "width": 2550,
+          "height": 1700
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/325a3f82-5306-43ad-b33a-ad7c7574696d.jpg",
+          "width": 1024,
+          "height": 571,
+          "caption": "Flat Panel LED Light"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "TiAsjx5j7GA",
+          "align": "left"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "B00GMcqSWjk",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/76f8d97c-a8e4-465d-a632-c41867b7de75.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Keeping your video from shaking is the easiest and first step to creating a quality Self Tape.",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "You need a Tripod!",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/e760334d-add2-415e-bab8-654ab8ed3f33.jpg",
+          "width": 334,
+          "height": 501
+        },
+        {
+          "type": "blockquote",
+          "html": "A standard tripod between 50&quot; and 70&quot; is ideal for Self Tape Videos"
+        },
+        {
+          "type": "h4",
+          "html": "You will need separate mounts for your tripod if you are using a Tablet or Smartphone as your recording device."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/4786b21a-46b7-467d-a2ab-b60dc91e4dc5.jpg",
+          "width": 1450,
+          "height": 1318,
+          "caption": "Tablet Mount"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/f457469a-6453-4c75-bea9-ac0fd3a87dff.jpg",
+          "width": 1282,
+          "height": 1500,
+          "caption": "Smartphone Mount"
+        }
+      ]
+    },
+    {
+      "kind": "window",
+      "classes": [
+        "window-section",
+        "height-50",
+        "caption-left"
+      ],
+      "background": {
+        "image": "/courses/perfect-self-tape/equipment-guide/images/c95a59ea-7f6e-4aae-b7f0-67561df7fd77.jpg",
+        "width": 2560,
+        "height": 1706,
+        "position": "50% 50%"
+      },
+      "elements": []
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Bad sound is the number one killer of amateur video.",
+          "align": "center"
+        },
+        {
+          "type": "h3",
+          "html": "A Microphone is an easy fix to many Self Tape Woes.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "A Lavalier or &quot;Lapel&quot; Mic is easily adaptable to use with Smartphones, Cameras and Tablets."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/3befde9d-4afc-4722-9177-2a2f44766548.jpg",
+          "width": 1000,
+          "height": 500
+        },
+        {
+          "type": "blockquote",
+          "html": "They come with long enough cords to not be confining."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/5e320e03-551c-471a-ac68-48693526c402.jpg",
+          "width": 844,
+          "height": 1000
+        },
+        {
+          "type": "blockquote",
+          "html": "The lapel mic will focus the sound on the Actor and lessen the volume from The Reader, who is usually operating the camera."
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "hoj_uDLJpm4",
+          "align": "left"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/b8bb7643-89f9-4a35-8aa1-dbe04f7525d6.jpg",
+          "width": 958,
+          "height": 1172
+        },
+        {
+          "type": "blockquote",
+          "html": "Since Lapel mics have a 3.5mm Audio connection. You will most likely need an adapter to use it with an Iphone or Ipad."
+        },
+        {
+          "type": "blockquote",
+          "html": "They make simple adapters for Lightning and C-Type"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/d85fc850-43d7-438e-ae31-86fac44b3c2c.jpg",
+          "width": 340,
+          "height": 489
+        },
+        {
+          "type": "h3",
+          "html": "BACKDROPS",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "It is perfectly acceptable to use a plain wall in your home or even an Unwrinkled sheet.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "You will find the Self Tapes that look really polished have a backdrop that compliments the Actor in a pleasing color.",
+          "align": "center"
+        },
+        {
+          "type": "h4",
+          "html": "Shades of Grey, Blue, Green, Brown are popular choices.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/8A9F7F54-FBA9-4BFC-825F-6F14F899AD70.png",
+          "width": 2560,
+          "height": 2560
+        },
+        {
+          "type": "h4",
+          "html": "Popup shades are easily transportable and create a Self Tape studio wherever you are.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/6271E3C0-645C-4873-B16D-E01DB5468A13.jpg",
+          "width": 450,
+          "height": 450
+        },
+        {
+          "type": "h4",
+          "html": "Our go-to backdrop is a Grey Wool blanket that adds texture and does not reflect hot light.",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/D5B032B8-B9D6-4BF5-9D1B-E1AC68D0D230.jpg",
+          "width": 1500,
+          "height": 1500
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/CFD2B2F7-89E0-4D3D-8A09-EF24FE3FA68D.jpg",
+          "width": 620,
+          "height": 330,
+          "caption": "As an Amazon Associate I earn from qualifying purchases."
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/03a82bd4-8b9c-4f41-bc0a-996712f127dd.jpg",
+          "width": 933,
+          "height": 845
+        },
+        {
+          "type": "button",
+          "label": "Two Softbox Kit $42.99",
+          "href": "https://amzn.to/38HsN4u",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/76f504e7-6b39-4ce0-9419-f4018f6ca68a.jpg",
+          "width": 954,
+          "height": 908
+        },
+        {
+          "type": "button",
+          "label": "Three Rectangle Softbox Kit $66.99",
+          "href": "https://amzn.to/326sMVr",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/e782d5d5-4dcd-4cd3-b400-d883cb446c5e.jpg",
+          "width": 1500,
+          "height": 1449
+        },
+        {
+          "type": "button",
+          "label": "Three Octagon Softbox Kit $69.99",
+          "href": "https://amzn.to/327GYgH",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/35f85910-5b31-46ce-a43a-3cf83250bf74.jpg",
+          "width": 898,
+          "height": 982
+        },
+        {
+          "type": "button",
+          "label": "18\" Ring Light Kit  $68.99",
+          "href": "https://amzn.to/38GGvoo",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/7c83cdde-aa2f-4f2e-b2ff-876388d98d68.jpg",
+          "width": 1426,
+          "height": 1495
+        },
+        {
+          "type": "button",
+          "label": "14\" Ring Light  $47.80",
+          "href": "https://amzn.to/326rz0l",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/7fc4c293-453e-4fb6-b37e-8ed09213156d.jpg",
+          "width": 1285,
+          "height": 1500
+        },
+        {
+          "type": "button",
+          "label": "12\" Ring Light $35.99",
+          "href": "https://amzn.to/37HotAS",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/c7e7c3c0-cadc-4164-a058-960c186dce91.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        {
+          "type": "button",
+          "label": "10\"  LED Multi-Color Ring Light $42.99",
+          "href": "https://amzn.to/326sMVr",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/5f84e639-3154-4229-8135-390351fb81d2.jpg",
+          "width": 964,
+          "height": 884
+        },
+        {
+          "type": "button",
+          "label": "LED Panel  $57.99",
+          "href": "https://amzn.to/2V5YaSf",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/d9b8cbed-d281-441e-8dfd-fa5087bb0080.jpg",
+          "width": 1140,
+          "height": 1101
+        },
+        {
+          "type": "button",
+          "label": "Two Light Stands  $25.99",
+          "href": "https://amzn.to/2uVYPuU",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/64bb3100-b342-419a-92ff-4a4993dff9f7.jpg",
+          "width": 1364,
+          "height": 1467
+        },
+        {
+          "type": "button",
+          "label": "55\" Tripod  $14.99",
+          "href": "https://amzn.to/39IFkF5",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/bff819f1-45f4-49aa-9385-637871067f32.jpg",
+          "width": 890,
+          "height": 1483
+        },
+        {
+          "type": "button",
+          "label": "60\" Tripod  $23.99",
+          "href": "https://amzn.to/2SDRjxO",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/c03df65f-8984-43f7-b0ce-43f43f9f114a.jpg",
+          "width": 1450,
+          "height": 1318
+        },
+        {
+          "type": "button",
+          "label": "Tablet Tripod Adapter  $13.99",
+          "href": "https://amzn.to/2T17h42",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/1d2c4993-ff4f-486d-87b3-6ca175fa24ba.jpg",
+          "width": 1282,
+          "height": 1500
+        },
+        {
+          "type": "button",
+          "label": "Smartphone Tripod Mount $6.89",
+          "href": "https://amzn.to/38DZX5e",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/1dd4b7ef-c0b0-42c9-a66c-16c549a41a1d.jpg",
+          "width": 844,
+          "height": 1000
+        },
+        {
+          "type": "button",
+          "label": "Lapel Microphone $11.99",
+          "href": "https://amzn.to/2SFXwtm",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/da6d37ed-39ba-4d22-8918-7917d059a9d3.jpg",
+          "width": 340,
+          "height": 489
+        },
+        {
+          "type": "button",
+          "label": "Apple USB-C to Headphone Jack $7.99",
+          "href": "https://amzn.to/38JKEYw",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/a149f187-63a1-42b4-b365-056a44f57a49.jpg",
+          "width": 958,
+          "height": 1172
+        },
+        {
+          "type": "button",
+          "label": "Apple Headphone Lightning Adapter $7.99",
+          "href": "https://amzn.to/2P8hPNT",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/c3183015-8ece-4906-9d36-33f734059cd6.jpg",
+          "width": 1500,
+          "height": 1233
+        },
+        {
+          "type": "button",
+          "label": "Grey Wool Blanket  $16.01",
+          "href": "https://amzn.to/2P8ksiB",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/73f1cb90-0aa6-4e1d-9470-e3c6109b3ecc.jpg",
+          "width": 1500,
+          "height": 1184
+        },
+        {
+          "type": "button",
+          "label": "Backdrop Stand  $30.99",
+          "href": "https://amzn.to/39FXhE6",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/fc369fe9-1716-4a36-af8c-67f34066370c.jpg",
+          "width": 691,
+          "height": 891
+        },
+        {
+          "type": "button",
+          "label": "Pop Up Backdrop  $55.95",
+          "href": "https://amzn.to/37HhtUN",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/63b25c3d-19a1-47c0-8ab4-c26428bc6e2d.jpg",
+          "width": 875,
+          "height": 1000
+        },
+        {
+          "type": "button",
+          "label": "Grey Textured Backdrop  $17.90",
+          "href": "https://amzn.to/2HAycyD",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/20b17e61-6804-47a2-8079-b709e15dad86.jpg",
+          "width": 1000,
+          "height": 1000
+        },
+        {
+          "type": "button",
+          "label": "Blue Textured Backdrop $15.88",
+          "href": "https://amzn.to/2ubvNat",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/29c7060b-c149-4383-99bd-069892c1e4e6.jpg",
+          "width": 868,
+          "height": 836
+        },
+        {
+          "type": "button",
+          "label": "Yellow Backdrop  $11.68",
+          "href": "https://amzn.to/3bPL4yM",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/equipment-guide/images/ea717b81-d588-418e-8dc5-5d7a6567f07c.jpg",
+          "width": 444,
+          "height": 458
+        },
+        {
+          "type": "button",
+          "label": "Photo Clamps  $7.99",
+          "href": "https://amzn.to/2ua0iNS",
+          "align": "center"
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with images by fotoblend - \"lamp light bulb led\" • Jason Rosewell - \"untitled image\""
+  ],
+  "runtime": "classic"
+}

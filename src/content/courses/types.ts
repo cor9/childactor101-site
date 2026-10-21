@@ -1,73 +1,95 @@
 /**
  * Typed content model for the restored Child Actor 101 video courses.
  *
- * Modeled on the existing classroom content system (src/content/classroom.ts):
- * courses contain ordered sections, and lessons belong to a section while the
- * course keeps the authoritative lesson order for previous/next navigation.
+ * COURSE -> MODULE -> ordered content blocks.
+ *
+ * A module is one major section of the original course (one legacy Adobe Express
+ * page) rendered as a single scrollable page. Everything the original page held -
+ * subsection headings, copy, videos, links - lives in the module's `blocks` array
+ * in its recovered order. Progress is tracked per module, and previous/next
+ * navigation moves between modules.
  */
 
-/** A video attached to a lesson. */
-export type CourseVideo =
-  | {
-      kind: "bunny";
-      guid: string;
-      title?: string;
-      needsReview?: boolean;
-      note?: string;
-    }
-  | {
-      kind: "youtube";
-      videoId: string;
-      title?: string;
-      thirdParty: true;
-      note?: string;
-    }
-  | {
-      kind: "vimeo";
-      vimeoId: string;
-      title: string;
-      thirdParty: true;
-      note?: string;
-    }
-  | {
-      kind: "missing";
-      legacyVimeoId?: string;
-      candidates?: string[];
-      note: string;
-    };
+/** Level-2 headings mark the original subsections; level-3 are headings inside one. */
+export interface HeadingBlock {
+  type: "heading";
+  level: 2 | 3;
+  text: string;
+  /** In-page anchor. Level-2 anchors are the retired per-lesson slugs. */
+  anchor?: string;
+  summary?: string;
+  needsReview?: boolean;
+}
 
-export interface CourseBodySection {
-  heading?: string;
+export interface RichTextBlock {
+  type: "richText";
   paragraphs: string[];
   bullets?: string[];
 }
 
-export interface CourseResource {
+export interface BunnyVideoBlock {
+  type: "bunny-video";
+  guid: string;
+  title?: string;
+  needsReview?: boolean;
+  note?: string;
+}
+
+export interface ExternalVideoBlock {
+  type: "external-video";
+  provider: "youtube" | "vimeo";
+  videoId: string;
+  title?: string;
+  note?: string;
+}
+
+/** Keeps a video's position in the module when its Bunny match is unresolved. */
+export interface MissingVideoBlock {
+  type: "missing-video";
+  legacyVimeoId?: string;
+  candidates?: string[];
+  note: string;
+}
+
+export interface ImageBlock {
+  type: "image";
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface ResourceBlock {
+  type: "resource";
   title: string;
   href: string;
   note?: string;
 }
 
-export interface CourseLesson {
-  slug: string;
-  title: string;
-  sectionSlug: string;
-  summary?: string;
-  /** Single primary video for the lesson. */
-  video?: CourseVideo;
-  /** Multiple videos when the legacy page grouped several embeds in one topic. */
-  videos?: CourseVideo[];
-  body: CourseBodySection[];
-  resources: CourseResource[];
-  legacyAdobeUrl: string;
-  needsReview?: boolean;
-  reviewNote?: string;
+/** Assignments, notes, and restoration notices. */
+export interface CalloutBlock {
+  type: "callout";
+  tone: "assignment" | "note" | "restoration";
+  title?: string;
+  text: string;
 }
 
-export interface CourseSection {
+export type CourseBlock =
+  | HeadingBlock
+  | RichTextBlock
+  | BunnyVideoBlock
+  | ExternalVideoBlock
+  | MissingVideoBlock
+  | ImageBlock
+  | ResourceBlock
+  | CalloutBlock;
+
+export type CourseVideoBlock = BunnyVideoBlock | ExternalVideoBlock | MissingVideoBlock;
+
+export interface CourseModule {
   slug: string;
   title: string;
   legacyAdobeUrl: string;
+  blocks: CourseBlock[];
 }
 
 export interface Course {
@@ -76,6 +98,5 @@ export interface Course {
   subtitle: string;
   description: string;
   legacyAdobeUrl: string;
-  sections: CourseSection[];
-  lessons: CourseLesson[];
+  modules: CourseModule[];
 }

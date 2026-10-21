@@ -1,0 +1,522 @@
+/*
+ * Layout glue for recreated Adobe Express (Spark) pages.
+ *
+ * The original page gets its section/column/video/image layout from Adobe's runtime
+ * stylesheet, which we do not have. This file reproduces that layout for the
+ * pieces the pages use; typography, colors and spacing come from adobe-theme.css.
+ */
+
+:where(.adobe-page) .article iframe,
+:where(.adobe-page) .article img {
+  max-width: 100%;
+}
+
+:where(.adobe-page) .article {
+  color: #000;
+}
+
+:where(.adobe-page) .article p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+:where(.adobe-page) .article a {
+  color: #000;
+  text-decoration: underline;
+}
+
+:where(.adobe-page) .article :where(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+:where(.adobe-page) .article .content-container {
+  overflow: hidden;
+}
+
+:where(.adobe-page) {
+  font-family: "Times New Roman", Times, serif;
+  background: #fff;
+  color: rgba(17, 26, 11, 1);
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+:where(.adobe-page) *,
+:where(.adobe-page) *::before,
+:where(.adobe-page) *::after {
+  box-sizing: border-box;
+}
+
+:where(.adobe-page) .section {
+  position: relative;
+}
+
+:where(.adobe-page) .section-view,
+:where(.adobe-page) .section-content,
+:where(.adobe-page) .section-content-view {
+  position: relative;
+}
+
+:where(.adobe-page) .content-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+:where(.adobe-page) .article .section.full-width-section .section-content .content-container {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+/* Title section: full-height photo with centered title block */
+:where(.adobe-page) .title-section {
+  position: relative;
+  height: 100vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+:where(.adobe-page) .title-section .section-view,
+:where(.adobe-page) .title-section .section-background {
+  position: absolute;
+  inset: 0;
+}
+
+:where(.adobe-page) .title-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:where(.adobe-page) .title-section .title-header {
+  position: relative;
+  z-index: 1;
+}
+
+:where(.adobe-page) .title-header-view .gradient-overlay {
+  position: absolute;
+  top: -200%;
+  bottom: -200%;
+  height: auto;
+  min-height: 0;
+  z-index: 0;
+}
+
+:where(.adobe-page) .title-header .subtitle,
+:where(.adobe-page) .title-header .title {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+:where(.adobe-page) .title-header .title,
+:where(.adobe-page) .title-header .subtitle {
+  display: block;
+}
+
+:where(.adobe-page) .navigation-hint.down {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+  opacity: 0.85;
+}
+
+/* Images */
+:where(.adobe-page) .article .image {
+  margin: 0;
+  text-align: center;
+}
+
+:where(.adobe-page) .image-wrapper {
+  display: block;
+}
+
+:where(.adobe-page) .image-wrapper img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+:where(.adobe-page) .full-width-section .image-wrapper,
+:where(.adobe-page) .full-width-section .image-wrapper img {
+  width: 100%;
+}
+
+/* Embedded videos: 16:9 box at full column width */
+:where(.adobe-page) .embedded-link-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+:where(.adobe-page) .embedded-link-wrapper.widescreen-aspect-ratio {
+  padding-top: 56.25%;
+}
+
+:where(.adobe-page) .embedded-link-wrapper iframe,
+:where(.adobe-page) .embedded-link-wrapper .video-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+:where(.adobe-page) .video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e8ea;
+  color: #5b646b;
+  font-family: adobe-caslon-pro, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+:where(.adobe-page) .link-button-wrapper {
+  display: block;
+}
+
+:where(.adobe-page) .author-appreciation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+:where(.adobe-page) .section.author-section .author {
+  flex: 1;
+  overflow: hidden;
+  text-align: left;
+}
+
+:where(.adobe-page) .section.author-section .info {
+  margin: 7px 0;
+  min-height: 64px;
+  padding-right: 16px;
+}
+
+:where(.adobe-page) .section.author-section .name {
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+:where(.adobe-page) .section.credits-section {
+  font-family: adobe-clean, sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+:where(.adobe-page) .section.credits-section .section-content .content-container {
+  padding-bottom: 40px;
+}
+
+:where(.adobe-page) .section.credits-section .photo-credits {
+  margin: 0 auto;
+  font-size: 13px;
+  text-align: center;
+}
+
+:where(.adobe-page) .section.credits-section .credits-label {
+  font-weight: 700;
+}
+
+:where(.adobe-page) .section.credits-section .photo-credits p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2;
+  text-align: center;
+}
+
+/* Scroll-reveal start states (mirrors the theme's .hidden rules; see RevealOnScroll). */
+:where(.adobe-page) div.image.adobe-reveal-hidden, :where(.adobe-page) figure.image.adobe-reveal-hidden {
+  opacity: 0;
+  transform: translate3d(0, 40px, 0);
+}
+
+:where(.adobe-page) .caption.adobe-reveal-hidden,
+:where(.adobe-page) blockquote.adobe-reveal-hidden {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+
+/* --- Section types beyond single-column / full-width --------------------------------- */
+
+:where(.adobe-page) .section.spacer-section {
+  display: block;
+}
+
+/* Window section: a band showing a background photo; height comes from the height-NN class. */
+:where(.adobe-page) .window-section .section-view {
+  position: relative;
+  overflow: hidden;
+}
+
+:where(.adobe-page) .window-section .section-background,
+:where(.adobe-page) .window-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Split layout: one screen tall; photo fixed on one half, the text column scrolls on the other. */
+:where(.adobe-page) .single-column-section.split-layout {
+  height: 100vh;
+  min-height: 0;
+}
+
+:where(.adobe-page) .single-column-section.split-layout .section-view {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+}
+
+:where(.adobe-page) .single-column-section.split-layout .section-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+}
+
+:where(.adobe-page) .single-column-section.split-layout .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:where(.adobe-page) .single-column-section.split-layout.image-on-right .section-background {
+  left: auto;
+  right: 0;
+}
+
+:where(.adobe-page) .single-column-section.split-layout .section-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: auto;
+  scrollbar-width: thin;
+}
+
+:where(.adobe-page) .single-column-section.split-layout.image-on-right .section-content {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  /* Stacked: photo fixed in the top half, text column scrolls in the bottom half. */
+  :where(.adobe-page) .single-column-section.split-layout .section-background,
+  :where(.adobe-page) .single-column-section.split-layout.image-on-right .section-background {
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+  }
+
+  :where(.adobe-page) .single-column-section.split-layout .section-content,
+  :where(.adobe-page) .single-column-section.split-layout.image-on-right .section-content {
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+/* Newer Adobe Express runtime: inline-block image wrapper, centered by .image. */
+:where(.adobe-rt-new) .article .image-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+}
+
+:where(.adobe-rt-new) .article .full-width-section .image-wrapper {
+  display: block;
+}
+
+/* --- Fullscreen photo band -------------------------------------------------------- */
+:where(.adobe-page) .fullscreen-photo-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+:where(.adobe-page) .fullscreen-photo-section .section-view,
+:where(.adobe-page) .fullscreen-photo-section .section-background,
+:where(.adobe-page) .fullscreen-photo-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* --- Card flip-book: each card over its photo, one screen each ------------------------ */
+:where(.adobe-page) .card-flipbook-section .flip-slide {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+:where(.adobe-page) .card-flipbook-section .section-background,
+:where(.adobe-page) .card-flipbook-section .section-background-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:where(.adobe-page) .card-flipbook-section .section-content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+:where(.adobe-page) .card-flipbook-section .section-content-view {
+  position: relative;
+}
+
+:where(.adobe-page) .card-flipbook-section .section-content .card-right .content-container {
+  margin-left: auto;
+}
+
+:where(.adobe-page) .card-flipbook-section .section-content .card-center .content-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Photo grid (Adobe runtime layout rules; positions are pure CSS) -------------------- */
+:where(.adobe-page) .photo-grid {
+  position: relative;
+}
+
+:where(.adobe-page) .photo-group-container {
+  margin: 0;
+  padding: 1.6% 0 0;
+}
+
+:where(.adobe-page) .photo-group-container:first-child {
+  padding: 0;
+}
+
+:where(.adobe-page) .photo-group {
+  position: relative;
+  height: 100%;
+  padding-top: 72.3%;
+}
+
+:where(.adobe-page) .photo-group.t1-layout-p-1 {
+  padding-top: 138.3%;
+}
+
+:where(.adobe-page) .t2-layout-ll-1,
+:where(.adobe-page) .t3-layout-lpp-1,
+:where(.adobe-page) .t3-layout-ppl-1,
+:where(.adobe-page) .t4-layout-pppp-1 {
+  padding-top: 36.1%;
+}
+
+:where(.adobe-page) .t2-layout-lp-1,
+:where(.adobe-page) .t2-layout-pl-1 {
+  padding-top: 47.6%;
+}
+
+:where(.adobe-page) .t3-layout-ppp-1 {
+  padding-top: 46.2%;
+}
+
+:where(.adobe-page) .t3-layout-lll-1 {
+  padding-top: 23.6%;
+}
+
+:where(.adobe-page) .tile {
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+:where(.adobe-page) .photo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:where(.adobe-page) .t1-layout-l-1 > .tile:nth-child(1),
+:where(.adobe-page) .t1-layout-p-1 > .tile:nth-child(1) { top: 0; left: 0; width: 100%; height: 100%; }
+:where(.adobe-page) .t2-layout-ll-1 > .tile:nth-child(1),
+:where(.adobe-page) .t2-layout-pp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t2-layout-ll-1 > .tile:nth-child(2),
+:where(.adobe-page) .t2-layout-pp-1 > .tile:nth-child(2) { top: 0; left: 50%; width: 50%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t2-layout-lp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 67%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t2-layout-lp-1 > .tile:nth-child(2) { top: 0; left: 67%; width: 33%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t2-layout-pl-1 > .tile:nth-child(1) { top: 0; left: 0; width: 33%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t2-layout-pl-1 > .tile:nth-child(2) { top: 0; left: 33%; width: 67%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t3-layout-ppp-1 > .tile:nth-child(1),
+:where(.adobe-page) .t3-layout-lll-1 > .tile:nth-child(1) { top: 0; left: 0; width: 33%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-ppp-1 > .tile:nth-child(2),
+:where(.adobe-page) .t3-layout-lll-1 > .tile:nth-child(2) { top: 0; left: 33%; width: 34%; height: 100%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-ppp-1 > .tile:nth-child(3),
+:where(.adobe-page) .t3-layout-lll-1 > .tile:nth-child(3) { top: 0; left: 67%; width: 33%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t3-layout-lpp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-lpp-1 > .tile:nth-child(2) { top: 0; left: 50%; width: 25%; height: 100%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-lpp-1 > .tile:nth-child(3) { top: 0; left: 75%; width: 25%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t3-layout-ppl-1 > .tile:nth-child(1) { top: 0; left: 0; width: 25%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-ppl-1 > .tile:nth-child(2) { top: 0; left: 25%; width: 25%; height: 100%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-ppl-1 > .tile:nth-child(3) { top: 0; left: 50%; width: 50%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t3-layout-pll-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t3-layout-pll-1 > .tile:nth-child(2) { top: 0; left: 50%; width: 50%; height: 50%; padding-left: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t3-layout-pll-1 > .tile:nth-child(3) { top: 50%; left: 50%; width: 50%; height: 50%; padding-left: 0.8%; padding-top: 0.8%; }
+:where(.adobe-page) .t3-layout-llp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 50%; padding-right: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t3-layout-llp-1 > .tile:nth-child(2) { top: 50%; left: 0; width: 50%; height: 50%; padding-right: 0.8%; padding-top: 0.8%; }
+:where(.adobe-page) .t3-layout-llp-1 > .tile:nth-child(3) { top: 0; left: 50%; width: 50%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t4-layout-lppp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 50%; padding-right: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-lppp-1 > .tile:nth-child(2) { top: 50%; left: 0; width: 25%; height: 50%; padding-top: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-lppp-1 > .tile:nth-child(3) { top: 50%; left: 25%; width: 25%; height: 50%; padding-top: 0.8%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-lppp-1 > .tile:nth-child(4) { top: 0; left: 50%; width: 50%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t4-layout-plpp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-plpp-1 > .tile:nth-child(2) { top: 0; left: 50%; width: 50%; height: 50%; padding-left: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-plpp-1 > .tile:nth-child(3) { top: 50%; left: 50%; width: 25%; height: 50%; padding-top: 0.8%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-plpp-1 > .tile:nth-child(4) { top: 50%; left: 75%; width: 25%; height: 50%; padding-left: 0.8%; padding-top: 0.8%; }
+:where(.adobe-page) .t4-layout-pplp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 25%; height: 50%; padding-right: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-pplp-1 > .tile:nth-child(2) { top: 0; left: 25%; width: 25%; height: 50%; padding-left: 0.8%; padding-right: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-pplp-1 > .tile:nth-child(3) { top: 50%; left: 0; width: 50%; height: 50%; padding-top: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-pplp-1 > .tile:nth-child(4) { top: 0; left: 50%; width: 50%; height: 100%; padding-left: 0.8%; }
+:where(.adobe-page) .t4-layout-pppl-1 > .tile:nth-child(1) { top: 0; left: 0; width: 50%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-pppl-1 > .tile:nth-child(2) { top: 0; left: 50%; width: 25%; height: 50%; padding-left: 0.8%; padding-right: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-pppl-1 > .tile:nth-child(3) { top: 0; left: 75%; width: 25%; height: 50%; padding-left: 0.8%; padding-bottom: 0.8%; }
+:where(.adobe-page) .t4-layout-pppl-1 > .tile:nth-child(4) { top: 50%; left: 50%; width: 50%; height: 50%; padding-left: 0.8%; padding-top: 0.8%; }
+:where(.adobe-page) .t4-layout-pppp-1 > .tile:nth-child(1) { top: 0; left: 0; width: 25%; height: 100%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-pppp-1 > .tile:nth-child(2) { top: 0; left: 25%; width: 25%; height: 100%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-pppp-1 > .tile:nth-child(3) { top: 0; left: 50%; width: 25%; height: 100%; padding-left: 0.8%; padding-right: 0.8%; }
+:where(.adobe-page) .t4-layout-pppp-1 > .tile:nth-child(4) { top: 0; left: 75%; width: 25%; height: 100%; padding-left: 0.8%; }

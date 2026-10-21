@@ -1,0 +1,1350 @@
+{
+  "source": "https://express.adobe.com/page/fKEcYmY4tk1Ru/",
+  "theme": "adobe-theme-perfect-self-tape-properly-lit",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/rbi5aua.css",
+    "https://use.typekit.net/yfs6lii.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Properly Lit",
+    "subtitle": "Self Tape Lighting Explained",
+    "image": "/courses/perfect-self-tape/properly-lit/images/F6E91CDF-693D-4683-8EBB-A6785AB5D0CC.jpg",
+    "imageWidth": 768,
+    "imageHeight": 1024,
+    "backgroundPosition": "50% 50%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/492AF946-2E3C-490D-9EAD-85ED87D2A9F3.png",
+          "width": 800,
+          "height": 800
+        },
+        {
+          "type": "blockquote",
+          "html": "There is no image without light"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/6CD1D681-4228-414D-9290-E26CC3C2F61B.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Even a good performance can be overshadowed",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/FC4D1A0B-7B85-4DD9-BCC7-49E323682B9C.jpg",
+          "width": 1668,
+          "height": 928,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Shadows. Can’t see eyes. Too much space above head.",
+          "caption": "Shadows. Can’t see eyes. Too much space above head."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/CC5D3D07-34BF-486B-A18D-60525C59E90B.png",
+          "width": 2388,
+          "height": 1668,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Orange light. Bad Framing. Shadows on Wall.",
+          "caption": "Orange light. Bad Framing. Shadows on Wall."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/468B87AD-3215-40C6-940F-B13E10B84593.jpg",
+          "width": 1668,
+          "height": 938,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Hot spots of light. Bad Frame. Dark background sucks light.",
+          "caption": "Hot spots of light. Bad Frame. Dark background sucks light."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/8BA7C68B-AEB7-4627-9068-855B1F986E5F.jpg",
+          "width": 2388,
+          "height": 1324,
+          "displayWidth": 1024,
+          "figure": true,
+          "label": "Green screen backdrop. Shadows. No Depth.",
+          "caption": "Green screen backdrop. Shadows. No Depth."
+        },
+        {
+          "type": "h3",
+          "html": "Getting it Right - Sets You Apart",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/1C923DBE-7602-4FB4-A72C-77BFAA617292.jpg",
+          "width": 1668,
+          "height": 937,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/1F8867DE-DE97-4C22-9479-62BAC7B2204B.jpg",
+          "width": 1668,
+          "height": 924,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/C1E851EA-1BBC-4FAB-92EF-6536374A83F0.jpg",
+          "width": 2119,
+          "height": 1415,
+          "displayWidth": 1024
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/FCF261F1-EA11-4A4B-AC47-395E3EBFDD22.jpg",
+          "width": 800,
+          "height": 501
+        },
+        {
+          "type": "h3",
+          "html": "Understanding Lighting",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "nqMQZG68Wkc",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "First let’s make sure you got the gear",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/161A7A34-FD61-48DB-9148-75BF2F90A9F1.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "Soft Boxes And How They Work",
+          "href": "https://www.karltayloreducation.com/lighting-modifiers-softboxes/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/9891440F-EEA1-4C6C-9F55-2B2999EA8DE1.png",
+          "width": 720,
+          "height": 720
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "gj3R0OM2mKc",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/C6A6B9CD-072D-411A-B902-238D4F8045D7.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/52B1DEE2-31FC-4D11-9E5E-71AF4BD34FE2.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "button",
+          "label": "About LED In Video Shooting",
+          "href": "https://www.diyphotography.net/ten-tips-read-buy-led-lights-video/",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/B2039EF4-0D90-4E05-9B1B-E80B867D7E00.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "qSTGnl7HHao",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Learning to Light",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/FFC5011E-1B76-43FD-8ED0-E110446979A5.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/056CE33A-4C4D-4F41-96AF-6BE7B136C78A.png",
+          "width": 1000,
+          "height": 550
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "rq0q3Ea5fkQ",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/0621CB35-473B-4196-9260-2081E235971D.png",
+          "width": 1600,
+          "height": 1236,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "j_Sov3xmgwg",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/616FB544-0093-44A5-853D-1357F646F8BD.jpg",
+          "width": 600,
+          "height": 344
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "xJAI7ddS-b0",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/8B052C4E-D565-4848-A9B9-6C8D34B5A0D5.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/FB1E6A13-8155-40F4-B45F-DAA22CC07740.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/E2C838AB-7C50-49CD-9ADF-83FEB5B44A07.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/5C5A4302-B70E-420A-9A8A-D13A343AADDB.jpg",
+          "width": 500,
+          "height": 500
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/591310CA-A919-4B3F-84A7-CE858F179C36.jpg",
+          "width": 600,
+          "height": 488
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/210C3A6D-584A-45C3-8AF0-363E74515364.png",
+          "width": 1000,
+          "height": 707
+        },
+        {
+          "type": "h3",
+          "html": "Lexi Janicek’s Mother explains her home setup",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "photo-grid",
+      "classes": [
+        "photo-grid-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "grid": [
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/properly-lit/images/70473E0D-2A6B-467F-962A-C8BACE8857B5.jpg",
+              "width": 1668,
+              "height": 938
+            },
+            {
+              "src": "/courses/perfect-self-tape/properly-lit/images/FE7C4288-6C85-4B61-8266-09BEE7EF4C1E.jpg",
+              "width": 1668,
+              "height": 938
+            }
+          ]
+        },
+        {
+          "layout": "t2-layout-ll-1",
+          "tiles": [
+            {
+              "src": "/courses/perfect-self-tape/properly-lit/images/97455F46-EB74-4D50-B07B-CBCAE43C4158.jpg",
+              "width": 1668,
+              "height": 938
+            },
+            {
+              "src": "/courses/perfect-self-tape/properly-lit/images/53E44343-8169-4F09-BA75-1BD3B8298685.jpg",
+              "width": 1668,
+              "height": 938
+            }
+          ]
+        }
+      ],
+      "elements": []
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Laura Janiceck uses three lights in her home self tape setup of Lexi."
+        },
+        {
+          "type": "h4",
+          "html": "She places Lexi THREE FEET from Camera and FOUR FEET from Backdrop."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/D0800464-33C7-4936-AF6D-EA568BF8B8E7.jpg",
+          "width": 1900,
+          "height": 640,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "She uses TWO 24” Softboxes in front of Lexi as her MAIN and FILL LIGHTS."
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/40F65198-9E92-4028-BF86-0660136BCF30.jpg",
+          "width": 400,
+          "height": 400
+        },
+        {
+          "type": "h4",
+          "html": "LED Hair Light",
+          "align": "center"
+        },
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/F64A6C7D-BA4D-4375-9537-257DA6444CF9.jpg",
+          "width": 1125,
+          "height": 1279,
+          "displayWidth": 901
+        },
+        {
+          "type": "blockquote",
+          "html": "I have the middle of the soft boxes hitting at her eye level... the hair light is not on a boom, but the light that I use is able to angle down. I have it angling about 45 degrees in relation to the stand."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/380AC367-A463-4BAF-A09C-0DE8311EDCFC.jpg",
+          "width": 3680,
+          "height": 2413,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/EF94FE8B-D2D0-44B2-A68E-E5B4D65D5C14.jpg",
+          "width": 1900,
+          "height": 955,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/C3505F80-5E61-48E5-8C63-BA15271186CE.jpg",
+          "width": 2155,
+          "height": 1259,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom",
+        "bottom-shadow"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "Hair Light/Kicker Light/Back Light",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "flipbook",
+      "classes": [
+        "card-flipbook-section"
+      ],
+      "backgrounds": [
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/8E355346-F9E8-43F3-B446-8642B59D9763.jpg",
+          "width": 1668,
+          "height": 1660,
+          "position": "50% 50%"
+        },
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/14EE8C05-248C-49B5-912E-FE02040F1D66.jpg",
+          "width": 1668,
+          "height": 1651,
+          "position": "61.330935251798564% 80.61780738946094%"
+        },
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/1F5C17FE-850B-4472-942D-4232F5A5F8DF.jpg",
+          "width": 1668,
+          "height": 1822,
+          "position": "50% 50%"
+        },
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/BFDB1369-8A1E-4DC3-80E4-899CFA87FFC7.jpg",
+          "width": 1668,
+          "height": 1816,
+          "position": "50% 50%"
+        },
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/D830D9FB-EC54-457B-976B-FBD2A0122775.jpg",
+          "width": 1219,
+          "height": 1519,
+          "position": "50% 50%"
+        },
+        {
+          "image": "/courses/perfect-self-tape/properly-lit/images/EC34B64D-9423-40FF-B73B-F3B9CD22DA7B.jpg",
+          "width": 1387,
+          "height": 1134,
+          "position": "93.2918553405293% 59.19549586216253%"
+        }
+      ],
+      "cards": [
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "Soft Box on Boom Stand"
+            }
+          ]
+        },
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "Round LED Panel"
+            }
+          ]
+        },
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "8 by 36 inch Softbox"
+            }
+          ]
+        },
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "10 inch Ring Light"
+            }
+          ]
+        },
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "LED Flat Panel"
+            }
+          ]
+        },
+        {
+          "classes": [
+            "card-left"
+          ],
+          "elements": [
+            {
+              "type": "h4",
+              "html": "LED Flat Panel on Stand"
+            }
+          ]
+        }
+      ],
+      "elements": []
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer",
+        "top-shadow"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/BF680BDF-F43B-44A6-AB9D-A13DC3A366BD.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/0490077B-9F1C-49B9-8431-0DD1A60FDB98.jpg",
+          "width": 768,
+          "height": 588
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/DCB0F2D2-7568-4802-ABA3-BA4F83F4167C.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "uCAnQ8gipcg",
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/D1CFFA0D-3D40-4BE0-8176-A144B4ED968E.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "9NWAcK-wM80",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Skin tones should not be overlooked",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "youtube",
+          "id": "QhVOLaRHv94",
+          "align": "left"
+        },
+        {
+          "type": "h3",
+          "html": "Creating Variations for Mood",
+          "align": "center"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/84D2E3A0-898F-47AE-8B45-E4D32EB569F7.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/2ACCDC00-AECB-4361-8D54-46A7951A472E.png",
+          "width": 1000,
+          "height": 628
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/757A0775-324D-498D-8AEB-F183E7FCBC2A.jpg",
+          "width": 800,
+          "height": 501
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/6505B43C-45DF-49B3-A061-79FDA811C8E0.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/743C86EA-A1CE-48C3-9A85-988156C759AD.jpg",
+          "width": 2307,
+          "height": 1182,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/36A0ECF2-9A6C-4028-8DD0-73B12574C1BF.png",
+          "width": 2560,
+          "height": 1920,
+          "displayWidth": 1024
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/885AA4E3-D4A5-47B4-BCA2-5F53A74F6BDB.jpg",
+          "width": 1000,
+          "height": 562
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/properly-lit/images/004F056F-2ACA-4ACE-9332-E1948942061E.jpg",
+          "width": 2388,
+          "height": 1668,
+          "displayWidth": 1024
+        }
+      ]
+    }
+  ],
+  "credits": [
+    "Created with an image by r.hope22 - \"Lighting\""
+  ],
+  "runtime": "new"
+}

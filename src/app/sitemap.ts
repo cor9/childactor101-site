@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { getClassroomStaticLessonParams, getPublishedClassroomChapters } from "@/content/classroom";
-import { courses, lessonHasMissingVideo } from "@/content/courses";
+import { courses } from "@/content/courses";
 import { SITE_URL } from "@/lib/site-links";
 
 // Public, indexable top-level routes. /design-system is internal and stays out.
@@ -34,13 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lessonRoutes = getClassroomStaticLessonParams().map(
     ({ chapter, lesson }) => `/from-the-classroom/${chapter}/${lesson}`,
   );
-  const courseRoutes = courses.flatMap((course) => [
-    `/courses/${course.slug}`,
-    // Lessons still waiting on a recovered video are noindexed, so they stay out of the sitemap.
-    ...course.lessons
-      .filter((lesson) => !lessonHasMissingVideo(lesson))
-      .map((lesson) => `/courses/${course.slug}/${lesson.slug}`),
-  ]);
+  // Only the public sales pages are listed; the course itself lives at unlisted private addresses.
+  const courseRoutes = courses.map((course) => `/courses/${course.slug}`);
 
   return [...staticRoutes, ...chapterRoutes, ...lessonRoutes, ...courseRoutes].map((path) => ({
     url: path === "/" ? SITE_URL : `${SITE_URL}${path}`,

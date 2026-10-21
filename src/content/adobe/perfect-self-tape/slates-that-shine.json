@@ -1,0 +1,631 @@
+{
+  "source": "https://express.adobe.com/page/HTdXKtkSq3Ksq/",
+  "theme": "adobe-theme-perfect-self-tape-slates-that-shine",
+  "fontKits": [
+    "https://use.typekit.net/onz5gap.css",
+    "https://use.typekit.net/oea2wtv.css",
+    "https://use.typekit.net/pwy8yyx.css"
+  ],
+  "title": {
+    "position": "title-center",
+    "title": "Slates That Pop",
+    "subtitle": "",
+    "image": "/courses/perfect-self-tape/slates-that-shine/images/F55FFBC1-B3BF-4B8B-A5D1-C3CBB3332C17.jpg",
+    "imageWidth": 1000,
+    "imageHeight": 921,
+    "backgroundPosition": "48.184412470023986% 85.30359976614048%"
+  },
+  "sections": [
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h4",
+          "html": "A Slate should be filmed separately from the audition sides.",
+          "align": "center"
+        },
+        {
+          "type": "blockquote",
+          "html": "Repeating slate over and over before a scene reading pulls an Actor out of Scene preparation and Character."
+        },
+        {
+          "type": "h4",
+          "html": "In a Self Tape the Slate is the one opportunity an Actor has to show their charisma and vibe with the Casting Director."
+        },
+        {
+          "type": "blockquote",
+          "html": "In the Casting Room, conversation and personal interaction is a Huge component in a potential callback"
+        },
+        {
+          "type": "h4",
+          "html": "You must use the Slate as your one opportunity to have them see who you are and why they should want to get to know you"
+        },
+        {
+          "type": "blockquote",
+          "html": "Don’t be afraid to stand out. Adding a few seconds of personality never hurt anybody."
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/8B480A76-7E33-4CAD-9F03-A0559F40F85D.png",
+          "width": 2560,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "single-item-content-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "blockquote",
+          "html": "Always use Specific Slate Instructions if Casting provides"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/93AA157D-B6EE-4C21-9BCD-CC2BFF1C1D05.jpg",
+          "width": 1668,
+          "height": 2158
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/CD7B8D50-79FA-404C-9EA4-E36304BF8C5F.jpg",
+          "width": 1668,
+          "height": 1037
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/1FA3C953-BFE4-48D2-ACB7-FC168886F41B.jpg",
+          "width": 1668,
+          "height": 1903
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/6DF8C3DE-2C88-4116-90A6-2116BA67ED29.jpg",
+          "width": 1668,
+          "height": 1593
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/0A4CF000-D2FC-4E70-AAF7-AC43C8B75C45.jpg",
+          "width": 1668,
+          "height": 1783
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/756BE628-DE76-4C3F-9C6B-8099966AB6D1.jpg",
+          "width": 1668,
+          "height": 1850
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/12DD675C-D3E9-4F02-BB55-AD987A6EC5F2.jpg",
+          "width": 1668,
+          "height": 1634
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/3445E640-F31A-4E23-B2A5-8F27973A2D17.jpg",
+          "width": 1668,
+          "height": 1654
+        }
+      ]
+    },
+    {
+      "kind": "single-column",
+      "classes": [
+        "single-column-section",
+        "large-content-spacing-top",
+        "large-content-spacing-bottom"
+      ],
+      "spacing": {
+        "top": "large",
+        "bottom": "large"
+      },
+      "elements": [
+        {
+          "type": "h3",
+          "html": "Bonus Slate Shot Ideas",
+          "align": "center"
+        },
+        {
+          "type": "video",
+          "provider": "vimeo",
+          "id": "334221482",
+          "bunny": {
+            "guid": "d75ef465-5688-4d80-8ea2-59c595e44df3",
+            "title": "What is a Slate Shot-",
+            "needsReview": true
+          },
+          "align": "left"
+        }
+      ]
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/9F4C1830-AADA-4C52-A238-87BDC403FA11.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/D38FD430-89A5-4FB4-AD43-D51E3AD34CA2.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/1D80BC77-3850-424E-82E0-D17FBF43EBEF.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/0C00EF39-2AC8-4D7A-AEB3-96634DB1D980.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/D35848EC-F594-47A8-9215-0C49ECC2FCAD.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/E330459B-AA8D-402D-9554-57C8C9A53FA6.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/15CC46CD-E3AC-4370-90A2-F1EBBD3DB294.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/8F8FE6F0-571B-4E4A-9BF6-3B3EFEDA0AC0.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/D1ADE319-A90E-4A02-B039-F9FBDCDC00BD.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/00CFBA90-0EA7-4AF5-905C-58F3668E34BE.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/5F85CE16-AA4F-462E-B196-AD49BB3040AA.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    },
+    {
+      "kind": "spacer",
+      "classes": [
+        "spacer-section",
+        "content-spacer"
+      ],
+      "elements": []
+    },
+    {
+      "kind": "full-width",
+      "classes": [
+        "full-width-section"
+      ],
+      "spacing": {
+        "top": "normal",
+        "bottom": "normal"
+      },
+      "elements": [
+        {
+          "type": "image",
+          "src": "/courses/perfect-self-tape/slates-that-shine/images/BC9324FC-767D-44A1-8950-560C5C56F73E.png",
+          "width": 2550,
+          "height": 3300
+        }
+      ]
+    }
+  ],
+  "runtime": "classic"
+}

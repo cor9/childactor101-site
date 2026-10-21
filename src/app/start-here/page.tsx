@@ -11,13 +11,18 @@ import { PageHero } from "@/components/PageHero";
 import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 import { SectionLabel } from "@/components/SectionLabel";
 import { images } from "@/content/images";
+import {
+  MEMORIZATION_GUIDE_URL,
+  SELF_TAPE_SETUP_URL,
+  ZOOM_CALLBACK_GUIDE_URL,
+} from "@/lib/site-links";
 
 const roadmapSteps = [
   {
     title: "Understand the industry",
     description:
       "Before you spend money, learn how the business actually works. Understand the roles of reps, casting, classes, and families so you can make safer decisions. The first goal is clarity, not speed.",
-    actionHref: "/learn/how-to-become-a-child-actor",
+    actionHref: "/from-the-classroom/start-here/how-to-become-a-child-actor",
     actionLabel: "Read the overview",
   },
   {
@@ -31,7 +36,7 @@ const roadmapSteps = [
     title: "Build materials",
     description:
       "Photos, resumes, and profiles matter, but they work best once the foundation is there. Build simple, professional materials that match where your child is right now. You do not need everything on day one.",
-    actionHref: "/learn/headshots-resumes-and-materials",
+    actionHref: "/from-the-classroom/professional-materials",
     actionLabel: "See the material checklist",
   },
   {
@@ -44,7 +49,7 @@ const roadmapSteps = [
   {
     title: "Grow",
     description:
-      "A child acting career is built over time, not in one busy season. Protect your child&apos;s routine, mindset, and long-term health as opportunities grow. Sustainable progress beats constant urgency.",
+      "A child acting career is built over time, not in one busy season. Protect your child's routine, mindset, and long-term health as opportunities grow. Sustainable progress beats constant urgency.",
     actionHref: "/ecosystem",
     actionLabel: "Plan the long game",
   },
@@ -55,7 +60,7 @@ const firstReads = [
     title: "How to Become a Child Actor",
     description:
       "Start with a plain-English overview of how families usually enter TV and film, what the early stages look like, and what actually matters first.",
-    href: "/learn/how-to-become-a-child-actor",
+    href: "/from-the-classroom/start-here/how-to-become-a-child-actor",
     imageSrc: images.chapterGettingStarted.src,
     imageAlt: images.chapterGettingStarted.alt,
   },
@@ -63,7 +68,7 @@ const firstReads = [
     title: "What Parents Should Know First",
     description:
       "Get the foundational mindset, expectations, and safety lens that help parents make clearer decisions from the beginning.",
-    href: "/learn/what-parents-should-know-first",
+    href: "/from-the-classroom/start-here/what-it-takes-to-be-a-successful-child-actor",
     imageSrc: images.chapterForParents.src,
     imageAlt: images.chapterForParents.alt,
   },
@@ -71,7 +76,7 @@ const firstReads = [
     title: "Avoiding Talent Scams",
     description:
       "Learn the warning signs, pressure tactics, and red flags that often trap new families before they understand the industry.",
-    href: "/learn/avoiding-talent-scams",
+    href: "/before-you-pay",
     imageSrc: images.chapterRepresentation.src,
     imageAlt: images.chapterRepresentation.alt,
   },
@@ -79,7 +84,7 @@ const firstReads = [
     title: "Headshots, Resumes, and Materials",
     description:
       "Understand what materials matter, when they matter, and how to avoid building a polished package before the foundation is ready.",
-    href: "/learn/headshots-resumes-and-materials",
+    href: "/from-the-classroom/professional-materials",
     imageSrc: images.chapterTechnique.src,
     imageAlt: images.chapterTechnique.alt,
   },
@@ -90,28 +95,28 @@ const freeGuides = [
     title: "Headshot Guide",
     description:
       "A parent-first primer on timing, expectations, and what makes a headshot session useful instead of premature.",
-    href: "/guides/headshot-guide",
+    href: "/from-the-classroom/professional-materials/when-to-update-child-actor-headshots",
     eyebrow: "Free guide",
   },
   {
     title: "Self Tape Setup Tips",
     description:
       "A simple starter setup for clean, watchable self tapes without turning your house into a studio.",
-    href: "/guides/self-tape-setup-tips",
+    href: SELF_TAPE_SETUP_URL,
     eyebrow: "Free guide",
   },
   {
     title: "Fast Memorization Technique",
     description:
       "A practical technique young actors can use to learn lines faster while keeping the work calm and age-appropriate.",
-    href: "/guides/fast-memorization-technique",
+    href: MEMORIZATION_GUIDE_URL,
     eyebrow: "Free guide",
   },
   {
     title: "Zoom Callback Tips",
     description:
       "A calm checklist for helping your child show up prepared and professional when callbacks happen online.",
-    href: "/guides/zoom-callback-tips",
+    href: ZOOM_CALLBACK_GUIDE_URL,
     eyebrow: "Free guide",
   },
 ];

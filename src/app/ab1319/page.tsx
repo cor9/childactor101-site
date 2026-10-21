@@ -211,7 +211,7 @@ export default function AB1319Page() {
             <Card tone="warm" className="h-full">
               <FileText className="h-7 w-7 text-purple-deep" />
               <h2 className="mt-5 font-display text-3xl leading-tight text-chalkboard">
-                How to verify a company's compliance
+                How to verify a company&apos;s compliance
               </h2>
               <ul className="mt-5 space-y-4 pl-6 text-sm leading-7 text-ink-soft sm:text-base">
                 {ab1319VerifySteps.map((item) => (
@@ -225,7 +225,7 @@ export default function AB1319Page() {
             <Card className="h-full">
               <AlertTriangle className="h-7 w-7 text-[#c45745]" />
               <h2 className="mt-5 font-display text-3xl leading-tight text-chalkboard">
-                What to do if you've been scammed
+                What to do if you&apos;ve been scammed
               </h2>
               <ul className="mt-5 space-y-4 pl-6 text-sm leading-7 text-ink-soft sm:text-base">
                 {ab1319IfScammed.map((item) => (

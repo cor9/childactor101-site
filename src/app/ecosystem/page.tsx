@@ -12,8 +12,12 @@ import { Pill } from "@/components/ui/Pill";
 import { ChalkDust } from "@/components/primitives/ChalkDust";
 import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 
+import { SOFTWARE_TOOL_URLS } from "@/lib/site-links";
+
 export const metadata: Metadata = {
-  title: "Child Actor 101 Ecosystem | Tools, Training & Resources",
+  title: {
+    absolute: "Child Actor 101 Ecosystem | Tools, Training & Resources",
+  },
   description:
     "Explore the connected Child Actor 101 ecosystem of lessons, tools, training, coaching, guides, and resources for parents of young actors.",
 };
@@ -35,11 +39,11 @@ const mainPathways = [
     description: "Build professional materials for your child.",
     icon: <LayoutGrid className="h-6 w-6 text-[#bcefdc]" />,
     items: [
-      { name: "Resume101", href: "#resume101" },
-      { name: "Pages101", href: "#pages101" },
-      { name: "Prep101", href: "#prep101" },
-      { name: "Reader101", href: "#reader101" },
-      { name: "Bold Choices", href: "#bold-choices" },
+      { name: "Resume101", href: SOFTWARE_TOOL_URLS["Resume101"] },
+      { name: "Pages101", href: SOFTWARE_TOOL_URLS["Pages101"] },
+      { name: "Prep101", href: SOFTWARE_TOOL_URLS["Prep101"] },
+      { name: "Reader101", href: SOFTWARE_TOOL_URLS["Reader101"] },
+      { name: "Bold Choices", href: SOFTWARE_TOOL_URLS["Bold Choices"] },
     ],
   },
   {

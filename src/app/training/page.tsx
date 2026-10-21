@@ -11,7 +11,7 @@ import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "Online Acting Training for Young Actors | Child Actor 101",
+  title: "Online Acting Training for Young Actors",
   description:
     "Explore acting classes, coaching, audition training, and craft guidance for young actors ready to build stronger on-camera skills and a more professional path.",
 };

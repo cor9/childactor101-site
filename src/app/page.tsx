@@ -14,7 +14,7 @@ import { ChalkDoodle } from "@/components/primitives/ChalkDoodle";
 import { ChalkDust } from "@/components/primitives/ChalkDust";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { SPOTIFY_PODCAST_URL } from "@/lib/site-links";
+import { SOFTWARE_TOOL_URLS, SPOTIFY_PODCAST_URL } from "@/lib/site-links";
 
 const journeySteps = [
   {
@@ -83,6 +83,14 @@ const ecosystemColumns = [
     title: "Create",
     description: "Build your materials.",
     items: ["Resume101", "Pages101", "Prep101", "Reader101", "Bold Choices"],
+    itemHrefs: SOFTWARE_TOOL_URLS,
+    itemDescriptions: {
+      Resume101: "Build a professional actor résumé",
+      Pages101: "Create your actor’s professional webpage",
+      Prep101: "Prepare for auditions with AI",
+      Reader101: "Get scene-specific coaching for parent readers",
+      "Bold Choices": "Explore stronger acting choices",
+    },
   },
   {
     title: "Perform",
@@ -98,9 +106,11 @@ const ecosystemColumns = [
 ];
 
 export const metadata: Metadata = {
-  title: "The classroom for families navigating TV and film",
+  title: {
+    absolute: "Child Actor 101 | The classroom for families navigating TV and film",
+  },
   description:
-    "Start with the foundational Child Actor 101 homepage shell: the parent-first path into learning, tools, training, and podcast conversations.",
+    "Child Actor 101 helps families navigate the television and film industry through trusted education, practical tools, and professional training.",
 };
 
 export default function Home() {

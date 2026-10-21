@@ -1,0 +1,114 @@
+[
+  {
+    "path": "/parent-courses",
+    "kind": "page",
+    "title": "Parent Courses",
+    "risk": "high",
+    "eventualDestination": null,
+    "reviewNote": "Likely the course sales or access page. Do NOT point at /courses: that section holds two free restored courses, not necessarily the same products. Keep on the legacy host until the Squarespace page, its checkout, and customer access are verified."
+  },
+  {
+    "path": "/freeguides",
+    "kind": "page",
+    "title": "Free Guides",
+    "risk": "medium",
+    "eventualDestination": "/start-here",
+    "reviewNote": "Start Here has a Free Guides section, but its four guides link to other sites and the page was never compared with the old hub. This page also links the two PDFs below."
+  },
+  {
+    "path": "/private-coaching",
+    "kind": "page",
+    "title": "Private Coaching",
+    "risk": "medium",
+    "eventualDestination": "https://coaching.childactor101.com",
+    "reviewNote": "New Training page links Coaching with Corey to this site. Verify the old page's booking or payment flow before redirecting."
+  },
+  {
+    "path": "/self-tape-feedback",
+    "kind": "page",
+    "title": "Self Tape Feedback",
+    "risk": "medium",
+    "eventualDestination": "/ecosystem#self-tape-feedback",
+    "reviewNote": "The new site describes Self Tape Feedback but has no order flow here. Confirm the old page does not take orders or submissions before redirecting."
+  },
+  {
+    "path": "/youth-actor-workshops",
+    "kind": "page",
+    "title": "Youth Actor Workshops",
+    "risk": "medium",
+    "eventualDestination": null,
+    "reviewNote": "No equivalent identified. Training links to external class sites only. May hold dated event or signup content."
+  },
+  {
+    "path": "/thecraft",
+    "kind": "page",
+    "title": "The Craft",
+    "risk": "medium",
+    "eventualDestination": null,
+    "reviewNote": "No equivalent identified. The Ecosystem page names \"The Craft\" but it is only a section label there."
+  },
+  {
+    "path": "/talent-rep-open-call",
+    "kind": "page",
+    "title": "Talent Rep Open Call",
+    "risk": "medium",
+    "eventualDestination": "/industry/open-call",
+    "reviewNote": "The new page is for talent representatives. Check that the old page is not a family-facing submission form or a dated event page."
+  },
+  {
+    "path": "/resume-101",
+    "kind": "page",
+    "title": "Resume101",
+    "risk": "low",
+    "eventualDestination": "https://resumes.childactor101.com",
+    "reviewNote": "The tool now lives on its own site. Confirm the old page does not host the tool or collect payment."
+  },
+  {
+    "path": "/p101",
+    "kind": "page",
+    "title": "Pages101",
+    "risk": "low",
+    "eventualDestination": "https://pages.childactor101.com",
+    "reviewNote": "The tool now lives on its own site. Confirm the old page does not host the tool, subscriptions, or logins."
+  },
+  {
+    "path": "/ask101",
+    "kind": "page",
+    "title": "Ask101",
+    "risk": "medium",
+    "eventualDestination": null,
+    "reviewNote": "No equivalent identified on the new site. The old blog announced it as live, so it may be a working tool or signup."
+  },
+  {
+    "path": "/on-youtube",
+    "kind": "page",
+    "title": "On YouTube",
+    "risk": "low",
+    "eventualDestination": null,
+    "reviewNote": "Probably a video hub or channel link. Candidate: the YouTube channel itself, which is not recorded in this repo."
+  },
+  {
+    "path": "/books-more",
+    "kind": "page",
+    "title": "Books and More",
+    "risk": "medium",
+    "eventualDestination": "https://book101.childactor101.com",
+    "reviewNote": "Book101 is the nearest product site. Confirm it covers every item on the old page, including any store or affiliate links."
+  },
+  {
+    "path": "/s/7tips.pdf",
+    "kind": "pdf",
+    "title": "7 Tips Guide",
+    "risk": "medium",
+    "eventualDestination": null,
+    "reviewNote": "Downloadable file linked from /freeguides. Keep this URL working permanently, since other sites and emails may link straight to it. The inventory plans to split it into lessons, which does not replace the file."
+  },
+  {
+    "path": "/s/Content-Memorization.pdf",
+    "kind": "pdf",
+    "title": "Content Memorization Guide",
+    "risk": "medium",
+    "eventualDestination": "https://memorize.childactor101.com",
+    "reviewNote": "Memorization guide site is the likely successor, but its content was not compared with this PDF. Keep this URL working permanently."
+  }
+]

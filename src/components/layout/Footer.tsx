@@ -23,6 +23,7 @@ const defaultColumns: FooterColumn[] = [
     links: [
       { href: "/start-here", label: "Start Here" },
       { href: "/from-the-classroom", label: "From the Classroom" },
+      { href: "/courses", label: "Video Courses" },
       { href: "/podcast", label: "Podcast" },
       { href: "/corey-ralston", label: "Meet Corey" },
     ],

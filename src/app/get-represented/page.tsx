@@ -13,7 +13,7 @@ import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "How to Get Representation for a Child Actor | Child Actor 101",
+  title: "How to Get Representation for a Child Actor",
   description:
     "Learn when your child is ready for an agent or manager, how representation really works, and how to prepare professional materials before submitting.",
 };

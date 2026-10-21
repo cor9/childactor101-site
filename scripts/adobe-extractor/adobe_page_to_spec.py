@@ -31,7 +31,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 from page_routes import PAGE_ROUTES
-from video_map import VIMEO_MAP, YOUTUBE_REPLACEMENTS, vimeo_title
+from video_map import VIMEO_MAP, YOUTUBE_REMOVED, YOUTUBE_REPLACEMENTS, vimeo_title
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 USER_AGENT = {"User-Agent": "Mozilla/5.0"}
@@ -307,6 +307,8 @@ class PageExtractor:
         alignment = "center" if "link-center" in classes else "left"
         if iframe:
             video = self.video_from_iframe(iframe.attrs.get("src", ""))
+            if video.get("provider") == "youtube" and video["id"] in YOUTUBE_REMOVED:
+                return None
             video["align"] = alignment
             return video
         link = find_first(node, "a")

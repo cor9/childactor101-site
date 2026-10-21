@@ -114,8 +114,7 @@ VIMEO_MAP = {
     # --- External third-party Vimeo, still live ---
     "71838170": external_vimeo("71838170", "Who's Who on a Movie Crew (Vimeo Video School, 2013)"),
     "143619334": external_vimeo("143619334", "Why Props Matter (Rishi Kaneria, 2015)"),
-    # Vimeo title is "Mikey, Likes It!" (vimeo_library.csv). Earlier guess of Bunny "Research" was wrong.
-    "377218224": missing("377218224", "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match."),
+    "377218224": bunny("446e543d-107e-4430-844e-f2b3b5effd03", "Mikey, Likes It!"),  # Write It opening video; supplied by Corey
     # --- Supplied by Corey (formerly unmatched placeholders) ---
     "377218725": bunny("ed3ea1af-ac78-4c13-b063-c876cf0a5348", "Corey Ralston bio"),  # supplied by Corey
     "387252761": bunny("a855464e-d499-4221-98fa-dd884df2146d", "Why are Clips soo Important?"),  # supplied by Corey

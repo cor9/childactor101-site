@@ -32,9 +32,10 @@
           "type": "video",
           "provider": "vimeo",
           "id": "377218224",
-          "missing": {
-            "note": "Write It opening video; Vimeo title 'Mikey, Likes It!' (79s). Needs its Bunny match.",
-            "candidates": []
+          "bunny": {
+            "guid": "446e543d-107e-4430-844e-f2b3b5effd03",
+            "title": "Mikey, Likes It!",
+            "needsReview": false
           },
           "align": "left"
         },

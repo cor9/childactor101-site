@@ -27,6 +27,8 @@ type ModulePageProps = {
   }>;
 };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getCourseStaticModuleParams();
 }

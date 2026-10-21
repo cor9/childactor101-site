@@ -19,6 +19,9 @@ export type {
 
 export const courses: Course[] = [noExcusesCourse, perfectSelfTapeCourse];
 
+/** Courses that are sold behind a private link; the legacy public module routes must not serve them. */
+const PRIVATE_COURSES = new Set(["no-excuses"]);
+
 const courseMap = new Map(courses.map((course) => [course.slug, course]));
 
 export function getCourse(slug: string) {
@@ -52,7 +55,7 @@ export function getModulePagination(courseSlug: string, moduleSlug: string) {
 }
 
 export function getCourseStaticModuleParams() {
-  return courses.flatMap((course) =>
+  return courses.filter((course) => !PRIVATE_COURSES.has(course.slug)).flatMap((course) =>
     course.modules.map((module) => ({
       course: course.slug,
       module: module.slug,
@@ -110,7 +113,7 @@ export function moduleNeedsReview(module: CourseModule) {
 
 /** Old per-lesson routes now live as anchors inside their module page. */
 export function getLegacyLessonRedirects() {
-  return courses.flatMap((course) =>
+  return courses.filter((course) => !PRIVATE_COURSES.has(course.slug)).flatMap((course) =>
     course.modules.flatMap((module) =>
       getModuleSubsections(module).map((heading) => ({
         source: `/courses/${course.slug}/${heading.anchor}`,

@@ -15,6 +15,16 @@
  * deterministic; it verifies the embeds are present with the right source, not that they play.
  * Needs Playwright + Chromium (see compare-to-live.cjs for CHROMIUM_PATH / HTTPS_PROXY).
  */
+// A sold course lives at a private address (see src/content/adobe/<course>/order.ts); others are under /courses/<course>.
+function routeBase(course) {
+  try {
+    const order = require("fs").readFileSync(require("path").join(__dirname, "../../../src/content/adobe", course, "order.ts"), "utf8");
+    const match = order.match(/PRIVATE_BASE = "([^"]+)"/);
+    if (match) return match[1];
+  } catch (error) {}
+  return `/courses/${course}`;
+}
+
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -34,7 +44,7 @@ function routesFromContent() {
     if (!fs.statSync(dir).isDirectory()) continue;
     for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort()) {
       const slug = file.replace(/\.json$/, "");
-      routes.push(slug === "index" ? `/courses/${course}` : `/courses/${course}/${slug}`);
+      routes.push(slug === "index" ? `/courses/${course}` : `${routeBase(course)}/${slug}`);
     }
   }
   return routes;

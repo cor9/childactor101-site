@@ -11,12 +11,12 @@ Add every page you archive so its siblings link to it.
 
 PAGE_ROUTES = {
     # NO EXCUSES! DIY Actor Demo Reel Clips
-    "srf8IpDO7ZkIU": "/courses/no-excuses/welcome",
-    "MltFArqt4mOOT": "/courses/no-excuses/write-it",
-    "6DKzqO1Wiw758": "/courses/no-excuses/plan-prep-it",
-    "f5hjv4sMwNeA3": "/courses/no-excuses/shoot-it",
-    "GMt6OK0rvfYVm": "/courses/no-excuses/edit-it",
-    "z4dBmikw9rtLK": "/courses/no-excuses/use-it",
+    "srf8IpDO7ZkIU": "/learn/ne-9vphb2b1vsvl93/welcome",
+    "MltFArqt4mOOT": "/learn/ne-9vphb2b1vsvl93/write-it",
+    "6DKzqO1Wiw758": "/learn/ne-9vphb2b1vsvl93/plan-prep-it",
+    "f5hjv4sMwNeA3": "/learn/ne-9vphb2b1vsvl93/shoot-it",
+    "GMt6OK0rvfYVm": "/learn/ne-9vphb2b1vsvl93/edit-it",
+    "z4dBmikw9rtLK": "/learn/ne-9vphb2b1vsvl93/use-it",
     # The Perfect Self Tape
     "4N3CH5BgyUPgp": "/courses/perfect-self-tape",
     "t89Ol45aZnWWO": "/courses/perfect-self-tape/equipment-guide",

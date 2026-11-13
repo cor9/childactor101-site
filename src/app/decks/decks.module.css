@@ -62,11 +62,11 @@
 @media (max-width: 620px) { .page { padding: 38px 14px 65px; } .hero { margin-bottom: 28px; } .deckTabs { gap: 3px; padding: 5px; } .deckTab { min-height: 64px; padding: 5px; font-size: 11px; line-height: 1.2; } .deckTab small { font-size: 10px; } .toolbar { margin: 18px 0; } .toolbar button { padding: 7px 9px; font-size: 11px; } .playingCard { width: min(100%, 340px); padding: 18px; } .cardCenter p { font-size: clamp(20px, 6vw, 27px); } .controls { gap: 6px; } .controls .primaryButton { flex: 1; padding: 0 10px; font-size: 13px; } .secondaryButton { padding: 0 11px; } .secondaryButton span { display: none; } .bottomRow, .funnel { flex-direction: column; align-items: flex-start; } .funnel { padding: 25px; } .unlockCard { padding: 29px; } }
 @media (prefers-reduced-motion: reduce) { .playingCard { animation: none; } }
 @media print {
-  @page { size: letter portrait; margin: .38in; }
+  @page { size: letter portrait; margin: 0; }
   .page > .siteContent, .modalBackdrop { display: none !important; }
   .page { min-height: 0; padding: 0; background: white; color: black; }
   .printOnly { display: block; }
-  .printPage { break-after: page; }
+  .printPage { box-sizing: border-box; height: 11in; padding: .38in; break-after: page; }
   .printPage:last-child { break-after: auto; }
   .printOnly h1 { margin: 0 0 .18in; font: 800 13pt Arial, sans-serif; letter-spacing: .04em; color: #253e34; }
   .printGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }

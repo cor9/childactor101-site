@@ -183,7 +183,7 @@ export default function DeckShuffler() {
           </div>
 
           <div className={styles.bottomRow}>
-            <div><h2>Take the deck with you.</h2><p>Print all {activeCards.length} cards as low-ink, nine-card sheets.</p></div>
+            <div><h2>Take the deck with you.</h2><p>Print all {activeCards.length} cards as colorful, nine-card sheets inspired by the original decks.</p></div>
             <button type="button" className={styles.printButton} onClick={() => window.print()}><Printer size={18} /> Print 9-Up Sheet</button>
           </div>
           <aside className={styles.funnel}><div><span className={styles.eyebrow}>Ready for a choice that fits your script?</span><h2>Make your next take your own.</h2><p>Want acting choices written specifically for the exact script in your hand? Try Bold Choices — custom playable choices for your audition sides ($3.99/guide).</p></div><a href="https://boldchoices.childactor101.com" className={styles.funnelLink}>Explore Bold Choices <ArrowRight size={18} /></a></aside>

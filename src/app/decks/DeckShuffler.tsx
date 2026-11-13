@@ -190,7 +190,24 @@ export default function DeckShuffler() {
         </div>
       </div>
 
-      <div className={styles.printOnly} data-decks-print>{Array.from({ length: Math.ceil(activeCards.length / 9) }, (_, page) => <section className={styles.printPage} key={page}><h1>{deckOptions.find((option) => option.id === deck)?.label} · Acting Choice Cards</h1><div className={styles.printGrid}>{activeCards.slice(page * 9, page * 9 + 9).map((card) => <article key={card.id} className={styles.printCard}><small>{card.deck === "bold" ? "BOLD ACTING CHOICES" : "HA! HA! COMEDY"} · {card.number}</small><p>{card.prompt}</p><footer>CHILD ACTOR 101</footer></article>)}</div></section>)}</div>
+      <div className={styles.printOnly} data-decks-print>
+        {Array.from({ length: Math.ceil(activeCards.length / 9) }, (_, page) => (
+          <section className={styles.printPage} key={page}>
+            <h1>{deckOptions.find((option) => option.id === deck)?.label} · Acting Choice Cards</h1>
+            <div className={styles.printGrid}>
+              {activeCards.slice(page * 9, page * 9 + 9).map((card) => (
+                <article key={card.id} className={`${styles.printCard} ${card.deck === "bold" ? styles.boldPrintCard : styles.comedyPrintCard} ${card.prompt.length > 145 ? styles.printLong : card.prompt.length > 95 ? styles.printMedium : ""}`}>
+                  <div className={styles.printFrame}>
+                    <small>{card.deck === "bold" ? "BOLD ACTING CHOICES" : "HA! HA! COMEDY"} <b>#{card.number}</b></small>
+                    <p><span>{card.prompt}</span></p>
+                    <footer>CHILD ACTOR 101 <span>✦</span></footer>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
 
       {instructionsOpen && <div className={styles.modalBackdrop} onClick={() => setInstructionsOpen(false)}><div className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="instructions-title" onClick={(event) => event.stopPropagation()}><button type="button" className={styles.closeButton} onClick={() => setInstructionsOpen(false)} aria-label="Close instructions"><X size={22} /></button><span className={styles.eyebrow}>A note from Corey</span><h2 id="instructions-title">Instructions / How to Use</h2>{(deck === "all" ? [instructions.bold, instructions.comedy] : [instructions[deck]]).map((section) => <section key={section.title}><h3>{section.title}</h3>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</div></div>}
     </main>

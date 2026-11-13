@@ -61,4 +61,64 @@
 .printOnly { display: none; }
 @media (max-width: 620px) { .page { padding: 38px 14px 65px; } .hero { margin-bottom: 28px; } .deckTabs { gap: 3px; padding: 5px; } .deckTab { min-height: 64px; padding: 5px; font-size: 11px; line-height: 1.2; } .deckTab small { font-size: 10px; } .toolbar { margin: 18px 0; } .toolbar button { padding: 7px 9px; font-size: 11px; } .playingCard { width: min(100%, 340px); padding: 18px; } .cardCenter p { font-size: clamp(20px, 6vw, 27px); } .controls { gap: 6px; } .controls .primaryButton { flex: 1; padding: 0 10px; font-size: 13px; } .secondaryButton { padding: 0 11px; } .secondaryButton span { display: none; } .bottomRow, .funnel { flex-direction: column; align-items: flex-start; } .funnel { padding: 25px; } .unlockCard { padding: 29px; } }
 @media (prefers-reduced-motion: reduce) { .playingCard { animation: none; } }
-@media print { @page { size: letter portrait; margin: .38in; } .page > .siteContent, .modalBackdrop { display: none !important; } .page { min-height: 0; padding: 0; background: white; color: black; } .printOnly { display: block; } .printPage { break-after: page; } .printPage:last-child { break-after: auto; } .printOnly h1 { margin: 0 0 .18in; font: 700 14pt Arial, sans-serif; } .printGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; } .printCard { height: 3.03in; display: flex; flex-direction: column; justify-content: space-between; padding: .16in; border: 1px dashed #888; break-inside: avoid; background: white; color: black; } .printCard small { font: 700 7pt Arial, sans-serif; letter-spacing: .04em; } .printCard p { font: 700 12pt/1.25 Arial, sans-serif; } .printCard footer { font: 700 6pt Arial, sans-serif; letter-spacing: .12em; } }
+@media print {
+  @page { size: letter portrait; margin: .38in; }
+  .page > .siteContent, .modalBackdrop { display: none !important; }
+  .page { min-height: 0; padding: 0; background: white; color: black; }
+  .printOnly { display: block; }
+  .printPage { break-after: page; }
+  .printPage:last-child { break-after: auto; }
+  .printOnly h1 { margin: 0 0 .18in; font: 800 13pt Arial, sans-serif; letter-spacing: .04em; color: #253e34; }
+  .printGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .printCard {
+    box-sizing: border-box;
+    height: 3.03in;
+    padding: .055in;
+    border: 1px dashed #777;
+    break-inside: avoid;
+    overflow: hidden;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .boldPrintCard {
+    background: conic-gradient(from 45deg at 50% 50%, #65b1c1 0 25%, #e9c550 0 50%, #d78e91 0 75%, #80b58e 0) 0 0 / .68in .68in;
+  }
+  .comedyPrintCard {
+    background:
+      radial-gradient(circle at 15% 15%, #dc635b 0 .105in, transparent .11in),
+      radial-gradient(circle at 75% 20%, #9be2c0 0 .12in, transparent .125in),
+      radial-gradient(circle at 30% 79%, #e5ca67 0 .085in, transparent .09in),
+      radial-gradient(circle at 83% 83%, #79a9d7 0 .115in, transparent .12in),
+      linear-gradient(31deg, transparent 45%, #da6b65 46% 49%, transparent 50%) 0 0 / .8in .85in,
+      linear-gradient(145deg, transparent 43%, #65c3aa 44% 60%, transparent 61%) 0 0 / 1.1in 1.2in,
+      #17241e;
+  }
+  .printFrame {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: .13in .11in;
+    overflow: hidden;
+  }
+  .boldPrintCard .printFrame { background: #e9a9a9e8; border: .035in solid #cc6868; }
+  .comedyPrintCard .printFrame { background: #e3d4d0e8; border: .035in solid #222b29; }
+  .printFrame small { display: flex; justify-content: space-between; width: 100%; gap: 4px; padding: 5px 7px; color: #fff; font: 800 7.5pt Arial, sans-serif; letter-spacing: .09em; }
+  .boldPrintCard .printFrame small { background: #27634d; }
+  .comedyPrintCard .printFrame small { background: #0d4566; color: #f6d365; }
+  .printFrame small b { font-size: 7pt; }
+  .printFrame p { width: 100%; margin: auto 0; text-align: center; font: 800 15pt/1.37 Impact, "Arial Narrow", Arial, sans-serif; letter-spacing: .02em; text-transform: uppercase; overflow-wrap: anywhere; }
+  .printFrame p span { padding: .015in .035in; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .boldPrintCard .printFrame p span { background: #7edca1; color: #153d31; }
+  .comedyPrintCard .printFrame p span { background: #f8df85; color: #17344b; }
+  .boldPrintCard:nth-child(3n + 2) .printFrame { background: #3c4e70e8; border-color: #302b62; }
+  .boldPrintCard:nth-child(3n + 2) .printFrame p span { background: #315d3e; color: #fff; }
+  .boldPrintCard:nth-child(3n + 3) .printFrame p span { background: #f4cbd8; color: #952c19; }
+  .comedyPrintCard:nth-child(3n + 2) .printFrame p span { background: #ef334c; color: #62e1e2; }
+  .comedyPrintCard:nth-child(3n + 3) .printFrame p span { background: #121514; color: #57caab; }
+  .printMedium .printFrame p { font-size: 12pt; line-height: 1.32; }
+  .printLong .printFrame p { font-size: 10pt; line-height: 1.27; }
+  .printFrame footer { display: flex; justify-content: space-between; width: 100%; color: #17382b; font: 800 6.5pt Arial, sans-serif; letter-spacing: .1em; }
+  .boldPrintCard:nth-child(3n + 2) .printFrame footer { color: #fff; }
+}

@@ -61,6 +61,13 @@
   --shadow-paper: 0 24px 48px rgba(22, 36, 58, 0.08);
 }
 
+@media print {
+  body:has([data-decks-print]) > div > header,
+  body:has([data-decks-print]) > div > footer {
+    display: none !important;
+  }
+}
+
 @layer base {
   :root {
     --background: var(--color-paper);

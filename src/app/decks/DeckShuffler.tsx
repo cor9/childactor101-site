@@ -71,10 +71,13 @@ export default function DeckShuffler() {
   const currentCard = visibleCards.find((card) => card.id === currentId) ?? null;
 
   function resetView(nextDeck: DeckId, onlyFavorites: boolean) {
+    const savedCards = onlyFavorites ? actingCards.filter((card) => (nextDeck === "all" || card.deck === nextDeck) && favorites.includes(card.id)) : [];
+    const first = savedCards[0];
+    if (onlyFavorites) bags.current[nextDeck] = shuffle(savedCards.slice(1).map((card) => card.id));
     setDeck(nextDeck);
     setFavoritesOnly(onlyFavorites);
-    setHistory([]);
-    setPosition(-1);
+    setHistory(first ? [first.id] : []);
+    setPosition(first ? 0 : -1);
     setTransitionKey((key) => key + 1);
   }
 
@@ -120,6 +123,7 @@ export default function DeckShuffler() {
     try { localStorage.setItem(UNLOCK_KEY, "true"); } catch { /* Keep in-session access. */ }
     setUnlocked(true);
     setError("");
+    requestAnimationFrame(() => window.scrollTo(0, 0));
   }
 
   if (!ready) return <div className={styles.loading} aria-live="polite">Loading your decks…</div>;

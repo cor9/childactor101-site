@@ -15,6 +15,8 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 - Added a granular internal source-lesson inventory for Modules 01 and 05 to guide classroom lesson splitting without exposing internal module naming publicly
 - Added a typed `src/content/classroom.ts` sample classroom library model plus dynamic chapter and lesson prototype routes for `/from-the-classroom`
 
+- Native 101 Blog infrastructure (not yet populated): importer for the official Squarespace WordPress-format export (`scripts/blog/`), image downloader, migration audit, and `/101-blog`, `/101-blog/[slug]`, paginated and searchable archive, category and tag pages, RSS feed, sitemap entries, canonical URLs, and BlogPosting structured data. Redirect rules now follow the imported content automatically: migrated articles serve 200 at their original URLs and the `/101-blog` → classroom redirect is dropped once posts exist. "101 Blog" nav and footer links appear at the same time. See `docs/seo/blog-migration-runbook.md`. New commands: `npm run blog:import`, `blog:images`, `blog:audit`, `test:blog`
+
 ### Changed
 
 - Replaced the homepage Meet Corey placeholder with the real `corey-ralston.jpg` headshot
@@ -43,7 +45,7 @@ Unlike `DECISIONS.md`, which explains *why* important choices were made, this do
 
 ### Remaining
 
-- Integrate blog content
+- Provide the Squarespace export and run the blog import (`docs/seo/blog-migration-runbook.md`)
 - Migrate the podcast archive
 - Deploy preview environment
 

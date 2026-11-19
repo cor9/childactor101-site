@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"src/**/*.{ts,tsx}\" --max-warnings=0",
-    "test:redirects": "node scripts/test-legacy-redirects.mjs"
+    "test:redirects": "node scripts/test-legacy-redirects.mjs",
+    "test:blog": "node scripts/blog/test-blog-pipeline.mjs",
+    "blog:import": "node scripts/blog/import-squarespace.mjs",
+    "blog:images": "node scripts/blog/download-images.mjs",
+    "blog:audit": "node scripts/blog/audit.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.21.0",
@@ -23,6 +27,8 @@
     "@types/react-dom": "^19",
     "eslint": "9.0.0",
     "eslint-config-next": "16.2.9",
+    "fast-xml-parser": "^5.12.1",
+    "sanitize-html": "^2.18.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

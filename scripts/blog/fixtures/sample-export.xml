@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TEST FIXTURE ONLY. Synthetic data shaped like a Squarespace WordPress (WXR) export.
+     It is used by scripts/blog/test-blog-pipeline.mjs and is never imported into src/content. -->
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Fixture Site</title>
+  <link>https://www.childactor101.com</link>
+
+  <item>
+    <title>Fixture: What It Takes</title>
+    <link>https://www.childactor101.com/101-blog/what-it-takes</link>
+    <dc:creator><![CDATA[fixture-author]]></dc:creator>
+    <content:encoded><![CDATA[<h1>Heading one becomes h2</h1>
+<p>First paragraph with an <a href="https://www.childactor101.com/101-blog/Actorsaccess">internal link</a>, a
+<a href="https://legacy.childactor101.com/101-blog/not-migrated-post">legacy link to a missing post</a>, and an
+<a href="https://example.org/page" target="_blank">external link</a>.</p>
+<p></p>
+<p><img src="http://static1.squarespace.com/static/fixture/cover.jpg" alt="Fixture cover"></p>
+<p><img src="//images.squarespace-cdn.com/content/fixture/noalt.png"></p>
+[caption id="x" align="aligncenter"]<img src="https://images.squarespace-cdn.com/content/fixture/captioned.jpg" alt="Captioned"> A caption goes here[/caption]
+<p>Body text long enough to avoid the short-body flag. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<script>alert('x')</script>
+<iframe src="https://www.youtube.com/embed/fixture" width="560" height="315"></iframe>
+<iframe src="https://evil.example.net/embed"></iframe>]]></content:encoded>
+    <excerpt:encoded><![CDATA[A fixture excerpt.]]></excerpt:encoded>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_date>2023-03-02 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2023-03-02 17:00:00</wp:post_date_gmt>
+    <wp:post_name>what-it-takes</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_type>post</wp:post_type>
+    <category domain="category" nicename="start-here"><![CDATA[Start Here]]></category>
+    <category domain="post_tag" nicename="basics"><![CDATA[Basics]]></category>
+    <wp:postmeta><wp:meta_key>_thumbnail_id</wp:meta_key><wp:meta_value>900</wp:meta_value></wp:postmeta>
+  </item>
+
+  <item>
+    <title>Fixture: Mixed Case Slug</title>
+    <link>https://www.childactor101.com/101-blog/Actorsaccess</link>
+    <dc:creator><![CDATA[fixture-author]]></dc:creator>
+    <content:encoded><![CDATA[<p>Very short.</p>]]></content:encoded>
+    <wp:post_id>102</wp:post_id>
+    <wp:post_date_gmt>2021-01-15 12:00:00</wp:post_date_gmt>
+    <wp:post_name>Actorsaccess</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_type>post</wp:post_type>
+    <category domain="category" nicename="start-here"><![CDATA[Start Here]]></category>
+  </item>
+
+  <item>
+    <title>Fixture: A Draft</title>
+    <link>https://www.childactor101.com/101-blog/a-draft</link>
+    <dc:creator><![CDATA[fixture-author]]></dc:creator>
+    <content:encoded><![CDATA[<p>Unpublished.</p>]]></content:encoded>
+    <wp:post_id>103</wp:post_id>
+    <wp:post_date_gmt>2024-01-01 00:00:00</wp:post_date_gmt>
+    <wp:post_name>a-draft</wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+
+  <item>
+    <title>Fixture: Not In The Inventory</title>
+    <link>https://www.childactor101.com/101-blog/brand-new-fixture-post</link>
+    <dc:creator><![CDATA[fixture-author]]></dc:creator>
+    <content:encoded><![CDATA[<p>A post newer than the inventory. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>]]></content:encoded>
+    <wp:post_id>104</wp:post_id>
+    <wp:post_date_gmt>2025-06-01 00:00:00</wp:post_date_gmt>
+    <wp:post_name>brand-new-fixture-post</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_type>post</wp:post_type>
+    <category domain="category" nicename="announcements"><![CDATA[Announcements]]></category>
+  </item>
+
+  <item>
+    <title>Fixture Page</title>
+    <link>https://www.childactor101.com/about</link>
+    <content:encoded><![CDATA[<p>A page, not a post.</p>]]></content:encoded>
+    <wp:post_id>200</wp:post_id>
+    <wp:post_name>about</wp:post_name>
+    <wp:status>publish</wp:status>
+    <wp:post_type>page</wp:post_type>
+  </item>
+
+  <item>
+    <title>cover.jpg</title>
+    <link>https://www.childactor101.com/cover</link>
+    <wp:post_id>900</wp:post_id>
+    <wp:post_parent>101</wp:post_parent>
+    <wp:attachment_url>http://static1.squarespace.com/static/fixture/thumb.jpg</wp:attachment_url>
+    <wp:post_type>attachment</wp:post_type>
+  </item>
+</channel>
+</rss>

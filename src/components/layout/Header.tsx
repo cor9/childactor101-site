@@ -4,10 +4,13 @@ import { Menu } from "lucide-react";
 
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
+import { hasBlogPosts } from "@/lib/blog";
 
 export interface HeaderNavItem {
   href: string;
   label: string;
+  /** Short explainer shown under the label in the mobile menu and as the desktop tooltip. */
+  description?: string;
 }
 
 export interface HeaderProps {
@@ -16,9 +19,25 @@ export interface HeaderProps {
   navItems?: HeaderNavItem[];
 }
 
+// The two content libraries sit side by side and are described differently on purpose:
+// the 101 Blog is the original article archive, From the Classroom is the organized lesson library.
+// The blog link appears once its articles have been imported (see src/lib/blog.ts).
 const defaultNavItems: HeaderNavItem[] = [
   { href: "/start-here", label: "Start here" },
-  { href: "/from-the-classroom", label: "From the Classroom" },
+  {
+    href: "/from-the-classroom",
+    label: "From the Classroom",
+    description: "The newer, organized lesson library",
+  },
+  ...(hasBlogPosts()
+    ? [
+        {
+          href: "/101-blog",
+          label: "101 Blog",
+          description: "Original articles, industry commentary, announcements, and archived resources",
+        },
+      ]
+    : []),
   { href: "/ecosystem", label: "Tools" },
   { href: "/ecosystem", label: "Training" },
   { href: "/corey-ralston", label: "About Corey" },
@@ -47,20 +66,21 @@ export function Header({
           </p>
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-9" aria-label="Primary">
           {navItems.map((item) => (
             <Link
               key={`${item.label}-${item.href}`}
               href={item.href}
-              className="text-[1.05rem] font-medium text-chalkboard/78 transition hover:text-chalkboard"
+              title={item.description}
+              className="whitespace-nowrap text-[0.95rem] font-medium text-chalkboard/78 transition hover:text-chalkboard xl:text-[1.05rem]"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <Button href={ctaHref} size="lg">
+        <div className="hidden shrink-0 xl:block">
+          <Button href={ctaHref} size="lg" className="whitespace-nowrap">
             {ctaLabel}
           </Button>
         </div>
@@ -79,6 +99,9 @@ export function Header({
                   className="rounded-2xl px-4 py-3 text-sm font-medium text-ink transition hover:bg-paper-warm hover:text-chalkboard"
                 >
                   {item.label}
+                  {item.description ? (
+                    <span className="mt-0.5 block text-xs font-normal leading-5 text-ink-soft">{item.description}</span>
+                  ) : null}
                 </Link>
               ))}
               <Button href={ctaHref} className="mt-3 w-full">

@@ -34,6 +34,11 @@ const csvRows = readFileSync(`${ROOT}docs/seo/legacy-blog-migration-map.csv`, "u
     redirectedToLesson: line.includes(",A. Redirected"),
   }));
 
+// Once the Squarespace export has been imported the blog is native: the index and migrated-article
+// redirects intentionally disappear, so the pre-migration build assertions below (sections 3 and 4)
+// no longer apply. `npm run test:blog` covers that state.
+const nativeBlog = JSON.parse(readFileSync(`${ROOT}src/content/blog/index.json`, "utf8")).length > 0;
+
 let failures = 0;
 let passes = 0;
 
@@ -297,6 +302,10 @@ check("an inventory the repo already handles exits 0", clean.status === 0, `${cl
 const noArgs = runClassifier([]);
 check("no input file prints usage and exits 2", noArgs.status === 2 && noArgs.stderr.includes("Usage"), noArgs.stderr);
 
+if (nativeBlog) {
+  section("3-4. Pre-migration build checks");
+  console.log("SKIP  native blog content is imported; post-import behaviour is covered by `npm run test:blog`.");
+} else {
 // ---------------------------------------------------------------- 3. gate off
 section("3. Production build, LEGACY_BLOG_ORIGIN unset");
 
@@ -410,6 +419,8 @@ if (onBuild.status === 0) {
 
     check(`walked ${walkTargets.length} URLs hop by hop: no loops, 404s, or wrong targets`, problems.length === 0, problems.slice(0, 5).join("\n      "));
   });
+}
+
 }
 
 // ---------------------------------------------------------------- 5. bad values

@@ -8,6 +8,7 @@
   xmlns:wp="http://wordpress.org/export/1.2/">
 <channel>
   <title>Fixture Site</title>
+  <wp:author><wp:author_login>fixture-author</wp:author_login><wp:author_display_name><![CDATA[Fixture Author]]></wp:author_display_name></wp:author>
   <link>https://www.childactor101.com</link>
 
   <item>
@@ -25,7 +26,8 @@
 <p>Body text long enough to avoid the short-body flag. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <script>alert('x')</script>
 <iframe src="https://www.youtube.com/embed/fixture" width="560" height="315"></iframe>
-<iframe src="https://evil.example.net/embed"></iframe>]]></content:encoded>
+<iframe src="https://evil.example.net/embed"></iframe>
+<iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fembedlyvid%3Ffeature%3Doembed&amp;type=text%2Fhtml&amp;schema=youtube"></iframe>]]></content:encoded>
     <excerpt:encoded><![CDATA[A fixture excerpt.]]></excerpt:encoded>
     <wp:post_id>101</wp:post_id>
     <wp:post_date>2023-03-02 09:00:00</wp:post_date>
@@ -54,7 +56,7 @@
   <item>
     <title>Fixture: A Draft</title>
     <link>https://www.childactor101.com/101-blog/a-draft</link>
-    <dc:creator><![CDATA[fixture-author]]></dc:creator>
+    <dc:creator><![CDATA[private@example.com]]></dc:creator>
     <content:encoded><![CDATA[<p>Unpublished.</p>]]></content:encoded>
     <wp:post_id>103</wp:post_id>
     <wp:post_date_gmt>2024-01-01 00:00:00</wp:post_date_gmt>
@@ -67,7 +69,7 @@
     <title>Fixture: Not In The Inventory</title>
     <link>https://www.childactor101.com/101-blog/brand-new-fixture-post</link>
     <dc:creator><![CDATA[fixture-author]]></dc:creator>
-    <content:encoded><![CDATA[<p>A post newer than the inventory. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>]]></content:encoded>
+    <content:encoded><![CDATA[<p>A post newer than the inventory.</p><p>Second paragraph follows. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>]]></content:encoded>
     <wp:post_id>104</wp:post_id>
     <wp:post_date_gmt>2025-06-01 00:00:00</wp:post_date_gmt>
     <wp:post_name>brand-new-fixture-post</wp:post_name>

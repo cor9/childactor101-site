@@ -40,6 +40,7 @@ const bySlug = new Map(index.map((post) => [post.slug.toLowerCase(), post]));
 const inventorySlugs = new Set(inventory.map((entry) => entry.slug.toLowerCase()));
 
 const rows = [];
+const notes = [];
 const seoIssues = [];
 const titleCount = new Map();
 for (const post of index) titleCount.set(post.title.trim().toLowerCase(), (titleCount.get(post.title.trim().toLowerCase()) ?? 0) + 1);
@@ -52,7 +53,10 @@ function auditPost(post, inventoryEntry) {
   if (!post.author) issues.push("no author");
   if (!post.date) issues.push("no publication date");
   if (!full.body) issues.push("empty body");
-  else if (post.wordCount < SHORT_BODY_WORDS) issues.push(`short body (${post.wordCount} words): confirm against original`);
+  else if (full.sourceWordCount && post.wordCount < full.sourceWordCount * 0.98) issues.push(`text lost in cleaning (${full.sourceWordCount} words in export, ${post.wordCount} kept)`);
+  if (full.body && post.wordCount < SHORT_BODY_WORDS) {
+    notes.push({ slug: post.slug, message: `${post.wordCount} words, ${full.images?.length ?? 0} image(s), ${full.embedCount ?? 0} embed(s)${full.embedCount || full.images?.length ? " (media-led post; text is genuinely short in the export)" : ""}` });
+  }
 
   const images = imageSummary(full, manifest);
   if (images.failed) issues.push(`${images.failed} image(s) failed to download`);
@@ -160,6 +164,12 @@ ${list(missing.map((row) => `\`/101-blog/${row.entry.slug}\` — ${row.entry.tit
 ## Migrated but needing review
 
 ${list(review.map((row) => `\`/101-blog/${row.post.slug}\` — ${row.issues.join("; ")}`))}
+
+## Short or media-only posts (not errors)
+
+These contain little or no text in the export. They are complete as exported; eyeball them against the live pages.
+
+${list(notes.map((note) => `\`/101-blog/${note.slug}\` — ${note.message}`))}
 
 ## Skipped or ignored by the importer
 

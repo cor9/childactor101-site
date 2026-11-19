@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Card } from "@/components/ui/Card";
 import { Pill } from "@/components/ui/Pill";
-import { blogPostPath, formatPostDate, type BlogPostSummary } from "@/lib/blog";
+import { blogPostPath, formatPostDate, postDescription, type BlogPostSummary } from "@/lib/blog";
 
 export interface BlogPostCardProps {
   post: BlogPostSummary;
@@ -38,7 +38,7 @@ export function BlogPostCard({ post, priority = false }: BlogPostCardProps) {
           </Pill>
         ) : null}
         <h3 className="mt-5 font-display text-2xl leading-tight text-chalkboard">{post.title}</h3>
-        <p className="mt-3 line-clamp-4 flex-1 text-sm leading-7 text-ink-soft">{post.excerpt}</p>
+        <p className="mt-3 line-clamp-4 flex-1 text-sm leading-7 text-ink-soft">{postDescription(post)}</p>
         <p className="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-chalkboard/60">
           {[date, post.author].filter(Boolean).join(" · ")}
         </p>

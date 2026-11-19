@@ -17,6 +17,7 @@ import {
   getPost,
   getPostSummary,
   getRelatedPosts,
+  postDescription,
   postIsoDate,
 } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site-links";
@@ -36,13 +37,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: post.title,
-    description: post.excerpt,
+    description: postDescription(post),
     // Always the primary domain, with the original (case-preserved) slug.
     alternates: { canonical: url },
     openGraph: {
       type: "article",
       title: post.title,
-      description: post.excerpt,
+      description: postDescription(post),
       url,
       siteName: "Child Actor 101",
       publishedTime: postIsoDate(post),
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       tags: post.tags.map((tag) => tag.name),
       images: image ? [{ url: image, alt: post.title }] : undefined,
     },
-    twitter: { card: image ? "summary_large_image" : "summary", title: post.title, description: post.excerpt },
+    twitter: { card: image ? "summary_large_image" : "summary", title: post.title, description: postDescription(post) },
   };
 }
 
@@ -86,7 +87,7 @@ export default async function BlogArticlePage({ params }: Props) {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       headline: post.title,
-      description: post.excerpt,
+      description: postDescription(post),
       url,
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       ...(iso ? { datePublished: iso, dateModified: post.updated ?? iso } : {}),

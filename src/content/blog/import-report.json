@@ -1,0 +1,295 @@
+{
+  "importedAt": "2026-11-19T22:15:03.935Z",
+  "files": [
+    {
+      "file": "squarespace-export.xml",
+      "site": "Child Actor 101",
+      "posts": 171,
+      "attachments": 156
+    }
+  ],
+  "postsRead": 171,
+  "skipped": [
+    {
+      "slug": "4n3tpu2wfgucgifkmy8p72mfydf5hl",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "8exipo9uoqdsoqy7tvdkqjnbm661n5",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "9pr1yfio6r9zn16i7hc7e91bgaxyv2",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "9v86u9exje931we3ya0fp50r2gc0rx",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "actors-should-give-choices-in-their-self-tape-auditions",
+      "title": "Actors should give choices in their self tape auditions",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "fv52ziwwgfw21yuy87zu5sowdc3joy",
+      "title": "How To Find An Agent For Your Child Actor",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "how-to-handle-the-inevitable-rejection-that-all-child-actors-must-endure",
+      "title": "How to handle the inevitable rejection that all child actors must endure",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "kop9mxdkexek4jxo320tkqfaytsafn",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "mglcr620myk1u6mm2t9zfxzttsrfgi",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "p07pq3zatitquavtmha737vuf0n3fk",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "ssxz5om7ia8lxalz4hr49giwlycror",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "stop-playing-it-safe",
+      "title": "Stop playing it safe",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "the-art-of-the-headshot-how-parents-can-guide-their-child-actors-to-success",
+      "title": "The Art of the Headshot: How Parents Can Guide Their Child Actors to Success",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "slug": "w5i1iy3g1r5mucyshrqcomi9y004rp",
+      "title": "",
+      "reason": "status is \"draft\", not published",
+      "file": "squarespace-export.xml"
+    }
+  ],
+  "duplicates": [],
+  "warnings": {
+    "-hoacting-insights-ai-mentor-is-revolutionizing-child-actor-audition-prep": [
+      "unusual slug characters: -hoacting-insights-ai-mentor-is-revolutionizing-child-actor-audition-prep"
+    ],
+    "Demo Reel Options": [
+      "unusual slug characters: Demo Reel Options"
+    ]
+  },
+  "nonPostItems": [
+    {
+      "type": "page",
+      "title": "Home",
+      "link": "/home",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Contact Corey",
+      "link": "/contact-corey",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Contact",
+      "link": "/contact",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Privacy Policy",
+      "link": "/privacy-policy",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Terms and Conditions",
+      "link": "/terms-and-conditions",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "DIsclaimers",
+      "link": "/disclaimers",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Open Call Submissions",
+      "link": "/opencall10k",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "The Craft (retired)",
+      "link": "/thecraft",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Submissions Open Call",
+      "link": "/submissions",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "8k Open Call",
+      "link": "/8000",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Free Guides",
+      "link": "/freeguides",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "CPS Certified Vendors",
+      "link": "/cps-vendors",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Custom Audition Prep Guides",
+      "link": "/p101",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Resume-101",
+      "link": "/resume-101",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Self Tape Feedback",
+      "link": "/self-tape-feedback",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "ASK101",
+      "link": "/ask101",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Private Coaching",
+      "link": "/private-coaching",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Facebook Parent Group",
+      "link": "/facebook-parent-group",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Books & More",
+      "link": "/books-more",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "The Scenetist",
+      "link": "/the-scenetist",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "On Youtube",
+      "link": "/on-youtube",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Talent Rep Open Call",
+      "link": "/talent-rep-open-call",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Parent Courses",
+      "link": "/parent-courses",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Youth Actor Workshops",
+      "link": "/youth-actor-workshops",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Industry Expert LIVE",
+      "link": "/industry-expert-live",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Youth Actor Evaluation",
+      "link": "/evaluation",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Career Consultation/Materials Review",
+      "link": "/consultation",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Data-Deletion",
+      "link": "/delete-my-data",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Talent Scam Prevention Bonds (CA AB-1319)",
+      "link": "/ab1319",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Child Performer Protection (CA AB-1660)",
+      "link": "/ab1660",
+      "file": "squarespace-export.xml"
+    },
+    {
+      "type": "page",
+      "title": "Welcome",
+      "link": "/welcome",
+      "file": "squarespace-export.xml"
+    }
+  ]
+}

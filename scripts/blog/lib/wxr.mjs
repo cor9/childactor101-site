@@ -38,7 +38,7 @@ const parser = new XMLParser({
   parseAttributeValue: false,
   trimValues: true,
   processEntities: true,
-  isArray: (name) => ["item", "category", "wp:postmeta"].includes(name),
+  isArray: (name) => ["item", "category", "wp:postmeta", "wp:author"].includes(name),
 });
 
 const text = (value) => {
@@ -48,7 +48,9 @@ const text = (value) => {
 };
 
 export function stripTags(html) {
-  return sanitizeHtml(html, { allowedTags: [], allowedAttributes: {} })
+  // Put a space at every block boundary so "…join?</p><p>Short answer" does not become "join?Short answer".
+  const spaced = html.replace(/<\/(p|div|h[1-6]|li|ul|ol|blockquote|figure|figcaption|tr|td|th|table)>|<br\s*\/?>/gi, " $&");
+  return sanitizeHtml(spaced, { allowedTags: [], allowedAttributes: {} })
     .replace(/&nbsp;|&#160;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
@@ -139,6 +141,21 @@ export function cleanBody(rawHtml) {
     },
     transformTags: {
       h1: "h2",
+      // Squarespace wraps video embeds in Embedly: //cdn.embedly.com/widgets/media.html?src=<real embed URL>.
+      // Unwrap to the real embed so the video survives; the host allow-list still applies afterwards.
+      iframe: (tagName, attribs) => {
+        const next = { ...attribs, loading: "lazy" };
+        if (next.src) {
+          try {
+            const url = new URL(next.src.startsWith("//") ? `https:${next.src}` : next.src);
+            const inner = url.hostname === "cdn.embedly.com" ? url.searchParams.get("src") : null;
+            next.src = inner ?? url.href;
+          } catch {
+            // left as-is; the allow-list will drop it
+          }
+        }
+        return { tagName, attribs: next };
+      },
       a: (tagName, attribs) => {
         const next = { ...attribs };
         if (next.href) {
@@ -187,6 +204,14 @@ export function parseExport(xml, fileLabel = "export.xml") {
     throw new Error(`${fileLabel}: not a Squarespace/WordPress (WXR) export: no <rss><channel> element found.`);
   }
 
+  // Login -> display name. Posts reference authors by login, which can be an email address.
+  const authors = {};
+  for (const author of channel["wp:author"] ?? []) {
+    const login = text(author["wp:author_login"]);
+    const display = text(author["wp:author_display_name"]);
+    if (login && display) authors[login] = display;
+  }
+
   const items = channel.item ?? [];
   const attachments = new Map();
   const posts = [];
@@ -207,7 +232,7 @@ export function parseExport(xml, fileLabel = "export.xml") {
     }
   }
 
-  return { posts, attachments, other, site: { title: text(channel.title), link: text(channel.link) } };
+  return { posts, attachments, other, authors, site: { title: text(channel.title), link: text(channel.link) } };
 }
 
 export function buildPost(item, attachments, options = {}) {
@@ -229,7 +254,12 @@ export function buildPost(item, attachments, options = {}) {
   const localMatch = text(item["wp:post_date"]).match(/^(\d{4}-\d{2}-\d{2})/);
   const dateDisplay = localMatch && localMatch[1] !== "0000-00-00" ? localMatch[1] : date ? date.slice(0, 10) : null;
   const creator = text(item["dc:creator"]);
-  const author = options.authorMap?.[creator] ?? (creator || null);
+  let author = options.authorMap?.[creator] ?? (creator || null);
+  // Never publish an email address as a byline (Squarespace logins are often emails).
+  if (author && author.includes("@")) {
+    warnings.push("author was an email address and was withheld; add it to scripts/blog/author-map.json");
+    author = null;
+  }
 
   if (!slug) warnings.push("no slug");
   if (slug && !SLUG_PATTERN.test(slug)) warnings.push(`unusual slug characters: ${slug}`);
@@ -290,6 +320,9 @@ export function buildPost(item, attachments, options = {}) {
       originalPath: pathname || null,
       sourceId: postId || null,
       wordCount: countWords(cleaned.html),
+      // Words in the export before cleaning, so the audit can prove no text was lost.
+      sourceWordCount: countWords(rawBody.replace(/<(script|style)[\s\S]*?<\/\1>/gi, "").replace(/\[\/?caption[^\]]*\]/gi, "")),
+      embedCount: (cleaned.html.match(/<iframe/g) ?? []).length,
       readingMinutes: Math.max(1, Math.round(countWords(cleaned.html) / 220)),
       images: [...imageUrls],
       internalLinks: cleaned.internalLinks,

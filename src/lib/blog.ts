@@ -145,6 +145,11 @@ export function getRelatedPosts(post: BlogPostSummary, limit = 3): BlogPostSumma
     .map((entry) => entry.candidate);
 }
 
+/** Meta description: the excerpt, or a plain sentence for posts that are all images and video. */
+export function postDescription(post: Pick<BlogPostSummary, "title" | "excerpt">): string {
+  return post.excerpt.trim() || `Read “${post.title}” on the original Child Actor 101 blog.`;
+}
+
 export function formatPostDate(post: Pick<BlogPostSummary, "date" | "dateDisplay">): string | null {
   const day = post.dateDisplay ?? post.date?.slice(0, 10);
   if (!day) return null;
@@ -177,7 +182,7 @@ export function getSearchEntries(): BlogSearchEntry[] {
   return posts.map((post) => ({
     slug: post.slug,
     title: post.title,
-    excerpt: post.excerpt,
+    excerpt: postDescription(post),
     author: post.author,
     date: formatPostDate(post),
     categories: post.categories.map((term) => term.name),

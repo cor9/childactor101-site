@@ -74,7 +74,9 @@ function main() {
   const bySlug = new Map();
 
   for (const file of files) {
-    const { posts, attachments, other, site } = parseExport(readFileSync(file, "utf8"), basename(file));
+    const { posts, attachments, other, site, authors } = parseExport(readFileSync(file, "utf8"), basename(file));
+    // Display names from the export's own author table; author-map.json overrides win.
+    Object.assign(authorMap, { ...authors, ...readJson(args.authors, {}) });
     report.files.push({ file: basename(file), site: site.title, posts: posts.length, attachments: attachments.size });
     report.nonPostItems.push(...other.map((item) => ({ ...item, file: basename(file) })));
 

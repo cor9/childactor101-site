@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPages: MetadataRoute.Sitemap = [
     ...Array.from({ length: getPageCount() }, (_unused, position) => ({ url: `${SITE_URL}${pagePath(position + 1)}` })),
     ...getCategories().map((category) => ({ url: `${SITE_URL}/101-blog/category/${category.slug}` })),
-    ...getTags().map((tag) => ({ url: `${SITE_URL}/101-blog/tag/${tag.slug}` })),
+    ...getTags().filter((tag) => tag.count >= 2).map((tag) => ({ url: `${SITE_URL}/101-blog/tag/${tag.slug}` })),
     ...getAllPosts().map((post) => {
       const iso = postIsoDate(post);
       return { url: `${SITE_URL}${blogPostPath(post.slug)}`, ...(iso ? { lastModified: post.updated ?? iso } : {}) };

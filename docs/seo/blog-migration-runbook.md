@@ -1,6 +1,6 @@
 # 101 Blog migration runbook (Squarespace to native Next.js)
 
-**Status: infrastructure built and tested on synthetic data. No real articles are imported yet, and nothing has been deployed.** The Squarespace site, its indexing settings, DNS and content are never touched by anything here; the importer only reads a file.
+**Status: the 2026-11-19 Squarespace export has been imported (157 published posts, all 155 inventory articles present) and audited. Images are not yet copied locally and nothing has been deployed.** See `docs/seo/blog-migration-audit.md`. The Squarespace site, its indexing settings, DNS and content are never touched by anything here; the importer only reads a file.
 
 Why a native blog and not a proxy: the old articles must live at their original `https://www.childactor101.com/101-blog/<slug>` URLs with a canonical tag on the primary domain. Proxying Squarespace would return its own canonical tags and links and create a second, competing copy of the blog.
 
@@ -36,6 +36,8 @@ This writes `src/content/blog/` (`index.json`, `posts/<slug>.json`, `image-manif
 - Bodies are sanitised once, at import time, with an allow-list (no scripts, no unknown iframes; YouTube, Vimeo, Spotify and SoundCloud embeds are kept). Headings are `<h2>` or lower because the page title is the `<h1>`.
 - Links to `childactor101.com` / `legacy.childactor101.com` become relative primary-domain paths.
 - Author names are exactly what the export contains (often a Squarespace username). To show a display name instead, add `{"username": "Display Name"}` to `scripts/blog/author-map.json` and re-import.
+- **Authors:** the export's posts reference authors by login, which is often an email address. The importer maps logins to display names using the export's own author table and never publishes anything containing an `@` (it is withheld and reported instead).
+- **Embeds:** Squarespace wraps videos in Embedly (`cdn.embedly.com/widgets/media.html?src=…`); these are unwrapped to the real YouTube/Vimeo embed. Embeds from other hosts are removed and listed in the audit.
 - Dates keep the site-local calendar day, so a late-evening post is not shifted by UTC.
 
 ## 3. Copy the images locally

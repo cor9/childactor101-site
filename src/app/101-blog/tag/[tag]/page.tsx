@@ -23,6 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${tag.name} articles | 101 Blog`,
     description: `Child Actor 101 blog articles tagged ${tag.name}.`,
     alternates: { canonical: `/101-blog/tag/${tag.slug}` },
+    // A tag used by a single article is a thin duplicate of that article; keep it reachable, out of search.
+    ...(tag.count < 2 ? { robots: { index: false, follow: true } } : {}),
   };
 }
 

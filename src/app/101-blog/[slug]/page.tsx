@@ -36,13 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const image = post.featuredImage?.src;
 
   return {
-    title: post.title,
+    title: post.seoTitle || post.title,
     description: postDescription(post),
     // Always the primary domain, with the original (case-preserved) slug.
     alternates: { canonical: url },
     openGraph: {
       type: "article",
-      title: post.title,
+      title: post.seoTitle || post.title,
       description: postDescription(post),
       url,
       siteName: "Child Actor 101",
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       tags: post.tags.map((tag) => tag.name),
       images: image ? [{ url: image, alt: post.title }] : undefined,
     },
-    twitter: { card: image ? "summary_large_image" : "summary", title: post.title, description: postDescription(post) },
+    twitter: { card: image ? "summary_large_image" : "summary", title: post.seoTitle || post.title, description: postDescription(post) },
   };
 }
 

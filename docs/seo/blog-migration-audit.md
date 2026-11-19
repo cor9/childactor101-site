@@ -1,6 +1,6 @@
 # Blog migration audit
 
-Generated 2026-11-19T22:15:04.423Z by `scripts/blog/audit.mjs` from `squarespace-export.xml`.
+Generated 2026-11-19T23:56:22.351Z by `scripts/blog/audit.mjs` from `squarespace-export.xml`.
 Source of truth for the expected set: `src/content/blog/legacy-inventory.json` (155 original article URLs).
 
 ## Summary
@@ -21,12 +21,16 @@ Source of truth for the expected set: `src/content/blog/legacy-inventory.json` (
 
 | State | Count |
 |---|---|
-| Unique images referenced | 801 |
-| Copied to `public/blog/images` | 0 |
-| Still hot-linked from Squarespace (not yet downloaded) | 801 |
+| Unique images referenced | 805 |
+| Copied to `public/blog/images` | 805 |
+| Still hot-linked from Squarespace (not yet downloaded) | 0 |
 | Failed to download | 0 |
+| Local files missing on disk | 0 |
+| Image tags in article bodies still pointing at a remote URL | 0 (0 posts) |
+| Featured images still remote | 0 |
+| Stored size (originals were 469 MB) | 85 MB |
 
-Hot-linked images work only while the Squarespace site stays online. Run `node scripts/blog/download-images.mjs` and re-run this audit before the legacy site is ever retired.
+Every image is stored locally; no article depends on Squarespace's CDN.
 
 ## Missing articles
 
@@ -42,9 +46,7 @@ These contain little or no text in the export. They are complete as exported; ey
 
 - `/101-blog/Auditiontipsvideo` — 51 words, 2 image(s), 1 embed(s) (media-led post; text is genuinely short in the export)
 - `/101-blog/self-tape-equipment-for-child-actors` — 42 words, 2 image(s), 0 embed(s) (media-led post; text is genuinely short in the export)
-- `/101-blog/why-you-shouldnt-use-monologues-on-casting-profiles` — 0 words, 4 image(s), 0 embed(s) (media-led post; text is genuinely short in the export)
-- `/101-blog/101-tips-book` — 50 words, 3 image(s), 0 embed(s) (media-led post; text is genuinely short in the export)
-- `/101-blog/the-5-types-of-tv-content-your-child-actor-should-be-watching` — 0 words, 2 image(s), 5 embed(s) (media-led post; text is genuinely short in the export)
+- `/101-blog/101-tips-book` — 54 words, 3 image(s), 0 embed(s) (media-led post; text is genuinely short in the export)
 
 ## Skipped or ignored by the importer
 
@@ -109,10 +111,9 @@ These contain little or no text in the export. They are complete as exported; ey
 - child-star-on-hulu-a-rollercoaster-ride-through-instant-fame — no excerpt in export: meta description derived from body text
 - …and 112 more (see CSV)
 
-### N image(s) without alt text (9)
+### N image(s) without alt text (8)
 
 - allison-jones-on-casting-actors-golden-advice-from-a-legend — 12 image(s) without alt text
-- ah2iw5i9q7ctcr4z2yphs8pm5t8x8g — 10 image(s) without alt text
 - level-up-the-definitive-roadmap-to-becoming-a-competitive-actor-now-accepting-beta-testers- — 9 image(s) without alt text
 - why-i-rebuilt-the-entire-actor-training-program — 9 image(s) without alt text
 - create-a-vision-board-with-your-kiddos-to-manifest-success-and-growth-in-2025 — 9 image(s) without alt text
@@ -121,7 +122,7 @@ These contain little or no text in the export. They are complete as exported; ey
 - -hoacting-insights-ai-mentor-is-revolutionizing-child-actor-audition-prep — 7 image(s) without alt text
 - seeking-representation-vs-casting-resumes-what-parents-must-know — 3 image(s) without alt text
 
-### title is N characters (may truncate in search results) (101)
+### title is N characters (may truncate in search results) (100)
 
 - audition-and-forget-it-why-letting-go-is-a-child-actors-superpower — title is 70 characters (may truncate in search results)
 - avoid-these-common-audition-fails-expert-solutions-for-young-actors — title is 68 characters (may truncate in search results)
@@ -152,7 +153,7 @@ These contain little or no text in the export. They are complete as exported; ey
 - hollywood-hack-for-teen-actors-meet-the-cpp — title is 75 characters (may truncate in search results)
 - how-ai-is-revolutionizing-the-acting-worldand-why-you-and-your-young-actor-should-get-on-board — title is 95 characters (may truncate in search results)
 - introducing-ask101-your-personal-acting-industry-resource-now-live — title is 70 characters (may truncate in search results)
-- level-up-the-definitive-roadmap-to-becoming-a-competitive-actor-now-accepting-beta-testers- — title is 104 characters (may truncate in search results)
+- level-up-the-definitive-roadmap-to-becoming-a-competitive-actor-now-accepting-beta-testers- — title is 97 characters (may truncate in search results)
 - navigating-the-nuances-of-tv-acting-the-key-to-booking-the-gig — title is 63 characters (may truncate in search results)
 - olympic-level-training-for-aspiring-young-actors-why-consistency-is-key — title is 72 characters (may truncate in search results)
 - on-set-etiquette-essential-guide-for-child-actors-and-their-parents — title is 68 characters (may truncate in search results)
@@ -161,9 +162,9 @@ These contain little or no text in the export. They are complete as exported; ey
 - the-5-types-of-tv-content-your-child-actor-should-be-watching — title is 61 characters (may truncate in search results)
 - the-art-of-being-unforgettable-why-young-actors-should-ditch-the-vanilla-and-go-full-rocky-road — title is 99 characters (may truncate in search results)
 - the-child-actor-101-ecosystem-continues-to-grow-and-the-podcast-is-back — title is 73 characters (may truncate in search results)
-- the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-isnbspjust-a-hobbyist — title is 90 characters (may truncate in search results)
+- the-harsh-truth-if-youre-not-taking-training-seriously-your-kid-isnbspjust-a-hobbyist — title is 85 characters (may truncate in search results)
 - the-industry-classroom-how-acting-nurtures-life-skills-in-child-actors — title is 71 characters (may truncate in search results)
-- …and 61 more (see CSV)
+- …and 60 more (see CSV)
 
 ### Always check (cannot be detected from the export)
 

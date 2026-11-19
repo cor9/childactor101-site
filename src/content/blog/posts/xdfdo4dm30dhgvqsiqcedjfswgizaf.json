@@ -12,11 +12,14 @@
   "featuredImage": {
     "url": "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1679894391273-J22CJMUGDHZ5BK9D1PO6/IMG_0706.png?format=original",
     "source": "first-body-image",
-    "src": "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1679894391273-J22CJMUGDHZ5BK9D1PO6/IMG_0706.png?format=original"
+    "src": "/blog/images/3ba75c8f1c-IMG_0706.webp"
   },
   "originalUrl": "/101-blog/xdfdo4dm30dhgvqsiqcedjfswgizaf",
   "originalPath": "/101-blog/xdfdo4dm30dhgvqsiqcedjfswgizaf",
   "sourceId": "323",
+  "bodySource": "wordpress-export",
+  "seoTitle": null,
+  "seoDescription": null,
   "wordCount": 71,
   "sourceWordCount": 71,
   "embedCount": 1,
@@ -25,10 +28,11 @@
     "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1679894391273-J22CJMUGDHZ5BK9D1PO6/IMG_0706.png?format=original"
   ],
   "internalLinks": [],
+  "linkFixes": [],
   "externalLinkCount": 0,
   "contentIssues": {
     "imagesWithoutAlt": 0,
     "iframesDropped": 0
   },
-  "body": "<div><h2>Listen, there are no shortcuts to success in Hollywood!</h2></div>\n  \n  \n  \n  <img src=\"https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1679894391273-J22CJMUGDHZ5BK9D1PO6/IMG_0706.png?format=original\" alt=\"\" loading=\"lazy\" decoding=\"async\" />\n  \n  \n    \n  \n\n<div><h3>The main reason I started the Child Actor 101 Facebook group was to steer parents clear of the many scams that exist out there. Many give false hopes and impressions on how the entertainment industry works. And all of them overcharge and under deliver.</h3><h3><em>So, check out the video and subscribe to the Child Actor 101 YouTube channel for more insider info.</em> </h3></div><iframe src=\"https://www.youtube.com/embed/HJ_3ZIwTH-E?feature=oembed\" width=\"854\" height=\"480\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\" loading=\"lazy\"></iframe>"
+  "body": "<div><h2>Listen, there are no shortcuts to success in Hollywood!</h2></div>\n  \n  \n  \n  <img src=\"/blog/images/3ba75c8f1c-IMG_0706.webp\" width=\"1451\" height=\"790\" alt=\"\" loading=\"lazy\" decoding=\"async\" />\n  \n  \n    \n  \n\n<div><h3>The main reason I started the Child Actor 101 Facebook group was to steer parents clear of the many scams that exist out there. Many give false hopes and impressions on how the entertainment industry works. And all of them overcharge and under deliver.</h3><h3><em>So, check out the video and subscribe to the Child Actor 101 YouTube channel for more insider info.</em> </h3></div><iframe src=\"https://www.youtube.com/embed/HJ_3ZIwTH-E?feature=oembed\" width=\"854\" height=\"480\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\" loading=\"lazy\"></iframe>"
 }

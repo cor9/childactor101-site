@@ -5,6 +5,10 @@
  *
  *   node scripts/blog/download-images.mjs [--dir <content dir>] [--public <public/blog/images>] [--retry-failed]
  *
+ * Static images are resized to at most MAX_WIDTH px wide and saved as WebP (alpha kept) so the repo and the
+ * deployment stay small; animated images and SVGs are copied untouched. Width and height are recorded in the
+ * manifest so posts can reserve space and avoid layout shift. Originals stay on Squarespace, which is never modified.
+ *
  * Safe to re-run: already-downloaded files are skipped; failures are recorded, not fatal. A file is
  * accepted only when the server answers 200 with an image/* content type.
  */
@@ -12,6 +16,8 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+
+import sharp from "sharp";
 
 import { applyImageManifest } from "./lib/images.mjs";
 
@@ -23,7 +29,10 @@ const imageDir = flag("--public", join(ROOT, "public/blog/images"));
 const publicPrefix = "/blog/images";
 const retryFailed = args.includes("--retry-failed");
 const CONCURRENCY = 6;
+const MAX_WIDTH = 1600;
+const WEBP_QUALITY = 82;
 
+const KEEP_AS_IS = new Set(["image/gif", "image/svg+xml"]);
 const EXT_BY_TYPE = { "image/jpeg": ".jpg", "image/png": ".png", "image/gif": ".gif", "image/webp": ".webp", "image/svg+xml": ".svg", "image/avif": ".avif" };
 
 const manifestPath = join(contentDir, "image-manifest.json");
@@ -33,6 +42,22 @@ if (!existsSync(manifestPath)) {
 }
 const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
 mkdirSync(imageDir, { recursive: true });
+
+/** Returns the bytes to store plus metadata. Animated or vector images are kept exactly as served. */
+async function prepare(bytes, contentType) {
+  const type = contentType.split(";")[0].trim();
+  const meta = await sharp(bytes, { animated: true }).metadata().catch(() => null);
+  const animated = (meta?.pages ?? 1) > 1;
+  if (KEEP_AS_IS.has(type) || animated || !meta) {
+    return { bytes, type, width: meta?.width ?? null, height: meta ? (meta.pageHeight ?? meta.height) : null, optimized: false };
+  }
+  const { data, info } = await sharp(bytes)
+    .rotate()
+    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: WEBP_QUALITY })
+    .toBuffer({ resolveWithObject: true });
+  return { bytes: data, type: "image/webp", width: info.width, height: info.height, optimized: true };
+}
 
 function fileNameFor(url, contentType) {
   const hash = createHash("sha1").update(url).digest("hex").slice(0, 10);
@@ -59,10 +84,20 @@ async function worker() {
   while (queue.length) {
     const [url] = queue.shift();
     try {
-      const { bytes, contentType } = await fetchImage(url);
-      const name = fileNameFor(url, contentType);
-      writeFileSync(join(imageDir, name), bytes);
-      manifest[url] = { status: "downloaded", localPath: `${publicPrefix}/${name}`, bytes: bytes.length, contentType };
+      const fetched = await fetchImage(url);
+      const prepared = await prepare(fetched.bytes, fetched.contentType);
+      const name = fileNameFor(url, prepared.type);
+      writeFileSync(join(imageDir, name), prepared.bytes);
+      manifest[url] = {
+        status: "downloaded",
+        localPath: `${publicPrefix}/${name}`,
+        bytes: prepared.bytes.length,
+        originalBytes: fetched.bytes.length,
+        contentType: prepared.type,
+        width: prepared.width,
+        height: prepared.height,
+        optimized: prepared.optimized,
+      };
     } catch (error) {
       manifest[url] = { status: "failed", localPath: null, error: String(error.message ?? error) };
     }

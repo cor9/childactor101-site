@@ -14,7 +14,11 @@ export function applyImageManifest(post, manifest) {
   for (const url of post.images) {
     const entry = manifest[url];
     if (entry?.status === "downloaded" && entry.localPath) {
-      body = body.split(`src="${url}"`).join(`src="${entry.localPath}"`);
+      // Point at the local copy and, when known, reserve its space (width/height) unless the tag already sets them.
+      const dims = entry.width && entry.height ? ` width="${entry.width}" height="${entry.height}"` : "";
+      body = body.replace(new RegExp(`<img([^>]*?)src="${url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"([^>]*)>`, "g"), (_tag, before, after) =>
+        /\swidth=|\sheight=/.test(before + after) ? `<img${before}src="${entry.localPath}"${after}>` : `<img${before}src="${entry.localPath}"${dims}${after}>`,
+      );
     }
   }
   const featured = post.featuredImage;

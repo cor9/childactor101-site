@@ -12,11 +12,14 @@
   "featuredImage": {
     "url": "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1698604815108-AFM9A3RCZIY5KEEW9F8G/IMG_2513.jpeg",
     "source": "thumbnail",
-    "src": "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1698604815108-AFM9A3RCZIY5KEEW9F8G/IMG_2513.jpeg"
+    "src": "/blog/images/54027480e9-IMG_2513.webp"
   },
   "originalUrl": "/101-blog/olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
   "originalPath": "/101-blog/olympic-level-training-for-aspiring-young-actors-why-consistency-is-key",
   "sourceId": "172",
+  "bodySource": "wordpress-export",
+  "seoTitle": null,
+  "seoDescription": null,
   "wordCount": 447,
   "sourceWordCount": 447,
   "embedCount": 0,
@@ -25,6 +28,7 @@
     "https://images.squarespace-cdn.com/content/v1/616e111657e9bc2d5ed77edc/1698604815108-AFM9A3RCZIY5KEEW9F8G/IMG_2513.jpeg"
   ],
   "internalLinks": [],
+  "linkFixes": [],
   "externalLinkCount": 0,
   "contentIssues": {
     "imagesWithoutAlt": 0,

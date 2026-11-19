@@ -69,8 +69,13 @@ check("categories and tags keep names and slugs", post.categories[0].slug === "s
 check("<h1> demoted to <h2>", post.body.includes("<h2>Heading one becomes h2</h2>") && !post.body.includes("<h1"));
 check("scripts removed", !/<script|alert\(/i.test(post.body));
 check("allow-listed YouTube embed kept, unknown iframe removed", post.body.includes("youtube.com/embed/fixture") && !post.body.includes("evil.example.net") && post.contentIssues.iframesDropped === 1);
-check("Embedly-wrapped YouTube embed is unwrapped to the real embed", post.body.includes('src="https://www.youtube.com/embed/embedlyvid?feature=oembed"') && !post.body.includes("embedly.com") && post.embedCount === 2);
+check("Embedly-wrapped YouTube embed is unwrapped to the real embed", post.body.includes('src="https://www.youtube.com/embed/embedlyvid?feature=oembed"') && !post.body.includes("embedly.com") && post.embedCount === 4);
 check("block boundaries become spaces in derived text (no glued words)", !/\w\.[A-Z]/.test(mixed2excerpt()) , mixed2excerpt());
+check("Amazon affiliate widget is kept at its native pixel size; other inline styles are dropped", post.body.includes("ws-na.amazon-adsystem.com") && /style="width:120px;height:240px"/.test(post.body) && post.body.includes("embed-widget") && !post.body.includes("color:red"));
+check("video hidden in a data-html attribute (JSON-feed style) becomes a real embed", post.body.includes("youtube.com/embed/wrapped1"));
+const lateEvening = index.find((entry) => entry.slug === "brand-new-fixture-post");
+check("dates display in Pacific time (00:30 UTC on 1 June is 31 May at the site)", lateEvening.date === "2025-06-01T00:30:00.000Z" && lateEvening.dateDisplay === "2025-05-31", `${lateEvening.date} ${lateEvening.dateDisplay}`);
+check("leftover HTML entities in titles are decoded", lateEvening.title === "Fixture: Not & In The Inventory", lateEvening.title);
 check("raw word count is recorded and cleaning lost no text", post.sourceWordCount >= post.wordCount && post.wordCount >= post.sourceWordCount * 0.98, `${post.sourceWordCount} vs ${post.wordCount}`);
 check("links to the old and legacy hosts become relative primary-domain paths", post.body.includes('href="/101-blog/Actorsaccess"') && post.body.includes('href="/101-blog/not-migrated-post"') && !post.body.includes("legacy.childactor101.com"));
 check("external links get rel=noopener", /href="https:\/\/example\.org\/page"[^>]*rel="noopener noreferrer"/.test(post.body));
@@ -91,6 +96,15 @@ const notXml = join(work, "bad.xml");
 writeFileSync(notXml, "<html><body>nope</body></html>");
 const bad = run("import-squarespace.mjs", [notXml, "--out", join(work, "bad")]);
 check("a non-export file fails clearly", bad.status === 1 && bad.stderr.includes("not a Squarespace/WordPress (WXR) export"), bad.stderr);
+const overrideOut = join(work, "override-content");
+cpSync(out, overrideOut, { recursive: true });
+writeFileSync(join(overrideOut, "recovered-bodies.json"), JSON.stringify({ "what-it-takes": { body: "<p>Recovered paragraph from the JSON feed.</p><h1>Heading</h1>" } }));
+writeFileSync(join(overrideOut, "seo-overrides.json"), JSON.stringify({ "what-it-takes": { title: "A Custom SEO Title", description: "A custom meta description." }, Actorsaccess: { title: "Fixture: Mixed Case Slug", description: null } }));
+check("override import succeeds", run("import-squarespace.mjs", [FIXTURE, "--out", overrideOut]).status === 0);
+const overridden = readJson(join(overrideOut, "posts/what-it-takes.json"));
+check("a recovered body replaces the export body and is sanitised the same way", overridden.bodySource === "squarespace-json-feed" && overridden.body.includes("Recovered paragraph") && overridden.body.includes("<h2>Heading</h2>") && !overridden.body.includes("Heading one becomes h2"));
+check("posts not recovered keep the export body", readJson(join(overrideOut, "posts/actorsaccess.json")).bodySource === "wordpress-export");
+check("live SEO title and description are applied; an SEO title equal to the title is not stored", overridden.seoTitle === "A Custom SEO Title" && overridden.seoDescription === "A custom meta description." && readJson(join(overrideOut, "posts/actorsaccess.json")).seoTitle === null);
 check("no arguments prints usage", run("import-squarespace.mjs", []).status === 2);
 
 // ------------------------------------------------------------------ 2. image downloader
@@ -121,11 +135,12 @@ writeFileSync(join(dlContent, "image-manifest.json"), JSON.stringify(Object.from
 const dl = await runAsync("download-images.mjs", ["--dir", dlContent, "--public", dlPublic]);
 const dlManifest = readJson(join(dlContent, "image-manifest.json"));
 check("download exits 0", dl.status === 0, dl.stderr + dl.stdout);
-check("image/* 200 is saved and recorded", dlManifest[urls.ok].status === "downloaded" && /^\/blog\/images\/[0-9a-f]{10}-ok\.png$/.test(dlManifest[urls.ok].localPath) && readdirSync(dlPublic).length === 1);
+check("image/* 200 is saved and recorded", dlManifest[urls.ok].status === "downloaded" && /^\/blog\/images\/[0-9a-f]{10}-ok\.webp$/.test(dlManifest[urls.ok].localPath) && dlManifest[urls.ok].optimized === true && dlManifest[urls.ok].width === 1 && dlManifest[urls.ok].height === 1 && readdirSync(dlPublic).length === 1);
 check("200 HTML (soft 404) is rejected as not an image", dlManifest[urls.html].status === "failed" && dlManifest[urls.html].error.includes("not an image"));
 check("HTTP 404 is recorded as failed", dlManifest[urls.gone].status === "failed" && dlManifest[urls.gone].error === "HTTP 404");
 const dlAfter = readJson(join(dlContent, "posts/what-it-takes.json"));
 check("post body and featured image point at the local copy; failures keep the original URL", dlAfter.body.includes(`src="${dlManifest[urls.ok].localPath}"`) && dlAfter.body.includes(`src="${urls.gone}"`) && dlAfter.featuredImage.src === dlManifest[urls.ok].localPath);
+check("local images get width/height so the page does not shift while loading", dlAfter.body.includes(`src="${dlManifest[urls.ok].localPath}" width="1" height="1"`));
 check("index summary featured image is re-pointed", readJson(join(dlContent, "index.json")).find((p) => p.slug === "what-it-takes").featuredImage.src === dlManifest[urls.ok].localPath);
 const dl2 = await runAsync("download-images.mjs", ["--dir", dlContent, "--public", dlPublic]);
 check("second run downloads nothing new", dl2.stdout.includes("0 to download"), dl2.stdout);
@@ -211,6 +226,9 @@ async function withServer(env, fn) {
 }
 
 try {
+  // The real recovered bodies and SEO overrides must not leak into the synthetic import.
+  rmSync(join(CONTENT, "recovered-bodies.json"), { force: true });
+  rmSync(join(CONTENT, "seo-overrides.json"), { force: true });
   const bigFile = join(work, "big-export.xml");
   writeFileSync(bigFile, bigExport());
   const seeded = run("import-squarespace.mjs", [bigFile]);

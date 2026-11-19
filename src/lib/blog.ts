@@ -29,6 +29,9 @@ export interface BlogPostSummary {
   updated: string | null;
   excerpt: string;
   excerptSource: string;
+  /** Search-result title/description the live site used, when they differed from the article title/excerpt. */
+  seoTitle?: string | null;
+  seoDescription?: string | null;
   categories: BlogTerm[];
   tags: BlogTerm[];
   featuredImage: BlogImage | null;
@@ -146,8 +149,8 @@ export function getRelatedPosts(post: BlogPostSummary, limit = 3): BlogPostSumma
 }
 
 /** Meta description: the excerpt, or a plain sentence for posts that are all images and video. */
-export function postDescription(post: Pick<BlogPostSummary, "title" | "excerpt">): string {
-  return post.excerpt.trim() || `Read “${post.title}” on the original Child Actor 101 blog.`;
+export function postDescription(post: Pick<BlogPostSummary, "title" | "excerpt" | "seoDescription">): string {
+  return post.seoDescription?.trim() || post.excerpt.trim() || `Read “${post.title}” on the original Child Actor 101 blog.`;
 }
 
 export function formatPostDate(post: Pick<BlogPostSummary, "date" | "dateDisplay">): string | null {

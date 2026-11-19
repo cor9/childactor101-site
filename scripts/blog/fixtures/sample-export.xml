@@ -27,6 +27,8 @@
 <script>alert('x')</script>
 <iframe src="https://www.youtube.com/embed/fixture" width="560" height="315"></iframe>
 <iframe src="https://evil.example.net/embed"></iframe>
+<iframe style="width:120px;height:240px;color:red" src="//ws-na.amazon-adsystem.com/widgets/q?x=1"></iframe>
+<div class="sqs-video-wrapper" data-provider-name="YouTube" data-html="&lt;iframe src=&quot;https://www.youtube.com/embed/wrapped1&quot;&gt;&lt;/iframe&gt;"></div>
 <iframe class="embedly-embed" src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2Fembedlyvid%3Ffeature%3Doembed&amp;type=text%2Fhtml&amp;schema=youtube"></iframe>]]></content:encoded>
     <excerpt:encoded><![CDATA[A fixture excerpt.]]></excerpt:encoded>
     <wp:post_id>101</wp:post_id>
@@ -66,12 +68,12 @@
   </item>
 
   <item>
-    <title>Fixture: Not In The Inventory</title>
+    <title>Fixture: Not &amp;amp; In The Inventory</title>
     <link>https://www.childactor101.com/101-blog/brand-new-fixture-post</link>
     <dc:creator><![CDATA[fixture-author]]></dc:creator>
     <content:encoded><![CDATA[<p>A post newer than the inventory.</p><p>Second paragraph follows. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>]]></content:encoded>
     <wp:post_id>104</wp:post_id>
-    <wp:post_date_gmt>2025-06-01 00:00:00</wp:post_date_gmt>
+    <wp:post_date_gmt>2025-06-01 00:30:00</wp:post_date_gmt>
     <wp:post_name>brand-new-fixture-post</wp:post_name>
     <wp:status>publish</wp:status>
     <wp:post_type>post</wp:post_type>

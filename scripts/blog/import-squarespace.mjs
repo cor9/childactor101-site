@@ -59,6 +59,13 @@ function main() {
   if (files.length === 0) throw new Error("No .xml files found in the given inputs.");
 
   const authorMap = readJson(args.authors, {});
+  const linkMap = Object.fromEntries(
+    Object.entries(readJson(join(ROOT, "scripts/blog/link-map.json"), {}))
+      .filter(([key]) => key.startsWith("/"))
+      .map(([key, value]) => [key.toLowerCase(), value]),
+  );
+  const recovered = readJson(join(args.out, "recovered-bodies.json"), {});
+  const seo = readJson(join(args.out, "seo-overrides.json"), {});
   const manifestPath = join(args.out, "image-manifest.json");
   const manifest = readJson(manifestPath, {});
 
@@ -82,7 +89,7 @@ function main() {
 
     for (const item of posts) {
       report.postsRead += 1;
-      const { post, status, warnings } = buildPost(item, attachments, { authorMap });
+      const { post, status, warnings } = buildPost(item, attachments, { authorMap, linkMap, recovered, seo });
       const label = post.slug || post.title || post.sourceId || "(unknown)";
 
       if (status !== "publish") {
@@ -112,7 +119,7 @@ function main() {
   }
 
   const finalPosts = posts.map((post) => applyImageManifest(post, manifest));
-  const index = finalPosts.map(({ body, images, internalLinks, contentIssues, ...summary }) => ({
+  const index = finalPosts.map(({ body, images, internalLinks, linkFixes, contentIssues, ...summary }) => ({
     ...summary,
     imageCount: images.length,
   }));

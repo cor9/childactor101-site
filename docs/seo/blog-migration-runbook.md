@@ -1,6 +1,6 @@
 # 101 Blog migration runbook (Squarespace to native Next.js)
 
-**Status: the 2026-11-19 Squarespace export has been imported (157 published posts, all 155 inventory articles present) and audited. Images are not yet copied locally and nothing has been deployed.** See `docs/seo/blog-migration-audit.md`. The Squarespace site, its indexing settings, DNS and content are never touched by anything here; the importer only reads a file.
+**Status: imported, recovered, audited and compared with the live site; all 805 images stored locally. Nothing has been deployed.** See `docs/seo/blog-deployment-readiness.md`. The Squarespace site, its indexing settings, DNS and content are never touched by anything here; the importer only reads a file.
 
 Why a native blog and not a proxy: the old articles must live at their original `https://www.childactor101.com/101-blog/<slug>` URLs with a canonical tag on the primary domain. Proxying Squarespace would return its own canonical tags and links and create a second, competing copy of the blog.
 
@@ -46,7 +46,20 @@ This writes `src/content/blog/` (`index.json`, `posts/<slug>.json`, `image-manif
 npm run blog:images
 ```
 
-Downloads each image listed in the export into `public/blog/images/` and re-points the posts at the local copies. Images that fail keep their original Squarespace URL (still visible, but only while Squarespace hosts them) and are listed. Re-run with `-- --retry-failed`. This needs outbound access to `images.squarespace-cdn.com` and `static1.squarespace.com`, which is blocked in the Claude cloud session, so run it on your machine or in an environment that allows those hosts, then commit the images (expect a few hundred MB at most; check size before committing).
+Downloads each image listed in the export into `public/blog/images/` and re-points the posts at the local copies. Images that fail keep their original Squarespace URL (still visible, but only while Squarespace hosts them) and are listed. Re-run with `-- --retry-failed`. This needs outbound access to `images.squarespace-cdn.com`. In the Claude cloud session add that host to the environment's allowed hosts and run it with `NODE_USE_ENV_PROXY=1` (Node's fetch ignores the proxy otherwise). Commit the images (images are resized to 1600 px and saved as WebP, about 85 MB for the whole blog).
+
+## 3b. Recover content the export drops, then compare with the live pages
+
+The WordPress export omits some Squarespace block types (HTML/code blocks, some embeds), so a few posts arrive incomplete. These steps read the legacy site (GET only; the host must be allowed by the environment's network policy) and need `NODE_USE_ENV_PROXY=1` when running behind the cloud proxy:
+
+```bash
+NODE_USE_ENV_PROXY=1 node scripts/blog/recover-from-live.mjs     # stores full bodies for incomplete posts in recovered-bodies.json
+npm run blog:import -- scripts/blog/exports/<file>.xml            # re-import, applying them
+NODE_USE_ENV_PROXY=1 node scripts/blog/download-images.mjs
+NODE_USE_ENV_PROXY=1 node scripts/blog/compare-live.mjs --seo     # every article vs its live page; --seo writes seo-overrides.json
+```
+
+`compare-live.mjs` checks title, date, text coverage, images, videos and links, and captures the live SEO title and description, which the export lacks. `verify-seo.mjs <origin>` checks the rendered pages against the live ones, and `check-links.mjs <origin>` requests every internal link. Broken-link repairs live in `scripts/blog/link-map.json`.
 
 ## 4. Audit
 

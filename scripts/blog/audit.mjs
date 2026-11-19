@@ -92,6 +92,25 @@ for (const post of extras) {
 
 for (const row of rows) for (const message of row.seo) seoIssues.push({ slug: row.post?.slug ?? row.entry.slug, message });
 
+// Image verification against the disk, not just the manifest.
+const publicDir = flag("--public", join(ROOT, "public"));
+let missingFiles = 0;
+for (const entry of Object.values(manifest)) {
+  if (entry.status === "downloaded" && !existsSync(join(publicDir, entry.localPath))) missingFiles += 1;
+}
+let remoteBodyRefs = 0;
+let postsWithRemote = 0;
+let remoteFeatured = 0;
+for (const post of index) {
+  const full = loadPost(post.slug);
+  const remote = (full?.body?.match(/<img[^>]+src="https?:\/\//g) ?? []).length;
+  remoteBodyRefs += remote;
+  if (remote) postsWithRemote += 1;
+  if (post.featuredImage && !post.featuredImage.src.startsWith("/")) remoteFeatured += 1;
+}
+const stored = Object.values(manifest).reduce((sum, entry) => sum + (entry.bytes ?? 0), 0);
+const original = Object.values(manifest).reduce((sum, entry) => sum + (entry.originalBytes ?? 0), 0);
+
 const count = (status) => rows.filter((row) => row.status === status).length;
 const totals = Object.values(manifest).reduce((acc, entry) => ({ ...acc, [entry.status]: (acc[entry.status] ?? 0) + 1 }), {});
 const cell = (value) => `"${String(value ?? "").replace(/"/g, '""')}"`;
@@ -154,8 +173,12 @@ Source of truth for the expected set: \`src/content/blog/legacy-inventory.json\`
 | Copied to \`public/blog/images\` | ${totals.downloaded ?? 0} |
 | Still hot-linked from Squarespace (not yet downloaded) | ${totals.pending ?? 0} |
 | Failed to download | ${totals.failed ?? 0} |
+| Local files missing on disk | ${missingFiles} |
+| Image tags in article bodies still pointing at a remote URL | ${remoteBodyRefs} (${postsWithRemote} posts) |
+| Featured images still remote | ${remoteFeatured} |
+| Stored size${original ? " (originals were " + (original / 1e6).toFixed(0) + " MB)" : ""} | ${(stored / 1e6).toFixed(0)} MB |
 
-Hot-linked images work only while the Squarespace site stays online. Run \`node scripts/blog/download-images.mjs\` and re-run this audit before the legacy site is ever retired.
+${(totals.pending ?? 0) + (totals.failed ?? 0) + remoteBodyRefs > 0 ? "Some images still depend on Squarespace's CDN. Run `NODE_USE_ENV_PROXY=1 node scripts/blog/download-images.mjs --retry-failed` and re-run this audit before the legacy site is ever retired." : "Every image is stored locally; no article depends on Squarespace's CDN."}
 
 ## Missing articles
 

@@ -29,6 +29,8 @@ const IFRAME_HOSTS = [
   "player.vimeo.com",
   "open.spotify.com",
   "w.soundcloud.com",
+  // Amazon Associates product widgets (affiliate units the author placed in some posts).
+  "ws-na.amazon-adsystem.com",
 ];
 
 const parser = new XMLParser({
@@ -60,6 +62,20 @@ export function stripTags(html) {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+/** Decodes leftover HTML entities (the export double-escapes some titles, e.g. "&amp;" or "&#x1f31f;"). */
+export function decodeEntities(value) {
+  if (value === null || value === undefined) return value;
+  return String(value)
+    .replace(/&#x([0-9a-f]+);/gi, (_m, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_m, dec) => String.fromCodePoint(Number(dec)))
+    .replace(/&nbsp;/g, " ").replace(/&rsquo;/g, "’").replace(/&lsquo;/g, "‘").replace(/&rdquo;/g, "”").replace(/&ldquo;/g, "“")
+    .replace(/&mdash;/g, "—").replace(/&ndash;/g, "–").replace(/&hellip;/g, "…")
+    .replace(/&quot;/g, '"').replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+}
+
+/** The site displays dates in Pacific time; the export stores UTC. */
+export const SITE_TIME_ZONE = "America/Los_Angeles";
 
 export function countWords(html) {
   const plain = stripTags(html);
@@ -108,13 +124,22 @@ export function rewriteHref(href) {
   return { href, internal: false };
 }
 
-export function cleanBody(rawHtml) {
+/** Squarespace's JSON feed keeps embedded video inside a data-html attribute; surface it as a real iframe. */
+function unwrapVideoBlocks(html) {
+  return html.replace(/<div[^>]*sqs-video-wrapper[^>]*data-html="([^"]*)"[^>]*>/g, (tag, encoded) => {
+    const iframe = decodeEntities(encoded);
+    return /<iframe/i.test(iframe) ? `${tag}${iframe}` : tag;
+  });
+}
+
+export function cleanBody(rawHtml, linkMap = {}) {
   const images = new Set();
   const internalLinks = new Set();
   const externalLinks = new Set();
   const issues = { imagesWithoutAlt: 0, iframesDropped: 0 };
+  const linkFixes = [];
 
-  const html = sanitizeHtml(convertCaptions(rawHtml), {
+  const html = sanitizeHtml(convertCaptions(unwrapVideoBlocks(rawHtml)), {
     allowedTags: [
       "p", "br", "hr", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "a", "strong", "b", "em", "i", "u", "s",
       "blockquote", "img", "figure", "figcaption", "iframe", "table", "thead", "tbody", "tr", "th", "td",
@@ -123,10 +148,12 @@ export function cleanBody(rawHtml) {
     allowedAttributes: {
       a: ["href", "title", "target", "rel"],
       img: ["src", "alt", "width", "height", "title", "loading", "decoding"],
-      iframe: ["src", "width", "height", "title", "allowfullscreen", "frameborder", "allow", "loading"],
+      iframe: ["src", "width", "height", "title", "allowfullscreen", "frameborder", "allow", "loading", "style", "class", "scrolling"],
       th: ["colspan", "rowspan"],
       td: ["colspan", "rowspan"],
     },
+    // Only pixel sizes survive from inline styles (Amazon widgets are a fixed 120x240).
+    allowedStyles: { iframe: { width: [/^\d+px$/], height: [/^\d+px$/] } },
     allowedSchemes: ["http", "https", "mailto", "tel"],
     allowedSchemesByTag: { img: ["http", "https"], iframe: ["https"] },
     allowProtocolRelative: true,
@@ -145,11 +172,14 @@ export function cleanBody(rawHtml) {
       // Unwrap to the real embed so the video survives; the host allow-list still applies afterwards.
       iframe: (tagName, attribs) => {
         const next = { ...attribs, loading: "lazy" };
+        delete next.class;
         if (next.src) {
           try {
             const url = new URL(next.src.startsWith("//") ? `https:${next.src}` : next.src);
             const inner = url.hostname === "cdn.embedly.com" ? url.searchParams.get("src") : null;
             next.src = inner ?? url.href;
+            // Fixed-size widgets (not 16:9 video) get a marker class so they keep their native size.
+            if (url.hostname.endsWith("amazon-adsystem.com")) next.class = "embed-widget";
           } catch {
             // left as-is; the allow-list will drop it
           }
@@ -159,7 +189,13 @@ export function cleanBody(rawHtml) {
       a: (tagName, attribs) => {
         const next = { ...attribs };
         if (next.href) {
-          const result = rewriteHref(next.href);
+          let result = rewriteHref(next.href);
+          // Repair links to old Squarespace pages that no longer exist (scripts/blog/link-map.json).
+          const mapped = result.internal ? linkMap[result.pathname.toLowerCase()] : undefined;
+          if (mapped) {
+            linkFixes.push({ from: result.pathname, to: mapped });
+            result = rewriteHref(mapped);
+          }
           next.href = result.href;
           if (result.internal) {
             if (result.pathname?.toLowerCase().startsWith(BLOG_PREFIX)) internalLinks.add(result.pathname);
@@ -188,7 +224,7 @@ export function cleanBody(rawHtml) {
     },
   });
 
-  return { html: html.trim(), images: [...images], internalLinks: [...internalLinks], externalLinks: [...externalLinks], issues };
+  return { linkFixes, html: html.trim(), images: [...images], internalLinks: [...internalLinks], externalLinks: [...externalLinks], issues };
 }
 
 /** Parses one export file into raw post items plus attachment lookups. */
@@ -246,13 +282,18 @@ export function buildPost(item, attachments, options = {}) {
   }
 
   const slug = text(item["wp:post_name"]) || decodeURIComponent(pathname.split("/").filter(Boolean).pop() ?? "");
-  const title = text(item.title);
-  const rawBody = text(item["content:encoded"]);
+  const title = decodeEntities(text(item.title));
+  const exportBody = text(item["content:encoded"]);
+  // Posts whose export body is incomplete use the full body recovered from Squarespace's JSON feed
+  // (src/content/blog/recovered-bodies.json, written by scripts/blog/recover-from-live.mjs).
+  const recovered = options.recovered?.[slug.toLowerCase()];
+  const rawBody = recovered?.body ?? exportBody;
+  const seo = options.seo?.[slug] ?? options.seo?.[slug.toLowerCase()] ?? null;
   const status = text(item["wp:status"]) || "publish";
   const date = toIso(text(item["wp:post_date_gmt"]), text(item["wp:post_date"]));
-  // Calendar date as the site displayed it (site-local), so a late-evening post is not shifted a day by UTC.
-  const localMatch = text(item["wp:post_date"]).match(/^(\d{4}-\d{2}-\d{2})/);
-  const dateDisplay = localMatch && localMatch[1] !== "0000-00-00" ? localMatch[1] : date ? date.slice(0, 10) : null;
+  // Calendar day as the live site shows it. Squarespace renders in Pacific time, the export stores UTC, so an
+  // evening post would otherwise display one day late (verified against all 157 live pages).
+  const dateDisplay = date ? new Date(date).toLocaleDateString("en-CA", { timeZone: SITE_TIME_ZONE }) : null;
   const creator = text(item["dc:creator"]);
   let author = options.authorMap?.[creator] ?? (creator || null);
   // Never publish an email address as a byline (Squarespace logins are often emails).
@@ -270,13 +311,13 @@ export function buildPost(item, attachments, options = {}) {
   if (!rawBody) warnings.push("empty body");
   if (pathname && !pathname.toLowerCase().startsWith(`${BLOG_PREFIX}/`)) warnings.push(`original path is not under ${BLOG_PREFIX}: ${pathname}`);
 
-  const cleaned = cleanBody(rawBody);
+  const cleaned = cleanBody(rawBody, options.linkMap);
   const bodyText = stripTags(cleaned.html);
 
   const categories = [];
   const tags = [];
   for (const entry of item.category ?? []) {
-    const name = text(entry);
+    const name = decodeEntities(text(entry));
     const slugValue = entry["@_nicename"] || name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
     if (!name) continue;
     const target = entry["@_domain"] === "post_tag" ? tags : categories;
@@ -319,6 +360,9 @@ export function buildPost(item, attachments, options = {}) {
       originalUrl: link || null,
       originalPath: pathname || null,
       sourceId: postId || null,
+      bodySource: recovered ? "squarespace-json-feed" : "wordpress-export",
+      seoTitle: seo?.title && seo.title !== title ? decodeEntities(seo.title) : null,
+      seoDescription: seo?.description ? decodeEntities(seo.description) : null,
       wordCount: countWords(cleaned.html),
       // Words in the export before cleaning, so the audit can prove no text was lost.
       sourceWordCount: countWords(rawBody.replace(/<(script|style)[\s\S]*?<\/\1>/gi, "").replace(/\[\/?caption[^\]]*\]/gi, "")),
@@ -326,6 +370,7 @@ export function buildPost(item, attachments, options = {}) {
       readingMinutes: Math.max(1, Math.round(countWords(cleaned.html) / 220)),
       images: [...imageUrls],
       internalLinks: cleaned.internalLinks,
+      linkFixes: cleaned.linkFixes,
       externalLinkCount: cleaned.externalLinks.length,
       contentIssues: cleaned.issues,
       body: cleaned.html,

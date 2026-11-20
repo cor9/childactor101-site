@@ -1,5 +1,7 @@
 # Blog internal-link repair
 
+> **Status update (after review).** Approved and applied: `/classes`, `/headshot-guide`, `/home/ingenuityactorsstudio`, and the book card (verified Amazon product page). `/ask101`, `/self-tape-feedback` and `/selftapereview` are preserved through the legacy site for now (`/selftapereview` forwards to the legacy `/self-tape-feedback` page). The merchandise links stay unresolved and are tracked in `blog-link-cleanup-backlog.md` for a separate cleanup after deployment. The decision table below is the original analysis.
+
 Every internal link in every article is requested against a production build by `node scripts/blog/check-links.mjs` (results in `blog-link-check.csv`). The original pages were also read on the live legacy site (read-only) to establish what each one was for.
 
 ## Applied

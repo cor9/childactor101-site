@@ -16,7 +16,8 @@ Branch `claude/focused-cori-v0oppo` (on top of production's `main` at `c984c57`)
 | 20 articles that used to redirect to lessons | 308 to a classroom lesson | The original article (200) |
 | the other 135 articles | 307 to the legacy host (`LEGACY_BLOG_ORIGIN` is set) | The article served natively (200) |
 | `/from-the-classroom` and all lessons | unchanged | unchanged |
-| 12 preserved legacy pages, 2 PDFs | 307 to the legacy host | unchanged |
+| 12 preserved legacy pages, 2 PDFs (incl. `/ask101`, `/self-tape-feedback`) | 307 to the legacy host | unchanged |
+| `/selftapereview` | 404 | 307 to the legacy `/self-tape-feedback` page (new alias; same gate) |
 | everything else | unchanged | unchanged |
 
 `LEGACY_BLOG_ORIGIN` stays as it is. It still serves the preserved pages. For the blog it now only applies to inventory articles missing from the new blog, and there are none.
@@ -26,9 +27,9 @@ I built production's current code (`main`) and this branch side by side and comp
 
 ## Remaining issues that could affect visitors, SEO or functionality
 1. **Header call-to-action** ("Start Here" button): hidden on screens 1024 to 1279 px wide so seven nav items fit on one line (it duplicates the "Start here" link). This is the one visible change to existing pages. Reversible.
-2. **10 broken link targets** (22 links, 9 articles): decisions pending (`blog-link-repair.md`). At launch nothing that worked before breaks: eight were already 404 on the original site, and `/ask101` and `/self-tape-feedback` keep working through the legacy forward (temporary).
+2. **Unresolved link targets** (7 paths, 17 links in 6 articles; `blog-link-cleanup-backlog.md`): the old merchandise and product pages, all already 404 on the original site and left unchanged for a separate cleanup. `/ask101`, `/self-tape-feedback` and `/selftapereview` (11 links) are preserved through the legacy site, so the services stay reachable, but only while the legacy site exists.
 3. **Legacy site duplicates:** the legacy Squarespace copies stay indexable until the transition in `legacy-seo-transition-plan.md`. Deploy first; apply no legacy redirects until verification passes (loop risk, see that plan).
-4. **External destinations not click-tested** (blocked from my environment): `101training.childactor101.com` (new `/classes` route goes via `/training`), `pages.childactor101.com/opencall` (4 links), the Amazon links, Stripe links. Please click a few before approving.
+4. **External destinations not click-tested** (blocked from my environment): `101training.childactor101.com` (reached via `/training`), `pages.childactor101.com/opencall` (4 links), Stripe links. The Amazon book page was verified (HTTP 200, correct title).
 5. **Third-party embeds:** YouTube and Vimeo videos and 12 Amazon Associates widgets (one article) load from those services and set their own cookies. The site has no consent banner; check against your privacy policy. Videos match the original (they were not privacy-enhanced there either).
 6. **Page weight:** median article carries 0.32 MB of images; the heaviest three carry about 2 to 3 MB. All images are lazy-loaded, resized and WebP.
 7. **Guest-author profile box** (Clare Lopez's post) and the comment area from the Squarespace template are not reproduced; the text is.
@@ -39,7 +40,6 @@ I built production's current code (`main`) and this branch side by side and comp
 ## Before you approve
 - [ ] Open a Vercel preview of the branch (below) and look at `/101-blog`, a long article, a video article, the vision-board article, and mobile.
 - [ ] Click the external destinations in item 4.
-- [ ] Decide the ten pending links, or accept them as listed (they are not blockers).
 - [ ] Tell me how you want to merge (below).
 
 **Previews:** Vercel has built previews of this branch (READY). The latest I can see is for commit `d9ed39c`: `https://childactor101-site-oexorayi0-cor9s-projects.vercel.app` (sign in to Vercel to view). The next push of this branch creates a new preview that includes the `/classes` fix and the new tooling. Previews do not have `LEGACY_BLOG_ORIGIN`.

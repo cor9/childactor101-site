@@ -336,6 +336,9 @@ try {
       // Classroom redirects for articles NOT yet migrated stay in place.
       await expectStatus("/101-blog/self-tape-equipment-for-child-actors", 308, "/from-the-classroom/auditions/self-tape-equipment-for-child-actors");
       await expectStatus("/101-blog/the-critical-conversation", 404);
+      // Without LEGACY_BLOG_ORIGIN the legacy forwards are off.
+      await expectStatus("/selftapereview", 404);
+      await expectStatus("/ask101", 404);
     });
   }
 
@@ -351,11 +354,17 @@ try {
         ["inventory slug with spaces falls back with its encoding intact", "/101-blog/Demo%20Reel%20Options", 307, `${LEGACY}/101-blog/Demo%20Reel%20Options`],
         ["unmigrated article with a classroom lesson still goes to the lesson", "/101-blog/self-tape-equipment-for-child-actors", 308, `${APP}/from-the-classroom/auditions/self-tape-equipment-for-child-actors`],
         ["preserved legacy page still forwarded", "/freeguides", 307, `${LEGACY}/freeguides`],
+        ["/ask101 keeps working through the legacy fallback", "/ask101", 307, `${LEGACY}/ask101`],
+        ["/self-tape-feedback ($22 service) keeps working through the legacy fallback", "/self-tape-feedback", 307, `${LEGACY}/self-tape-feedback`],
+        ["/selftapereview reaches the same legacy service page (it is a 404 on the legacy host itself)", "/selftapereview", 307, `${LEGACY}/self-tape-feedback`],
+        ["alias is case-insensitive", "/SelfTapeReview", 307, `${LEGACY}/self-tape-feedback`],
       ];
       for (const [label, path, status, location] of cases) {
         const res = await get(path);
         check(label, res.status === status && res.location === location, `${res.status} ${res.location}`);
       }
+      const guardedAlias = await get("/selftapereview", "legacy.childactor101.com");
+      check("loop guard: the alias is never forwarded when already on the legacy host", guardedAlias.status !== 307 && guardedAlias.status !== 308, `${guardedAlias.status} ${guardedAlias.location}`);
       const guarded = await get("/101-blog/the-critical-conversation", "legacy.childactor101.com");
       check("loop guard: legacy host is never forwarded again", guarded.status !== 307 && guarded.status !== 308, `${guarded.status} ${guarded.location}`);
     });

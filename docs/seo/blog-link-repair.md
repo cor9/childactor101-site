@@ -1,61 +1,45 @@
 # Blog internal-link repair
 
-The articles link to pages of the old Squarespace site. Some of those pages have no counterpart on the new site. Every internal link in every article is requested against a production build by `node scripts/blog/check-links.mjs` (results in `blog-link-check.csv`).
+Every internal link in every article is requested against a production build by `node scripts/blog/check-links.mjs` (results in `blog-link-check.csv`). The original pages were also read on the live legacy site (read-only) to establish what each one was for.
 
-**Current state: 29 unique internal paths, 18 resolve, 11 do not. 24 article/link pairs in 19 articles are still broken.** None are redirected to the homepage and none have an invented destination.
+## Applied
 
-## Fixed (clear matches)
-
-Applied through `scripts/blog/link-map.json`, so re-importing never undoes them.
-
-| Old link | Now points to | Why it is a clear match |
+| Link | Now points to | Basis |
 |---|---|---|
-| `/home` (1 link) | `/` | Squarespace's home page; anchor text is "Child Actor 101". |
-| `/blog/time-to-re-think-your-self-tape-backdrop-and-get-one-these-for-under-20` (1) | `/101-blog/time-to-re-think-…` | Old URL form of an article that exists at that slug. |
-| `/contact` (1, "sign up for our newsletter") | `/from-the-classroom#newsletter` | The anchor text is a newsletter signup, and that section exists (also used by the Ecosystem page as "The Callback"). |
-| `/talent-rep-open-call` (4: "Submit your child's materials here", "Submit here", "Submit to the Talent Rep Open Call Now", "talent agents") | `https://pages.childactor101.com/opencall` | The links are family submission calls to action. The site already defines this as `OPEN_CALL_URL`, used by the Open Call and Industry pages ("Families submit for free"). `/industry/open-call` is the representatives' page, so it is the wrong target. |
+| `/classes` (**16 links, 13 articles; your approval**) | `/training` | Verified before applying. On the live site `/classes` was a 301 redirect straight to `https://101training.childactor101.com`, the class site. `/training` has a "Structured class training / Explore Classes" card that links to that same site, so it represents the original destination accurately, as a gateway with one extra click. If you prefer the one-click behaviour, replace the value in `scripts/blog/link-map.json` with `https://101training.childactor101.com` and re-import. One link displayed the old URL as visible text; that text is updated too. |
+| `/home` | `/` | Squarespace's home page. |
+| `/blog/time-to-re-think-…` | `/101-blog/time-to-re-think-…` | Old form of an article that exists at that slug. |
+| `/contact` (newsletter link) | `/from-the-classroom#newsletter` | Anchor text is a newsletter signup; the section exists. |
+| `/talent-rep-open-call` (4 links) | `https://pages.childactor101.com/opencall` | Family submission calls to action; the site defines this as `OPEN_CALL_URL`. |
 
-## Needs your decision
+## Decision table: the remaining 10 paths (22 links in 9 articles)
 
-Each shows the recommended option first. Once you choose, it is a one-line change in `scripts/blog/link-map.json` plus a re-import.
+**Nothing below has been changed.** Proposals are staged in `scripts/blog/link-map.pending.json`, which the importer ignores. To approve one, say so and I move it into `link-map.json` and re-import.
 
-### 1. `/classes` — 16 links in 13 articles (the biggest one)
-Anchor text: "Check out our online classes", "HERE", the bare URL. The Squarespace promo box "Online Acting Classes" also uses it (see item 6).
-1. **`/training`** (recommended): "Online Acting Training for Young Actors", the current page that describes class training and links onward to enrollment.
-2. `https://101training.childactor101.com`: straight to class enrollment (the site's own `trainingOptionsHref`). Better if the old page was a class sign-up page.
-3. Interim only: leave it forwarding to the legacy site (needs approval; it is a temporary forward, not a fix).
+"Live today" is the HTTP status of the path on the legacy site. **Seven of the ten were already dead (404) in the original articles**, so they are not regressions from the migration. The two that work today are marked.
 
-### 2. `/ask101` — 1 article ("Introducing Ask101… Now Live"), 4 links
-No Ask101 page or app URL exists in this repository.
-1. **Send me the live Ask101 URL** (recommended): the article is the launch announcement, so the buttons should open the tool.
-2. Remove the links and keep the text.
-3. Interim only: forward to the legacy site.
+| # | Original URL (links / articles) | Live today | Original purpose | Recommended destination | Destination exists? | Confidence |
+|---|---|---|---|---|---|---|
+| 1 | `/ask101` (5 / 1) | **200, works** | Free AI chatbot for parents: Q&A on agents vs managers, self-tape feedback, resumes, classes and set etiquette. The chat widget was embedded on the page, and its address is not in the page source. | None can be recommended. The new site has no Ask101 page or app. I need the chatbot's URL or embed code (then either link to it or build `/ask101`). The `chat.openai.com` links elsewhere in the blog are different tools (Acting Insight, Scenetist). | No | n/a: not enough to recommend |
+| 2 | `/self-tape-feedback` (3 / 2) | **200, works** | A **$22 paid service**: Stripe payment plus an intake form; written notes on a self-tape (the page says 8- and 12-hour turnarounds). | Needs a page with the order flow. The new site promotes "Get Self Tape Feedback" in five places, all pointing at `/ecosystem#self-tape-feedback`, but that anchor does not exist and there is no order flow. The old page had two Stripe links (`…3sh0tQ2wU3A`, `…G7IxdgC2wU3k`); I cannot tell which is current. Please choose the order link or approve building the section. | `/ecosystem` exists; the anchor and the order flow do not | Medium that it is still offered; low on which link |
+| 3 | `/selftapereview` (3 / 1) | 404 | Announcement for "Self Tape Review", a personalized audition-feedback service. It is the same service as #2 under an earlier name. | Same destination as #2. | As #2 | High that it is the same service |
+| 4 | `/headshot-guide` (1 / 1) | 404 | A passing mention ("headshots") in the 11,000-members post. | `/from-the-classroom/professional-materials/when-to-update-child-actor-headshots`. This is where the new site's own "Headshot Guide" free guide (Start Here) already points. | **Yes** (200) | **High** |
+| 5 | `/store-1` (1 / 1) | 404 | Squarespace merchandise store index ("Actor Shirts"). | No equivalent on the site. The only merchandise shop the blog links to is TeePublic (`teepublic.com/user/wearablepsa`), a stage-parent series, so it may not be the same shirts. Recommend removing the link and keeping the text. | n/a | Low |
+| 6 | `/store-1/p/uta-hagen-…` (1 / 1) | 404 | Product page for an acting-theory T-shirt. The sibling link in the same sentence ("Sanford Meisner's") already goes to a TeePublic product. | The TeePublic product URL, if it exists. I will not guess product IDs. Otherwise remove the link. | Unknown | Low |
+| 7 | `/store-1/p/stella-adler-…` (1 / 1) | 404 | Same as #6. | Same as #6. | Unknown | Low |
+| 8 | `/store-1/p/17o7cec3…` (3 / 1) "Youth Actor Evaluation" | 404 | Product page for a private talent evaluation (shown as a "Sale" card). | No confirmed current offer. A May 2024 article links "private Talent Evaluation" to a Stripe link (`pay.childactor101.com/b/00gaGlbyb3QB4a4g0c`), which looks like a dated promotion. I would not reuse it without your confirmation. Otherwise remove the card links. | Unknown | Low |
+| 9 | `/store-1/p/6l3f9vgt…` (3 / 1) "The Best Advice for Child Actors Book" | 404 | Product page for Corey's book. | The Amazon author page already used in the "101 Tips" article that announces this same book: `https://www.amazon.com/Corey-Ralston/e/B094XZGD1S`. | URL is in existing content; cannot be checked from here | Medium-high |
+| 10 | `/home/ingenuityactorsstudio` (1 / 1) | 404 | Image link on a promo block labelled "Online Acting Classes". | `/training` (same as `/classes`). | **Yes** (200) | Medium-high |
 
-### 3. `/self-tape-feedback` (2 articles) and `/selftapereview` (1 article)
-Anchor text: "Self-Tape Feedback", "Self Tape Review", "Check it out!". These promote a paid review service.
-1. **Send me the order page or payment link** (recommended).
-2. `/ecosystem#self-tape-feedback`: this is what the rest of the new site uses for Self Tape Feedback (five places). But on that page it is only a decorative label with no anchor and no order flow, so it would be a dead end for a "buy this" link. Only choose it if that section gets built.
-3. Interim only: forward to the legacy site (`/self-tape-feedback` is already on the preserved-pages list).
+### What I can recommend applying now
+Four are ready on your OK: **#4** (high), **#10** and **#9** (medium-high), and **#3** once #2 is decided. The rest need information only you have: Ask101's address (#1), the order link or page for the feedback service (#2), the current shirt, evaluation and book URLs (#5 to #8).
 
-### 4. `/headshot-guide` — 1 link ("headshots", in the 11,000-members article)
-1. **The Headshot Guide URL**, if it is a standalone free guide like the other guide subdomains (`selftapetips.`, `memorize.`, `zoomcb.`, `collegechecklist.`). I did not find one.
-2. `/from-the-classroom/professional-materials/when-to-update-child-actor-headshots`: an existing lesson on exactly this topic (verified, 200). Good fallback because the link is a passing mention.
+### Not verifiable from here
+Outbound access to the site's other hosts (`101training.`, `coaching.`, `pages.childactor101.com`, Amazon, Stripe) is blocked in this environment. "Exists" for those means the address is in the site's own configuration or live content, not that I fetched it. Please click the three or four external destinations once before deploying.
 
-### 5. Store pages — 6 links in 4 articles
-| Link | Anchor | Option |
-|---|---|---|
-| `/store-1` | "Actor Shirts" | The same blog already links the Sanford Meisner shirt and the Super Stage Parent series to TeePublic (`teepublic.com/user/wearablepsa`). If the shirts moved there, send me the URLs. |
-| `/store-1/p/uta-hagen-…`, `/store-1/p/stella-adler-…` | "Uta Hagen's", "Stella Adler's" | Same as above (the sibling "Sanford Meisner's" link already goes to TeePublic). |
-| `/store-1/p/17o7cec3…` | "Youth Actor Evaluation" | The new product or booking URL, if the service is still offered. |
-| `/store-1/p/6l3f9vgt…` | "The Best Advice for Child Actors Book" | The Amazon link (the "101 Tips" article says the book is on Amazon). |
-Recommended: send the real URLs. If a product is discontinued, remove the link and keep the text. Not redirecting any of these anywhere else.
+## If a path stays unresolved
+None of these are redirected to the homepage. **At launch, nothing that worked before breaks:** eight of the ten were already 404 in the original articles, and the two that worked (`/ask101`, `/self-tape-feedback`) are on the preserved-pages list. Production has `LEGACY_BLOG_ORIGIN` set (checked in Vercel; value hidden), so those two forward to the legacy site and keep working for as long as the legacy site exists. My local checks show them as 404 only because they run without that variable. That forwarding is a stopgap, not a fix, and it ends when the legacy site is retired.
 
-### 6. `/home/ingenuityactorsstudio` — 1 image link
-It wraps an image above an "Online Acting Classes" text block, so it is the same promo as item 1. Use the same destination as `/classes`, or remove the link.
-
-## Not a destination problem
-- `notion://www.notion.so/www.childrescuecoalition.org` (TikTok article) is a malformed link in the original. The link text is kept; the dead link is dropped.
-- External links (408 across 85 hosts) were counted but not requested. Affiliate and payment links (Stripe, Amazon) were left exactly as published.
-
-## If you decide to keep a link working before deploy
-Any of these paths can be forwarded to the legacy site temporarily (the repo's existing, off-by-default `LEGACY_BLOG_ORIGIN` mechanism). That only keeps the link alive. It leaves the old site in the click path, so I suggest it only as a stopgap and only with your approval.
+## Other
+- `notion://www.notion.so/www.childrescuecoalition.org` (TikTok article) was malformed in the original; the text is kept and the dead link dropped.
+- External links (408 across 85 hosts) are counted, not requested; affiliate and payment links are left as published.

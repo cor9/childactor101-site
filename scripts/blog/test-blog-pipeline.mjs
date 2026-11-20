@@ -163,6 +163,36 @@ check("original URL maps to new URL for a migrated article", csv.includes("https
 check("--strict exits 1 when anything is missing", run("audit.mjs", ["--content", out, "--docs", docs, "--strict"]).status === 1);
 check("audit without an import report exits 2", run("audit.mjs", ["--content", join(work, "empty"), "--docs", docs]).status === 2);
 
+// ------------------------------------------------------------------ 3b. legacy redirect tooling
+section("3b. Legacy redirect generator and read-only checker");
+const mappingFile = join(work, "mappings.txt");
+const gen = run("generate-legacy-redirects.mjs", ["--content", out, "--out", mappingFile]);
+const mappings = readFileSync(mappingFile, "utf8");
+check("generator writes one 301 line per article", gen.status === 0 && mappings.includes("/101-blog/what-it-takes -> https://www.childactor101.com/101-blog/what-it-takes 301") && mappings.includes("/101-blog/Actorsaccess -> https://www.childactor101.com/101-blog/Actorsaccess 301"), gen.stderr);
+check("blog index maps to the new blog archive, never the homepage", mappings.includes("/101-blog -> https://www.childactor101.com/101-blog 301") && !/-> https:\/\/www\.childactor101\.com\/? 301/.test(mappings));
+check("single-article tags go to the blog archive, tags with 2+ articles to their tag page", mappings.includes("/101-blog/tag/Basics -> https://www.childactor101.com/101-blog 301"));
+check("category archive maps to the matching new category page", mappings.includes("/101-blog/category/Start%20Here -> https://www.childactor101.com/101-blog/category/start-here 301"));
+
+const legacyStub = http.createServer((req, res) => {
+  const slug = decodeURIComponent(req.url.replace("/101-blog/", ""));
+  const target = (s) => `https://www.childactor101.com/101-blog/${encodeURIComponent(s)}`;
+  if (slug === "what-it-takes") return (res.writeHead(301, { location: target(slug) }), res.end());
+  if (slug === "Actorsaccess") return (res.writeHead(302, { location: target(slug) }), res.end());
+  if (slug === "brand-new-fixture-post") return (res.writeHead(301, { location: "https://www.childactor101.com/" }), res.end());
+  res.writeHead(200);
+  res.end("legacy");
+});
+await new Promise((done) => legacyStub.listen(4320, done));
+const checkLegacy = await new Promise((resolve) => {
+  const child = spawn("node", [join(ROOT, "scripts/blog/check-legacy-redirects.mjs"), "--legacy", "http://localhost:4320", "--content", out]);
+  let stdout = "";
+  child.stdout.on("data", (chunk) => (stdout += chunk));
+  child.on("close", (status) => resolve({ status, stdout }));
+});
+check("checker exits 1 when any redirect is wrong", checkLegacy.status === 1);
+check("checker classifies each state", checkLegacy.stdout.includes("Checked 3 articles") && checkLegacy.stdout.includes("1 redirected correctly, 0 not yet redirected, 2 wrong") && checkLegacy.stdout.includes("WRONG Actorsaccess: HTTP 302") && checkLegacy.stdout.includes("WRONG brand-new-fixture-post: redirects to https://www.childactor101.com/"), checkLegacy.stdout);
+legacyStub.close();
+
 // ------------------------------------------------------------------ 4. native blog on a real build
 section("4. Native blog on a production build (synthetic export)");
 

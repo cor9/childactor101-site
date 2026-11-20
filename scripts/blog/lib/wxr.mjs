@@ -224,7 +224,14 @@ export function cleanBody(rawHtml, linkMap = {}) {
     },
   });
 
-  return { linkFixes, html: html.trim(), images: [...images], internalLinks: [...internalLinks], externalLinks: [...externalLinks], issues };
+  // A repaired link that shows the old address as its visible text must not keep displaying it.
+  let finalHtml = html.trim();
+  for (const fix of linkFixes) {
+    const shown = new RegExp(`(<a [^>]*>\\s*)https?://(?:www\\.)?childactor101\\.com${fix.from.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/?(\\s*</a>)`, "gi");
+    const target = fix.to.startsWith("/") ? `https://www.childactor101.com${fix.to}` : fix.to;
+    finalHtml = finalHtml.replace(shown, `$1${target}$2`);
+  }
+  return { linkFixes, html: finalHtml, images: [...images], internalLinks: [...internalLinks], externalLinks: [...externalLinks], issues };
 }
 
 /** Parses one export file into raw post items plus attachment lookups. */

@@ -1,6 +1,6 @@
 # Blog migration audit
 
-Generated 2026-11-19T23:56:22.351Z by `scripts/blog/audit.mjs` from `squarespace-export.xml`.
+Generated 2026-11-20T00:09:45.766Z by `scripts/blog/audit.mjs` from `squarespace-export.xml`.
 Source of truth for the expected set: `src/content/blog/legacy-inventory.json` (155 original article URLs).
 
 ## Summary

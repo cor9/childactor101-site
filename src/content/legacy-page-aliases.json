@@ -1,0 +1,7 @@
+[
+  {
+    "path": "/selftapereview",
+    "legacyPath": "/self-tape-feedback",
+    "note": "Old blog links use /selftapereview for the Self Tape Review service (the $22 Self Tape Feedback service). That path was already a 404 on the legacy site, so it forwards to the legacy page that actually serves the service. Temporary, like every legacy forward; same gate (LEGACY_BLOG_ORIGIN)."
+  }
+]

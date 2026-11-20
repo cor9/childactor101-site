@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
 
-import {
-  LEGACY_BLOG_INDEX_DESTINATION,
-  legacyBlogRedirects,
-} from "./src/content/legacy-blog-redirects";
-import { buildLegacyBlogFallbackRedirects } from "./src/lib/legacy-blog-fallback";
+import blogIndex from "./src/content/blog/index.json";
+import legacyInventory from "./src/content/blog/legacy-inventory.json";
+import { buildBlogExactRedirects, buildBlogFallbackRedirects } from "./src/lib/blog-redirects";
 import { buildLegacyPagePreservationRedirects } from "./src/lib/legacy-page-preservation";
+
+// Slugs that exist in the native 101 Blog (imported from the Squarespace export). Empty until the
+// export is imported, which keeps the pre-migration redirects in place.
+const blogInput = {
+  migratedSlugs: new Set((blogIndex as { slug: string }[]).map((post) => post.slug.toLowerCase())),
+  inventorySlugs: legacyInventory.map((entry) => entry.slug),
+  legacyOrigin: process.env.LEGACY_BLOG_ORIGIN,
+};
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -13,20 +19,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: "/101-blog",
-        destination: LEGACY_BLOG_INDEX_DESTINATION,
-        permanent: true,
-      },
-      ...legacyBlogRedirects.map(({ legacySlug, destination }) => ({
-        source: `/101-blog/${legacySlug}`,
-        destination,
-        permanent: true,
-      })),
+      // Exact blog rules first. Articles that now exist natively are not redirected.
+      ...buildBlogExactRedirects(blogInput),
       // Everything below is off unless LEGACY_BLOG_ORIGIN is set, and must stay after the exact
-      // blog redirects above. The blog catch-all stays last so it never shadows an exact rule.
+      // blog redirects above.
       ...buildLegacyPagePreservationRedirects(process.env.LEGACY_BLOG_ORIGIN),
-      ...buildLegacyBlogFallbackRedirects(process.env.LEGACY_BLOG_ORIGIN),
+      ...buildBlogFallbackRedirects(blogInput),
     ];
   },
 };

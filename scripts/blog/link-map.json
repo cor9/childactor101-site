@@ -1,0 +1,11 @@
+{
+  "_comment": "Old Squarespace paths that no longer exist, mapped to the page that now serves the same purpose. Applied on import, so re-importing never reverts them. Keys are matched case-insensitively against the link path (query and fragment ignored). Only add a destination that is a clear match; ambiguous ones are listed in docs/seo/blog-link-repair.md.",
+  "/home": "/",
+  "/blog/time-to-re-think-your-self-tape-backdrop-and-get-one-these-for-under-20": "/101-blog/time-to-re-think-your-self-tape-backdrop-and-get-one-these-for-under-20",
+  "/contact": "/from-the-classroom#newsletter",
+  "/talent-rep-open-call": "https://pages.childactor101.com/opencall",
+  "/classes": "/training",
+  "/headshot-guide": "/from-the-classroom/professional-materials/when-to-update-child-actor-headshots",
+  "/home/ingenuityactorsstudio": "/training",
+  "/store-1/p/6l3f9vgtcw1z7lk142rauvbht1u5ua": "https://www.amazon.com/Best-Advice-Child-Actors-Hollywood-ebook/dp/B09HRQ6LPK"
+}

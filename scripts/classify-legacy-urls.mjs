@@ -39,7 +39,11 @@ if (files.length === 0) {
 const exactBlogSlugs = new Set(
   [...readFileSync(`${ROOT}src/content/legacy-blog-redirects.ts`, "utf8").matchAll(/legacySlug:\s*"([^"]+)"/g)].map((match) => match[1].toLowerCase()),
 );
-const preserved = new Map(JSON.parse(readFileSync(`${ROOT}src/content/legacy-preserved-pages.json`, "utf8")).map((page) => [page.path.toLowerCase(), page]));
+const preserved = new Map([
+  ...JSON.parse(readFileSync(`${ROOT}src/content/legacy-preserved-pages.json`, "utf8")),
+  // Aliases forward to a different legacy path, so they count as handled too.
+  ...JSON.parse(readFileSync(`${ROOT}src/content/legacy-page-aliases.json`, "utf8")).map((alias) => ({ path: alias.path, kind: "page" })),
+].map((page) => [page.path.toLowerCase(), page]));
 const appRoutes = new Set(readdirSync(`${ROOT}src/app`, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name.toLowerCase()));
 
 const CUSTOMER_ACCESS = /^\/(cart|checkout|account|commerce|api|config|login|signin|sign-in|store|shop|products?|member|members|membership|my-[^/]+|course|courses|download|downloads|order|orders|s|thank-?you|success|payment[^/]*|portal|class|classes|workshops?)(\/|$)/;

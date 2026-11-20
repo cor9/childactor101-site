@@ -1,3 +1,4 @@
+import pageAliases from "./legacy-page-aliases.json";
 import preservedPages from "./legacy-preserved-pages.json";
 
 /**
@@ -19,3 +20,15 @@ export interface LegacyPreservedPage {
 }
 
 export const legacyPreservedPages = preservedPages as LegacyPreservedPage[];
+
+/**
+ * A path on this site that has no page of its own on the legacy host, but whose service lives at a
+ * different legacy path. It forwards to `legacyPath` on the legacy host while the legacy site exists.
+ */
+export interface LegacyPageAlias {
+  path: string;
+  legacyPath: string;
+  note: string;
+}
+
+export const legacyPageAliases = pageAliases as LegacyPageAlias[];

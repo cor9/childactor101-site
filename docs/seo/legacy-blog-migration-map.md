@@ -1,5 +1,7 @@
 # Legacy blog migration map
 
+> **Superseded plan:** the decision is now a full native migration of the original blog to `/101-blog`, not redirects to classroom lessons or a permanent legacy fallback. See `docs/seo/blog-migration-runbook.md`. This map remains the audit of the original 155 URLs; its "Redirected" categories apply only until each article is imported.
+
 Audit of every legacy `https://www.childactor101.com/101-blog/...` article (155, from `docs/classroom/blog-to-classroom-map.json`) against the new classroom routes.
 
 - Redirects are implemented only for category **A** (plus the blog index `/101-blog` → `/from-the-classroom`). Source of truth: `src/content/legacy-blog-redirects.ts`, wired in `next.config.ts`.

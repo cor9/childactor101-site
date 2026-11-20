@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 __pycache__/
+
+# Raw Squarespace exports can include drafts and unpublished pages; never commit them.
+/scripts/blog/exports/

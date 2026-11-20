@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Container } from "@/components/layout/Container";
+import { hasBlogPosts } from "@/lib/blog";
 
 export interface FooterLink {
   href: string;
@@ -23,6 +24,7 @@ const defaultColumns: FooterColumn[] = [
     links: [
       { href: "/start-here", label: "Start Here" },
       { href: "/from-the-classroom", label: "From the Classroom" },
+      ...(hasBlogPosts() ? [{ href: "/101-blog", label: "101 Blog" }] : []),
       { href: "/courses", label: "Video Courses" },
       { href: "/podcast", label: "Podcast" },
       { href: "/corey-ralston", label: "Meet Corey" },
